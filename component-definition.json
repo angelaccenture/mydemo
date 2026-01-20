@@ -31,7 +31,7 @@
       "id": "sections",
       "components": [
         {
-          "title": "Section",
+          "title": "Section Metadata",
           "id": "section",
           "plugins": {
             "da": {

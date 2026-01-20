@@ -58,6 +58,18 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Container",
+            "value": "container"
+          },
+          {
+            "name": "Angel Section",
+            "value": "angelsection"
           }
         ]
       }
