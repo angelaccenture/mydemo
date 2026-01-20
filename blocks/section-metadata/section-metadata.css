@@ -87,6 +87,9 @@
       text-align: center;
     }
   }
+  &.angelsection {
+    color: red;
+  }
 
   > .default-content > *:first-child {
     margin-top: 0;
