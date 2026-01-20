@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Section",
+      "title": "Section Metadata",
       "id": "section",
       "plugins": {
         "da": {
@@ -24,7 +24,20 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+              {
+              "name": "Center",
+              "value": "center"
+            },
+              {
+              "name": "Container",
+              "value": "container"
+            },
+              {
+              "name": "Angel Section",
+              "value": "angelsection"
             }
+            
           ]
         }
       ]
