@@ -81,7 +81,7 @@
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "div:nth-child(1)",
+        "name": "div:nth-child(1)>div:nth-child(1)",
         "value": "",
         "label": "Summary",
         "required": true
