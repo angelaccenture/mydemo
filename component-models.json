@@ -97,6 +97,23 @@
     ]
   },
   {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "div:nth-child(1)>p:nth-child(1)",
+        "valueType": "string",
+        "label": "Tab Name"
+      },
+      {
+        "component": "richtext",
+        "name": "div:nth-child(2)",
+        "label": "Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -205,54 +222,31 @@
     ]
   },
   {
-    "id": "quote",
+    "id": "video",
     "fields": [
       {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)",
-        "label": "Quote",
-        "required": true
+        "component": "boolean",
+        "name": "classes_autoplay",
+        "label": "Autoplay Video",
+        "valueType": "boolean"
       },
       {
         "component": "text",
-        "name": "div:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
-        "label": "Author",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "search",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
         "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]",
-        "label": "Search URL",
+        "label": "Video URL",
+        "valueType": "string",
         "required": true
       },
       {
         "component": "text",
         "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)",
-        "label": "Search URL Text",
+        "label": "Video URL Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "tabs-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "div:nth-child(1)>p:nth-child(1)",
-        "valueType": "string",
-        "label": "Tab Name"
       },
       {
-        "component": "richtext",
-        "name": "div:nth-child(2)",
-        "label": "Content",
+        "component": "reference",
+        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(2)>img:nth-child(3)[src]",
+        "label": "Poster Image",
         "valueType": "string"
       }
     ]

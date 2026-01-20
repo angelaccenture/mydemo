@@ -32,9 +32,9 @@
     ]
   },
   {
-    "id": "cards",
+    "id": "tabs",
     "components": [
-      "card"
+      "tabs-item"
     ]
   },
   {
@@ -58,12 +58,6 @@
     "components": [
       "text",
       "image"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tabs-item"
     ]
   }
 ]

@@ -48,7 +48,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion",
+          "title": "Accordion - AK",
           "id": "accordion",
           "plugins": {
             "da": {
@@ -70,18 +70,25 @@
           }
         },
         {
-          "title": "Cards",
-          "id": "cards",
+          "title": "Tabs",
+          "id": "tabs",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"cards\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div><div></div></div></div>"
+              "unsafeHTML": "<div class=\"tabs\"><div><div><p></p></div><div></div></div></div>"
             }
-          },
-          "model": "cards",
-          "filter": "cards"
+          }
         },
         {
-          "title": "Card",
+          "title": "Tabs Item",
+          "id": "tabs-item",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div><div><p></p></div><div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Card - AK",
           "id": "card",
           "plugins": {
             "da": {
@@ -91,7 +98,7 @@
           "model": "card"
         },
         {
-          "title": "Carousel",
+          "title": "Carousel - AK",
           "id": "carousel",
           "plugins": {
             "da": {
@@ -159,42 +166,13 @@
           }
         },
         {
-          "title": "Quote",
-          "id": "quote",
+          "title": "Video",
+          "id": "video",
           "plugins": {
             "da": {
-              "name": "quote",
+              "name": "video",
               "rows": 1,
               "columns": 1
-            }
-          }
-        },
-        {
-          "title": "Search",
-          "id": "search",
-          "plugins": {
-            "da": {
-              "name": "search",
-              "rows": 1,
-              "columns": 1
-            }
-          }
-        },
-        {
-          "title": "Tabs",
-          "id": "tabs",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div class=\"tabs\"><div><div><p></p></div><div></div></div></div>"
-            }
-          }
-        },
-        {
-          "title": "Tabs Item",
-          "id": "tabs-item",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div><div><p></p></div><div></div></div>"
             }
           }
         },
