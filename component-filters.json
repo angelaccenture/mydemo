@@ -34,6 +34,12 @@
     ]
   },
   {
+    "id": "cards",
+    "components": [
+      "card"
+    ]
+  },
+  {
     "id": "carousel",
     "components": [
       "carousel-item"
