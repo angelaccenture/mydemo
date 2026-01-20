@@ -31,7 +31,7 @@
       "id": "sections",
       "components": [
         {
-          "title": "Section Metadata",
+          "title": "Section",
           "id": "section",
           "plugins": {
             "da": {
@@ -164,6 +164,17 @@
               "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture><h1></h1></div></div></div>"
             }
           }
+        },
+        {
+          "title": "Section Metadata",
+          "id": "section-metadata",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div></div>"
+            }
+          },
+          "filter": "section-metadata",
+          "model": "section-metadata"
         },
         {
           "title": "Video",

@@ -9,20 +9,16 @@
     "id": "section",
     "components": [
       "accordion",
-      "cards",
+      "card",
       "carousel",
       "columns",
-      "embed",
       "fragment",
-      "form",
       "hero",
       "image",
-      "quote",
-      "search",
-      "tabs",
+      "advanced-tabs",
       "table",
       "text",
-      "video"
+      "youtube"
     ]
   },
   {
@@ -58,6 +54,22 @@
     "components": [
       "text",
       "image"
+    ]
+  },
+  {
+    "id": "section-metadata",
+    "components": [
+      "accordion",
+      "card",
+      "carousel",
+      "columns",
+      "fragment",
+      "hero",
+      "image",
+      "advanced-tabs",
+      "table",
+      "text",
+      "youtube"
     ]
   }
 ]

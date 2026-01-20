@@ -1,20 +1,20 @@
 {
   "definitions": [
     {
-      "title": "Section",
-      "id": "section",
+      "title": "Section Metadata",
+      "id": "section-metadata",
       "plugins": {
         "da": {
           "unsafeHTML": "<div></div>"
         }
       },
-      "filter": "section",
-      "model": "section"
+      "filter": "section-metadata",
+      "model": "section-metadata"
     }
   ],
   "models": [
     {
-      "id": "section",
+      "id": "section-metadata",
       "fields": [
         {
           "component": "multiselect",
@@ -22,7 +22,7 @@
           "label": "Style",
           "options": [
             {
-              "name": "Highlight",
+              "name": "Section Metada Class Only",
               "value": "highlight"
             },
               {
@@ -45,9 +45,9 @@
   ],
   "filters": [
     {
-      "id": "section",
+      "id": "section-metadata",
       "components": [
-      "accordion",
+        "accordion",
         "card",
         "carousel",
         "columns",

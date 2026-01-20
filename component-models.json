@@ -222,6 +222,34 @@
     ]
   },
   {
+    "id": "section-metadata",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Section Metada Class Only",
+            "value": "highlight"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Container",
+            "value": "container"
+          },
+          {
+            "name": "Angel Section",
+            "value": "angelsection"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "video",
     "fields": [
       {
