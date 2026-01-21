@@ -29,7 +29,7 @@
               "name": "Center",
               "value": "center"
             },
-              {
+            {
               "name": "Container",
               "value": "container"
             },
@@ -38,6 +38,51 @@
               "value": "angelsection"
             }
             
+          ]
+        },
+         {
+          "component": "select",
+          "name": "gap",
+          "label": "Gap",
+          "options": [
+            {
+              "name": "Big",
+              "value": "xl"
+            },
+            {
+              "name": "Small",
+              "value": "s"
+            }
+          ]
+        },
+         {
+          "component": "select",
+          "name": "gap",
+          "label": "Gap",
+          "options": [
+            {
+              "name": "Big",
+              "value": "xl"
+            },
+            {
+              "name": "Small",
+              "value": "s"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "spacing",
+          "label": "Spacing",
+          "options": [
+            {
+              "name": "Big",
+              "value": "xxl"
+            },
+            {
+              "name": "Small",
+              "value": "s"
+            }
           ]
         }
       ]
