@@ -148,7 +148,7 @@
     "id": "accordion-item",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
         "name": "div:nth-child(1)>div:nth-child(1)",
         "value": "",
@@ -156,7 +156,7 @@
         "required": true
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "div:nth-child(2)",
         "value": "",
         "label": "Text",
