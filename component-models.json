@@ -297,7 +297,7 @@
     "fields": [
       {
         "component": "multiselect",
-        "name": "class",
+        "name": "classes",
         "label": "Style",
         "options": [
           {
