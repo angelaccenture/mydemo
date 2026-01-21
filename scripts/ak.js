@@ -46,6 +46,7 @@ export async function loadStyle(href) {
 }
 
 export async function loadBlock(block) {
+    console.log(block);
   const { components } = getConfig();
   const { classList } = block;
   const name = classList[0];
