@@ -46,14 +46,12 @@ export async function loadStyle(href) {
 }
 
 export async function loadBlock(block) {
-  console.log("start block");
-    console.log(block);
-    console.log("end block");
   const { components } = getConfig();
   const { classList } = block;
   const name = classList[0];
   block.dataset.blockName = name;
   const blockPath = `/blocks/${name}/${name}`;
+  console.log(blockPath);
   const loaded = [new Promise((resolve) => {
     (async () => {
       try {
