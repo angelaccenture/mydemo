@@ -5,7 +5,7 @@
       "id": "hero",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"hero\"><div><div><picture><a href=\"\"><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></a></div><div><div><div><h1></h1></div></div></div>"
+          "unsafeHTML": "<div class=\"hero angel\"><div><div><picture><a href=\"\"><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></a></div><div><div><div><h1></h1></div></div></div>"
         }
       }
     }
