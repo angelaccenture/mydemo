@@ -5,7 +5,7 @@
       "id": "hero",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div></div><div><div><h1>Author Kit</h1><p>Powerfully simple experiences.</p></div></div></div>"
+          "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"./media_1674c029fe1c222fe6f72c3bf0ad7fdf41e16eca9.jpg?width=2000&amp;format=webply&amp;optimize=medium\" media=\"(min-width: 600px)\"><source type=\"image/webp\" srcset=\"./media_1674c029fe1c222fe6f72c3bf0ad7fdf41e16eca9.jpg?width=750&amp;format=webply&amp;optimize=medium\"><source type=\"image/jpeg\" srcset=\"./media_1674c029fe1c222fe6f72c3bf0ad7fdf41e16eca9.jpg?width=2000&amp;format=jpg&amp;optimize=medium\" media=\"(min-width: 600px)\"><img loading=\"lazy\" alt=\"\" src=\"./media_1674c029fe1c222fe6f72c3bf0ad7fdf41e16eca9.jpg?width=750&amp;format=jpg&amp;optimize=medium\" width=\"3840\" height=\"2160\"></picture></div></div><div><div><h1>Author Kit</h1><p>Powerfully simple experiences.</p></div></div></div>"
         }
       }
     }
