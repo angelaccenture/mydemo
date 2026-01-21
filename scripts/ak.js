@@ -50,6 +50,7 @@ export async function loadBlock(block) {
   const { classList } = block;
   const name = classList[0];
   block.dataset.blockName = name;
+  console.log(${name});
   const blockPath = `/blocks/${name}/${name}`;
   console.log(blockPath);
   const loaded = [new Promise((resolve) => {
