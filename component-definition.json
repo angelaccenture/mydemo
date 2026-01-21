@@ -48,7 +48,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion - BC",
+          "title": "Accordion",
           "id": "accordion",
           "plugins": {
             "da": {
