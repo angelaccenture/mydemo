@@ -40,6 +40,13 @@
             
           ]
         },
+        {
+          "component": "number",
+          "name": "grid",
+          "label": "Grid",
+          "valueType": "number",
+          "value": 4
+        },
          {
           "component": "select",
           "name": "gap",
