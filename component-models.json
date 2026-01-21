@@ -148,7 +148,7 @@
     "id": "accordion-item",
     "fields": [
       {
-        "component": "richtext",
+        "component": "text",
         "valueType": "string",
         "name": "div:nth-child(1)>div:nth-child(1)",
         "value": "",
@@ -156,7 +156,7 @@
         "required": true
       },
       {
-        "component": "richtext",
+        "component": "text",
         "name": "div:nth-child(2)",
         "value": "",
         "label": "Text",
@@ -216,6 +216,26 @@
     ]
   },
   {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          },
+          {
+            "name": "Angel Carousel",
+            "value": "classname"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "carousel-item",
     "fields": [
       {
@@ -232,7 +252,7 @@
         "label": "Background Image Alt"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "div:nth-child(2)",
         "label": "Text",
         "valueType": "string"

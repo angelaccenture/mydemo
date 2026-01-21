@@ -20,6 +20,27 @@
     }
   ],
   "models": [
+     {
+      "id": "carousel",
+      "fields": [
+       {
+          "component": "multiselect",
+          "name": "style",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Highlight",
+              "value": "highlight"
+            },
+              {
+              "name": "Angel Carousel",
+              "value": "classname"
+            }
+            
+          ]
+        }
+      ]
+    },
     {
       "id": "carousel-item",
       "fields": [
@@ -37,7 +58,7 @@
           "label": "Background Image Alt"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "name": "div:nth-child(2)",
           "label": "Text",
           "valueType": "string"
