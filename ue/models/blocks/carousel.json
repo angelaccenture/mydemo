@@ -61,6 +61,7 @@
           "component": "richtext",
           "name": "div:nth-child(2)",
           "label": "Text",
+           "value": "",
           "valueType": "string"
         }
       ]

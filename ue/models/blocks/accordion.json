@@ -31,12 +31,14 @@
           "component": "richtext",
           "valueType": "string",
           "name": "div:nth-child(1)>div:nth-child(1)",
+          "value": "",
           "label": "Summary",
           "required": true
         },
         {
           "component": "richtext",
           "name": "div:nth-child(2)",
+          "value": "",
           "label": "Text",
           "valueType": "string",
           "required": true

@@ -24,7 +24,7 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
+          "name": "div:nth-child(1)>div:nth-child(1)>a:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
           "label": "Alt",
           "value": ""
         },

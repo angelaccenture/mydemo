@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Text",
+      "title": "Text - Test",
       "id": "text",
       "plugins": {
         "da": {
