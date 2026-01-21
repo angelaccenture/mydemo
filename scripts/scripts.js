@@ -34,12 +34,13 @@ const decorateArea = ({ area = document }) => {
   eagerLoad(area, 'img');
 };
 
+/*
 export async function loadPage() {
   setConfig({ hostnames, locales, widgets, components, decorateArea });
   await loadArea();
 }
 await loadPage();
-
+*/
 (function da() {
   const ref = new URL(window.location.href).searchParams.get('dapreview');
   if (ref) import('../tools/da/da.js').then((mod) => mod.default(loadPage));
@@ -258,6 +259,8 @@ async function loadPage() {
   await loadLazy(document);
   loadDelayed();
   loadSidekick();
+  setConfig({ hostnames, locales, widgets, components, decorateArea });
+  await loadArea();
 }
 
 // UE Editor support before page load
