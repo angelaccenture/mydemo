@@ -296,6 +296,25 @@
     "id": "hero",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "class",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Add More",
+            "value": "classname"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "div:nth-child(1)>div:nth-child(1)>a:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
