@@ -48,7 +48,7 @@
           "valueType": "string"
         },
           {
-          "component": "richtext",
+          "component": "text",
           "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(3)",
           "value": "",
           "label": "Text",
