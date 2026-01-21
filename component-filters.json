@@ -28,7 +28,7 @@
     ]
   },
   {
-    "id": "tabs",
+    "id": "advanced-tabs",
     "components": [
       "tabs-item"
     ]

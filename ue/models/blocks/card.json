@@ -12,7 +12,7 @@
       "filter": "cards"
     },
     {
-      "title": "Card",
+      "title": "Card Item - AK",
       "id": "card",
       "plugins": {
         "da": {

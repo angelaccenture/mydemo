@@ -111,7 +111,7 @@
     {
       "id": "section",
       "components": [
-      "accordion",
+        "accordion",
         "card",
         "carousel",
         "columns",

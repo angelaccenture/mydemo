@@ -1,11 +1,11 @@
 {
   "definitions": [
     {
-      "title": "Video",
-      "id": "video",
+      "title": "Table - AK",
+      "id": "table",
       "plugins": {
         "da": {
-          "name": "video",
+          "name": "table",
           "rows": 1,
           "columns": 1
         }
@@ -14,7 +14,7 @@
   ],
   "models": [
     {
-      "id": "video",
+      "id": "table",
       "fields": [
         {
           "component": "boolean",

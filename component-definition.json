@@ -48,7 +48,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion - AK",
+          "title": "Accordion - BC",
           "id": "accordion",
           "plugins": {
             "da": {
@@ -70,8 +70,8 @@
           }
         },
         {
-          "title": "Tabs",
-          "id": "tabs",
+          "title": "Advanced Tabs - AK",
+          "id": "advanced-tabs",
           "plugins": {
             "da": {
               "unsafeHTML": "<div class=\"tabs\"><div><div><p></p></div><div></div></div></div>"
@@ -99,7 +99,7 @@
           "filter": "cards"
         },
         {
-          "title": "Card",
+          "title": "Card Item - AK",
           "id": "card",
           "plugins": {
             "da": {
@@ -109,7 +109,7 @@
           "model": "card"
         },
         {
-          "title": "Carousel - AK",
+          "title": "Carousel - BC",
           "id": "carousel",
           "plugins": {
             "da": {
@@ -127,7 +127,7 @@
           }
         },
         {
-          "title": "Columns",
+          "title": "Columns - AK",
           "id": "columns",
           "plugins": {
             "da": {
@@ -159,7 +159,7 @@
           }
         },
         {
-          "title": "Fragment",
+          "title": "Fragment - BC",
           "id": "fragment",
           "plugins": {
             "da": {
@@ -168,7 +168,7 @@
           }
         },
         {
-          "title": "Hero",
+          "title": "Hero - AK",
           "id": "hero",
           "plugins": {
             "da": {
@@ -177,22 +177,22 @@
           }
         },
         {
-          "title": "Video",
-          "id": "video",
+          "title": "Table - AK",
+          "id": "table",
           "plugins": {
             "da": {
-              "name": "video",
+              "name": "table",
               "rows": 1,
               "columns": 1
             }
           }
         },
         {
-          "title": "Video",
-          "id": "video",
+          "title": "YouTube - AK",
+          "id": "youtube",
           "plugins": {
             "da": {
-              "name": "video",
+              "name": "youtube",
               "rows": 1,
               "columns": 1
             }

@@ -1,11 +1,11 @@
 {
   "definitions": [
     {
-      "title": "Video",
-      "id": "video",
+      "title": "YouTube - AK",
+      "id": "youtube",
       "plugins": {
         "da": {
-          "name": "video",
+          "name": "youtube",
           "rows": 1,
           "columns": 1
         }
@@ -14,7 +14,7 @@
   ],
   "models": [
     {
-      "id": "video",
+      "id": "youtube",
       "fields": [
         {
           "component": "boolean",

@@ -300,7 +300,7 @@
     ]
   },
   {
-    "id": "video",
+    "id": "table",
     "fields": [
       {
         "component": "boolean",
@@ -330,7 +330,7 @@
     ]
   },
   {
-    "id": "video",
+    "id": "youtube",
     "fields": [
       {
         "component": "boolean",

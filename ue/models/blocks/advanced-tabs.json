@@ -1,8 +1,8 @@
 {
   "definitions": [
     {
-      "title": "Tabs",
-      "id": "tabs",
+      "title": "Advanced Tabs - AK",
+      "id": "advanced-tabs",
       "plugins": {
         "da": {
           "unsafeHTML": "<div class=\"tabs\"><div><div><p></p></div><div></div></div></div>"
@@ -40,7 +40,7 @@
   ],
   "filters": [
     {
-      "id": "tabs",
+      "id": "advanced-tabs",
       "components": ["tabs-item"]
     }
   ]
