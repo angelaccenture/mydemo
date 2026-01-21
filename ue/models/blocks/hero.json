@@ -1,11 +1,11 @@
 {
   "definitions": [
     {
-      "title": "Hero - AK",
+      "title": "Hero",
       "id": "hero",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture><h1></h1></div></div></div>"
+          "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" media=\"(min-width: 600px)\"><source type=\"image/webp\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\"><source type=\"image/jpeg\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" media=\"(min-width: 600px)\"><img loading=\"lazy\" alt=\"Alt Text\" src=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" width=\"3840\" height=\"2160\"></picture></div></div><div><div><h1>Author Kit</h1><p>Powerfully simple experiences.</p></div></div></div>"
         }
       }
     }
@@ -15,9 +15,29 @@
       "id": "hero",
       "fields": [
         {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+           {
+              "name": "Center",
+              "value": "center"
+            },
+            {
+              "name": "Light",
+              "value": "light"
+            },
+              {
+              "name": "Add More",
+              "value": "classname"
+            }
+            
+          ]
+        },
+        {
           "component": "reference",
           "valueType": "string",
-          "name": "div:nth-child(1)>div:nth-child(1)>a:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
+          "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
           "label": "Image",
           "multi": false
         },

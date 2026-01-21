@@ -7,7 +7,9 @@
         "da": {
           "unsafeHTML": "<div class=\"carousel\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div><div></div></div>"
         }
-      }
+      },
+       "model": "carousel",
+      "filter": "carousel"
     },
     {
       "title": "Carousel Slide",
@@ -20,6 +22,27 @@
     }
   ],
   "models": [
+     {
+      "id": "carousel",
+      "fields": [
+       {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Highlight",
+              "value": "highlight"
+            },
+              {
+              "name": "Angel Carousel",
+              "value": "classname"
+            }
+            
+          ]
+        }
+      ]
+    },
     {
       "id": "carousel-item",
       "fields": [
@@ -40,6 +63,7 @@
           "component": "richtext",
           "name": "div:nth-child(2)",
           "label": "Text",
+           "value": "",
           "valueType": "string"
         }
       ]
