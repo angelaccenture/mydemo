@@ -1,3 +1,19 @@
+#Angel Status - Delete when I am done
+Page - Add Tags, verify items
+Section - Styles not splitting after added in UE, Add checkbutton for columns (hide items), clean up dialog items
+Text - Getting errors in UE
+Image - Verify, Add intt DA doc
+
+Accordion - IP - Modifiable, Add into DA as new
+Advanced Tabs - Not Started
+Card - IP - Modifiable, Add into DA as new
+Carousel - Done
+Columns - TBD, do we need if we have section now?
+Fragment -Not Started
+Hero - IP - Modifiable, Add into DA as new
+Table - Not Started
+YouTube - Not Started
+
 # Author Kit
 For projects that want a few more batteries. Built by the team who brought you da.live and adobe.com.
 
