@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Card Item",
+      "title": "Card",
       "id": "card",
       "plugins": {
         "da": {
