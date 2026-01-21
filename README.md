@@ -10,7 +10,7 @@
 * Carousel - IP  
 * Columns - TBD, do we need if we have section now?
 * Fragment -Not Started
-*** Hero - QA**
+* **Hero - QA**
 * Table - Not Started
 * YouTube - Not Started
 
