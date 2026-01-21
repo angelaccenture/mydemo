@@ -37,7 +37,7 @@
           "label": "Background Image Alt"
         },
         {
-          "component": "richtext",
+          "component": "text",
           "name": "div:nth-child(2)",
           "label": "Text",
           "valueType": "string"
