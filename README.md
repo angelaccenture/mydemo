@@ -1,4 +1,4 @@
-#Angel Status - Delete when I am done
+# Angel Status - Delete when I am done
 Page - Add Tags, verify items
 Section - Styles not splitting after added in UE, Add checkbutton for columns (hide items), clean up dialog items
 Text - Getting errors in UE
