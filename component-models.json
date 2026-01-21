@@ -74,11 +74,23 @@
         ]
       },
       {
-        "component": "number",
+        "component": "select",
         "name": "grid",
         "label": "Grid",
-        "valueType": "number",
-        "value": 4
+        "options": [
+          {
+            "name": "2 Columns",
+            "value": "2"
+          },
+          {
+            "name": "3 Columns",
+            "value": "3"
+          },
+          {
+            "name": "4 Columns",
+            "value": "4"
+          }
+        ]
       },
       {
         "component": "select",
