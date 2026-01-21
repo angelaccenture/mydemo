@@ -1,16 +1,16 @@
 # Angel Status - Delete when I am done
-* Page - Add Tags, verify items
-* Section - Styles not splitting after added in UE, Add checkbutton for columns (hide items), clean up dialog items
+* Page - IP
+* Section - IP
 * Text - Getting errors in UE
-* Image - Verify, Add intt DA doc
+* Image - IP
 
-* Accordion - IP - Modifiable, Add into DA as new
+* Accordion - IP
 * Advanced Tabs - Not Started
-* Card - IP - Modifiable, Add into DA as new
-* Carousel - IP - had worked but I broke it 
+* Card - IP
+* Carousel - IP  
 * Columns - TBD, do we need if we have section now?
 * Fragment -Not Started
-* Hero - IP - Modifiable, Add into DA as new
+*** Hero - QA**
 * Table - Not Started
 * YouTube - Not Started
 
