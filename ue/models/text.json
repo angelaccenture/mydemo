@@ -5,7 +5,7 @@
       "id": "text",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div><p></p></div>"
+          "unsafeHTML": ""
         }
       }
     }
