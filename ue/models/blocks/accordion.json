@@ -16,7 +16,7 @@
       "plugins": {
         "da": {
           "name": "accordion-item",
-          "unsafeHTML": "<div><div></div><div></div></div>"
+          "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>"
         }
       }
     }
@@ -26,7 +26,7 @@
       "id": "accordion-item",
       "fields": [
         {
-          "component": "richtext",
+          "component": "text",
           "valueType": "string",
           "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
           "value": "",
