@@ -5,7 +5,7 @@
       "id": "default",
       "components": [
         {
-          "title": "Text - Test",
+          "title": "Text",
           "id": "text",
           "plugins": {
             "da": {
@@ -115,7 +115,7 @@
           }
         },
         {
-          "title": "Columns - AK",
+          "title": "Columns",
           "id": "columns",
           "plugins": {
             "da": {
@@ -147,7 +147,7 @@
           }
         },
         {
-          "title": "Fragment - BC",
+          "title": "Fragment",
           "id": "fragment",
           "plugins": {
             "da": {
@@ -170,6 +170,35 @@
           "plugins": {
             "da": {
               "name": "table",
+              "rows": 1,
+              "columns": 1
+            }
+          }
+        },
+        {
+          "title": "Tabs",
+          "id": "tabs",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"tabs\"><div><div><p></p></div><div></div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Tabs Item",
+          "id": "tabs-item",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div><div><p></p></div><div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Video",
+          "id": "video",
+          "plugins": {
+            "da": {
+              "name": "video",
               "rows": 1,
               "columns": 1
             }
