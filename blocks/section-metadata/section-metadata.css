@@ -87,8 +87,10 @@
       text-align: center;
     }
   }
-  &.angelsection {
-    color: red;
+  &.highlight {
+    background-color: var(--color-light);
+    margin: 0;
+    padding: 40px 0;
   }
 
   > .default-content > *:first-child {

@@ -71,10 +71,6 @@
           {
             "name": "Container",
             "value": "container"
-          },
-          {
-            "name": "Angel Section",
-            "value": "angelsection"
           }
         ]
       },
@@ -94,6 +90,14 @@
           {
             "name": "4 Columns",
             "value": "4"
+          },
+          {
+            "name": "5 Columns",
+            "value": "5"
+          },
+          {
+            "name": "6 Columns",
+            "value": "6"
           }
         ]
       },
@@ -103,27 +107,28 @@
         "label": "Gap",
         "options": [
           {
-            "name": "Big",
-            "value": "xl"
+            "name": "X-Small",
+            "value": "xs"
           },
           {
             "name": "Small",
             "value": "s"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "gap",
-        "label": "Gap",
-        "options": [
+          },
           {
-            "name": "Big",
+            "name": "Medium",
+            "value": "m"
+          },
+          {
+            "name": "Large",
+            "value": "l"
+          },
+          {
+            "name": "X-Large",
             "value": "xl"
           },
           {
-            "name": "Small",
-            "value": "s"
+            "name": "XX-Large",
+            "value": "xxl"
           }
         ]
       },
@@ -133,12 +138,28 @@
         "label": "Spacing",
         "options": [
           {
-            "name": "Big",
-            "value": "xxl"
+            "name": "X-Small",
+            "value": "xs"
           },
           {
             "name": "Small",
             "value": "s"
+          },
+          {
+            "name": "Medium",
+            "value": "m"
+          },
+          {
+            "name": "Large",
+            "value": "l"
+          },
+          {
+            "name": "X-Large",
+            "value": "xl"
+          },
+          {
+            "name": "XX-Large",
+            "value": "xxl"
           }
         ]
       }
@@ -185,6 +206,21 @@
   {
     "id": "card",
     "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Quiet",
+            "value": "quiet"
+          }
+        ]
+      },
       {
         "component": "reference",
         "valueType": "string",
@@ -280,16 +316,24 @@
         "label": "Style",
         "options": [
           {
-            "name": "Center",
-            "value": "center"
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "name": "Large",
+            "value": "large"
           },
           {
             "name": "Light",
             "value": "light"
           },
           {
-            "name": "Add More",
-            "value": "classname"
+            "name": "Dark",
+            "value": "dark"
+          },
+          {
+            "name": "Center",
+            "value": "center"
           }
         ]
       },
