@@ -6,7 +6,7 @@
 
 * Accordion - IP
 * Advanced Tabs - Not Started
-* Card - IP
+* **Card - Do a final QA - works in all 3**
 * Carousel - IP  
 * Columns - TBD, do we need if we have section now?
 * Fragment -Not Started
