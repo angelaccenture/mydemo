@@ -23,15 +23,15 @@
           "options": [
             {
               "name": "Highlight",
-              "value": " highlight"
+              "value": "highlight"
             },
               {
               "name": "Center",
-              "value": " center"
+              "value": "center"
             },
               {
               "name": "Container",
-              "value": " container"
+              "value": "container"
             }         
             
           ]
