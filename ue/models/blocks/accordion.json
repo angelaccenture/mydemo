@@ -6,8 +6,7 @@
       "plugins": {
         "da": {
           "name": "accordion",
-          "rows": 1,
-          "columns": 2
+          "unsafeHTML": "<div class=\"accordion\"></div>"
         }
       }
     },
@@ -17,8 +16,7 @@
       "plugins": {
         "da": {
           "name": "accordion-item",
-          "rows": 2,
-          "columns": 0
+          "unsafeHTML": "<div><div></div><div></div></div>"
         }
       }
     }
