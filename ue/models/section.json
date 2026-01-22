@@ -29,14 +29,10 @@
               "name": "Center",
               "value": "center"
             },
-            {
+              {
               "name": "Container",
               "value": "container"
-            },
-              {
-              "name": "Angel Section",
-              "value": "angelsection"
-            }
+            }         
             
           ]
         },
@@ -56,6 +52,14 @@
             {
               "name": "4 Columns",
               "value": "4"
+            },
+             {
+              "name": "5 Columns",
+              "value": "5"
+            },
+             {
+              "name": "6 Columns",
+              "value": "6"
             }
           ]
         },
@@ -64,28 +68,29 @@
           "name": "gap",
           "label": "Gap",
           "options": [
+             {
+              "name": "X-Small",
+              "value": "xs"
+            },
+             {
+              "name": "Small",
+              "value": "s"
+            },
             {
-              "name": "Big",
+              "name": "Medium",
+              "value": "m"
+            },
+            {
+              "name": "Large",
+              "value": "l"
+            },
+            {
+              "name": "X-Large",
               "value": "xl"
             },
             {
-              "name": "Small",
-              "value": "s"
-            }
-          ]
-        },
-         {
-          "component": "select",
-          "name": "gap",
-          "label": "Gap",
-          "options": [
-            {
-              "name": "Big",
-              "value": "xl"
-            },
-            {
-              "name": "Small",
-              "value": "s"
+              "name": "XX-Large",
+              "value": "xxl"
             }
           ]
         },
@@ -94,13 +99,29 @@
           "name": "spacing",
           "label": "Spacing",
           "options": [
-            {
-              "name": "Big",
-              "value": "xxl"
+              {
+              "name": "X-Small",
+              "value": "xs"
             },
-            {
+             {
               "name": "Small",
               "value": "s"
+            },
+            {
+              "name": "Medium",
+              "value": "m"
+            },
+            {
+              "name": "Large",
+              "value": "l"
+            },
+            {
+              "name": "X-Large",
+              "value": "xl"
+            },
+            {
+              "name": "XX-Large",
+              "value": "xxl"
             }
           ]
         }

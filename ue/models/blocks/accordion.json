@@ -6,8 +6,7 @@
       "plugins": {
         "da": {
           "name": "accordion",
-          "rows": 1,
-          "columns": 2
+          "unsafeHTML": "<div class=\"accordion\"></div>"
         }
       }
     },
@@ -17,8 +16,7 @@
       "plugins": {
         "da": {
           "name": "accordion-item",
-          "rows": 2,
-          "columns": 0
+          "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>"
         }
       }
     }
@@ -28,16 +26,16 @@
       "id": "accordion-item",
       "fields": [
         {
-          "component": "richtext",
+          "component": "text",
           "valueType": "string",
-          "name": "div:nth-child(1)",
+          "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
           "value": "",
           "label": "Summary",
           "required": true
         },
         {
           "component": "richtext",
-          "name": "div:nth-child(2)",
+          "name": "div:nth-child(1)>div:nth-child(2)>p:nth-child(1)",
           "value": "",
           "label": "Text",
           "valueType": "string",
@@ -50,7 +48,7 @@
     {
       "id": "accordion",
       "components": [
-        "accordion-item"
+        "accordion-item","image"
       ]
     }
   ]

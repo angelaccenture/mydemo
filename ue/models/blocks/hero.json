@@ -20,18 +20,25 @@
           "label": "Style",
           "options": [
            {
-              "name": "Center",
-              "value": "center"
+              "name": "Small",
+              "value": "small"
             },
             {
+              "name": "Large",
+              "value": "large"
+            },
+              {
               "name": "Light",
               "value": "light"
             },
-              {
-              "name": "Add More",
-              "value": "classname"
-            }
-            
+             {
+              "name": "Dark",
+              "value": "dark"
+            },
+             {
+              "name": "Center",
+              "value": "center"
+            }            
           ]
         },
         {

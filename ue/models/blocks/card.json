@@ -15,6 +15,21 @@
       "id": "card",
       "fields": [
         {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+           {
+              "name": "Center",
+              "value": "center"
+            },
+            {
+              "name": "Quiet",
+              "value": "quiet"
+            }            
+          ]
+        },
+         {
           "component": "reference",
           "valueType": "string",
           "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
