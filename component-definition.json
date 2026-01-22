@@ -9,8 +9,7 @@
           "id": "text",
           "plugins": {
             "da": {
-              "name": "text",
-              "type": "text"
+              "unsafeHTML": "<div><p></p></div>"
             }
           }
         },
