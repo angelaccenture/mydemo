@@ -5,7 +5,7 @@
       "id": "card",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" media=\"(min-width: 600px)\"><source type=\"image/webp\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\"><source type=\"image/jpeg\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" media=\"(min-width: 600px)\"><img loading=\"lazy\" alt=\"Alt Text\" src=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" width=\"3840\" height=\"2160\"></picture></div></div><div><div><h1>Author Kit</h1><p>Powerfully simple experiences.</p></div></div></div>"
+          "unsafeHTML": "<div class=\"card\"><div><p><picture><source type=\"image/webp\" srcset=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\" media=\"(min-width: 600px)\"><source type=\"image/webp\" srcset=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\"><source type=\"image/jpeg\" srcset=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\" media=\"(min-width: 600px)\"><img loading=\"lazy\" alt=\"Alt Text\" src=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\" width=\"3840\" height=\"2160\"></picture></p><p><strong>Unmatched speed</strong></p><p>AEM is the fastest way to publish, create, and serve websites.</p></div><div></div></div>"
         }
       }
     }
