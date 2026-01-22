@@ -57,7 +57,7 @@
     "fields": [
       {
         "component": "multiselect",
-        "name": "classes",
+        "name": "style",
         "label": "Style",
         "options": [
           {
