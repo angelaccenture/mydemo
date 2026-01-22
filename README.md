@@ -6,11 +6,11 @@
 
 * Accordion - IP
 * Advanced Tabs - Not Started
-* **Card - Do a final QA - works in all 3**
+* **Card - works in all 3 - Need to update to new code**
 * Carousel - IP  
 * Columns - TBD, do we need if we have section now?
 * Fragment -Not Started
-* **Hero - Do a final QA - works in all 3**
+* **Hero - works in all 3 - Need to update to new code**
 * Table - Not Started
 * YouTube - Not Started
 
