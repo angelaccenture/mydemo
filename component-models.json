@@ -150,14 +150,14 @@
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "div:nth-child(1)",
+        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
         "value": "",
         "label": "Summary",
         "required": true
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(2)",
+        "name": "div:nth-child(1)>div:nth-child(2)>p:nth-child(1)",
         "value": "",
         "label": "Text",
         "valueType": "string",
