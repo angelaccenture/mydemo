@@ -92,7 +92,7 @@
           "id": "card",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div><div><p><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></p><p><strong>Unmatched speed</strong></p><p>AEM is the fastest way to publish, create, and serve websites.</p></div><div></div></div>"
+              "unsafeHTML": "<div><div><p>Picture goes here</p><p><strong>Unmatched speed</strong></p><p>AEM is the fastest way to publish, create, and serve websites.</p></div><div></div></div>"
             }
           }
         },
