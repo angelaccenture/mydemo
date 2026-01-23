@@ -41,7 +41,11 @@
           "name": "grid",
           "label": "Grid",
           "options": [
-            {
+           {
+              "name": "1 Columns",
+              "value": "1"
+            },
+             {
               "name": "2 Columns",
               "value": "2"
             },
