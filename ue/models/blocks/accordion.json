@@ -21,8 +21,8 @@
           "name": "accordion-item",
           "unsafeHTML": "<div>Lorem Ipsum dolor site amet</div><div>Text area</div>",
           "fields": [
-            { "name": "summary", "selector": "div>div"},
-            { "name": "text", "selector": "div>div:nth-child(2)"}
+            { "name": "summary", "selector": "div>div:nth-child(1)>p"},
+            { "name": "text", "selector": "div>div:nth-child(2)>p"}
           ]
         }
       }
