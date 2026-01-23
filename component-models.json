@@ -244,7 +244,7 @@
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "div>div>p",
         "value": "",
         "label": "Text",
         "valueType": "string"
