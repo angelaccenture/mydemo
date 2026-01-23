@@ -141,7 +141,7 @@
                 },
                 {
                   "name": "text",
-                  "selector": "div>div>p"
+                  "selector": "div>div"
                 }
               ]
             }
