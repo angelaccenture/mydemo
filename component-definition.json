@@ -63,7 +63,7 @@
           "plugins": {
             "da": {
               "name": "accordion",
-              "unsafeHTML": "<div class=\"accordion\"></div>"
+              "unsafeHTML": "<div class=\"accordion\"><div>Summary</div><div>Test Area</div></div>"
             }
           }
         },
@@ -74,7 +74,7 @@
           "plugins": {
             "da": {
               "name": "accordion-item",
-              "unsafeHTML": "<div>Summary</div><div>Text Area</div>",
+              "unsafeHTML": "<div>Summary Item</div><div>Text Area Item</div>",
               "fields": [
                 {
                   "name": "summary",
