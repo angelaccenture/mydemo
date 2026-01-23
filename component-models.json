@@ -230,13 +230,6 @@
         "multi": false
       },
       {
-        "component": "text",
-        "name": "title",
-        "value": "",
-        "label": "Title",
-        "valueType": "string"
-      },
-      {
         "component": "richtext",
         "name": "text",
         "value": "",
@@ -290,14 +283,14 @@
     "fields": [
       {
         "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]",
-        "label": "Fragment URL",
-        "required": true
+        "name": "urlText",
+        "label": "Fragment URL Text"
       },
       {
         "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)",
-        "label": "Fragment URL Text"
+        "name": "url",
+        "label": "Fragment URL",
+        "required": true
       }
     ]
   },

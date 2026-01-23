@@ -17,10 +17,6 @@
               "selector": "div>div>picture>img[alt]"
             },
             {
-              "name": "title",
-              "selector": "div>div>p>strong"
-            },
-             {
               "name": "text",
               "selector": "div>div>p"
             }
@@ -61,13 +57,6 @@
           "name": "imageAlt",
           "label": "Image Alt",
           "multi": false
-        },
-        {
-          "component": "text",
-          "name": "title",
-          "value": "",
-          "label": "Title",
-          "valueType": "string"
         },
           {
           "component": "richtext",

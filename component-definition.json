@@ -110,10 +110,6 @@
                   "selector": "div>div>picture>img[alt]"
                 },
                 {
-                  "name": "title",
-                  "selector": "div>div>p>strong"
-                },
-                {
                   "name": "text",
                   "selector": "div>div>p"
                 }
@@ -174,9 +170,20 @@
         {
           "title": "Fragment",
           "id": "fragment",
+          "model": "fragment",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"fragment\"><div><div><p><a href=\"\">Fragment URL</a></p></div></div></div>"
+              "unsafeHTML": "<div class=\"fragment\"><div><div><p><a href=\"\">Fragment URL</a></p></div></div></div>",
+              "fields": [
+                {
+                  "name": "url",
+                  "selector": "div>div>p>a[href]"
+                },
+                {
+                  "name": "urlText",
+                  "selector": "div>div>p>a"
+                }
+              ]
             }
           }
         },
