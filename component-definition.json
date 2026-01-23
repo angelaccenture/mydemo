@@ -94,7 +94,7 @@
           }
         },
         {
-          "title": "Card - V2",
+          "title": "Card",
           "id": "card",
           "model": "card",
           "plugins": {
