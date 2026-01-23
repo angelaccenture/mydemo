@@ -224,27 +224,27 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "div>div>picture>img[src]",
+        "name": "image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "div>div>picture>img[alt]",
+        "name": "imageAlt",
         "label": "Image Alt",
         "multi": false
       },
       {
         "component": "text",
-        "name": "div>div>p>strong",
+        "name": "title",
         "value": "",
         "label": "Title",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "div>div>p",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
