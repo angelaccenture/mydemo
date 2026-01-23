@@ -3,9 +3,24 @@
     {
       "title": "Hero",
       "id": "hero",
+      "model": "hero",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" media=\"(min-width: 600px)\"><source type=\"image/webp\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\"><source type=\"image/jpeg\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" media=\"(min-width: 600px)\"><img loading=\"lazy\" alt=\"Alt Text\" src=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" width=\"3840\" height=\"2160\"></picture></div></div><div><div><h1>Author Kit</h1><p>Powerfully simple experiences.</p></div></div></div>"
+          "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture><h1></h1></div></div></div>",
+          "fields": [
+            {
+              "name": "image",
+              "selector": "div>div>picture>img[src]"
+            },
+            {
+              "name": "imageAlt",
+              "selector": "div>div>picture>img[alt]"
+            },
+            {
+              "name": "text",
+              "selector": "div>div>h1"
+            }
+          ]
         }
       }
     }
@@ -41,30 +56,23 @@
             }            
           ]
         },
-        {
+       {
           "component": "reference",
           "valueType": "string",
-          "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
+          "name": "image",
           "label": "Image",
           "multi": false
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
+          "name": "imageAlt",
           "label": "Alt",
           "value": ""
         },
-             {
-          "component": "text",
-          "name": "div:nth-child(2)>div:nth-child(1)>h1:nth-child(1)",
-          "value": "",
-          "label": "Title",
-          "valueType": "string"
-        },
         {
           "component": "text",
-          "name": "div:nth-child(2)>div:nth-child(1)>p:nth-child(2)",
+          "name": "text",
           "value": "",
           "label": "Text",
           "valueType": "string"

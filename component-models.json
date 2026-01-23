@@ -36,18 +36,12 @@
       {
         "component": "reference",
         "name": "image",
-        "hidden": true,
-        "multi": false
-      },
-      {
-        "component": "reference",
-        "name": "img:nth-child(3)[src]",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
-        "name": "img:nth-child(3)[alt]",
+        "name": "imageAlt",
         "label": "Alt Text"
       }
     ]
@@ -340,27 +334,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
+        "name": "image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
+        "name": "imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "text",
-        "name": "div:nth-child(2)>div:nth-child(1)>h1:nth-child(1)",
-        "value": "",
-        "label": "Title",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "div:nth-child(2)>div:nth-child(1)>p:nth-child(2)",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
