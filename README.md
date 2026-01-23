@@ -1,16 +1,15 @@
 # Angel Status - Delete when I am done
-* Page - IP
-* Section - IP
-* Text - Getting errors in UE
-* Image - IP
+* Page - Solution for tags and add styles
+* Section - styles need space after comma
+* Text - Error message, but mostly works
+* **Image - Done V2**
 
 * Accordion - IP
 * Advanced Tabs - Not Started
-* **Card - works in all 3 - Need to update to new code**
+* **Card - works in all 3 - Done V2**
 * Carousel - IP  
-* Columns - TBD, do we need if we have section now?
-* Fragment -Not Started
-* **Hero - works in all 3 - Need to update to new code**
+* Fragment - Rendering frag within UE
+* **Hero - works in all 3 - Done V2**
 * Table - Not Started
 * YouTube - Not Started
 
