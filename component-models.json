@@ -36,18 +36,12 @@
       {
         "component": "reference",
         "name": "image",
-        "hidden": true,
-        "multi": false
-      },
-      {
-        "component": "reference",
-        "name": "img:nth-child(3)[src]",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
-        "name": "img:nth-child(3)[alt]",
+        "name": "imageAlt",
         "label": "Alt Text"
       }
     ]
@@ -79,6 +73,10 @@
         "name": "grid",
         "label": "Grid",
         "options": [
+          {
+            "name": "1 Columns",
+            "value": "1"
+          },
           {
             "name": "2 Columns",
             "value": "2"
@@ -171,14 +169,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
+        "name": "summary",
         "value": "",
         "label": "Summary",
         "required": true
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(1)>div:nth-child(2)>p:nth-child(1)",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string",
@@ -191,13 +189,13 @@
     "fields": [
       {
         "component": "text",
-        "name": "div:nth-child(1)>p:nth-child(1)",
+        "name": "name",
         "valueType": "string",
         "label": "Tab Name"
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(2)",
+        "name": "content",
         "label": "Content",
         "valueType": "string"
       }
@@ -224,27 +222,27 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
+        "name": "image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
+        "name": "imageAlt",
         "label": "Image Alt",
         "multi": false
       },
       {
         "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(2)>strong:nth-child(1)",
+        "name": "title",
         "value": "",
         "label": "Title",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(3)",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
@@ -257,19 +255,19 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
+        "name": "backgroundImage",
         "label": "Background Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
+        "name": "backgroundImageAlt",
         "label": "Background Image Alt"
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(2)",
+        "name": "text",
         "label": "Text",
         "valueType": "string"
       }
@@ -296,14 +294,14 @@
     "fields": [
       {
         "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]",
-        "label": "Fragment URL",
-        "required": true
+        "name": "urlText",
+        "label": "Fragment URL Text"
       },
       {
         "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)",
-        "label": "Fragment URL Text"
+        "name": "url",
+        "label": "Fragment URL",
+        "required": true
       }
     ]
   },
@@ -340,27 +338,27 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
+        "name": "image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
+        "name": "imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "text",
-        "name": "div:nth-child(2)>div:nth-child(1)>h1:nth-child(1)",
+        "name": "title",
         "value": "",
         "label": "Title",
         "valueType": "string"
       },
       {
-        "component": "text",
-        "name": "div:nth-child(2)>div:nth-child(1)>p:nth-child(2)",
+        "component": "richtext",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
@@ -368,47 +366,25 @@
     ]
   },
   {
+    "id": "schedule",
+    "fields": []
+  },
+  {
     "id": "table",
-    "fields": [
-      {
-        "component": "boolean",
-        "name": "classes_autoplay",
-        "label": "Autoplay Video",
-        "valueType": "boolean"
-      },
-      {
-        "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]",
-        "label": "Video URL",
-        "valueType": "string",
-        "required": true
-      },
-      {
-        "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)",
-        "label": "Video URL Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(2)>img:nth-child(3)[src]",
-        "label": "Poster Image",
-        "valueType": "string"
-      }
-    ]
+    "fields": []
   },
   {
     "id": "tabs-item",
     "fields": [
       {
         "component": "text",
-        "name": "div:nth-child(1)>p:nth-child(1)",
+        "name": "name",
         "valueType": "string",
         "label": "Tab Name"
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(2)",
+        "name": "content",
         "label": "Content",
         "valueType": "string"
       }
@@ -425,20 +401,20 @@
       },
       {
         "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]",
+        "name": "videoUrl",
         "label": "Video URL",
         "valueType": "string",
         "required": true
       },
       {
         "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)",
+        "name": "videoUrlText",
         "label": "Video URL Text",
         "valueType": "string"
       },
       {
         "component": "reference",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(2)>img:nth-child(3)[src]",
+        "name": "posterImage",
         "label": "Poster Image",
         "valueType": "string"
       }

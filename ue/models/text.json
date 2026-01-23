@@ -3,9 +3,11 @@
     {
       "title": "Text",
       "id": "text",
+      "model": "text",
       "plugins": {
         "da": {
-          "unsafeHTML": "<p></p>"
+          "name": "text",
+          "type": "text"
         }
       }
     }
