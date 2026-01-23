@@ -8,7 +8,7 @@
       "plugins": {
         "da": {
           "name": "accordion",
-          "unsafeHTML": "<div class=\"accordion\"><div><div>Summary</div><div>Test Area</div></div></div>"
+          "unsafeHTML": "<div class=\"accordion\"><div><div>Summary</div><div>Text Area</div></div></div>"
         }
       }
     },

@@ -63,7 +63,7 @@
           "plugins": {
             "da": {
               "name": "accordion",
-              "unsafeHTML": "<div class=\"accordion\"><div><div>Summary</div><div>Test Area</div></div></div>"
+              "unsafeHTML": "<div class=\"accordion\"><div><div>Summary</div><div>Text Area</div></div></div>"
             }
           }
         },
@@ -254,11 +254,11 @@
               "fields": [
                 {
                   "name": "image",
-                  "selector": "div>div>a>picture>img[src]"
+                  "selector": "div>div>a>picture>img:nth-child(3)[src]"
                 },
                 {
                   "name": "imageAlt",
-                  "selector": "div>div>a>picture>img[alt]"
+                  "selector": "div>div>a>picture>img:nth-child(3)[alt]"
                 },
                 {
                   "name": "title",
