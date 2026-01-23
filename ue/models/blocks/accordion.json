@@ -3,20 +3,30 @@
     {
       "title": "Accordion",
       "id": "accordion",
+      "model": "accordion",
+      "filter": "accordion",
       "plugins": {
         "da": {
           "name": "accordion",
-          "unsafeHTML": "<div class=\"accordion\"></div>"
+          "rows": 1,
+          "columns": 2
+          
         }
       }
     },
     {
       "title": "Accordion Item",
       "id": "accordion-item",
+      "model": "accordion-item",
       "plugins": {
         "da": {
           "name": "accordion-item",
-          "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>"
+          "rows": 2,
+          "columns": 0,
+          "fields": [
+            { "name": "summary", "selector": "div:nth-child(1)"},
+            { "name": "text", "selector": "div:nth-child(2)"}
+          ]
         }
       }
     }
@@ -26,16 +36,16 @@
       "id": "accordion-item",
       "fields": [
         {
-          "component": "text",
+          "component": "richtext",
           "valueType": "string",
-          "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
+          "name": "summary",
           "value": "",
           "label": "Summary",
           "required": true
         },
         {
           "component": "richtext",
-          "name": "div:nth-child(1)>div:nth-child(2)>p:nth-child(1)",
+          "name": "text",
           "value": "",
           "label": "Text",
           "valueType": "string",
@@ -48,7 +58,7 @@
     {
       "id": "accordion",
       "components": [
-        "accordion-item","image"
+        "accordion-item"
       ]
     }
   ]

@@ -24,12 +24,11 @@
   {
     "id": "accordion",
     "components": [
-      "accordion-item",
-      "image"
+      "accordion-item"
     ]
   },
   {
-    "id": "advanced-tabs",
+    "id": "tabs",
     "components": [
       "tabs-item"
     ]

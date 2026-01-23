@@ -1,11 +1,11 @@
 {
   "definitions": [
     {
-      "title": "Table - AK",
-      "id": "table",
+      "title": "Schedule",
+      "id": "schedule",
       "plugins": {
         "da": {
-          "name": "table",
+          "name": "schedule",
           "rows": 1,
           "columns": 1
         }
@@ -14,7 +14,7 @@
   ],
   "models": [
     {
-      "id": "table",
+      "id": "schedule",
       "fields": [
     
       ]

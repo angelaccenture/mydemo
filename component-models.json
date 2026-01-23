@@ -163,16 +163,16 @@
     "id": "accordion-item",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
+        "name": "summary",
         "value": "",
         "label": "Summary",
         "required": true
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(1)>div:nth-child(2)>p:nth-child(1)",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string",
@@ -185,13 +185,13 @@
     "fields": [
       {
         "component": "text",
-        "name": "div:nth-child(1)>p:nth-child(1)",
+        "name": "name",
         "valueType": "string",
         "label": "Tab Name"
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(2)",
+        "name": "content",
         "label": "Content",
         "valueType": "string"
       }
@@ -244,19 +244,19 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
+        "name": "backgroundImage",
         "label": "Background Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
+        "name": "backgroundImageAlt",
         "label": "Background Image Alt"
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(2)",
+        "name": "text",
         "label": "Text",
         "valueType": "string"
       }
@@ -355,47 +355,25 @@
     ]
   },
   {
+    "id": "schedule",
+    "fields": []
+  },
+  {
     "id": "table",
-    "fields": [
-      {
-        "component": "boolean",
-        "name": "classes_autoplay",
-        "label": "Autoplay Video",
-        "valueType": "boolean"
-      },
-      {
-        "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]",
-        "label": "Video URL",
-        "valueType": "string",
-        "required": true
-      },
-      {
-        "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)",
-        "label": "Video URL Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(2)>img:nth-child(3)[src]",
-        "label": "Poster Image",
-        "valueType": "string"
-      }
-    ]
+    "fields": []
   },
   {
     "id": "tabs-item",
     "fields": [
       {
         "component": "text",
-        "name": "div:nth-child(1)>p:nth-child(1)",
+        "name": "name",
         "valueType": "string",
         "label": "Tab Name"
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(2)",
+        "name": "content",
         "label": "Content",
         "valueType": "string"
       }
@@ -412,20 +390,20 @@
       },
       {
         "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]",
+        "name": "videoUrl",
         "label": "Video URL",
         "valueType": "string",
         "required": true
       },
       {
         "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)",
+        "name": "videoUrlText",
         "label": "Video URL Text",
         "valueType": "string"
       },
       {
         "component": "reference",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(2)>img:nth-child(3)[src]",
+        "name": "posterImage",
         "label": "Poster Image",
         "valueType": "string"
       }
