@@ -141,11 +141,11 @@
                 },
                 {
                   "name": "title",
-                  "selector": "div>div>p:nth-child(1)>strong"
+                  "selector": "div>div>p:nth-child(2)>strong"
                 },
                 {
                   "name": "text",
-                  "selector": "div>div>p:nth-child(2)"
+                  "selector": "div>div>p:nth-child(3)"
                 }
               ]
             }
