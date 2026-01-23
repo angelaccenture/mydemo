@@ -256,7 +256,7 @@
               "fields": [
                 {
                   "name": "image",
-                  "selector": "div>div>picture>img[src]"
+                  "selector": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]"
                 },
                 {
                   "name": "imageAlt",
@@ -264,11 +264,11 @@
                 },
                 {
                   "name": "title",
-                  "selector": "div:nth-child(2)>div>h1"
+                  "selector": "div:nth-child(2)>div:nth-child(1)>h1:nth-child(1)"
                 },
                 {
                   "name": "text",
-                  "selector": "div:nth-child(2)>div>p"
+                  "selector": "div:nth-child(2)>div:nth-child(1)>p:nth-child(2)"
                 }
               ]
             }
