@@ -18,11 +18,11 @@
             },
             {
               "name": "title",
-              "selector": "div>div:nth-child(2)>h1"
+              "selector": "div:nth-child(2)>div>h1"
             },
             {
               "name": "text",
-              "selector": "div>div:nth-child(2)>p"
+              "selector": "div:nth-child(2)>div>p"
             }
           ]
         }
