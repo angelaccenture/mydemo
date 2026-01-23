@@ -8,7 +8,7 @@
       "plugins": {
         "da": {
           "name": "accordion",
-          "unsafeHTML": "<div class=\"accordion\"><div><div>Summary</div><div>Text Area</div></div></div>"
+          "unsafeHTML": "<div class=\"accordion\"><div></div></div>"
         }
       }
     },
@@ -19,10 +19,10 @@
       "plugins": {
         "da": {
           "name": "accordion-item",
-          "unsafeHTML": "<div><div>Summary Item</div><div>Text Area Item</div></div>",
+          "unsafeHTML": "<div>Lorem Ipsum dolor site amet</div><div>Text area</div>",
           "fields": [
-            { "name": "summary", "selector": "div>div:nth-child(1)"},
-            { "name": "text", "selector": "div>div:nth-child(2)"}
+            { "name": "summary", "selector": "div>div>p"},
+            { "name": "text", "selector": "div>div:nth-child(2)>p"}
           ]
         }
       }
