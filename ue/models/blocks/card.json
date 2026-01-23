@@ -71,7 +71,7 @@
         },
           {
           "component": "richtext",
-          "name": "div>div>p",
+          "name": "text",
           "value": "",
           "label": "Text",
           "valueType": "string"
