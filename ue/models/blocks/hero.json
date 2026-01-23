@@ -6,8 +6,8 @@
       "model": "hero",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture><h1></h1></div></div></div>",
-          "fields": [
+          "unsafeHTML": "<div class=\"hero\"><div><div><picture><source type=\"image/webp\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" media=\"(min-width: 600px)\"><source type=\"image/webp\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\"><source type=\"image/jpeg\" srcset=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" media=\"(min-width: 600px)\"><img loading=\"lazy\" alt=\"Alt Text\" src=\"https://content.da.live/aemsites/author-kit/media/bg-image.jpg\" width=\"3840\" height=\"2160\"></picture></div></div><div><div><h1>Author Kit</h1><p>Powerfully simple experiences.</p></div></div></div>",
+           "fields": [
             {
               "name": "image",
               "selector": "div>div>picture>img[src]"
