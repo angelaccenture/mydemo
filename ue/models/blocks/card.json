@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Card",
+      "title": "Card - V2",
       "id": "card",
        "model": "card",
       "plugins": {
