@@ -13,7 +13,7 @@
       }
     },
     {
-      "title": "Carousel Slide",
+      "title": "Carousel Slide - V2",
       "id": "carousel-item",
       "model": "carousel-item",
       "plugins": {
@@ -21,9 +21,9 @@
           "rows": 1,
           "columns": 1,
           "fields": [
-            { "name": "backgroundImage", "selector": "div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]"},
-            { "name": "backgroundImageAlt", "selector": "div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]"},
-            { "name": "text", "selector": "div:nth-child(2)>p:nth-child(1)"}
+            { "name": "backgroundImage", "selector": "div>picture>img:nth-child(3)[src]"},
+            { "name": "backgroundImageAlt", "selector": "div>picture>img:nth-child(3)[alt]"},
+            { "name": "text", "selector": "div:nth-child(2)>p"}
           ]
         }
       }
