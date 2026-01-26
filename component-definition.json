@@ -62,19 +62,19 @@
           "filter": "accordion",
           "plugins": {
             "da": {
-              "name": "accordion",
-              "unsafeHTML": "<div class=\"accordion\"><div></div></div>"
+              "rows": 1,
+              "columns": 0
             }
           }
         },
         {
-          "title": "Accordion Item",
+          "title": "Accordion Item - V2",
           "id": "accordion-item",
           "model": "accordion-item",
           "plugins": {
             "da": {
-              "name": "accordion-item",
-              "unsafeHTML": "<div><div>Lorem Ipsum dolor site amet</div><div>Text area</div></div>",
+              "rows": 0,
+              "columns": 2,
               "fields": [
                 {
                   "name": "summary",
@@ -162,7 +162,7 @@
           }
         },
         {
-          "title": "Carousel Slide - V2",
+          "title": "Carousel Slide",
           "id": "carousel-item",
           "model": "carousel-item",
           "plugins": {

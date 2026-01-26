@@ -7,7 +7,7 @@
 * Accordion - IP
 * Advanced Tabs - Not Started
 * **Card - works in all 3 - Done V2**
-* Carousel - IP  
+* **Carousel - Done V2** 
 * Fragment - Rendering frag within UE
 * **Hero - works in all 3 - Done V2**
 * Table - Not Started
