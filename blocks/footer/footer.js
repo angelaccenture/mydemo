@@ -26,6 +26,6 @@ export default async function init(el) {
 */
     el.append(fragment);
   } catch (e) {
-    throw Error(e);
+   // throw Error(e);
   }
 }
