@@ -51,7 +51,6 @@ export async function loadBlock(block) {
   const name = classList[0];
   block.dataset.blockName = name;
   const blockPath = `/blocks/${name}/${name}`;
-  console.log(`${blockPath}.test`);
   const loaded = [new Promise((resolve) => {
     (async () => {
       try {
