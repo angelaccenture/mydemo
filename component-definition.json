@@ -172,15 +172,15 @@
               "fields": [
                 {
                   "name": "backgroundImage",
-                  "selector": "div:nth-child(1)>picture>img[src]"
+                  "selector": "div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]"
                 },
                 {
                   "name": "backgroundImageAlt",
-                  "selector": "div:nth-child(1)>picture>img[alt]"
+                  "selector": "div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]"
                 },
                 {
                   "name": "text",
-                  "selector": "div:nth-child(2)"
+                  "selector": "div:nth-child(2)>p:nth-child(1)"
                 }
               ]
             }
