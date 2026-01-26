@@ -8,7 +8,7 @@
       "plugins": {
         "da": {
           "rows": 1,
-          "columns": 1
+          "columns": 2
         }
       }
     },
@@ -18,8 +18,6 @@
       "model": "accordion-item",
       "plugins": {
         "da": {
-         "rows": 1,
-          "columns": 2,
           "fields": [
             { "name": "summary", "selector": "div>div:nth-child(1)>p"},
             { "name": "text", "selector": "div>div:nth-child(2)>p"}
