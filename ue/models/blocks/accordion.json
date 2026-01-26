@@ -8,17 +8,17 @@
       "plugins": {
         "da": {
           "rows": 1,
-          "columns": 2
+          "columns": 0
         }
       }
     },
     {
-      "title": "Accordion Item",
+      "title": "Accordion Item - V2",
       "id": "accordion-item",
       "model": "accordion-item",
       "plugins": {
         "da": {
-          "rows": 1,
+          "rows": 0,
           "columns": 2,
           "fields": [
             { "name": "summary", "selector": "div>div:nth-child(1)>p"},
