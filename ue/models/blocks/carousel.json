@@ -13,7 +13,7 @@
       }
     },
     {
-      "title": "Carousel Slide - V2",
+      "title": "Carousel Slide",
       "id": "carousel-item",
       "model": "carousel-item",
       "plugins": {
