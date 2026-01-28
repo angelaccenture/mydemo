@@ -270,6 +270,7 @@ function decorateFooter() {
   if (!footer) return;
   const meta = getMetadata('footer') || 'footer';
   if (meta === 'off') {
+    document.body.classList.add('no-footer');
     footer.remove();
     return;
   }
