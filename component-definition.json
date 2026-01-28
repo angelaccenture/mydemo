@@ -1,56 +1,6 @@
 {
   "groups": [
     {
-      "title": "Default Content",
-      "id": "default",
-      "components": [
-        {
-          "title": "Text",
-          "id": "text",
-          "plugins": {
-            "da": {
-              "name": "text",
-              "type": "text"
-            }
-          }
-        },
-        {
-          "title": "Image",
-          "id": "image",
-          "model": "image",
-          "plugins": {
-            "da": {
-              "name": "image",
-              "type": "image",
-              "fields": [
-                {
-                  "name": "imageAlt",
-                  "selector": "img[alt]"
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Sections",
-      "id": "sections",
-      "components": [
-        {
-          "title": "Section Metadata",
-          "id": "section",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div></div>"
-            }
-          },
-          "filter": "section",
-          "model": "section"
-        }
-      ]
-    },
-    {
       "title": "Angel Test Section",
       "id": "angeltest",
       "components": [
@@ -201,6 +151,56 @@
               ]
             }
           }
+        }
+      ]
+    },
+    {
+      "title": "Default Content",
+      "id": "default",
+      "components": [
+        {
+          "title": "Text",
+          "id": "text",
+          "plugins": {
+            "da": {
+              "name": "text",
+              "type": "text"
+            }
+          }
+        },
+        {
+          "title": "Image",
+          "id": "image",
+          "model": "image",
+          "plugins": {
+            "da": {
+              "name": "image",
+              "type": "image",
+              "fields": [
+                {
+                  "name": "imageAlt",
+                  "selector": "img[alt]"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Sections",
+      "id": "sections",
+      "components": [
+        {
+          "title": "Section Metadata",
+          "id": "section",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div></div>"
+            }
+          },
+          "filter": "section",
+          "model": "section"
         }
       ]
     },

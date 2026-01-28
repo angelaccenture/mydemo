@@ -1,6 +1,15 @@
 {
   "groups": [
     {
+      "title": "Angel Test Section",
+      "id": "angeltest",
+      "components": [
+        {
+          "...": "./blocks/*.json#/definitions"
+        }
+      ]
+    },
+    {
       "title": "Default Content",
       "id": "default",
       "components": [
@@ -18,15 +27,6 @@
       "components": [
         {
           "...": "./section.json#/definitions"
-        }
-      ]
-    },
-     {
-      "title": "Angel Test Section",
-      "id": "angeltest",
-      "components": [
-        {
-          "...": "./blocks/*.json#/definitions"
         }
       ]
     },

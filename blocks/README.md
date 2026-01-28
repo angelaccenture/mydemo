@@ -1,5 +1,5 @@
 # Universal Editor (UE) Block Checkist
-- Page - IP, verify that I have all features
+- Page - IP, verify that I have all features - Fix UE error message
 - Text - Fix error message in UE, drag/drop feature
 - Image - Done w/ V2 model
 - Header - 
