@@ -1,5 +1,7 @@
 # Universal Editor (UE) Block Checkist
 - Page - IP, verify that I have all features
+- Text - Fix error message in UE, drag/drop feature
+- Image - Done w/ V2 model
 - Header - 
 - Footer - Need to fix it showing on pages
 - Section-Metadata - IP, need to add all new Author Kit features
