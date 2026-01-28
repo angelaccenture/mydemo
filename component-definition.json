@@ -79,11 +79,11 @@
               "fields": [
                 {
                   "name": "summary",
-                  "selector": "div:nth-child(1)"
+                  "selector": "div>div>p"
                 },
                 {
                   "name": "text",
-                  "selector": "div:nth-child(2)"
+                  "selector": "div>div:nth-child(2)>p"
                 }
               ]
             }
@@ -140,15 +140,15 @@
               "fields": [
                 {
                   "name": "backgroundImage",
-                  "selector": "div:nth-child(1)>picture>img[src]"
+                  "selector": "div>div>picture>img:nth-child(3)[src]"
                 },
                 {
                   "name": "backgroundImageAlt",
-                  "selector": "div:nth-child(1)>picture>img[alt]"
+                  "selector": "div>div>picture>img:nth-child(3)[alt]"
                 },
                 {
                   "name": "text",
-                  "selector": "div:nth-child(2)"
+                  "selector": "div>div:nth-child(2)>p"
                 }
               ]
             }
