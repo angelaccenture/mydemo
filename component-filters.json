@@ -10,7 +10,9 @@
     "components": [
       "text",
       "image",
+      "accordion",
       "card",
+      "carousel",
       "hero"
     ]
   },

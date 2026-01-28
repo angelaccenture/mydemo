@@ -13,7 +13,7 @@
 | Accoridion | In Progress | Block Collection
 | Advanced-Tabs | Not Started | Author Kit block
 | Card | Done | w/ V2 Model
-| Carousel | Mostly Done | Brought in aem.js (need to move that code into carousel.js)
+| Carousel | Mostly Done | Works in UE when carousel doesn't render, but breaks when it renders
 | Columns | n/a | Not sure if needed
 | Fragment | Not Started | Author Kit block
 | Hero | Done | w/ V2 Model
