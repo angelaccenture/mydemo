@@ -8,9 +8,7 @@
       "plugins": {
         "da": {
           "name": "accordion",
-          "rows": 1,
-          "columns": 2
-          
+          "unsafeHTML": "<div class=\"carousel\"></div>"          
         }
       }
     },
@@ -21,8 +19,7 @@
       "plugins": {
         "da": {
           "name": "accordion-item",
-          "rows": 2,
-          "columns": 0,
+          "unsafeHTML": "<div><div>Lorem ipsum dolor site amet</div><div>Aliquando sadipscing eum ea, aliquid postulant qui in. Option</div></div>",
           "fields": [
             { "name": "summary", "selector": "div>div>p"},
             { "name": "text", "selector": "div>div:nth-child(2)>p"}
