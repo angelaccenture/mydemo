@@ -15,10 +15,16 @@
 - YouTube - Author Kit block
 
 # Other Features
-- Tag Manager
-- MSM (localization)
+- Tag Manager (https://github.com/aemsites/da-blog-tools/blob/main/tools/tags/README.md)
+- MSM (localization) - (https://github.com/mhaack/da-tools/tree/main/tools/locales)
 - Templates
 - Permissions
 - DAM Integration (and Dynamic Media - Need to get more requirements)
 - Analytics Integration (need full integration - get requirements)
+
+# Helpful Links
+https://github.com/alexcarol/sidekick-library-generator
+https://github.com/adobe/aem-github-copilot
+
+
 
