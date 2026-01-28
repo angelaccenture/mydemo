@@ -117,6 +117,8 @@
     {
       "id": "section",
       "components": [
+        "text",
+        "image",
         "card",
         "hero"
       ]

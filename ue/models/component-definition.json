@@ -1,19 +1,7 @@
 {
   "groups": [
     {
-      "title": "Angel Test Section",
-      "id": "angeltest",
-      "components": [
-       {
-          "...": "./text.json#/definitions"
-        },
-        {
-          "...": "./image.json#/definitions"
-        }
-      ]
-    },
-    {
-      "title": "Default Content - Test",
+      "title": "Default Content",
       "id": "default",
       "components": [
         {
