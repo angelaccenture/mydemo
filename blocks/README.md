@@ -13,7 +13,7 @@
 | Accoridion | In Progress | Block Collection
 | Advanced-Tabs | Not Started | Author Kit block
 | Card | Done | w/ V2 Model
-| Carousel | In Progress | Block Collection
+| Carousel | Mostly Done | Brought in aem.js (need to move that code into carousel.js)
 | Columns | n/a | Not sure if needed
 | Fragment | Not Started | Author Kit block
 | Hero | Done | w/ V2 Model
@@ -30,9 +30,11 @@
 - DAM Integration (and Dynamic Media - Need to get more requirements)
 - Analytics Integration (need full integration - get requirements)
 
-# Helpful Links
+## Helpful Links
 https://github.com/alexcarol/sidekick-library-generator
 https://github.com/adobe/aem-github-copilot
 
+## Angel Notes
+- Use partials to create shortcuts for name mappings maybe? for consistent ones
 
 
