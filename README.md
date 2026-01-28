@@ -1,18 +1,3 @@
-# Angel Status - Delete when I am done
-* Page - Solution for tags and add styles
-* Section - styles need space after comma
-* Text - Error message, but mostly works
-* **Image - Done V2**
-
-* Accordion - IP
-* Advanced Tabs - Not Started
-* **Card - works in all 3 - Done V2**
-* **Carousel - Done V2** 
-* Fragment - Rendering frag within UE
-* **Hero - works in all 3 - Done V2**
-* Table - Not Started
-* YouTube - Not Started
-
 # Author Kit
 For projects that want a few more batteries. Built by the team who brought you da.live and adobe.com.
 

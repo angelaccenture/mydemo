@@ -87,11 +87,6 @@
       text-align: center;
     }
   }
-  &.highlight {
-    background-color: var(--color-light);
-    margin: 0;
-    padding: 40px 0;
-  }
 
   > .default-content > *:first-child {
     margin-top: 0;
