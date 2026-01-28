@@ -55,7 +55,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion - Test",
+          "title": "Accordion - 1:30pm",
           "id": "accordion",
           "model": "accordion",
           "filter": "accordion",
@@ -77,11 +77,11 @@
               "fields": [
                 {
                   "name": "summary",
-                  "selector": "div>div>p"
+                  "selector": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)"
                 },
                 {
                   "name": "text",
-                  "selector": "div>div:nth-child(2)>p"
+                  "selector": "div:nth-child(1)>div:nth-child(2)>p:nth-child(1)"
                 }
               ]
             }
@@ -136,15 +136,15 @@
               "fields": [
                 {
                   "name": "backgroundImage",
-                  "selector": "div>div>picture>img:nth-child(3)[src]"
+                  "selector": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]"
                 },
                 {
                   "name": "backgroundImageAlt",
-                  "selector": "div>div>picture>img:nth-child(3)[alt]"
+                  "selector": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]"
                 },
                 {
                   "name": "text",
-                  "selector": "div>div:nth-child(2)>p"
+                  "selector": "div:nth-child(1)>div:nth-child(2)>p:nth-child(1)"
                 }
               ]
             }

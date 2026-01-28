@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Accordion - Test",
+      "title": "Accordion - 1:30pm",
       "id": "accordion",
       "model": "accordion",
       "filter": "accordion",
@@ -21,8 +21,8 @@
           "name": "accordion-item",
           "unsafeHTML": "<div><div>Lorem ipsum dolor site amet</div><div>Aliquando sadipscing eum ea, aliquid postulant qui in. Option</div></div>",
           "fields": [
-            { "name": "summary", "selector": "div>div>p"},
-            { "name": "text", "selector": "div>div:nth-child(2)>p"}
+            { "name": "summary", "selector": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)"},
+            { "name": "text", "selector": "div:nth-child(1)>div:nth-child(2)>p:nth-child(1)"}
           ]
         }
       }
