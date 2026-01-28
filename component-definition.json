@@ -77,11 +77,11 @@
               "fields": [
                 {
                   "name": "summary",
-                  "selector": "div>div:nth-child(1)>p"
+                  "selector": "div:nth-child(1)>p:nth-child(1)"
                 },
                 {
                   "name": "text",
-                  "selector": "div>div:nth-child(2)>p"
+                  "selector": "div:nth-child(1)>p:nth-child(2)"
                 }
               ]
             }
