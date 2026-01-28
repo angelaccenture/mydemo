@@ -8,7 +8,7 @@
       "plugins": {
         "da": {
           "rows": 1,
-          "columns": 0
+          "columns": 1
         }
       }
     },
@@ -18,8 +18,8 @@
       "model": "accordion-item",
       "plugins": {
         "da": {
-          "rows": 1,
-          "columns": 2,
+          "rows": 0,
+          "columns": 3,
           "fields": [
             { "name": "summary", "selector": "div>div:nth-child(1)>p"},
             { "name": "text", "selector": "div>div:nth-child(2)>p"}
@@ -55,7 +55,7 @@
     {
       "id": "accordion",
       "components": [
-        "accordion-item","image","text"
+        "accordion-item"
       ]
     }
   ]

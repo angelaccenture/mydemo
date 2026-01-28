@@ -62,7 +62,7 @@
           "plugins": {
             "da": {
               "rows": 1,
-              "columns": 0
+              "columns": 1
             }
           }
         },
@@ -72,8 +72,8 @@
           "model": "accordion-item",
           "plugins": {
             "da": {
-              "rows": 1,
-              "columns": 2,
+              "rows": 0,
+              "columns": 3,
               "fields": [
                 {
                   "name": "summary",
