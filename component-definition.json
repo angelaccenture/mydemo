@@ -25,7 +25,7 @@
               "fields": [
                 {
                   "name": "imageAlt",
-                  "selector": "img[alt]"
+                  "selector": "img:nth-child(3)[alt]"
                 }
               ]
             }
@@ -55,6 +55,39 @@
       "id": "blocks",
       "components": [
         {
+          "title": "Accordion",
+          "id": "accordion",
+          "model": "accordion",
+          "filter": "accordion",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 0
+            }
+          }
+        },
+        {
+          "title": "Accordion Item - 1/28",
+          "id": "accordion-item",
+          "model": "accordion-item",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 4,
+              "fields": [
+                {
+                  "name": "summary",
+                  "selector": "div:nth-child(1)>p:nth-child(1)"
+                },
+                {
+                  "name": "text",
+                  "selector": "div:nth-child(1)>p:nth-child(2)"
+                }
+              ]
+            }
+          }
+        },
+        {
           "title": "Card",
           "id": "card",
           "model": "card",
@@ -77,6 +110,63 @@
                 {
                   "name": "text",
                   "selector": "div>div>p:nth-child(3)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Carousel",
+          "id": "carousel",
+          "model": "carousel",
+          "filter": "carousel",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 1
+            }
+          }
+        },
+        {
+          "title": "Carousel Slide",
+          "id": "carousel-item",
+          "model": "carousel-item",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "backgroundImage",
+                  "selector": "div>picture>img:nth-child(3)[src]"
+                },
+                {
+                  "name": "backgroundImageAlt",
+                  "selector": "div>picture>img:nth-child(3)[alt]"
+                },
+                {
+                  "name": "text",
+                  "selector": "div:nth-child(2)>p"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Fragment",
+          "id": "fragment",
+          "model": "fragment",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"fragment\"><div><div><p><a href=\"\">Fragment URL</a></p></div></div></div>",
+              "fields": [
+                {
+                  "name": "url",
+                  "selector": "div>div>p>a[href]"
+                },
+                {
+                  "name": "urlText",
+                  "selector": "div>div>p>a"
                 }
               ]
             }

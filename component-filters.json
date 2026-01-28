@@ -8,8 +8,26 @@
   {
     "id": "section",
     "components": [
+      "text",
+      "image",
+      "accordion",
       "card",
+      "carousel",
       "hero"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item",
+      "image",
+      "text"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
     ]
   }
 ]
