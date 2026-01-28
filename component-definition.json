@@ -55,14 +55,14 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion",
+          "title": "Accordion - Test",
           "id": "accordion",
           "model": "accordion",
           "filter": "accordion",
           "plugins": {
             "da": {
               "name": "accordion",
-              "unsafeHTML": "<div class=\"carousel\"></div>"
+              "unsafeHTML": "<div class=\"accordion\"></div>"
             }
           }
         },
