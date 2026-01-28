@@ -159,44 +159,6 @@
     ]
   },
   {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "summary",
-        "value": "",
-        "label": "Summary",
-        "required": true
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string",
-        "required": true
-      }
-    ]
-  },
-  {
-    "id": "tabs-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "name",
-        "valueType": "string",
-        "label": "Tab Name"
-      },
-      {
-        "component": "richtext",
-        "name": "content",
-        "label": "Content",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "card",
     "fields": [
       {
@@ -241,62 +203,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "carousel-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "backgroundImage",
-        "label": "Background Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "backgroundImageAlt",
-        "label": "Background Image Alt"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "columns",
-    "fields": [
-      {
-        "component": "number",
-        "valueType": "number",
-        "name": "columns",
-        "label": "Number of Columns",
-        "value": 2,
-        "validation": {
-          "numberMin": 1,
-          "numberMax": 6
-        }
-      }
-    ]
-  },
-  {
-    "id": "fragment",
-    "fields": [
-      {
-        "component": "text",
-        "name": "urlText",
-        "label": "Fragment URL Text"
-      },
-      {
-        "component": "text",
-        "name": "url",
-        "label": "Fragment URL",
-        "required": true
       }
     ]
   },
@@ -356,91 +262,6 @@
         "name": "text",
         "value": "",
         "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "schedule",
-    "fields": []
-  },
-  {
-    "id": "table",
-    "fields": []
-  },
-  {
-    "id": "tabs-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "name",
-        "valueType": "string",
-        "label": "Tab Name"
-      },
-      {
-        "component": "richtext",
-        "name": "content",
-        "label": "Content",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "video",
-    "fields": [
-      {
-        "component": "boolean",
-        "name": "classes_autoplay",
-        "label": "Autoplay Video",
-        "valueType": "boolean"
-      },
-      {
-        "component": "text",
-        "name": "videoUrl",
-        "label": "Video URL",
-        "valueType": "string",
-        "required": true
-      },
-      {
-        "component": "text",
-        "name": "videoUrlText",
-        "label": "Video URL Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "posterImage",
-        "label": "Poster Image",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "youtube",
-    "fields": [
-      {
-        "component": "boolean",
-        "name": "classes_autoplay",
-        "label": "Autoplay Video",
-        "valueType": "boolean"
-      },
-      {
-        "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]",
-        "label": "Video URL",
-        "valueType": "string",
-        "required": true
-      },
-      {
-        "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)",
-        "label": "Video URL Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(2)>img:nth-child(3)[src]",
-        "label": "Poster Image",
         "valueType": "string"
       }
     ]

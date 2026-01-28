@@ -20,48 +20,5 @@
       "text",
       "youtube"
     ]
-  },
-  {
-    "id": "accordion",
-    "components": [
-      "accordion-item",
-      "image",
-      "text"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tabs-item"
-    ]
-  },
-  {
-    "id": "carousel",
-    "components": [
-      "carousel-item"
-    ]
-  },
-  {
-    "id": "columns",
-    "components": [
-      "columns-row"
-    ]
-  },
-  {
-    "id": "columns-row",
-    "components": []
-  },
-  {
-    "id": "columns-cell",
-    "components": [
-      "text",
-      "image"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tabs-item"
-    ]
   }
 ]
