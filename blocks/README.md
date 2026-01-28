@@ -1,20 +1,26 @@
 # Universal Editor (UE) Block Checkist
-- Page - IP, verify that I have all features - Fix UE error message
-- Text - Fix error message in UE, drag/drop feature
-- Image - Done w/ V2 model
-- Header - 
-- Footer - Need to fix it showing on pages
-- Section-Metadata - IP, need to add all new Author Kit features
-- Accoridion - Bring over from Block Collection
-- Advanced-Tabs - Author Kit block
-- Card - Done w/ V2 model
-- Carousel - Bring over from Block Collection
-- Columns - Ask if still needed (with section-metadata not sure of purpose)
-- Fragment -
-- Hero - Done w/ V2 model
-- Schedule - Author Kit block
-- Table - Author Kit block
-- YouTube - Author Kit block
+
+| Block Name | Status | Notes
+| :--- | :---: | ---: |
+| Page | Mostly Done | verify/fix new Author Kit features - Fix UE error message
+| Text | In Progress | Fix error message in UE, drag/drop featuretes
+| Image | Mostly Done | Fix alt Text
+| :--- | :---: | ---: |
+| Header | n/a | Text Blocks
+| Footer | In Progress | Need to fix it showing on pages
+| Section-Metadata | Mostly Done | verify/fix new Author Kit features
+| :--- | :---: | ---: |
+| Accoridion | In Progress | Block Collection
+| Advanced-Tabs | Not Started | Author Kit block
+| Card | Done | w/ V2 Model
+| Carousel | In Progress | Block Collection
+| Columns | n/a | Not sure if needed
+| Fragment | Not Started | Author Kit block
+| Hero | Done | w/ V2 Model
+| Schedule | Not Started | Author Kit block
+| Table | Not Started | Author Kit block
+| YouTube | Not Started | Author Kit block
+
 
 # Other Features
 - Tag Manager (https://github.com/aemsites/da-blog-tools/blob/main/tools/tags/README.md)
