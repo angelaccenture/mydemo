@@ -8,17 +8,8 @@
   {
     "id": "section",
     "components": [
-      "accordion",
       "card",
-      "carousel",
-      "columns",
-      "fragment",
-      "hero",
-      "image",
-      "advanced-tabs",
-      "table",
-      "text",
-      "youtube"
+      "hero"
     ]
   }
 ]

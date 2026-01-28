@@ -64,35 +64,16 @@
         ]
       },
       {
-        "component": "select",
+        "component": "number",
+        "valueType": "number",
         "name": "grid",
-        "label": "Grid",
-        "options": [
-          {
-            "name": "1 Columns",
-            "value": "1"
-          },
-          {
-            "name": "2 Columns",
-            "value": "2"
-          },
-          {
-            "name": "3 Columns",
-            "value": "3"
-          },
-          {
-            "name": "4 Columns",
-            "value": "4"
-          },
-          {
-            "name": "5 Columns",
-            "value": "5"
-          },
-          {
-            "name": "6 Columns",
-            "value": "6"
-          }
-        ]
+        "required": true,
+        "label": "Grid Columns",
+        "validation": {
+          "numberMin": 0,
+          "numberMax": 6,
+          "customErrorMsg": "1 thru 6 columns"
+        }
       },
       {
         "component": "select",
