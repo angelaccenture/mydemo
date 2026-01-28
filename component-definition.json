@@ -24,10 +24,6 @@
               "type": "image",
               "fields": [
                 {
-                  "name": "image",
-                  "selector": "img:nth-child(3)[src]"
-                },
-                {
                   "name": "imageAlt",
                   "selector": "img:nth-child(3)[alt]"
                 }
