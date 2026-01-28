@@ -6,8 +6,7 @@
 | Text | In Progress | Fix error message in UE, drag/drop featuretes
 | Image | Mostly Done | Fix alt Text
 | :--- | :---: | ---: |
-| Header | n/a | Text Blocks
-| Footer | In Progress | Need to fix it showing on pages
+| Footer | In Progress | Fixed in UE, now just need to make it render on page hahaha!
 | Section-Metadata | Mostly Done | verify/fix new Author Kit features
 | :--- | :---: | ---: |
 | Accoridion | In Progress | Block Collection
