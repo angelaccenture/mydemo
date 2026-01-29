@@ -79,11 +79,11 @@
               "fields": [
                 {
                   "name": "summary",
-                  "selector": "div:nth-child(1)"
+                  "selector": "div>div:nth-child(1)"
                 },
                 {
                   "name": "text",
-                  "selector": "div:nth-child(2)"
+                  "selector": "div>div:nth-child(2)"
                 }
               ]
             }
@@ -136,7 +136,7 @@
           "plugins": {
             "da": {
               "rows": 1,
-              "columns": 1,
+              "columns": 2,
               "fields": [
                 {
                   "name": "backgroundImage",

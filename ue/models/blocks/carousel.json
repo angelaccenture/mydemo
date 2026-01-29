@@ -19,7 +19,7 @@
       "plugins": {
         "da": {
           "rows": 1,
-          "columns": 1,
+          "columns": 2,
           "fields": [
             { "name": "backgroundImage", "selector": "div:nth-child(1)>picture>img[src]"},
             { "name": "backgroundImageAlt", "selector": "div:nth-child(1)>picture>img[alt]"},
