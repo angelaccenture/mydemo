@@ -55,7 +55,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion - V2a",
+          "title": "Accordion - V2b",
           "id": "accordion",
           "model": "accordion",
           "filter": "accordion",
@@ -79,11 +79,11 @@
               "fields": [
                 {
                   "name": "summary",
-                  "selector": "div:nth-child(1)>div:nth-child(1)"
+                  "selector": "div:nth-child(1)>div:nth-child(1)>div:nth-child(1)"
                 },
                 {
                   "name": "text",
-                  "selector": "div:nth-child(1)>div:nth-child(2)"
+                  "selector": "div:nth-child(1)>div:nth-child(1)>div:nth-child(2)"
                 }
               ]
             }
@@ -125,7 +125,7 @@
           "plugins": {
             "da": {
               "rows": 1,
-              "columns": 1
+              "columns": 2
             }
           }
         },
@@ -136,7 +136,7 @@
           "plugins": {
             "da": {
               "rows": 2,
-              "columns": 2,
+              "columns": 0,
               "fields": [
                 {
                   "name": "backgroundImage",

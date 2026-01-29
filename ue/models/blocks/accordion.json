@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Accordion - V2a",
+      "title": "Accordion - V2b",
       "id": "accordion",
       "model": "accordion",
       "filter": "accordion",
@@ -24,8 +24,8 @@
           "rows": 2,
           "columns": 0,
           "fields": [
-            { "name": "summary", "selector": "div:nth-child(1)>div:nth-child(1)"},
-            { "name": "text", "selector": "div:nth-child(1)>div:nth-child(2)"}
+            { "name": "summary", "selector": "div:nth-child(1)>div:nth-child(1)>div:nth-child(1)"},
+            { "name": "text", "selector": "div:nth-child(1)>div:nth-child(1)>div:nth-child(2)"}
           ]
         }
       }
