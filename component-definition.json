@@ -57,33 +57,22 @@
         {
           "title": "Accordion",
           "id": "accordion",
-          "model": "accordion",
-          "filter": "accordion",
           "plugins": {
             "da": {
+              "name": "accordion",
               "rows": 1,
-              "columns": 0
+              "columns": 2
             }
           }
         },
         {
-          "title": "Accordion Item - 1/28",
+          "title": "Accordion Item",
           "id": "accordion-item",
-          "model": "accordion-item",
           "plugins": {
             "da": {
-              "rows": 1,
-              "columns": 4,
-              "fields": [
-                {
-                  "name": "summary",
-                  "selector": "div:nth-child(1)>p:nth-child(1)"
-                },
-                {
-                  "name": "text",
-                  "selector": "div:nth-child(1)>p:nth-child(2)"
-                }
-              ]
+              "name": "accordion-item",
+              "rows": 2,
+              "columns": 0
             }
           }
         },
@@ -118,37 +107,18 @@
         {
           "title": "Carousel",
           "id": "carousel",
-          "model": "carousel",
-          "filter": "carousel",
           "plugins": {
             "da": {
-              "rows": 1,
-              "columns": 1
+              "unsafeHTML": "<div class=\"carousel\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div><div></div></div>"
             }
           }
         },
         {
           "title": "Carousel Slide",
           "id": "carousel-item",
-          "model": "carousel-item",
           "plugins": {
             "da": {
-              "rows": 1,
-              "columns": 1,
-              "fields": [
-                {
-                  "name": "backgroundImage",
-                  "selector": "div>picture>img:nth-child(3)[src]"
-                },
-                {
-                  "name": "backgroundImageAlt",
-                  "selector": "div>picture>img:nth-child(3)[alt]"
-                },
-                {
-                  "name": "text",
-                  "selector": "div:nth-child(2)>p"
-                }
-              ]
+              "unsafeHTML": "<div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div><div></div></div>"
             }
           }
         },
