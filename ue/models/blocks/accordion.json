@@ -1,27 +1,27 @@
 {
   "definitions": [
     {
-      "title": "Accordion - b",
+      "title": "Accordion - c",
       "id": "accordion",
       "model": "accordion",
       "filter": "accordion",
       "plugins": {
         "da": {
           "name": "accordion",
-          "unsafeHTML": "<div class=\"accordion\"></div>"
+          "unsafeHTML": "<div class=\"accordion\"><div></div></div>"
         }
       }
     },
     {
-      "title": "Accordion Item - V2a",
+      "title": "Accordion Item",
       "id": "accordion-item",
       "model": "accordion-item",
       "plugins": {
         "da": {
-        "unsafeHTML": "<div><div>Summary</div><div>Text area</div></div>",
+        "unsafeHTML": "<div>Summary</div><div>Text Area</div>",
           "fields": [
-            { "name": "summary", "selector": "div>div:nth-child(1)"},
-            { "name": "text", "selector": "div>div:nth-child(2)"}
+            { "name": "summary", "selector": "div:nth-child(1)"},
+            { "name": "text", "selector": "div:nth-child(2)"}
           ]
         }
       }
