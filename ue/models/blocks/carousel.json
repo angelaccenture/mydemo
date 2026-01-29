@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Carousel",
+      "title": "Carousel - V2",
       "id": "carousel",
       "model": "carousel",
       "filter": "carousel",
