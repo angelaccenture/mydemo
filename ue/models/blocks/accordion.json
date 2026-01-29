@@ -15,7 +15,7 @@
       }
     },
     {
-      "title": "Accordion Item",
+      "title": "Accordion Item - V2",
       "id": "accordion-item",
       "model": "accordion-item",
       "plugins": {

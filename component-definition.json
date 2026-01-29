@@ -68,7 +68,7 @@
           }
         },
         {
-          "title": "Accordion Item",
+          "title": "Accordion Item - V2",
           "id": "accordion-item",
           "model": "accordion-item",
           "plugins": {
@@ -130,7 +130,7 @@
           }
         },
         {
-          "title": "Carousel Slide",
+          "title": "Carousel Slide - V2",
           "id": "carousel-item",
           "model": "carousel-item",
           "plugins": {
