@@ -145,14 +145,14 @@
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "div:nth-child(1)",
+        "name": "summary",
         "value": "",
         "label": "Summary",
         "required": true
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(2)",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string",
@@ -214,19 +214,19 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
+        "name": "backgroundImage",
         "label": "Background Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[alt]",
+        "name": "backgroundImageAlt",
         "label": "Background Image Alt"
       },
       {
         "component": "richtext",
-        "name": "div:nth-child(2)",
+        "name": "text",
         "label": "Text",
         "valueType": "string"
       }

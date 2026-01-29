@@ -57,6 +57,8 @@
         {
           "title": "Accordion",
           "id": "accordion",
+          "model": "accordion",
+          "filter": "accordion",
           "plugins": {
             "da": {
               "name": "accordion",
@@ -68,11 +70,22 @@
         {
           "title": "Accordion Item",
           "id": "accordion-item",
+          "model": "accordion-item",
           "plugins": {
             "da": {
               "name": "accordion-item",
               "rows": 2,
-              "columns": 0
+              "columns": 0,
+              "fields": [
+                {
+                  "name": "summary",
+                  "selector": "div:nth-child(1)"
+                },
+                {
+                  "name": "text",
+                  "selector": "div:nth-child(2)"
+                }
+              ]
             }
           }
         },
@@ -107,18 +120,37 @@
         {
           "title": "Carousel",
           "id": "carousel",
+          "model": "carousel",
+          "filter": "carousel",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"carousel\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div><div></div></div>"
+              "rows": 1,
+              "columns": 1
             }
           }
         },
         {
           "title": "Carousel Slide",
           "id": "carousel-item",
+          "model": "carousel-item",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div><div><picture><source type=\"image/webp\" srcset=\"\"><source type=\"image/jpeg\" srcset=\"\"><img loading=\"lazy\"></picture></div><div></div></div>"
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "backgroundImage",
+                  "selector": "div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "backgroundImageAlt",
+                  "selector": "div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "text",
+                  "selector": "div:nth-child(2)"
+                }
+              ]
             }
           }
         },
