@@ -55,7 +55,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion",
+          "title": "Accordion - V2",
           "id": "accordion",
           "model": "accordion",
           "filter": "accordion",
@@ -118,7 +118,7 @@
           }
         },
         {
-          "title": "Carousel",
+          "title": "Carousel - V2",
           "id": "carousel",
           "model": "carousel",
           "filter": "carousel",
