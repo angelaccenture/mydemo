@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Accordion - a",
+      "title": "Accordion - b",
       "id": "accordion",
       "model": "accordion",
       "filter": "accordion",
@@ -20,8 +20,8 @@
         "da": {
         "unsafeHTML": "<div><div>Summary</div><div>Text area</div></div>",
           "fields": [
-            { "name": "summary", "selector": "div>div:nth-child(1)>p"},
-            { "name": "text", "selector": "div>div:nth-child(2)>p"}
+            { "name": "summary", "selector": "div>div:nth-child(1)"},
+            { "name": "text", "selector": "div>div:nth-child(2)"}
           ]
         }
       }

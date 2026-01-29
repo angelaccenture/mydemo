@@ -55,7 +55,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion - a",
+          "title": "Accordion - b",
           "id": "accordion",
           "model": "accordion",
           "filter": "accordion",
@@ -76,11 +76,11 @@
               "fields": [
                 {
                   "name": "summary",
-                  "selector": "div>div:nth-child(1)>p"
+                  "selector": "div>div:nth-child(1)"
                 },
                 {
                   "name": "text",
-                  "selector": "div>div:nth-child(2)>p"
+                  "selector": "div>div:nth-child(2)"
                 }
               ]
             }
