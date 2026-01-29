@@ -55,25 +55,26 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion",
+          "title": "Accordion - a",
           "id": "accordion",
           "model": "accordion",
           "filter": "accordion",
           "plugins": {
             "da": {
+              "name": "accordion",
               "rows": 1,
-              "columns": 0
+              "columns": 2
             }
           }
         },
         {
-          "title": "Accordion Item - V2",
+          "title": "Accordion Item - V2a",
           "id": "accordion-item",
           "model": "accordion-item",
           "plugins": {
             "da": {
-              "rows": 0,
-              "columns": 2,
+              "rows": 2,
+              "columns": 0,
               "fields": [
                 {
                   "name": "summary",
@@ -116,12 +117,13 @@
           }
         },
         {
-          "title": "Carousel",
+          "title": "Carousel - a",
           "id": "carousel",
           "model": "carousel",
           "filter": "carousel",
           "plugins": {
             "da": {
+              "name": "carousel",
               "rows": 1,
               "columns": 1
             }
@@ -133,8 +135,8 @@
           "model": "carousel-item",
           "plugins": {
             "da": {
-              "rows": 1,
-              "columns": 1,
+              "rows": 2,
+              "columns": 0,
               "fields": [
                 {
                   "name": "backgroundImage",

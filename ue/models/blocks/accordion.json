@@ -1,25 +1,26 @@
 {
   "definitions": [
     {
-      "title": "Accordion",
+      "title": "Accordion - a",
       "id": "accordion",
       "model": "accordion",
       "filter": "accordion",
       "plugins": {
         "da": {
+          "name": "accordion",
           "rows": 1,
-          "columns": 0
+          "columns": 2
         }
       }
     },
     {
-      "title": "Accordion Item - V2",
+      "title": "Accordion Item - V2a",
       "id": "accordion-item",
       "model": "accordion-item",
       "plugins": {
         "da": {
-          "rows": 0,
-          "columns": 2,
+          "rows": 2,
+          "columns": 0,
           "fields": [
             { "name": "summary", "selector": "div>div:nth-child(1)>p"},
             { "name": "text", "selector": "div>div:nth-child(2)>p"}

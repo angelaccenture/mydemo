@@ -1,12 +1,13 @@
 {
   "definitions": [
     {
-      "title": "Carousel",
+      "title": "Carousel - a",
       "id": "carousel",
       "model": "carousel",
       "filter": "carousel",
       "plugins": {
         "da": {
+          "name": "carousel",
           "rows": 1,
           "columns": 1
         }
@@ -18,8 +19,8 @@
       "model": "carousel-item",
       "plugins": {
         "da": {
-          "rows": 1,
-          "columns": 1,
+          "rows": 2,
+          "columns": 0,
           "fields": [
             { "name": "backgroundImage", "selector": "div>picture>img:nth-child(3)[src]"},
             { "name": "backgroundImageAlt", "selector": "div>picture>img:nth-child(3)[alt]"},
