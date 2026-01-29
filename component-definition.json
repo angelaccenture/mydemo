@@ -55,7 +55,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion - V2",
+          "title": "Accordion - V2a",
           "id": "accordion",
           "model": "accordion",
           "filter": "accordion",
@@ -79,11 +79,11 @@
               "fields": [
                 {
                   "name": "summary",
-                  "selector": "div>div:nth-child(1)"
+                  "selector": "div:nth-child(1)>div:nth-child(1)"
                 },
                 {
                   "name": "text",
-                  "selector": "div>div:nth-child(2)"
+                  "selector": "div:nth-child(1)>div:nth-child(2)"
                 }
               ]
             }
@@ -118,7 +118,7 @@
           }
         },
         {
-          "title": "Carousel - V2",
+          "title": "Carousel - V2a",
           "id": "carousel",
           "model": "carousel",
           "filter": "carousel",
@@ -135,20 +135,20 @@
           "model": "carousel-item",
           "plugins": {
             "da": {
-              "rows": 1,
+              "rows": 2,
               "columns": 2,
               "fields": [
                 {
                   "name": "backgroundImage",
-                  "selector": "div:nth-child(1)>picture>img[src]"
+                  "selector": "div:nth-child(1)>div:nth-child(1)>picture>img[src]"
                 },
                 {
                   "name": "backgroundImageAlt",
-                  "selector": "div:nth-child(1)>picture>img[alt]"
+                  "selector": "div:nth-child(1)>div:nth-child(1)>picture>img[alt]"
                 },
                 {
                   "name": "text",
-                  "selector": "div:nth-child(2)"
+                  "selector": "div:nth-child(1)>div:nth-child(2)"
                 }
               ]
             }

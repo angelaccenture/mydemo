@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Carousel - V2",
+      "title": "Carousel - V2a",
       "id": "carousel",
       "model": "carousel",
       "filter": "carousel",
@@ -18,12 +18,12 @@
       "model": "carousel-item",
       "plugins": {
         "da": {
-          "rows": 1,
+          "rows": 2,
           "columns": 2,
           "fields": [
-            { "name": "backgroundImage", "selector": "div:nth-child(1)>picture>img[src]"},
-            { "name": "backgroundImageAlt", "selector": "div:nth-child(1)>picture>img[alt]"},
-            { "name": "text", "selector": "div:nth-child(2)"}
+            { "name": "backgroundImage", "selector": "div:nth-child(1)>div:nth-child(1)>picture>img[src]"},
+            { "name": "backgroundImageAlt", "selector": "div:nth-child(1)>div:nth-child(1)>picture>img[alt]"},
+            { "name": "text", "selector": "div:nth-child(1)>div:nth-child(2)"}
           ]
         }
       }
