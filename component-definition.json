@@ -25,7 +25,7 @@
               "fields": [
                 {
                   "name": "imageAlt",
-                  "selector": "img:nth-child(3)[alt]"
+                  "selector": "img[alt]"
                 }
               ]
             }
