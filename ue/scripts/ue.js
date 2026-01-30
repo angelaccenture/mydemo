@@ -14,42 +14,17 @@ import { showSlide } from '../../blocks/carousel/carousel.js';
 import { moveInstrumentation } from './ue-utils.js';
 
 const setupObservers = () => {
-  const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
+  const mutatingBlocks = document.querySelectorAll('div.carousel, div.accordion, footer');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
-        // detect the mutation type of the block or picture (for cards)
-        const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
-
+       
         switch (type) {
-          case 'cards':
-            // handle card div > li replacements
-            if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
-              const ulEl = addedElements[0];
-              const removedDivEl = [...mutation.removedNodes].filter((node) => node.tagName === 'DIV');
-              removedDivEl.forEach((div, index) => {
-                if (index < ulEl.children.length) {
-                  moveInstrumentation(div, ulEl.children[index]);
-                }
-              });
-            }
-            break;
-          case 'cards-image':
-            // handle card-image picture replacements
-            if (mutation.target.classList.contains('cards-card-image')) {
-              const addedPictureEl = [...mutation.addedNodes].filter((node) => node.tagName === 'PICTURE');
-              const removedPictureEl = [...mutation.removedNodes].filter((node) => node.tagName === 'PICTURE');
-              if (addedPictureEl.length === 1 && removedPictureEl.length === 1) {
-                const oldImgEL = removedPictureEl[0].querySelector('img');
-                const newImgEl = addedPictureEl[0].querySelector('img');
-                if (oldImgEL && newImgEl) {
-                  moveInstrumentation(oldImgEL, newImgEl);
-                }
-              }
-            }
+          case 'footer':
+          console.log("footer top of ue");
             break;
           case 'accordion':
             if (addedElements.length === 1 && addedElements[0].tagName === 'DETAILS') {
@@ -78,10 +53,6 @@ const setupObservers = () => {
         }
       }
     });
-  });
-
-  mutatingBlocks.forEach((cardsBlock) => {
-    observer.observe(cardsBlock, { childList: true, subtree: true });
   });
 };
 
