@@ -9,7 +9,6 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-console.log("ue.js");
 import { showSlide } from '../../blocks/carousel/carousel.js';
 import { moveInstrumentation } from './ue-utils.js';
 
@@ -52,14 +51,12 @@ const setupObservers = () => {
             }
             break;
           case 'accordion':
-            console.log("accordion");
             if (addedElements.length === 1 && addedElements[0].tagName === 'DETAILS') {
               moveInstrumentation(removedElements[0], addedElements[0]);
               moveInstrumentation(removedElements[0].querySelector('div'), addedElements[0].querySelector('summary'));
             }
             break;
           case 'carousel':
-            console.log("carousel");
             if (removedElements.length === 1 && removedElements[0].attributes['data-aue-model']?.value === 'carousel-item') {
               const resourceAttr = removedElements[0].getAttribute('data-aue-resource');
               if (resourceAttr) {

@@ -1,4 +1,5 @@
 import { loadArea, setConfig } from './ak.js';
+
 const hostnames = ['authorkit.dev'];
 
 const locales = {
