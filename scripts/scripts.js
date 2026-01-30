@@ -1,5 +1,4 @@
 import { loadArea, setConfig } from './ak.js';
-console.log('scripts');
 const hostnames = ['authorkit.dev'];
 
 const locales = {
@@ -39,9 +38,7 @@ export async function loadPage() {
   await loadArea();
 }
 // UE Editor support before page load
-console.log("is this true?");
 if (window.location.hostname.includes('ue.da.live')) {
-  console.log("test");
   await import(`${window.hlx.codeBasePath}/ue/scripts/ue.js`).then(({ default: ue }) => ue());
 }
 await loadPage();

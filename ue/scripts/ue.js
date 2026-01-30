@@ -12,7 +12,7 @@
 console.log("ue.js");
 import { showSlide } from '../../blocks/carousel/carousel.js';
 import { moveInstrumentation } from './ue-utils.js';
-
+/*
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
@@ -151,3 +151,4 @@ export default () => {
   setupObservers();
   setupUEEventHandlers();
 };
+*/
