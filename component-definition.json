@@ -10,7 +10,6 @@
           "plugins": {
             "da": {
               "name": "text",
-              "type": "text",
               "unsafeHTML": "<div class=\"richtext\"></div>"
             }
           }
@@ -77,7 +76,7 @@
               "fields": [
                 {
                   "name": "summary",
-                  "selector": "div>div:nth-child(1)"
+                  "selector": "div>div>div:nth-child(1)"
                 },
                 {
                   "name": "text",

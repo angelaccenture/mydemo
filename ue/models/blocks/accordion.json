@@ -20,7 +20,7 @@
         "da": {
         "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>",
           "fields": [
-            { "name": "summary", "selector": "div>div:nth-child(1)"},
+            { "name": "summary", "selector": "div>div>div:nth-child(1)"},
             { "name": "text", "selector": "div>div:nth-child(2)"}
           ]
         }
