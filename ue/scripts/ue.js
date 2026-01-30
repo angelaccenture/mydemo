@@ -12,6 +12,7 @@
 
 import { showSlide } from '../../blocks/carousel/carousel.js';
 import { moveInstrumentation } from './ue-utils.js';
+console.log("ue.js");
 
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('div.carousel, div.accordion, footer');
@@ -24,7 +25,6 @@ const setupObservers = () => {
 
        
         switch (type) {
-           console.log("ue.js - switch/type");
           case 'carousel':
              console.log("ue.js - carousel");
             if (removedElements.length === 1 && removedElements[0].attributes['data-aue-model']?.value === 'carousel-item') {
