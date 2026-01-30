@@ -39,6 +39,7 @@ export async function loadPage() {
 }
 // UE Editor support before page load
 if (window.location.hostname.includes('ue.da.live')) {
+  console.log("ue editor script load");
   await import(`../ue/scripts/ue.js`).then(({ default: ue }) => ue());
 }
 await loadPage();
