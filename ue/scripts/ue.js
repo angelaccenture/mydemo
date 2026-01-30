@@ -16,6 +16,7 @@ import { moveInstrumentation } from './ue-utils.js';
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('div.carousel, div.accordion, footer');
   const observer = new MutationObserver((mutations) => {
+    console.log("ue.js - setupObservers");
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
@@ -23,16 +24,9 @@ const setupObservers = () => {
 
        
         switch (type) {
-          case 'footer':
-          console.log("footer top of ue");
-            break;
-          case 'accordion':
-            if (addedElements.length === 1 && addedElements[0].tagName === 'DETAILS') {
-              moveInstrumentation(removedElements[0], addedElements[0]);
-              moveInstrumentation(removedElements[0].querySelector('div'), addedElements[0].querySelector('summary'));
-            }
-            break;
+           console.log("ue.js - switch/type");
           case 'carousel':
+             console.log("ue.js - carousel");
             if (removedElements.length === 1 && removedElements[0].attributes['data-aue-model']?.value === 'carousel-item') {
               const resourceAttr = removedElements[0].getAttribute('data-aue-resource');
               if (resourceAttr) {
@@ -95,12 +89,6 @@ const setupUEEventHandlers = () => {
           case 'carousel':
             if (index) {
               showSlide(blockEl, index);
-            }
-            break;
-           case 'footer':
-            console.log("footer ue");
-            if (index) {
-              console.log("footer if ue");
             }
             break;
           case 'tabs':
