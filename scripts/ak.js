@@ -266,6 +266,7 @@ function decorateHeader() {
   if (breadcrumbs) header.append(breadcrumbs);
 }
 function decorateFooter() {
+  console.log("decorateFooter");
   const footer = document.querySelector('footer');
   if (!footer) return;
   const meta = getMetadata('footer') || 'footer';
