@@ -126,6 +126,12 @@ const setupUEEventHandlers = () => {
               showSlide(blockEl, index);
             }
             break;
+           case 'footer':
+            console.log("footer ue");
+            if (index) {
+              console.log("footer if ue");
+            }
+            break;
           case 'tabs':
             if (element === block) {
               return;
