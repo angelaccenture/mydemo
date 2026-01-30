@@ -8,7 +8,6 @@ const FOOTER_PATH = '/fragments/nav/footer';
  * @param {Element} el The footer element
  */
 export default async function init(el) {
-  console.log("generate from footer.js not utils")
   const { locale } = getConfig();
   const footerMeta = getMetadata('footer');
   const path = footerMeta || FOOTER_PATH;
