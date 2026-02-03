@@ -87,10 +87,10 @@ const setupUEEventHandlers = () => {
 
         switch (block) {
           case 'accordion':
-            blockEl.querySelectorAll('details').forEach((details) => {
-              details.open = false;
-            });
-            element.open = true;
+          //  blockEl.querySelectorAll('details').forEach((details) => {
+            //  details.open = false;
+           // });
+            //element.open = true;
             break;
           case 'carousel':
             if (index) {
