@@ -26,11 +26,11 @@ const setupObservers = () => {
        
         switch (type) {
            case 'accordion':
-            if (addedElements.length === 1 && addedElements[0].tagName === 'DETAILS') {
+          /*  if (addedElements.length === 1 && addedElements[0].tagName === 'DETAILS') {
               moveInstrumentation(removedElements[0], addedElements[0]);
               moveInstrumentation(removedElements[0].querySelector('div'), addedElements[0].querySelector('summary'));
             }
-            break;
+            break;*/
           case 'carousel':
              console.log("ue.js - carousel");
             if (removedElements.length === 1 && removedElements[0].attributes['data-aue-model']?.value === 'carousel-item') {
