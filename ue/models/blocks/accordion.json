@@ -18,7 +18,7 @@
       "model": "accordion-item",
       "plugins": {
         "da": {
-           "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>",
+           "unsafeHTML": "<div><div><p>Summary</p></div><div><p>Text Area</p></div></div>",
           "fields": [
             { "name": "summary", "selector": "div:nth-child(1)>p:nth-child(1)"},
             { "name": "text", "selector": "div:nth-child(1)>p:nth-child(2)"}
