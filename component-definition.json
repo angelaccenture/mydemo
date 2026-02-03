@@ -67,20 +67,20 @@
           }
         },
         {
-          "title": "Accordion Item - 2/3b",
+          "title": "Accordion Item - 2/3c",
           "id": "accordion-item",
           "model": "accordion-item",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div><p>Summary</p></div><div><p>Text Area</p></div>",
+              "unsafeHTML": "<div>Summary</div><div>Text Area<</div>",
               "fields": [
                 {
                   "name": "summary",
-                  "selector": "div:nth-child(1)>p:nth-child(1)"
+                  "selector": "div:nth-child(1)"
                 },
                 {
                   "name": "text",
-                  "selector": "div:nth-child(1)>p:nth-child(2)"
+                  "selector": "div:nth-child(2)"
                 }
               ]
             }
