@@ -13,13 +13,12 @@
       }
     },
     {
-      "title": "Accordion Item - 1/28",
+      "title": "Accordion Item - 2/3",
       "id": "accordion-item",
       "model": "accordion-item",
       "plugins": {
         "da": {
-          "rows": 1,
-          "columns": 4,
+           "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>",
           "fields": [
             { "name": "summary", "selector": "div:nth-child(1)>p:nth-child(1)"},
             { "name": "text", "selector": "div:nth-child(1)>p:nth-child(2)"}
