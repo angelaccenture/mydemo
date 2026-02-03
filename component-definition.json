@@ -67,12 +67,12 @@
           }
         },
         {
-          "title": "Accordion Item - 2/3",
+          "title": "Accordion Item - 2/3b",
           "id": "accordion-item",
           "model": "accordion-item",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div><div><p>Summary</p></div><div><p>Text Area</p></div></div>",
+              "unsafeHTML": "<div><p>Summary</p></div><div><p>Text Area</p></div>",
               "fields": [
                 {
                   "name": "summary",
