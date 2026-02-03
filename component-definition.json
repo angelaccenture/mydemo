@@ -71,7 +71,7 @@
           "model": "accordion-item",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div><div>Summary</div><div>Text Area<</div></div>",
+              "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>",
               "fields": [
                 {
                   "name": "summary",
