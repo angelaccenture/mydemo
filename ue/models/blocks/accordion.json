@@ -7,22 +7,20 @@
       "filter": "accordion",
       "plugins": {
         "da": {
-          "rows": 1,
-          "columns": 0
+          "unsafeHTML": "<div class=\"accordion\"></div>"
         }
       }
     },
     {
-      "title": "Accordion Item - 1/28",
+      "title": "Accordion Item",
       "id": "accordion-item",
       "model": "accordion-item",
       "plugins": {
         "da": {
-          "rows": 1,
-          "columns": 4,
+           "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>",
           "fields": [
-            { "name": "summary", "selector": "div:nth-child(1)>p:nth-child(1)"},
-            { "name": "text", "selector": "div:nth-child(1)>p:nth-child(2)"}
+            { "name": "summary", "selector": "div>div:nth-child(1)"},
+            { "name": "text", "selector": "div>div:nth-child(2)"}
           ]
         }
       }
