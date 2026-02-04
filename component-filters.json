@@ -19,9 +19,7 @@
   {
     "id": "accordion",
     "components": [
-      "accordion-item",
-      "image",
-      "text"
+      "accordion-item"
     ]
   },
   {
