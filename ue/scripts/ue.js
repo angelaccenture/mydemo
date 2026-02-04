@@ -14,6 +14,7 @@ import { showSlide } from '../../blocks/carousel/carousel.js';
 import { moveInstrumentation } from './ue-utils.js';
 console.log("ue.js");
 
+
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('div.carousel, div.accordion, footer');
   const observer = new MutationObserver((mutations) => {
