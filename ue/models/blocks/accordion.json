@@ -12,7 +12,7 @@
       }
     },
     {
-      "title": "Accordion Item - 2/3f",
+      "title": "Accordion Item",
       "id": "accordion-item",
       "model": "accordion-item",
       "plugins": {
