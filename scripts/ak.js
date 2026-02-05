@@ -281,10 +281,13 @@ function decorateFooter() {
 }
 
 function decorateDoc() {
-  if (!window.location.hostname.includes('ue.da.live')) {
-    console.log("not UE");
-   decorateHeader();
-    decorateFooter();
+if (!window.location.hostname.includes('ue.da.live')) {
+  console.log("not UE");
+  decorateHeader();
+  decorateFooter();
+}
+else {
+  console.log("Should not be running header/footer");
 }
   loadTemplate();
 
