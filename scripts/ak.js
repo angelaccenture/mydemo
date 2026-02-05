@@ -249,6 +249,7 @@ function decorateSections(parent, isDoc) {
 }
 
 function decorateHeader() {
+    console.log("decorateHeader");
   const header = document.querySelector('header');
   if (!header) return;
   const meta = getMetadata('header') || 'header';
