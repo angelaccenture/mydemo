@@ -281,8 +281,10 @@ function decorateFooter() {
 }
 
 function decorateDoc() {
-  decorateHeader();
-  decorateFooter();
+  if (!window.location.hostname.includes('ue.da.live')) {
+   decorateHeader();
+    decorateFooter();
+}
   loadTemplate();
 
   // Setup scheme
