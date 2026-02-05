@@ -8,10 +8,6 @@ export default async function error(ex, el) {
 
   if (window.location.hostname.includes('ue.da.live')) {
     console.log("Error in UE " + ex);
-    if (ex.includes('blocks')) {
-      ex = null;
-      console.log("New EX" + ex);
-    }
   }
   if (el && ENV !== 'prod') {
     await loadStyle(`${codeBase}/styles/error.css`);
