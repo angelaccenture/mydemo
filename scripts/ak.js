@@ -284,7 +284,7 @@ if (!window.location.hostname.includes('ue.da.live')) {
   decorateFooter();
 }
 else {
-  //Do nothing, not sure why the else is needed for the UE
+  console.log("Header/footer turned off for UE")
 }
   loadTemplate();
 
