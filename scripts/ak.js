@@ -282,6 +282,7 @@ function decorateFooter() {
 
 function decorateDoc() {
   if (!window.location.hostname.includes('ue.da.live')) {
+    console.log("not UE");
    decorateHeader();
     decorateFooter();
 }
