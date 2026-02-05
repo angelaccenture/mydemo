@@ -7,7 +7,7 @@ const { codeBase } = getConfig();
 export default async function error(ex, el) {
   // eslint-disable-next-line no-console
   console.log("error.js" + ue);
-  if (el && ENV !== 'prod' || ue !== true) {
+  if (el && ENV !== 'prod' || ue != true) {
     console.log("Should not be showing");
     await loadStyle(`${codeBase}/styles/error.css`);
     const wrapper = document.createElement('div');
