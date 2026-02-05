@@ -6,8 +6,8 @@ const { codeBase } = getConfig();
 
 export default async function error(ex, el) {
   // eslint-disable-next-line no-console
-  console.log("error.js" + ue);
-  if (el && ENV !== 'prod' || ue != true) {
+  console.log("error.js" + !ue);
+  if (el && ENV !== 'prod') {
     console.log("Should not be showing");
     await loadStyle(`${codeBase}/styles/error.css`);
     const wrapper = document.createElement('div');
@@ -19,4 +19,7 @@ export default async function error(ex, el) {
     el.insertAdjacentElement('afterend', wrapper);
     wrapper.append(title, el);
   }
+  if (ue) {
+    console.log("Dont show error");
+  } 
 }
