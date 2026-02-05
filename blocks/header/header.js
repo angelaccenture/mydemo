@@ -190,7 +190,6 @@ export default async function init(el) {
     const fragment = await loadFragment(`${locale.prefix}${path}`);
     fragment.classList.add('header-content');
     await decorateHeader(fragment);
-    console.log(fragment);
     el.append(fragment);
   } catch (e) {
     throw Error(e);

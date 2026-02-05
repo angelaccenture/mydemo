@@ -249,7 +249,6 @@ function decorateSections(parent, isDoc) {
 }
 
 function decorateHeader() {
-    console.log("decorateHeader");
   const header = document.querySelector('header');
   if (!header) return;
   const meta = getMetadata('header') || 'header';
@@ -267,7 +266,6 @@ function decorateHeader() {
   if (breadcrumbs) header.append(breadcrumbs);
 }
 function decorateFooter() {
-  console.log("decorateFooter");
  const footer = document.querySelector('footer');
   if (!footer) return;
   const meta = getMetadata('footer') || 'footer';
