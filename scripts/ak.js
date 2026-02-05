@@ -286,7 +286,7 @@ if (!window.location.hostname.includes('ue.da.live')) {
   decorateFooter();
 }
 else {
-  //Figure out what should do
+  //Do nothing, not sure why the else is needed for the UE
 }
   loadTemplate();
 
