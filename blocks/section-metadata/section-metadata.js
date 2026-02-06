@@ -70,9 +70,19 @@ function handleBackground(background, section) {
     setColorScheme(section);
   }
 }
+function toClassName(name) {
+  return typeof name === 'string'
+    ? name
+      .toLowerCase()
+      .replace(/[^0-9a-z]/gi, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '')
+    : '';
+}
 
 async function handleStyle(text, section) {
   console.log("section space issue - block code");
+
 
   const styles = text
             .split(',')
