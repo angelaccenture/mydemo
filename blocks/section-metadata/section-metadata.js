@@ -72,6 +72,7 @@ function handleBackground(background, section) {
 }
 
 async function handleStyle(text, section) {
+  console.log("section space issue");
   const styles = text.split(',').map((style) => style.replaceAll(' ', '-'));
   section.classList.add(...styles);
 }
