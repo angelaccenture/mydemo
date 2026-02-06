@@ -8,17 +8,19 @@ export default async function error(ex, el) {
   console.log("Error: " + ex);
 
   if (window.location.hostname.includes('ue.da.live')) {
-   console.log("Error UE Only");
+    // Dont show errors in the UE - these are only useful for DA Editor
   }
-  if (el && ENV !== 'prod') {
-    await loadStyle(`${codeBase}/styles/error.css`);
-    const wrapper = document.createElement('div');
-    wrapper.className = 'has-error';
+  else {
+      if (el && ENV !== 'prod') {
+        await loadStyle(`${codeBase}/styles/error.css`);
+        const wrapper = document.createElement('div');
+        wrapper.className = 'has-error';
 
-    const title = document.createElement('p');
-    title.className = 'title';
-    title.textContent = 'Error';
-    el.insertAdjacentElement('afterend', wrapper);
-    wrapper.append(title, el);
+        const title = document.createElement('p');
+        title.className = 'title';
+        title.textContent = 'Error';
+        el.insertAdjacentElement('afterend', wrapper);
+        wrapper.append(title, el);
+      }
   }
 }
