@@ -265,9 +265,27 @@ function decorateHeader() {
   document.body.classList.add('has-breadcrumbs');
   if (breadcrumbs) header.append(breadcrumbs);
 }
+function decorateFooter() {
+ const footer = document.querySelector('footer');
+  if (!footer) return;
+  const meta = getMetadata('footer') || 'footer';
+  if (meta === 'off') {
+    document.body.classList.add('no-footer');
+    footer.remove();
+    return;
+  }
+  footer.className = meta;
+  footer.dataset.status = 'decorated';
+}
 
 function decorateDoc() {
+if (!window.location.hostname.includes('ue.da.live')) {
   decorateHeader();
+  decorateFooter();
+}
+else {
+  //Do nothing
+}
   loadTemplate();
 
   // Setup scheme

@@ -5,7 +5,10 @@ const { codeBase } = getConfig();
 
 export default async function error(ex, el) {
   // eslint-disable-next-line no-console
-  console.log(ex);
+
+  if (!window.location.hostname.includes('ue.da.live')) {
+    console.log("Not UE");
+  }
   if (el && ENV !== 'prod') {
     await loadStyle(`${codeBase}/styles/error.css`);
     const wrapper = document.createElement('div');
