@@ -74,7 +74,7 @@ function handleBackground(background, section) {
 async function handleStyle(text, section) {
   console.log("section space issue - block code");
 
-  const styles = meta.style
+  const styles = text
             .split(',')
             .filter((style) => style)
             .map((style) => toClassName(style.trim()));
