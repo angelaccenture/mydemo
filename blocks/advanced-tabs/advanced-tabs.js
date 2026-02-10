@@ -51,7 +51,7 @@ export default function init(el) {
     return;
   }
   console.log(tabs);
-  const tabCount = tabs.querySelectorAll().length;
+  const tabCount = querySelectorAll(tabs).length;
   console.log(tabCount);
 
   // Filter and format all sections that do not hold the tabs block
