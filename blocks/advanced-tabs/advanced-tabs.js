@@ -52,6 +52,7 @@ export default function init(el) {
   }
 
   // Filter and format all sections that do not hold the tabs block
+
   const tabPanels = [...parent.querySelectorAll(':scope > .section')]
     .reduce((acc, section, idx) => {
       if (section !== currSection) {
@@ -62,6 +63,7 @@ export default function init(el) {
       }
       return acc;
     }, []);
+    console.log(tabPanels);
 
   const tabList = getTabList(tabs, tabPanels);
 
