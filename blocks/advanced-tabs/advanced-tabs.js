@@ -50,7 +50,7 @@ export default function init(el) {
     log('Please add an unordered list to the advanced tabs block.');
     return;
   }
-
+  console.log(tabs);
   // Filter and format all sections that do not hold the tabs block
 
   const tabPanels = [...parent.querySelectorAll(':scope > .section')]
