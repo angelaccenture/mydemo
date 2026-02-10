@@ -51,6 +51,9 @@ export default function init(el) {
     return;
   }
   console.log(tabs);
+  const tabCount = tabs.querySelectorAll().length;
+  console.log(tabCount);
+
   // Filter and format all sections that do not hold the tabs block
 
   const tabPanels = [...parent.querySelectorAll(':scope > .section')]
