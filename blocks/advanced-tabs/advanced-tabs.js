@@ -41,7 +41,7 @@ export default function init(el) {
   parent.style = 'display: none;';
 
   // Find the section that contains the actual block
-  const currSection = el.closest('.section');
+  const currSection = el.closest('.section .advanced-tabs');
   console.log(currSection);
 
   // Find the tab items
