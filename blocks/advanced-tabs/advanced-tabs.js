@@ -42,6 +42,7 @@ export default function init(el) {
 
   // Find the section that contains the actual block
   const currSection = el.closest('.section');
+  console.log(currSection);
 
   // Find the tab items
   const tabs = el.querySelector('ul');
