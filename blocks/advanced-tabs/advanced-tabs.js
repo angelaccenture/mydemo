@@ -30,7 +30,18 @@ function getTabList(tabs, tabPanels) {
     });
   }
   const tabCount = tabItems.length;
+  return tabList;
+}
+ 
+export default function init(el) {
+  // Find the top most parent where all tab sections live
+  const parent = el.closest('.fragment-content, main');
 
+  // Forefully hide parent because sections may not be loaded yet
+  parent.style = 'display: none;';
+
+  // Find the section that contains the actual block
+  const currSection = el.closest('.section');
   const currSectionat = el.closest('.section .advanced-tabs');
   const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
   const tabSection = document.querySelectorAll('.tabSection ~ .section');
@@ -45,20 +56,6 @@ function getTabList(tabs, tabPanels) {
     return;
   }
 
-
-  return tabList;
-}
- 
-export default function init(el) {
-  // Find the top most parent where all tab sections live
-  const parent = el.closest('.fragment-content, main');
-
-  // Forefully hide parent because sections may not be loaded yet
-  parent.style = 'display: none;';
-
-  // Find the section that contains the actual block
-  const currSection = el.closest('.section');
-
   // Filter and format all sections that do not hold the tabs block
   const tabPanels = [...parent.querySelectorAll(':scope > .tabSection')]
     .reduce((acc, section, idx) => {
@@ -72,7 +69,6 @@ export default function init(el) {
     }, []);
 
   const tabList = getTabList(tabs, tabPanels);
-
 
   tabs.remove();
   el.append(tabList, ...tabPanels);
