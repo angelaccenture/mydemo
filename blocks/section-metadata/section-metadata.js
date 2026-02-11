@@ -70,9 +70,25 @@ function handleBackground(background, section) {
     setColorScheme(section);
   }
 }
+function toClassName(name) {
+  return typeof name === 'string'
+    ? name
+      .toLowerCase()
+      .replace(/[^0-9a-z]/gi, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '')
+    : '';
+}
 
 async function handleStyle(text, section) {
-  const styles = text.split(', ').map((style) => style.replaceAll(' ', '-'));
+
+  const styles = text
+            .split(',')
+            .filter((style) => style)
+            .map((style) => toClassName(style.trim()));
+          styles.forEach((style) => section.classList.add(style));
+
+ // const styles = text.split(', ').map((style) => style.replaceAll(' ', '-'));
   section.classList.add(...styles);
 }
 
@@ -106,3 +122,4 @@ export default async function init(el) {
   if (metadata.background?.content) handleBackground(metadata.background, section);
   el.remove();
 }
+
