@@ -56,7 +56,7 @@ export default function init(el) {
   const tabCount = tabItems.childElementCount;
   console.log(tabCount);
 
-  for (let i = 0; i < tabCount; i++) {
+  for (let i = 0; i < tabCount.length; i++) {
     console.log("Run this for items in tabCount");
 } 
   tabSection.forEach(element => {
