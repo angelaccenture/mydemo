@@ -53,11 +53,8 @@ export default function init(el) {
   
   // Filter and format all sections that do not hold the tabs block
 
-  
-
-  const tabPanels = [...parent.querySelectorAll(':scope > .section')]
+  const tabPanels = [...parent.querySelectorAll('.tabSection')]
      .reduce((acc, section, idx) => {
-       console.log(tabPanels);
       if (section !== currSection) {
         section.id = `tabpanel-${idx + 1}`;
         section.role = 'tabpanel';
@@ -66,6 +63,19 @@ export default function init(el) {
       }
       return acc;
     }, []);
+
+//Original Code
+ /* const tabPanels = [...parent.querySelectorAll(':scope > .section')]
+     .reduce((acc, section, idx) => {
+      if (section !== currSection) {
+        section.id = `tabpanel-${idx + 1}`;
+        section.role = 'tabpanel';
+        section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
+        acc.push(section);
+      }
+      return acc;
+    }, []);
+    */
 
   const tabList = getTabList(tabs, tabPanels);
 
