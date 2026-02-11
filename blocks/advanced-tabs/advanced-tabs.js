@@ -54,9 +54,9 @@ export default function init(el) {
   // Filter and format all sections that do not hold the tabs block
   const nextTabs = parent.querySelectorAll('.tabSection');
 
-  const tabPanels = [nextTabs]
+  const tabPanels = [...parent.querySelectorAll(':scope > .section')]
      .reduce((acc, section, idx) => {
-      if (section !== currSection) {
+      if (section !== nextTabs) {
         section.id = `tabpanel-${idx + 1}`;
         section.role = 'tabpanel';
         section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
