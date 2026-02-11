@@ -42,18 +42,14 @@ export default function init(el) {
 
   // Find the section that contains the actual block
   const currSection = el.closest('.section .advanced-tabs');
-  console.log("currSection " + currSection);
   const tabsSection = currSection.closest('.section').classList.add("tabSection");
-  console.log("tabsSection")
-  console.log(tabsSection);
-
+  
   // Find the tab items
   const tabs = el.querySelector('ul');
   if (!tabs) {
     log('Please add an unordered list to the advanced tabs block.');
     return;
   }
-  console.log("tabs " + tabs);
   //const tabCount = querySelectorAll('li').length;
   //console.log(tabCount);
 
@@ -63,13 +59,13 @@ export default function init(el) {
 
   const tabPanels = [...parent.querySelectorAll(':scope > .section')]
     .reduce((acc, section, idx) => {
-    /*  if (section !== currSection) {
+      if (section !== tabsSection) {
         section.id = `tabpanel-${idx + 1}`;
         section.role = 'tabpanel';
         section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
         acc.push(section);
       }
-      return acc;*/
+      return acc;
     }, []);
     console.log("tabPanels " + tabPanels);
 
