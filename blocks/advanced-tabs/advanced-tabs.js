@@ -41,33 +41,18 @@ export default function init(el) {
   parent.style = 'display: none;';
 
   // Find the section that contains the actual block
-  const currSection = el.closest('.section .advanced-tabs');
-  const tabSectionItem = currSection.closest('.section').classList.add("tabSectionItems");
-  //Add class to items within the count
-  //const tabSection = tabSectionItem.nextSibling;
-  //console.log(tabSection);
-  
+  const currSection = el.closest('.section');
+
   // Find the tab items
   const tabs = el.querySelector('ul');
   if (!tabs) {
     log('Please add an unordered list to the advanced tabs block.');
     return;
   }
-  
-  // Filter and format all sections that do not hold the tabs block
-  const tabPanels = [...parent.querySelectorAll(':scope > .tabSection')]
-     .reduce((acc, section, idx) => {
-        console.log(section);
-        section.id = `tabpanel-${idx + 1}`;
-        section.role = 'tabpanel';
-        section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
-        acc.push(section);
-      return acc;
-    }, []);
 
-//Original Code
- /* const tabPanels = [...parent.querySelectorAll(':scope > .section')]
-     .reduce((acc, section, idx) => {
+  // Filter and format all sections that do not hold the tabs block
+  const tabPanels = [...parent.querySelectorAll(':scope > .section')]
+    .reduce((acc, section, idx) => {
       if (section !== currSection) {
         section.id = `tabpanel-${idx + 1}`;
         section.role = 'tabpanel';
@@ -76,12 +61,10 @@ export default function init(el) {
       }
       return acc;
     }, []);
-    */
 
   const tabList = getTabList(tabs, tabPanels);
 
   tabs.remove();
-  //el.append(tabList, ...tabPanels);
-  el.append(tabList);
+  el.append(tabList, ...tabPanels);
   parent.removeAttribute('style');
 }
