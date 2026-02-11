@@ -57,6 +57,7 @@ export default function init(el) {
   console.log(tabCount);
 
   tabSection.forEach((element, index) => {
+    console.log(index);
     if (index < 2) {
       console.log (element);
     }
