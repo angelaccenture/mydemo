@@ -54,7 +54,7 @@ export default function init(el) {
   }
 
   // Filter and format all sections that do not hold the tabs block
-  const tabPanels = [...parent.querySelectorAll('.tabSectionItems > .section')]
+  const tabPanels = [...parent.querySelectorAll(':scope > .section')]
     .reduce((acc, section, idx) => {
       if (section !== currSection) {
         section.id = `tabpanel-${idx + 1}`;
