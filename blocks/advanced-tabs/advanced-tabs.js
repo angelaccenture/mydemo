@@ -43,6 +43,8 @@ export default function init(el) {
   // Find the section that contains the actual block
   const currSection = el.closest('.section .advanced-tabs');
   console.log(currSection);
+  const tabsSection = currSection.closest('.section');
+  console.log(tabsSection)
 
   // Find the tab items
   const tabs = el.querySelector('ul');
@@ -55,6 +57,8 @@ export default function init(el) {
   //console.log(tabCount);
 
   // Filter and format all sections that do not hold the tabs block
+
+  
 
   const tabPanels = [...parent.querySelectorAll(':scope > .section')]
     .reduce((acc, section, idx) => {
