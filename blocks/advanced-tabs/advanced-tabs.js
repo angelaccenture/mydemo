@@ -40,7 +40,7 @@ export default function init(el) {
   parent.style = 'display: none;';
 
   // Find the tab items
-  const tabs = el.querySelector('.advanced-tabs ul li');
+  const tabs = el.querySelector('.advanced-tabs ul');
   if (!tabs) {
     log('Please add an unordered list to the advanced tabs block.');
     return;
