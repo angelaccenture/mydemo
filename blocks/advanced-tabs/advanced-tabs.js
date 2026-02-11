@@ -52,7 +52,9 @@ export default function init(el) {
   const currSectionat = el.closest('.section .advanced-tabs');
   const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
   const tabSection = document.querySelectorAll('.tabSection ~ .section');
-  const tabCount = tabs.length;
+  const tabItems = document.querySelector(".advanced-tabs ul li");
+  const tabCount = tabItems.childElementCount;
+  console.log(tabCount);
   tabSection.forEach(element => {
     console.log(element);
     element.classList.add("tabSection");
