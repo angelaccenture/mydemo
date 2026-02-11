@@ -59,10 +59,10 @@ export default function init(el) {
   tabSection.forEach((element, index) => {
     console.log(index);
     if (index < 4) {
-     // console.log (element);
+     element.classList.add("tabSection");
     }
     console.log(element);
-    element.classList.add("tabSection");
+   
   });
 
   // Filter and format all sections that do not hold the tabs block
