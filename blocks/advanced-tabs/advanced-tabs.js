@@ -44,7 +44,8 @@ export default function init(el) {
   const currSection = el.closest('.section .advanced-tabs');
   console.log("currSection " + currSection);
   const tabsSection = currSection.closest('.section');
-  console.log("tabsSection " + tabsSection)
+  console.log("tabsSection")
+  console.log(tabsSection);
 
   // Find the tab items
   const tabs = el.querySelector('ul');
