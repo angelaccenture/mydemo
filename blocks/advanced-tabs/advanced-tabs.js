@@ -47,9 +47,7 @@ export default function init(el) {
   const tabSection = document.querySelectorAll('.tabSection ~ .section');
   tabSection.forEach(element => {
     console.log(element);
-    console.log(tabItems);
     element.classList.add("tabSection");
-    // Perform operations on each element
   });
 
 
