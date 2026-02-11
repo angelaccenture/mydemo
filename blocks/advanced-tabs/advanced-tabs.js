@@ -43,7 +43,7 @@ export default function init(el) {
   // Find the section that contains the actual block
   const currSection = el.closest('.section .advanced-tabs');
   console.log("currSection " + currSection);
-  const tabsSection = currSection.closest('.section');
+  const tabsSection = currSection.closest('.section').classList.add("tabSection");
   console.log("tabsSection")
   console.log(tabsSection);
 
