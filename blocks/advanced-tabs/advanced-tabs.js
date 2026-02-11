@@ -57,6 +57,7 @@ export default function init(el) {
   const tabPanels = [...parent.querySelectorAll(':scope > .section')]
      .reduce((acc, section, idx) => {
       if (section !== nextTabs) {
+        console.log(section);
         section.id = `tabpanel-${idx + 1}`;
         section.role = 'tabpanel';
         section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
