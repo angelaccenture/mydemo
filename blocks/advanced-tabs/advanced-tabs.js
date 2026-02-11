@@ -44,8 +44,8 @@ export default function init(el) {
   const currSection = el.closest('.section .advanced-tabs');
   const tabSectionItem = currSection.closest('.section').classList.add("tabSectionItems");
   //Add class to items within the count
-  const tabSection = tabSectionItem.nextSibling;
-  console.log(tabSection);
+  //const tabSection = tabSectionItem.nextSibling;
+  //console.log(tabSection);
   
   // Find the tab items
   const tabs = el.querySelector('ul');
