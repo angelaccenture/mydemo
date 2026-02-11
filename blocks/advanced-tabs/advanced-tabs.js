@@ -44,7 +44,8 @@ export default function init(el) {
   const currSection = el.closest('.section');
   const currSectionat = el.closest('.section .advanced-tabs');
   const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
-  console.log(tabSectionItem);
+  const tabSection = document.querySelectorAll('.tabSection')
+  console.log(tabSection);
 
 
   // Find the tab items
