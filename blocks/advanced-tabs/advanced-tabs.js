@@ -30,6 +30,14 @@ function getTabList(tabs, tabPanels) {
     });
   }
   const tabCount = tabItems.length;
+  const currSectionat = el.closest('.section .advanced-tabs');
+  const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
+  const tabSection = document.querySelectorAll('.tabSection ~ .section');
+  tabSection.forEach(element => {
+    console.log(element);
+    element.classList.add("tabSection");
+  });
+  
   return tabList;
 }
  
@@ -42,13 +50,7 @@ export default function init(el) {
 
   // Find the section that contains the actual block
   const currSection = el.closest('.section');
-  const currSectionat = el.closest('.section .advanced-tabs');
-  const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
-  const tabSection = document.querySelectorAll('.tabSection ~ .section');
-  tabSection.forEach(element => {
-    console.log(element);
-    element.classList.add("tabSection");
-  });
+  
   // Find the tab items
   const tabs = el.querySelector('ul');
   if (!tabs) {
