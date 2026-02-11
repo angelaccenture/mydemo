@@ -54,14 +54,11 @@ export default function init(el) {
   const tabSection = document.querySelectorAll('.tabSection ~ .section');
   const tabItems = document.querySelector(".advanced-tabs ul");
   const tabCount = tabItems.childElementCount;
-  console.log(tabCount);
 
   tabSection.forEach((element, index) => {
-    console.log(index);
     if (index < tabCount) {
      element.classList.add("tabSection");
     }
-    console.log(element);
    
   });
 
