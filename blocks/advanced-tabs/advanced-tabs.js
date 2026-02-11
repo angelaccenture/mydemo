@@ -71,7 +71,7 @@ export default function init(el) {
   const tabList = getTabList(tabs, tabPanels);
 
   tabs.remove();
-  el.append(tabList, ...tabPanels);
-  //el.append(tabList);
+  //el.append(tabList, ...tabPanels);
+  el.append(tabList);
   parent.removeAttribute('style');
 }
