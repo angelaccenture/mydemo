@@ -50,16 +50,14 @@ export default function init(el) {
     log('Please add an unordered list to the advanced tabs block.');
     return;
   }
-  //const tabCount = querySelectorAll('li').length;
-  //console.log(tabCount);
-
+  
   // Filter and format all sections that do not hold the tabs block
 
   
 
   const tabPanels = [...parent.querySelectorAll(':scope > .section')]
     .reduce((acc, section, idx) => {
-      if (section !== tabsSection) {
+      if (section !== currSection) {
         section.id = `tabpanel-${idx + 1}`;
         section.role = 'tabpanel';
         section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
@@ -67,7 +65,6 @@ export default function init(el) {
       }
       return acc;
     }, []);
-    console.log("tabPanels " + tabPanels);
 
   const tabList = getTabList(tabs, tabPanels);
 
