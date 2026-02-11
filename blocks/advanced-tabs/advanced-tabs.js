@@ -40,16 +40,19 @@ export default function init(el) {
   parent.style = 'display: none;';
 
   // Find the tab items
-  const tabs = el.querySelector('.advanced-tabs ul');
+  const tabs = el.querySelector('.advanced-tabs ul li');
   if (!tabs) {
     log('Please add an unordered list to the advanced tabs block.');
     return;
   }
-  // Find the section that contains the actual block and only add class to tab sections
+  // Find the section 
   const currSection = el.closest('.section');
+
+   // Find the section that contains the actual block and only add class to tab sections
   const currSectionat = el.closest('.section .advanced-tabs');
   const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
   const tabSection = document.querySelectorAll('.tabSection ~ .section');
+  const tabCount = tabs.length;
   tabSection.forEach(element => {
     console.log(element);
     element.classList.add("tabSection");
@@ -58,7 +61,7 @@ export default function init(el) {
   // Filter and format all sections that do not hold the tabs block
   const tabPanels = [...parent.querySelectorAll(':scope > .tabSection')]
     .reduce((acc, section, idx) => {
-      if (section !== currSectionat) {
+      if (section !== currSection) {
         section.id = `tabpanel-${idx + 1}`;
         section.role = 'tabpanel';
         section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
