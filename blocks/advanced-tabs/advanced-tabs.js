@@ -42,7 +42,9 @@ export default function init(el) {
 
   // Find the section that contains the actual block
   const currSection = el.closest('.section .advanced-tabs');
-  const tabsSection = currSection.closest('.section').classList.add("tabSection");
+  const tabsSectionItem = currSection.closest('.section').classList.add("tabSectionItems");
+  //Add class to items within the count
+  const tabsSection = tabsSectionItem.nextElementSibling.classList.add("tabSection")
   
   // Find the tab items
   const tabs = el.querySelector('ul');
@@ -52,17 +54,13 @@ export default function init(el) {
   }
   
   // Filter and format all sections that do not hold the tabs block
-  const nextTabs = parent.querySelectorAll('.tabSection');
-
-  const tabPanels = [...parent.querySelectorAll(':scope > .section')]
+  const tabPanels = [...parent.querySelectorAll(':scope > .tabSection')]
      .reduce((acc, section, idx) => {
-      if (section !== nextTabs) {
         console.log(section);
         section.id = `tabpanel-${idx + 1}`;
         section.role = 'tabpanel';
         section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
         acc.push(section);
-      }
       return acc;
     }, []);
 
