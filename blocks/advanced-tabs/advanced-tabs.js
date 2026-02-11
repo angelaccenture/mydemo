@@ -31,12 +31,7 @@ function getTabList(tabs, tabPanels) {
   }
 
   console.log("tabItems");
-  console.log(tabItems);
-  tabItems.forEach(parent => {
-    // Use childElementCount
-    const childCount = parent.childElementCount; 
-    console.log(`An element with class 'parent-element' has ${childCount} child elements.`);
-    });
+  console.log(tabItems.length);
 
   return tabList;
 }
