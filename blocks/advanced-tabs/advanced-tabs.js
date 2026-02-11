@@ -58,7 +58,7 @@ export default function init(el) {
 
   tabSection.forEach((element, index) => {
     console.log(index);
-    if (index < 4) {
+    if (index < tabCount) {
      element.classList.add("tabSection");
     }
     console.log(element);
