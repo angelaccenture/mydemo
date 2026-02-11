@@ -42,9 +42,9 @@ export default function init(el) {
 
   // Find the section that contains the actual block
   const currSection = el.closest('.section .advanced-tabs');
-  console.log(currSection);
+  console.log("currSection " + currSection);
   const tabsSection = currSection.closest('.section');
-  console.log(tabsSection)
+  console.log("tabsSection " + tabsSection)
 
   // Find the tab items
   const tabs = el.querySelector('ul');
@@ -52,7 +52,7 @@ export default function init(el) {
     log('Please add an unordered list to the advanced tabs block.');
     return;
   }
-  console.log(tabs);
+  console.log("tabs " + tabs);
   //const tabCount = querySelectorAll('li').length;
   //console.log(tabCount);
 
