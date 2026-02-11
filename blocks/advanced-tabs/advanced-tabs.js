@@ -50,7 +50,7 @@ export default function init(el) {
     element.classList.add("tabSection");
   });
   // Find the tab items
-  const tabs = el.querySelector('ul');
+  const tabs = el.querySelector('.advanced-tabs ul');
   if (!tabs) {
     log('Please add an unordered list to the advanced tabs block.');
     return;
