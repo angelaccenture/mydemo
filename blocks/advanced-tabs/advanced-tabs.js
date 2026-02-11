@@ -41,7 +41,8 @@ export default function init(el) {
   parent.style = 'display: none;';
 
   // Find the section that contains the actual block
-  const currSection = el.closest('.section');
+  const currSection = el.closest('.section .advanced-tabs');
+  const tabSectionItem = currSection.closest('.section').classList.add("tabSectionItems");
 
   // Find the tab items
   const tabs = el.querySelector('ul');
@@ -66,5 +67,6 @@ export default function init(el) {
 
   tabs.remove();
   el.append(tabList, ...tabPanels);
+  //el.append(tabList);
   parent.removeAttribute('style');
 }
