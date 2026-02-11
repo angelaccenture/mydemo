@@ -81,8 +81,6 @@ function toClassName(name) {
 }
 
 async function handleStyle(text, section) {
-  console.log("section space issue - block code");
-
 
   const styles = text
             .split(',')
