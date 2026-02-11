@@ -55,9 +55,9 @@ export default function init(el) {
   const tabItems = document.querySelector(".advanced-tabs ul");
   const tabCount = tabItems.childElementCount;
   console.log(tabCount);
-  const limit = 3;
+  const tabSectionSlice = tabSectionSlice.slice(0, 2);
 
-  tabSection.slice(0, limit).forEach(element => {
+  tabSectionSlice.forEach(element => {
     console.log(element);
     element.classList.add("tabSection");
   });
