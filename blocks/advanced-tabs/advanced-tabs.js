@@ -29,7 +29,6 @@ function getTabList(tabs, tabPanels) {
       btn.classList.add('is-active');
     });
   }
-  const tabCount = tabItems.length;
   return tabList;
 }
  
@@ -40,7 +39,13 @@ export default function init(el) {
   // Forefully hide parent because sections may not be loaded yet
   parent.style = 'display: none;';
 
-  // Find the section that contains the actual block
+  // Find the tab items
+  const tabs = el.querySelector('.advanced-tabs ul');
+  if (!tabs) {
+    log('Please add an unordered list to the advanced tabs block.');
+    return;
+  }
+  // Find the section that contains the actual block and only add class to tab sections
   const currSection = el.closest('.section');
   const currSectionat = el.closest('.section .advanced-tabs');
   const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
@@ -49,17 +54,11 @@ export default function init(el) {
     console.log(element);
     element.classList.add("tabSection");
   });
-  // Find the tab items
-  const tabs = el.querySelector('.advanced-tabs ul');
-  if (!tabs) {
-    log('Please add an unordered list to the advanced tabs block.');
-    return;
-  }
 
   // Filter and format all sections that do not hold the tabs block
   const tabPanels = [...parent.querySelectorAll(':scope > .tabSection')]
     .reduce((acc, section, idx) => {
-      if (section !== currSection) {
+      if (section !== currSectionat) {
         section.id = `tabpanel-${idx + 1}`;
         section.role = 'tabpanel';
         section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
