@@ -30,18 +30,18 @@ function getTabList(tabs, tabPanels) {
     });
   }
 
-  return tabList;
-}
-
- 
   console.log("tabItems");
   console.log(tabItems);
   tabItems.forEach(parent => {
     // Use childElementCount
     const childCount = parent.childElementCount; 
     console.log(`An element with class 'parent-element' has ${childCount} child elements.`);
-});
+    });
 
+  return tabList;
+}
+
+ 
 export default function init(el) {
   // Find the top most parent where all tab sections live
   const parent = el.closest('.fragment-content, main');
