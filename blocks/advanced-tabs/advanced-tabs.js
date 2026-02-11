@@ -51,7 +51,7 @@ export default function init(el) {
     return;
   }
   console.log(tabs);
-  const tabCount = querySelectorAll(tabs).length;
+  //const tabCount = querySelectorAll('li').length;
   console.log(tabCount);
 
   // Filter and format all sections that do not hold the tabs block
@@ -71,7 +71,7 @@ export default function init(el) {
   const tabList = getTabList(tabs, tabPanels);
 
   tabs.remove();
-  //el.append(tabList, ...tabPanels);
-  el.append(tabList);
+  el.append(tabList, ...tabPanels);
+  //el.append(tabList);
   parent.removeAttribute('style');
 }
