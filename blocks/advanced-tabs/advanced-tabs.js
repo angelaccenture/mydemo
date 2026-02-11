@@ -56,8 +56,8 @@ export default function init(el) {
   
 
   const tabPanels = [...parent.querySelectorAll(':scope > .section')]
-  console.log(tabPanels);
-    .reduce((acc, section, idx) => {
+     .reduce((acc, section, idx) => {
+       console.log(tabPanels);
       if (section !== currSection) {
         section.id = `tabpanel-${idx + 1}`;
         section.role = 'tabpanel';
