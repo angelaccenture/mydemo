@@ -52,8 +52,9 @@ export default function init(el) {
   }
   
   // Filter and format all sections that do not hold the tabs block
+  const nextTabs = parent.querySelectorAll('.tabSection');
 
-  const tabPanels = [...parent.querySelectorAll('.tabSection').nextElementSibling]
+  const tabPanels = [nextTabs]
      .reduce((acc, section, idx) => {
       if (section !== currSection) {
         section.id = `tabpanel-${idx + 1}`;
