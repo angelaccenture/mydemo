@@ -1,24 +1,30 @@
 # Universal Editor (UE) Block Checkist
 
-| Block Name | Status | Notes
+| Name | Status | Notes
 | :--- | :---: | ---: |
-| Page | Mostly Done | verify/fix new Author Kit features - Fix UE error message
-| Text | In Progress | Fix error message in UE, drag/drop featuretes
-| Image | Mostly Done | Fix alt Text
+| Templates | Not Started | Figure out what we need (controls blocks and style system)
 | :--- | :---: | ---: |
-| Footer | In Progress | Fixed in UE, now just need to make it render on page hahaha!
-| Section-Metadata | Mostly Done | verify/fix new Author Kit features
+| Page | Mostly Done | Add tags manager, get all SEO requirements for demo
+| Text | Mostly Done | Add support for ID's - Check function in ak.js (decorateHash) for 
+| Image | Mostly Done | Add support for ID's
 | :--- | :---: | ---: |
-| Accoridion | In Progress | Block Collection
-| Advanced-Tabs | Not Started | Author Kit block
+| Footer/Header | In Progress | Find better solution for UE support
+| Section-Metadata | In Progress | Split out grid code and verify background stuff works
+| Section-Grid | Mostly Done | verify/fix new Author Kit features
+| Advanced-Tabs | Mostly Done | UE Support
+| Advanced-Carousel | In Progress | 
+| Advanced-Accordion | In Progress | 
+| :--- | :---: | ---: |
+| Button | In Progress | Check function in ak.js (decorateButton)
 | Card | Done | w/ V2 Model
-| Carousel | In Progress | Works in UE when carousel doesn't render, but breaks when it renders
-| Columns | n/a | Not sure if needed
 | Fragment | Not Started | Author Kit block
 | Hero | Done | w/ V2 Model
-| Schedule | Not Started | Author Kit block
-| Table | Not Started | Author Kit block
-| YouTube | Not Started | Author Kit block
+| Teaser | Not Started |
+| Form | Not Started | 
+| Modal | Not Started | 
+| Schedule | Not Started | Need for Publish Workflow
+| Table | TBD | Author Kit block
+| YouTube | TBD | Author Kit block
 
 
 # Other Features
@@ -28,6 +34,7 @@
 - Permissions
 - DAM Integration (and Dynamic Media - Need to get more requirements)
 - Analytics Integration (need full integration - get requirements)
+- Target HTML Offer -- https://github.com/kmurugulla/eds-target-htmloffer
 
 ## Helpful Links
 https://github.com/alexcarol/sidekick-library-generator
