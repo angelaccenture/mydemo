@@ -29,13 +29,14 @@ function getTabList(tabs, tabPanels) {
       btn.classList.add('is-active');
     });
   }
+  const tabCount = tabItems.length;
 
   console.log("tabItems");
   console.log(tabItems.length);
 
   return tabList;
 }
-
+console.log(tabList);
  
 export default function init(el) {
   // Find the top most parent where all tab sections live
