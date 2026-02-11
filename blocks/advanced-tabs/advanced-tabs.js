@@ -42,9 +42,10 @@ export default function init(el) {
 
   // Find the section that contains the actual block
   const currSection = el.closest('.section .advanced-tabs');
-  const tabsSectionItem = currSection.closest('.section').classList.add("tabSectionItems");
+  const tabSectionItem = currSection.closest('.section').classList.add("tabSectionItems");
   //Add class to items within the count
-  const tabsSection = tabsSectionItem.nextElementSibling;
+  const tabSection = tabSectionItem.nextSibling;
+  console.log(tabSection);
   
   // Find the tab items
   const tabs = el.querySelector('ul');
