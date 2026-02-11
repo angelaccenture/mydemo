@@ -54,10 +54,10 @@ export default function init(el) {
   const tabPanels = [...parent.querySelectorAll(':scope > .section')]
     .reduce((acc, section, idx) => {
       if (section !== currSection) {
-        section.id = `tabpanel-${idx + 1}`;
-        section.role = 'tabpanel';
-        section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
-        acc.push(section);
+       // section.id = `tabpanel-${idx + 1}`;
+       // section.role = 'tabpanel';
+       // section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
+       // acc.push(section);
       }
       return acc;
     }, []);
