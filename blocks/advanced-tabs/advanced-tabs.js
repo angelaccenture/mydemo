@@ -45,8 +45,16 @@ export default function init(el) {
   const currSectionat = el.closest('.section .advanced-tabs');
   const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
   const tabSection = document.querySelectorAll('.tabSection ~ .section');
+  const tabCount = document.querySelectorAll('.tab-list');
+  tabCount.forEach(parent => {
+    // Use childElementCount
+    const childCount = parent.childElementCount; 
+    console.log(`An element with class 'parent-element' has ${childCount} child elements.`);
+});
+
   tabSection.forEach(element => {
     console.log(element);
+
     element.classList.add("tabSection");
   });
 
