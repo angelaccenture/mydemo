@@ -43,7 +43,8 @@ export default function init(el) {
   // Find the section that contains the actual block
   const currSection = el.closest('.section .advanced-tabs');
   const tabSectionItem = currSection.closest('.section').classList.add("tabSectionItems");
-  const nextSection = document.getElementsByClassName(".tabSectionItems").nextSibling.classList.add("tabSection");
+  const nextSection = document.getElementsByClassName(".tabSectionItems").nextSibling;
+  console.log(nextSection);
 
   // Find the tab items
   const tabs = el.querySelector('ul');
