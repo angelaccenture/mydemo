@@ -48,14 +48,6 @@
     ]
   },
   {
-    "id": "tabs",
-    "components": [
-      "image",
-      "text",
-      "button"
-    ]
-  },
-  {
     "id": "table",
     "components": [
       "table-row"
