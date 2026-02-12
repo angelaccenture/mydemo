@@ -11,7 +11,7 @@
 | Footer/Header | In Progress | Find better solution for UE support
 | Section-Metadata | In Progress | Split out grid code and verify background stuff works
 | Section-Grid | Mostly Done | verify/fix new Author Kit features
-| Advanced-Tabs | Mostly Done | UE Support
+| Advanced-Tabs | Mostly Done | UE Support (later: have 2 sets of tabs and have nested tabs)
 | Advanced-Carousel | In Progress | 
 | Advanced-Accordion | In Progress | 
 | :--- | :---: | ---: |
