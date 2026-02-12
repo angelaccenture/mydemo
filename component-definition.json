@@ -10,7 +10,8 @@
           "plugins": {
             "da": {
               "name": "text",
-              "type": "text"
+              "type": "text",
+              "unsafeHTML": "<p>Text</p>"
             }
           }
         },
