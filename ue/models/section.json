@@ -45,11 +45,17 @@
       "components": [
         "text",
         "image",
-        "button",
         "accordion",
-        "card",
+        "button",
         "carousel",
-        "hero"
+        "card",
+        "form",
+        "fragment",
+        "hero",
+        "modal",
+        "table",
+        "tabs",
+        "teaser"
       ]
     }
   ]
