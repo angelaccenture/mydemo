@@ -11,11 +11,15 @@
           "fields": [
             {
               "name": "tablistone",
-              "selector": "div>div>li"
+              "selector": "<div><div><ul><li>"
             },
             {
               "name": "tablisttwo",
               "selector": "div>div>ul>li:nth-child(2)"
+            },
+            {
+              "name": "tablistthree",
+              "selector": "div>div>ul>li:nth-child(3)"
             }
           ]
         }
@@ -67,7 +71,7 @@
           "name": "tablisttwo",
           "label": "Second Tab Name",
           "required": true,
-          "condition": { ">": [{"var" : "tablistnumber"}, 2] 
+          "condition": { ">": [{"var" : "tablistnumber"}, 1] 
           }
         },
         {
@@ -76,16 +80,16 @@
           "name": "tablistthree",
           "label": "Third Tab Name",
           "required": true,
-          "condition": { ">": [{"var" : "tablistnumber"}, 3] 
+          "condition": { ">": [{"var" : "tablistnumber"}, 2] 
           }
         },
         {
           "component": "text",
           "valueType": "string",
           "name": "tablistfour",
-          "label": "Fouther Tab Name",
+          "label": "Fourth Tab Name",
           "required": true,
-          "condition": { ">": [{"var" : "tablistnumber"}, 4] 
+          "condition": { ">": [{"var" : "tablistnumber"}, 3] 
           }
         }
       ]

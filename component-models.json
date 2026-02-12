@@ -233,7 +233,7 @@
             {
               "var": "tablistnumber"
             },
-            2
+            1
           ]
         }
       },
@@ -248,7 +248,7 @@
             {
               "var": "tablistnumber"
             },
-            3
+            2
           ]
         }
       },
@@ -256,14 +256,14 @@
         "component": "text",
         "valueType": "string",
         "name": "tablistfour",
-        "label": "Fouther Tab Name",
+        "label": "Fourth Tab Name",
         "required": true,
         "condition": {
           ">": [
             {
               "var": "tablistnumber"
             },
-            4
+            3
           ]
         }
       }
