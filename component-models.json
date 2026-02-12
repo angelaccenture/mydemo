@@ -204,9 +204,24 @@
     "id": "advanced-tabs",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Standard",
+            "value": "Standard"
+          },
+          {
+            "name": "Blue Standard",
+            "value": "bluestandard"
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "valueType": "string",
-        "name": "tab-list",
+        "name": "tablist",
         "value": "",
         "label": "Tab List",
         "required": true

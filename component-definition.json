@@ -158,10 +158,16 @@
           "title": "Tabs",
           "id": "advanced-tabs",
           "model": "advanced-tabs",
-          "filter": "advanced-tabs",
+          "filter": "section",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"advanced-tabs\"></div>"
+              "unsafeHTML": "<div class=\"advanced-tabs\"></div>",
+              "fields": [
+                {
+                  "name": "tablist",
+                  "selector": "div>div>"
+                }
+              ]
             }
           }
         },

@@ -4,10 +4,16 @@
       "title": "Tabs",
       "id": "advanced-tabs",
       "model": "advanced-tabs",
-      "filter": "advanced-tabs",
+      "filter": "section",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"advanced-tabs\"></div>"
+          "unsafeHTML": "<div class=\"advanced-tabs\"></div>",
+            "fields": [
+            {
+              "name": "tablist",
+              "selector": "div>div>"
+            }
+          ]
         }
       }
     }
@@ -17,9 +23,24 @@
       "id": "advanced-tabs",
       "fields": [
         {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+           {
+              "name": "Standard",
+              "value": "Standard"
+            },
+            {
+              "name": "Blue Standard",
+              "value": "bluestandard"
+            }            
+          ]
+        },
+         {
           "component": "richtext",
           "valueType": "string",
-          "name": "tab-list",
+          "name": "tablist",
           "value": "",
           "label": "Tab List",
           "required": true
@@ -27,12 +48,5 @@
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "tabs",
-      "components": [
-        "image","text","button"
-      ]
-    }
-  ]
+  "filters": []
 }
