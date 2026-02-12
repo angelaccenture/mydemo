@@ -31,11 +31,52 @@
     ]
   },
   {
+    "id": "columns",
+    "components": [
+      "columns-row"
+    ]
+  },
+  {
+    "id": "columns-row",
+    "components": []
+  },
+  {
+    "id": "columns-cell",
+    "components": [
+      "text",
+      "image"
+    ]
+  },
+  {
     "id": "accordion",
     "components": [
       "accordion-item",
       "image",
       "text"
+    ]
+  },
+  {
+    "id": "table",
+    "components": [
+      "table-row"
+    ]
+  },
+  {
+    "id": "table-2-columns",
+    "components": [
+      "table-col-2"
+    ]
+  },
+  {
+    "id": "table-3-columns",
+    "components": [
+      "table-col-3"
+    ]
+  },
+  {
+    "id": "table-4-columns",
+    "components": [
+      "table-col-4"
     ]
   }
 ]

@@ -185,6 +185,22 @@
     ]
   },
   {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "columns",
+        "label": "Number of Columns",
+        "value": 2,
+        "validation": {
+          "numberMin": 1,
+          "numberMax": 6
+        }
+      }
+    ]
+  },
+  {
     "id": "accordion-item",
     "fields": [
       {
@@ -202,6 +218,139 @@
         "label": "Text",
         "valueType": "string",
         "required": true
+      }
+    ]
+  },
+  {
+    "id": "button",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link",
+        "value": "/content"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text",
+        "value": "Button"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title",
+        "value": "Button"
+      },
+      {
+        "component": "select",
+        "name": "linkStyle",
+        "value": "",
+        "label": "Styles",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "Text Button",
+            "value": "text-btn"
+          },
+          {
+            "name": "Input",
+            "value": "primary-variant"
+          },
+          {
+            "name": "Input Secondary",
+            "value": "secondary-variant"
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "name": "icondropdown",
+        "value": false,
+        "label": "Add Icon"
+      },
+      {
+        "component": "container",
+        "label": "Icon styles",
+        "name": "iconStyles",
+        "condition": {
+          "===": [
+            {
+              "var": "icondropdown"
+            },
+            true
+          ]
+        },
+        "fields": [
+          {
+            "component": "select",
+            "name": "IconPlacement",
+            "value": "trailing",
+            "label": "Icon Placement",
+            "options": [
+              {
+                "name": "After",
+                "value": "trailing"
+              },
+              {
+                "name": "Before",
+                "value": "leading"
+              }
+            ]
+          },
+          {
+            "component": "text",
+            "name": "linkIconText",
+            "label": "Icon Text",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "name": "inverse",
+        "label": "inverse",
+        "valueType": "boolean",
+        "value": false
+      },
+      {
+        "component": "select",
+        "name": "sizeClasses",
+        "value": "large",
+        "label": "Size",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Large",
+            "value": "large"
+          },
+          {
+            "name": "Small",
+            "value": "small"
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "name": "openInNewTab",
+        "label": "Opens button in new tab",
+        "value": false
+      },
+      {
+        "component": "text",
+        "name": "buttonId",
+        "label": "ID",
+        "value": ""
       }
     ]
   },
@@ -249,6 +398,22 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Form"
+      },
+      {
+        "component": "text",
+        "name": "action",
+        "label": "Action URL",
         "valueType": "string"
       }
     ]
@@ -326,6 +491,290 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "fragment",
+    "fields": [
+      {
+        "component": "text",
+        "name": "urlText",
+        "label": "Fragment URL Text"
+      },
+      {
+        "component": "text",
+        "name": "url",
+        "label": "Fragment URL",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "table",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Border",
+            "children": [
+              {
+                "name": "Striped",
+                "value": "striped"
+              },
+              {
+                "name": "Bordered",
+                "value": "bordered"
+              }
+            ]
+          },
+          {
+            "name": "Header",
+            "children": [
+              {
+                "name": "No Header",
+                "value": "no-header"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "filter",
+        "label": "Columns",
+        "valueType": "string",
+        "value": "table",
+        "options": [
+          {
+            "name": "1 Column",
+            "value": "table"
+          },
+          {
+            "name": "2 Columns",
+            "value": "table-2-columns"
+          },
+          {
+            "name": "3 Columns",
+            "value": "table-3-columns"
+          },
+          {
+            "name": "4 Columns",
+            "value": "table-4-columns"
+          },
+          {
+            "name": "5 Columns",
+            "value": "table-5-columns"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "table-row",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      }
+    ]
+  },
+  {
+    "id": "table-col-2",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column2text",
+        "label": "Column2"
+      }
+    ]
+  },
+  {
+    "id": "table-col-3",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column2text",
+        "label": "Column2"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column3text",
+        "label": "Column3"
+      }
+    ]
+  },
+  {
+    "id": "table-col-4",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column2text",
+        "label": "Column2"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column3text",
+        "label": "Column3"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column4text",
+        "label": "Column4"
+      }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "value": "Your text will show here.",
+        "name": "teaserBlurb",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "teaserStyle",
+        "value": "image",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Video",
+            "value": "video"
+          },
+          {
+            "name": "Image",
+            "value": "image"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Video Properties",
+        "name": "videoProperties",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "teaserStyle"
+            },
+            "video"
+          ]
+        },
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "videoReference",
+            "label": "Video Reference",
+            "multi": false,
+            "description": "Provide a URL for the video background."
+          },
+          {
+            "component": "select",
+            "name": "videoBehavior",
+            "value": "autoplay",
+            "label": "Video Behavior (on load)",
+            "valueType": "string",
+            "options": [
+              {
+                "name": "Autoplay",
+                "value": "autoplay"
+              },
+              {
+                "name": "Pause",
+                "value": "pause"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Image Properties",
+        "name": "imageProperties",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "teaserStyle"
+            },
+            "image"
+          ]
+        },
+        "fields": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "imageRef",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "alt",
+            "value": "Default alt",
+            "label": "Alt Text"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Button Properties",
+        "name": "buttonProperties",
+        "valueType": "string",
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "btn-text",
+            "value": "Button",
+            "label": "Button Text"
+          },
+          {
+            "component": "aem-content",
+            "name": "btn-link",
+            "label": "Button Link",
+            "valueType": "string",
+            "rootPath": "",
+            "description": "Path to linked AEM content"
+          }
+        ]
       }
     ]
   }

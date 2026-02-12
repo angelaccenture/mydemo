@@ -9,23 +9,22 @@
 | Image | IP | Alt Text | NS | Add support for ID's
 | :--- | :---: | ---: |---: |
 | Footer/Header | IP | IP | NS | Find better solution for UE
-| Section-Metadata |IP | IP | NS | Split out grid code and verify background stuff works
+| Schedule | NS | NS | NS | Need for Publish Workflow
+| :--- | :---: | ---: |---: |
+| Section-Metadata |IP | IP | NS | Split out grid code and verify background stuff
+| Advanced-Accordion | IP | IP | NS | 
+| Advanced-Carousel | IP | IP | NS | 
 | Advanced-Columns | IP | IP | NS | verify/fix new Author Kit features
 | Advanced-Tabs | Done | IP | NS | Future: have 2 sets of tabs and have nested tabs
-| Advanced-Carousel | IP | IP | NS | 
-| Advanced-Accordion | IP | IP | NS | 
 | :--- | :---: | ---: |---: |
 | Button | IP | IP | NS | Check function in ak.js (decorateButton)
 | Card | Done | V2 | Done |
+| Form |IP | IP |  NS | 
 | Fragment | IP | IP | NS | Author Kit block
 | Hero | Done | V2 | Done | 
-| Teaser | IP | IP | NS | 
-| Form |IP | IP |  NS | 
 | Modal | IP | IP |  NS | 
-| Schedule | NS | NS | NS | Need for Publish Workflow
 | Table | TBD | TBD | TBD | Author Kit block
-| YouTube | TBD | TBD | TBD | Author Kit block
-
+| Teaser | IP | IP | NS |
 
 # Other Features
 - Tag Manager (https://github.com/aemsites/da-blog-tools/blob/main/tools/tags/README.md)
@@ -33,6 +32,7 @@
 - Templates
 - Permissions
 - DAM Integration (and Dynamic Media - Need to get more requirements)
+- Video/Youtube, figure out with DAM stuff
 - Analytics Integration (need full integration - get requirements)
 - Target HTML Offer -- https://github.com/kmurugulla/eds-target-htmloffer
 
