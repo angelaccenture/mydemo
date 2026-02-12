@@ -7,7 +7,7 @@
       "filter": "advanced-tabs",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1</li><li>Tab 2</li><li>Tab 3</li></ul></div></div><div>Section One</div>",
+          "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1</li><li>Tab 2</li><li>Tab 3</li></ul></div></div><div>Section One</div><div>Section Two</div><div>Section Three</div>",
           "fields": [
             {
               "name": "tablist-one",
