@@ -50,19 +50,6 @@
             }            
           ]
         },
-         {
-          "component": "number",
-          "valueType": "number",
-          "name": "tablistnumber",
-          "required": true,
-          "value": 1,
-          "label": "Tab Items",
-          "validation": {
-              "numberMin": 1,
-              "numberMax": 6,
-              "customErrorMsg": "1 thru 6 tabs"
-            }
-        },
         {
           "component": "text",
           "valueType": "string",
@@ -74,28 +61,19 @@
           "component": "text",
           "valueType": "string",
           "name": "tablisttwo",
-          "label": "Second Tab Name",
-          "required": true,
-          "condition": { ">": [{"var" : "tablistnumber"}, 1] 
-          }
+          "label": "Second Tab Name"
         },
         {
           "component": "text",
           "valueType": "string",
           "name": "tablistthree",
-          "label": "Third Tab Name",
-          "required": true,
-          "condition": { ">": [{"var" : "tablistnumber"}, 2] 
-          }
+          "label": "Third Tab Name"
         },
         {
           "component": "text",
           "valueType": "string",
           "name": "tablistfour",
-          "label": "Fourth Tab Name",
-          "required": true,
-          "condition": { ">": [{"var" : "tablistnumber"}, 3] 
-          }
+          "label": "Fourth Tab Name"
         }
       ]
     }
