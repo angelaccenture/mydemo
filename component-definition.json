@@ -133,8 +133,7 @@
               "fields": [
                 {
                   "name": "tablistone",
-                  "selector": "div>div>ul>li",
-                  "unsafeHTML": "<li></li>"
+                  "selector": "div>div>ul>li"
                 },
                 {
                   "name": "tablisttwo",
