@@ -1,13 +1,10 @@
 [
   {
     "id": "main",
-    "components": ["section","grid","advanced-accordion","advanced-carousel","advanced-tabs"]
+    "components": ["section"]
   },
   {
     "...": "./section.json#/filters"
-  },
-  {
-    "...": "./grid.json#/filters"
   },
   {
     "...": "./blocks/*.json#/filters"

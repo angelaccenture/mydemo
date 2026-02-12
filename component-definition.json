@@ -47,17 +47,6 @@
           },
           "filter": "section",
           "model": "section"
-        },
-        {
-          "title": "Grid",
-          "id": "grid",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div></div>"
-            }
-          },
-          "filter": "grid",
-          "model": "grid"
         }
       ]
     },

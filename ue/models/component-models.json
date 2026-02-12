@@ -12,9 +12,6 @@
     "...": "./section.json#/models"
   },
   {
-    "...": "./grid.json#/models"
-  },
-  {
     "...": "./blocks/*.json#/models"
   }
 ]
