@@ -7,14 +7,14 @@
       "filter": "advanced-tabs",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1</li><li>Tab 2</li><li>Tab 3</li></ul></div></div><div>Section One</div><div>Section Two</div><div>Section Three</div>",
+          "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1</li><li>Tab 2</li><li>Tab 3</li></ul></div></div>",
           "fields": [
             {
-              "name": "tablist-one",
+              "name": "tablistone",
               "selector": "div>div>li"
             },
             {
-              "name": "tablist-two",
+              "name": "tablisttwo",
               "selector": "div>div>ul>li:nth-child(2)"
             }
           ]
@@ -57,19 +57,35 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "tablist-one",
+          "name": "tablistone",
           "label": "First Tab Name",
-          "required": true,
-          "condition": { "===": [{"var" : "tablistnumber"}, 1] 
-          }
+          "required": true
         },
          {
           "component": "text",
           "valueType": "string",
-          "name": "tablist-two",
+          "name": "tablisttwo",
           "label": "Second Tab Name",
           "required": true,
-          "condition": { "===": [{"var" : "tablistnumber"}, 2] 
+          "condition": { "<": [{"var" : "tablistnumber"}, 2] 
+          }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "tablistthree",
+          "label": "Third Tab Name",
+          "required": true,
+          "condition": { "<": [{"var" : "tablistnumber"}, 3] 
+          }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "tablistfour",
+          "label": "Fouther Tab Name",
+          "required": true,
+          "condition": { "<": [{"var" : "tablistnumber"}, 4] 
           }
         }
       ]

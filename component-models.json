@@ -218,30 +218,52 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "tablist-one",
+        "name": "tablistone",
         "label": "First Tab Name",
+        "required": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tablisttwo",
+        "label": "Second Tab Name",
         "required": true,
         "condition": {
-          "===": [
+          "<": [
             {
               "var": "tablistnumber"
             },
-            1
+            2
           ]
         }
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "tablist-two",
-        "label": "Second Tab Name",
+        "name": "tablistthree",
+        "label": "Third Tab Name",
         "required": true,
         "condition": {
-          "===": [
+          "<": [
             {
               "var": "tablistnumber"
             },
-            2
+            3
+          ]
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tablistfour",
+        "label": "Fouther Tab Name",
+        "required": true,
+        "condition": {
+          "<": [
+            {
+              "var": "tablistnumber"
+            },
+            4
           ]
         }
       }
