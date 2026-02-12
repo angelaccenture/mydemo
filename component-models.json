@@ -207,6 +207,7 @@
         "valueType": "number",
         "name": "tablistnumber",
         "required": true,
+        "value": 1,
         "label": "Tab Items",
         "validation": {
           "numberMin": 1,
@@ -215,11 +216,10 @@
         }
       },
       {
-        "component": "richtext",
+        "component": "text",
         "valueType": "string",
         "name": "tablist-one",
-        "value": "",
-        "label": "First Tab",
+        "label": "First Tab Name",
         "required": true,
         "condition": {
           "===": [
@@ -227,6 +227,21 @@
               "var": "tablistnumber"
             },
             1
+          ]
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tablist-two",
+        "label": "Second Tab Name",
+        "required": true,
+        "condition": {
+          "===": [
+            {
+              "var": "tablistnumber"
+            },
+            2
           ]
         }
       }
