@@ -51,19 +51,6 @@
   "filters": [ {
       "id": "advanced-tabs",
       "components": [
-        "section",
-        "text",
-        "image",
-        "advanced-accordion",
-        "button",
-        "advanced-carousel",
-        "card",
-        "form",
-        "fragment",
-        "hero",
-        "modal",
-        "table",
-        "teaser"
       ]
     }]
 }
