@@ -12,7 +12,7 @@
             {
               "name": "tablistone",
               "selector": "div>div>ul>li",
-              "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>tablistone</li></ul></div></div>"
+              "unsafeHTML": "<li>tablistone</li>"
             },
             {
               "name": "tablisttwo",
