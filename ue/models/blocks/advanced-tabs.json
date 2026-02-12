@@ -11,7 +11,7 @@
           "fields": [
             {
               "name": "tablistone",
-              "selector": "<div><div><ul><li>",
+              "selector": "div>div>ul>li",
               "unsafeHTML": "<div class=\"angeltest\"><div><ul><li>Tab Name</li></ul></div></div>"
             },
             {
