@@ -15,7 +15,7 @@
 | Advanced-Accordion | n/a | n/a | n/a | Don't need to build for Demo
 | Advanced-Carousel | IP | IP | NS | 
 | Advanced-Columns | IP | IP | NS | verify/fix new Author Kit features
-| Advanced-Tabs | Done | IP | NS | Future: have 2 sets of tabs and have nested tabs
+| Advanced-Tabs | Done | IP | Done | Future: have 2 sets of tabs and have nested tabs
 | :--- | :---: | ---: |---: |
 | Button | IP | IP | NS | Check function in ak.js (decorateButton)
 | Card | Done | V2 | Done |

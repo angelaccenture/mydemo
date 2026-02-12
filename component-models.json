@@ -201,7 +201,7 @@
     ]
   },
   {
-    "id": "tabs",
+    "id": "advanced-tabs",
     "fields": [
       {
         "component": "richtext",

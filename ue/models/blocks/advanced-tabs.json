@@ -2,9 +2,9 @@
   "definitions": [
     {
       "title": "Tabs",
-      "id": "tabs",
-      "model": "tabs",
-      "filter": "tabs",
+      "id": "advanced-tabs",
+      "model": "advanced-tabs",
+      "filter": "advanced-tabs",
       "plugins": {
         "da": {
           "unsafeHTML": "<div class=\"advanced-tabs\"></div>"
@@ -14,7 +14,7 @@
   ],
   "models": [
     {
-      "id": "tabs",
+      "id": "advanced-tabs",
       "fields": [
         {
           "component": "richtext",

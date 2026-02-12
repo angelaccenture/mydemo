@@ -156,9 +156,9 @@
         },
         {
           "title": "Tabs",
-          "id": "tabs",
-          "model": "tabs",
-          "filter": "tabs",
+          "id": "advanced-tabs",
+          "model": "advanced-tabs",
+          "filter": "advanced-tabs",
           "plugins": {
             "da": {
               "unsafeHTML": "<div class=\"advanced-tabs\"></div>"
