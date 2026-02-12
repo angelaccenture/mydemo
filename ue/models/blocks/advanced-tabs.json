@@ -38,6 +38,26 @@
           ]
         },
          {
+          "component": "number",
+          "valueType": "number",
+          "name": "tablistnumber",
+          "required": true,
+          "label": "Tab Items",
+          "validation": {
+              "numberMin": 1,
+              "numberMax": 6,
+              "customErrorMsg": "1 thru 6 tabs"
+            }
+        },
+        {
+            "component": "text-input",
+            "label": "Hidden text field",
+            "name": "hidden-text",
+            "valueType": "string",
+            "condition": { "===": [{"var" : "tablistnumber"}, 1] 
+          }
+          },
+          {
           "component": "richtext",
           "valueType": "string",
           "name": "tablist",
