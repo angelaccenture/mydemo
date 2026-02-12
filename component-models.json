@@ -229,7 +229,7 @@
         "label": "Second Tab Name",
         "required": true,
         "condition": {
-          "<": [
+          ">": [
             {
               "var": "tablistnumber"
             },
@@ -244,7 +244,7 @@
         "label": "Third Tab Name",
         "required": true,
         "condition": {
-          "<": [
+          ">": [
             {
               "var": "tablistnumber"
             },
@@ -259,7 +259,7 @@
         "label": "Fouther Tab Name",
         "required": true,
         "condition": {
-          "<": [
+          ">": [
             {
               "var": "tablistnumber"
             },

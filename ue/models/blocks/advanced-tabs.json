@@ -67,7 +67,7 @@
           "name": "tablisttwo",
           "label": "Second Tab Name",
           "required": true,
-          "condition": { "<": [{"var" : "tablistnumber"}, 2] 
+          "condition": { ">": [{"var" : "tablistnumber"}, 2] 
           }
         },
         {
@@ -76,7 +76,7 @@
           "name": "tablistthree",
           "label": "Third Tab Name",
           "required": true,
-          "condition": { "<": [{"var" : "tablistnumber"}, 3] 
+          "condition": { ">": [{"var" : "tablistnumber"}, 3] 
           }
         },
         {
@@ -85,7 +85,7 @@
           "name": "tablistfour",
           "label": "Fouther Tab Name",
           "required": true,
-          "condition": { "<": [{"var" : "tablistnumber"}, 4] 
+          "condition": { ">": [{"var" : "tablistnumber"}, 4] 
           }
         }
       ]
