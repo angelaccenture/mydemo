@@ -9,8 +9,10 @@ export default async function error(ex, el) {
 
   if (window.location.hostname.includes('ue.da.live')) {
     // Dont show errors in the UE - these are only useful for DA Editor
+    console.log("Dont show errors in the UE for now");
   }
   else {
+    console.log("Not in UE, show errors");
       if (el && ENV !== 'prod') {
         await loadStyle(`${codeBase}/styles/error.css`);
         const wrapper = document.createElement('div');
