@@ -132,8 +132,12 @@
               "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1</li><li>Tab 2</li><li>Tab 3</li></ul></div></div>",
               "fields": [
                 {
-                  "name": "tablist",
-                  "selector": "div>div>ul"
+                  "name": "tablist-one",
+                  "selector": "div>div>ul>li"
+                },
+                {
+                  "name": "tablist-two",
+                  "selector": "div>div>ul>li:nth-child(2)"
                 }
               ]
             }
