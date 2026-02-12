@@ -1,30 +1,30 @@
 # Universal Editor (UE) Block Checkist
 
-| Name | Status | Notes
-| :--- | :---: | ---: |
-| Templates | Not Started | Figure out what we need (controls blocks and style system)
-| :--- | :---: | ---: |
-| Page | Mostly Done | Add tags manager, get all SEO requirements for demo
-| Text | Mostly Done | Add support for ID's - Check function in ak.js (decorateHash) for 
-| Image | Mostly Done | Add support for ID's
-| :--- | :---: | ---: |
-| Footer/Header | In Progress | Find better solution for UE support
-| Section-Metadata | In Progress | Split out grid code and verify background stuff works
-| Section-Grid | Mostly Done | verify/fix new Author Kit features
-| Advanced-Tabs | Mostly Done | UE Support (later: have 2 sets of tabs and have nested tabs)
-| Advanced-Carousel | In Progress | 
-| Advanced-Accordion | In Progress | 
-| :--- | :---: | ---: |
-| Button | In Progress | Check function in ak.js (decorateButton)
-| Card | Done | w/ V2 Model
-| Fragment | Not Started | Author Kit block
-| Hero | Done | w/ V2 Model
-| Teaser | Not Started |
-| Form | Not Started | 
-| Modal | Not Started | 
-| Schedule | Not Started | Need for Publish Workflow
-| Table | TBD | Author Kit block
-| YouTube | TBD | Author Kit block
+| Name | Block | UE | Notes
+| :--- | :---: | ---: |---: |
+| Templates | NS | NS | Figure out what we need (controls blocks and style system)
+| :--- | :---: | ---: |---: |
+| Page | IP | IP | Add tags manager, get all SEO requirements for demo
+| Text | IP | IP | Add support for ID's - Check function in ak.js (decorateHash) for 
+| Image | IP | Alt Text | Add support for ID's
+| :--- | :---: | ---: |---: |
+| Footer/Header | IP | IP | Find better solution for UE
+| Section-Metadata |IP | IP | Split out grid code and verify background stuff works
+| Advanced-Columns | IP | IP | verify/fix new Author Kit features
+| Advanced-Tabs | Done | IP | Future: have 2 sets of tabs and have nested tabs
+| Advanced-Carousel | IP | IP | 
+| Advanced-Accordion | IP | IP | 
+| :--- | :---: | ---: |---: |
+| Button | IP | IP | Check function in ak.js (decorateButton)
+| Card | Done | V2 | 
+| Fragment | IP | IP | Author Kit block
+| Hero | Done | V2 | 
+| Teaser | IP | IP | 
+| Form |IP | IP |  
+| Modal | IP | IP |  
+| Schedule | Not Started | Not Started | Need for Publish Workflow
+| Table | TBD | TBD | Author Kit block
+| YouTube | TBD | TBD | Author Kit block
 
 
 # Other Features
