@@ -11,8 +11,7 @@
           "fields": [
             {
               "name": "tablistone",
-              "selector": "div>div>ul>li",
-              "unsafeHTML": "<li></li>"
+              "selector": "div>div>ul>li"
             },
             {
               "name": "tablisttwo",
@@ -21,6 +20,10 @@
             {
               "name": "tablistthree",
               "selector": "div>div>ul>li:nth-child(3)"
+            },
+            {
+              "name": "tablistfour",
+              "selector": "div>div>ul>li:nth-child(4)"
             }
           ]
         }
