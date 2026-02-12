@@ -137,7 +137,7 @@
                 },
                 {
                   "name": "tablisttwo",
-                  "selector": "div>div>ul>li"
+                  "selector": "div>div>ul>li:nth-child(2)"
                 },
                 {
                   "name": "tablistthree",

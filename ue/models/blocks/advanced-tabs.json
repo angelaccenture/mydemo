@@ -15,7 +15,7 @@
             },
             {
               "name": "tablisttwo",
-              "selector": "div>div>ul>li"
+              "selector": "div>div>ul>li:nth-child(2)"
             },
              {
               "name": "tablistthree",
@@ -60,7 +60,7 @@
           "component": "text",
           "valueType": "string",
           "name": "tablisttwo",
-          "label": "Second Tab Name"
+          "label": "Second Tab Name - why does just this one work???"
         },
         {
           "component": "text",
