@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Tabs - 3:34pm",
+      "title": "Tabs - 3:37pm",
       "id": "advanced-tabs",
       "model": "advanced-tabs",
       "filter": "advanced-tabs",
@@ -15,7 +15,7 @@
             },
             {
               "name": "tablisttwo",
-              "selector": "div>div>ul>li:nth-child(2)"
+              "selector": "div>div>ul>li"
             },
              {
               "name": "tablistthree",
