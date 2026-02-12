@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Standard",
+      "title": "Section",
       "id": "section",
       "plugins": {
         "da": {
@@ -45,16 +45,16 @@
       "components": [
         "text",
         "image",
-        "accordion",
+        "advanced-accordion",
         "button",
-        "carousel",
+        "advanced-carousel",
         "card",
         "form",
         "fragment",
         "hero",
         "modal",
         "table",
-        "tabs",
+        "advanced-tabs",
         "teaser"
       ]
     }
