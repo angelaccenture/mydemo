@@ -4,7 +4,7 @@
       "title": "Tabs",
       "id": "advanced-tabs",
       "model": "advanced-tabs",
-      "filter": "section",
+      "filter": "advanced-tabs",
       "plugins": {
         "da": {
           "unsafeHTML": "<div class=\"advanced-tabs\"></div>",
