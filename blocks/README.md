@@ -1,30 +1,30 @@
 # Universal Editor (UE) Block Checkist
 
-| Name | Block | UE | Notes
+| Name | Block | UE | QE | Notes
 | :--- | :---: | ---: |---: |
-| Templates | NS | NS | Figure out what we need (controls blocks and style system)
+| Templates | NS | NS | NS | Figure out what we need (controls blocks and style system)
 | :--- | :---: | ---: |---: |
-| Page | IP | IP | Add tags manager, get all SEO requirements for demo
-| Text | IP | IP | Add support for ID's - Check function in ak.js (decorateHash) for 
-| Image | IP | Alt Text | Add support for ID's
+| Page | IP | IP | NS | Add tags manager, get all SEO requirements for demo
+| Text | IP | IP | NS | Add support for ID's - Check function in ak.js (decorateHash) for 
+| Image | IP | Alt Text | NS | Add support for ID's
 | :--- | :---: | ---: |---: |
-| Footer/Header | IP | IP | Find better solution for UE
-| Section-Metadata |IP | IP | Split out grid code and verify background stuff works
-| Advanced-Columns | IP | IP | verify/fix new Author Kit features
-| Advanced-Tabs | Done | IP | Future: have 2 sets of tabs and have nested tabs
-| Advanced-Carousel | IP | IP | 
-| Advanced-Accordion | IP | IP | 
+| Footer/Header | IP | IP | NS | Find better solution for UE
+| Section-Metadata |IP | IP | NS | Split out grid code and verify background stuff works
+| Advanced-Columns | IP | IP | NS | verify/fix new Author Kit features
+| Advanced-Tabs | Done | IP | NS | Future: have 2 sets of tabs and have nested tabs
+| Advanced-Carousel | IP | IP | NS | 
+| Advanced-Accordion | IP | IP | NS | 
 | :--- | :---: | ---: |---: |
-| Button | IP | IP | Check function in ak.js (decorateButton)
-| Card | Done | V2 | 
-| Fragment | IP | IP | Author Kit block
-| Hero | Done | V2 | 
-| Teaser | IP | IP | 
-| Form |IP | IP |  
-| Modal | IP | IP |  
-| Schedule | Not Started | Not Started | Need for Publish Workflow
-| Table | TBD | TBD | Author Kit block
-| YouTube | TBD | TBD | Author Kit block
+| Button | IP | IP | NS | Check function in ak.js (decorateButton)
+| Card | Done | V2 | Done |
+| Fragment | IP | IP | NS | Author Kit block
+| Hero | Done | V2 | Done | 
+| Teaser | IP | IP | NS | 
+| Form |IP | IP |  NS | 
+| Modal | IP | IP |  NS | 
+| Schedule | NS | NS | NS | Need for Publish Workflow
+| Table | TBD | TBD | TBD | Author Kit block
+| YouTube | TBD | TBD | TBD | Author Kit block
 
 
 # Other Features
