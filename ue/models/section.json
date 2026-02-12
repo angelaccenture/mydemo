@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Section Metadata",
+      "title": "Standard",
       "id": "section",
       "plugins": {
         "da": {
@@ -35,80 +35,6 @@
             }         
             
           ]
-        },
-        {
-          "component": "number",
-          "valueType": "number",
-          "name": "grid",
-          "required": true,
-          "label": "Grid Columns",
-          "validation": {
-            "numberMin": 0,
-            "numberMax": 6,
-            "customErrorMsg": "1 thru 6 columns"
-          }
-        },
-         {
-          "component": "select",
-          "name": "gap",
-          "label": "Gap",
-          "options": [
-             {
-              "name": "X-Small",
-              "value": "xs"
-            },
-             {
-              "name": "Small",
-              "value": "s"
-            },
-            {
-              "name": "Medium",
-              "value": "m"
-            },
-            {
-              "name": "Large",
-              "value": "l"
-            },
-            {
-              "name": "X-Large",
-              "value": "xl"
-            },
-            {
-              "name": "XX-Large",
-              "value": "xxl"
-            }
-          ]
-        },
-        {
-          "component": "select",
-          "name": "spacing",
-          "label": "Spacing",
-          "options": [
-              {
-              "name": "X-Small",
-              "value": "xs"
-            },
-             {
-              "name": "Small",
-              "value": "s"
-            },
-            {
-              "name": "Medium",
-              "value": "m"
-            },
-            {
-              "name": "Large",
-              "value": "l"
-            },
-            {
-              "name": "X-Large",
-              "value": "xl"
-            },
-            {
-              "name": "XX-Large",
-              "value": "xxl"
-            }
-          ]
         }
       ]
     }
@@ -119,6 +45,7 @@
       "components": [
         "text",
         "image",
+        "button",
         "accordion",
         "card",
         "carousel",

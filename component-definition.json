@@ -38,7 +38,7 @@
       "id": "sections",
       "components": [
         {
-          "title": "Section Metadata",
+          "title": "Standard",
           "id": "section",
           "plugins": {
             "da": {
@@ -47,6 +47,17 @@
           },
           "filter": "section",
           "model": "section"
+        },
+        {
+          "title": "Grid",
+          "id": "grid",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div></div>"
+            }
+          },
+          "filter": "grid",
+          "model": "grid"
         }
       ]
     },
@@ -88,8 +99,8 @@
         {
           "title": "Carousel",
           "id": "carousel",
-          "model": "carousel",
-          "filter": "carousel",
+          "model": "advanced-carousel",
+          "filter": "advanced-carousel",
           "plugins": {
             "da": {
               "rows": 1,
@@ -121,17 +132,6 @@
               ]
             }
           }
-        },
-        {
-          "title": "Columns",
-          "id": "advanced-columns",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div></div>"
-            }
-          },
-          "filter": "advanced-columns",
-          "model": "advanced-columns"
         },
         {
           "title": "Tabs",

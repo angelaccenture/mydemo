@@ -1,15 +1,15 @@
 {
   "definitions": [
     {
-      "title": "Columns",
-      "id": "advanced-columns",
+      "title": "Grid",
+      "id": "grid",
       "plugins": {
         "da": {
           "unsafeHTML": "<div></div>"
         }
       },
-      "filter": "advanced-columns",
-      "model": "advanced-columns"
+      "filter": "grid",
+      "model": "grid"
     }
   ],
   "models": [
@@ -119,9 +119,10 @@
       "components": [
         "text",
         "image",
-        "accordion",
+        "advanced-accordion",
+        "advanced-carousel",
         "card",
-        "carousel",
+        "button",
         "hero"
       ]
     }

@@ -3,7 +3,7 @@
     "id": "main",
     "components": [
       "section",
-      "advanced-columns",
+      "grid",
       "advanced-accordion",
       "advanced-carousel",
       "advanced-tabs"
@@ -14,9 +14,22 @@
     "components": [
       "text",
       "image",
+      "button",
       "accordion",
       "card",
       "carousel",
+      "hero"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "text",
+      "image",
+      "advanced-accordion",
+      "advanced-carousel",
+      "card",
+      "button",
       "hero"
     ]
   },
@@ -29,20 +42,9 @@
     ]
   },
   {
-    "id": "carousel",
+    "id": "advanced-carousel",
     "components": [
       "carousel-item"
-    ]
-  },
-  {
-    "id": "section",
-    "components": [
-      "text",
-      "image",
-      "accordion",
-      "card",
-      "carousel",
-      "hero"
     ]
   },
   {

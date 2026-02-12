@@ -18,6 +18,9 @@
       "components": [
         {
           "...": "./section.json#/definitions"
+        },
+        {
+          "...": "./grid.json#/definitions"
         }
       ]
     },
