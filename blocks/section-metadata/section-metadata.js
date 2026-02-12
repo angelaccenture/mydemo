@@ -122,3 +122,4 @@ export default async function init(el) {
   if (metadata.background?.content) handleBackground(metadata.background, section);
   el.remove();
 }
+
