@@ -7,12 +7,12 @@
       "filter": "advanced-tabs",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab Name</li></ul></div></div>",
+          "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul></ul></div></div>",
           "fields": [
             {
               "name": "tablistone",
               "selector": "div>div>ul>li",
-              "unsafeHTML": "<li>tablistone</li>"
+              "unsafeHTML": "<li></li>"
             },
             {
               "name": "tablisttwo",
