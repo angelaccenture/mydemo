@@ -1,49 +1,27 @@
 {
   "definitions": [
     {
-      "title": "Accordion",
-      "id": "accordion",
-      "model": "accordion",
-      "filter": "accordion",
+      "title": "Tabs",
+      "id": "tabs",
+      "model": "tabs",
+      "filter": "tabs",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"accordion\"></div>"
-        }
-      }
-    },
-    {
-      "title": "Accordion Item",
-      "id": "accordion-item",
-      "model": "accordion-item",
-      "plugins": {
-        "da": {
-           "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>",
-          "fields": [
-            { "name": "summary", "selector": "div>div:nth-child(1)"},
-            { "name": "text", "selector": "div>div:nth-child(2)"}
-          ]
+          "unsafeHTML": "<div class=\"advanced-tabs\"></div>"
         }
       }
     }
   ],
   "models": [
     {
-      "id": "accordion-item",
+      "id": "tabs",
       "fields": [
         {
-          "component": "text",
-          "valueType": "string",
-          "name": "summary",
-          "value": "",
-          "label": "Summary",
-          "required": true
-        },
-        {
           "component": "richtext",
-          "name": "text",
-          "value": "",
-          "label": "Text",
           "valueType": "string",
+          "name": "tab-list",
+          "value": "",
+          "label": "Tab List",
           "required": true
         }
       ]
@@ -51,9 +29,9 @@
   ],
   "filters": [
     {
-      "id": "accordion",
+      "id": "tabs",
       "components": [
-        "accordion-item","image","text"
+        "image","text","button"
       ]
     }
   ]

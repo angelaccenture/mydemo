@@ -201,22 +201,14 @@
     ]
   },
   {
-    "id": "accordion-item",
+    "id": "tabs",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "summary",
-        "value": "",
-        "label": "Summary",
-        "required": true
-      },
-      {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
         "valueType": "string",
+        "name": "tab-list",
+        "value": "",
+        "label": "Tab List",
         "required": true
       }
     ]

@@ -1,4 +1,4 @@
-# Universal Editor (UE) Block Checkist
+# Angel's Universal Editor (UE) Block Checkist
 
 | Name | Block | UE | QE | Notes
 | :--- | :---: | ---: |---: |
@@ -12,21 +12,21 @@
 | Schedule | NS | NS | NS | Need for Publish Workflow
 | :--- | :---: | ---: |---: |
 | Section-Metadata |IP | IP | NS | Split out grid code and verify background stuff
-| Advanced-Accordion | IP | IP | NS | 
+| Advanced-Accordion | n/a | n/a | n/a | Don't need to build for Demo
 | Advanced-Carousel | IP | IP | NS | 
 | Advanced-Columns | IP | IP | NS | verify/fix new Author Kit features
 | Advanced-Tabs | Done | IP | NS | Future: have 2 sets of tabs and have nested tabs
 | :--- | :---: | ---: |---: |
 | Button | IP | IP | NS | Check function in ak.js (decorateButton)
 | Card | Done | V2 | Done |
-| Form |IP | IP |  NS | 
-| Fragment | IP | IP | NS | Author Kit block
+| Form | n/a | n/a | n/a | Don't need to build for Demo
+| Fragment | n/a | n/a | n/a | Don't need to build for Demo
 | Hero | Done | V2 | Done | 
-| Modal | IP | IP |  NS | 
-| Table | TBD | TBD | TBD | Author Kit block
-| Teaser | IP | IP | NS |
+| Modal | n/a | n/a |  n/a | Don't need to build for Demo
+| Table | n/a | n/a |  n/a | Don't need to build for Demo
+| Teaser | n/a | n/a | n/a | Don't need to build for Demo
 
-# Other Features
+# Other Features / Notes
 - Tag Manager (https://github.com/aemsites/da-blog-tools/blob/main/tools/tags/README.md)
 - MSM (localization) - (https://github.com/mhaack/da-tools/tree/main/tools/locales)
 - Templates

@@ -48,11 +48,11 @@
     ]
   },
   {
-    "id": "accordion",
+    "id": "tabs",
     "components": [
-      "accordion-item",
       "image",
-      "text"
+      "text",
+      "button"
     ]
   },
   {
