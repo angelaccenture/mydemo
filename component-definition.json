@@ -129,11 +129,11 @@
           "filter": "advanced-tabs",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"advanced-tabs\"></div>",
+              "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1<li><li>Tab 2<li><li>Tab 3<li></ul></div></div>",
               "fields": [
                 {
                   "name": "tablist",
-                  "selector": "<div><ul><li>Tab 1<li><li>Tab 2<li><li>Tab 3<li></ul></div>"
+                  "selector": "div>div"
                 }
               ]
             }
