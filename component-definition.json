@@ -133,7 +133,7 @@
               "fields": [
                 {
                   "name": "tablist",
-                  "selector": "div>div"
+                  "selector": "div>div>ul"
                 }
               ]
             }
