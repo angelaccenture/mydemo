@@ -9,21 +9,21 @@
         "da": {
           "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul></ul></div></div>",
           "fields": [
-            {
+             {
               "name": "tablistone",
-              "selector": "div>div>ul>li"
+              "selector": "div>div>ul>li:nth-child(2)"
             },
             {
               "name": "tablisttwo",
               "selector": "div>div>ul>li:nth-child(2)"
             },
-            {
+             {
               "name": "tablistthree",
-              "selector": "div>div>ul>li:nth-child(3)"
+              "selector": "div>div>ul>li:nth-child(2)"
             },
-            {
+             {
               "name": "tablistfour",
-              "selector": "div>div>ul>li:nth-child(4)"
+              "selector": "div>div>ul>li:nth-child(2)"
             }
           ]
         }

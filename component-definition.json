@@ -133,7 +133,7 @@
               "fields": [
                 {
                   "name": "tablistone",
-                  "selector": "div>div>ul>li"
+                  "selector": "div>div>ul>li:nth-child(2)"
                 },
                 {
                   "name": "tablisttwo",
@@ -141,11 +141,11 @@
                 },
                 {
                   "name": "tablistthree",
-                  "selector": "div>div>ul>li:nth-child(3)"
+                  "selector": "div>div>ul>li:nth-child(2)"
                 },
                 {
                   "name": "tablistfour",
-                  "selector": "div>div>ul>li:nth-child(4)"
+                  "selector": "div>div>ul>li:nth-child(2)"
                 }
               ]
             }
