@@ -215,10 +215,12 @@
         }
       },
       {
-        "component": "text-input",
-        "label": "Hidden text field",
-        "name": "hidden-text",
+        "component": "richtext",
         "valueType": "string",
+        "name": "tablist-one",
+        "value": "",
+        "label": "First Tab",
+        "required": true,
         "condition": {
           "===": [
             {
@@ -227,14 +229,6 @@
             1
           ]
         }
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "tablist",
-        "value": "",
-        "label": "Tab List",
-        "required": true
       }
     ]
   },

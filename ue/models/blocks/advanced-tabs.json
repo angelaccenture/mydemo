@@ -50,20 +50,14 @@
             }
         },
         {
-            "component": "text-input",
-            "label": "Hidden text field",
-            "name": "hidden-text",
-            "valueType": "string",
-            "condition": { "===": [{"var" : "tablistnumber"}, 1] 
-          }
-          },
-          {
           "component": "richtext",
           "valueType": "string",
-          "name": "tablist",
+          "name": "tablist-one",
           "value": "",
-          "label": "Tab List",
-          "required": true
+          "label": "First Tab",
+          "required": true,
+          "condition": { "===": [{"var" : "tablistnumber"}, 1] 
+          }
         }
       ]
     }
