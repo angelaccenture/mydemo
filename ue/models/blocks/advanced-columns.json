@@ -2,71 +2,127 @@
   "definitions": [
     {
       "title": "Columns",
-      "id": "columns",
+      "id": "advanced-columns",
       "plugins": {
         "da": {
-          "name": "columns",
-          "rows": 1,
-          "columns": 2,
-          "behaviour": "columns"
+          "unsafeHTML": "<div></div>"
         }
-      }
-    },
-    {
-      "title": "Columns Row",
-      "id": "columns-row",
-      "plugins": {
-        "da": {
-          "name": "columns-row",
-          "behaviour": "columns-row"
-        }
-      }
-    },
-    {
-      "title": "Columns Cell",
-      "id": "columns-cell",
-      "plugins": {
-        "da": {
-          "unsafeHTML": "<div></div>",
-          "behaviour": "columns-cell"
-        }
-      }
+      },
+      "filter": "advanced-columns",
+      "model": "advanced-columns"
     }
   ],
   "models": [
     {
-      "id": "columns",
+      "id": "advanced-columns",
       "fields": [
+        {
+          "component": "multiselect",
+          "name": "style",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Highlight",
+              "value": "highlight"
+            },
+              {
+              "name": "Center",
+              "value": "center"
+            },
+              {
+              "name": "Container",
+              "value": "container"
+            }         
+            
+          ]
+        },
         {
           "component": "number",
           "valueType": "number",
-          "name": "columns",
-          "label": "Number of Columns",
-          "value": 2,
+          "name": "grid",
+          "required": true,
+          "label": "Grid Columns",
           "validation": {
             "numberMin": 1,
-            "numberMax": 6
+            "numberMax": 6,
+            "customErrorMsg": "1 thru 6 columns"
           }
+        },
+         {
+          "component": "select",
+          "name": "gap",
+          "label": "Gap",
+          "options": [
+             {
+              "name": "X-Small",
+              "value": "xs"
+            },
+             {
+              "name": "Small",
+              "value": "s"
+            },
+            {
+              "name": "Medium",
+              "value": "m"
+            },
+            {
+              "name": "Large",
+              "value": "l"
+            },
+            {
+              "name": "X-Large",
+              "value": "xl"
+            },
+            {
+              "name": "XX-Large",
+              "value": "xxl"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "spacing",
+          "label": "Spacing",
+          "options": [
+              {
+              "name": "X-Small",
+              "value": "xs"
+            },
+             {
+              "name": "Small",
+              "value": "s"
+            },
+            {
+              "name": "Medium",
+              "value": "m"
+            },
+            {
+              "name": "Large",
+              "value": "l"
+            },
+            {
+              "name": "X-Large",
+              "value": "xl"
+            },
+            {
+              "name": "XX-Large",
+              "value": "xxl"
+            }
+          ]
         }
       ]
     }
   ],
   "filters": [
     {
-      "id": "columns",
-      "components": [
-        "columns-row"
-      ]
-    },
-    {
-      "id": "columns-row",
-      "components": []
-    },
-    {
-      "id": "columns-cell",
+      "id": "section",
       "components": [
         "text",
-        "image"
+        "image",
+        "accordion",
+        "card",
+        "carousel",
+        "hero"
       ]
     }
   ]

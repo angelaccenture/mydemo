@@ -1,7 +1,7 @@
 [
   {
     "id": "main",
-    "components": ["section"]
+    "components": ["section","advanced-columns","advanced-accordion","advanced-carousel","advanced-tabs"]
   },
   {
     "...": "./section.json#/filters"
