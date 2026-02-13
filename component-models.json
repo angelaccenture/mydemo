@@ -3,7 +3,7 @@
     "id": "page-metadata",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "template",
         "label": "Template",
         "options": [
