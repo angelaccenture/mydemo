@@ -133,7 +133,7 @@
               "fields": [
                 {
                   "name": "tablistall",
-                  "selector": "div>div>ul"
+                  "selector": "div>div>ul>li"
                 },
                 {
                   "name": "tablistone",
