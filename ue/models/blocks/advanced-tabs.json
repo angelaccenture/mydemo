@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Tabs - 8:35",
+      "title": "Tabs - 8:44",
       "id": "advanced-tabs",
       "model": "advanced-tabs",
       "filter": "advanced-tabs",
@@ -50,10 +50,10 @@
           ]
         },
         {
-          "component": "text",
+          "component": "richtext",
           "valueType": "string",
           "name": "tablistone",
-          "label": "First Tab Name"
+          "label": "First Tab Name - nope"
         },
          {
           "component": "text",
