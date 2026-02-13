@@ -9,7 +9,6 @@ import {
   loadSections,
 } from './aem.js';
 import { decorateRichtext } from './editor-support-rte.js';
-//import { decorateMain } from './scripts.js';
 
 window.xwalk = window.xwalk || {};
 window.xwalk.isAuthorEnv = true;
@@ -25,6 +24,7 @@ function setUEFilter(element, filter) {
  * https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types#data-properties
  */
 function updateUEInstrumentation() {
+  console.log("update UE Inst");
   const main = document.querySelector('main');
   const template = document.querySelector('meta[name="template"]')?.content;
   const sections = main.querySelectorAll('[data-aue-model$="section"]');
@@ -38,7 +38,7 @@ function updateUEInstrumentation() {
     'informational',
     'shoppable',
   ];
-  const columnTemplates = ['account','article','blank','content','helplegal', 'informational','shoppable','educational','guide','orders', 'address', 'returns', 'account-order-details'];
+  const columnTemplates = ['account','content','helplegal', 'informational','shoppable','educational','guide','orders', 'address', 'returns', 'account-order-details'];
 
   // updated section filters according to the template
   if (templates.includes(template)) {
@@ -83,7 +83,6 @@ async function applyChanges(event) {
       const newMain = parsedUpdate.querySelector(`[data-aue-resource="${resource}"]`);
       newMain.style.display = 'none';
       element.insertAdjacentElement('afterend', newMain);
-      //decorateMain(newMain);
       decorateRichtext(newMain);
       await loadSections(newMain);
       element.remove();
