@@ -205,8 +205,8 @@
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "tablistone",
-        "label": "First Tab Name - nope"
+        "name": "tablist",
+        "label": "Tab List"
       },
       {
         "component": "text",

@@ -1,16 +1,16 @@
 {
   "definitions": [
     {
-      "title": "Tabs - 8:44",
+      "title": "Tabs - 8:47",
       "id": "advanced-tabs",
       "model": "advanced-tabs",
       "filter": "advanced-tabs",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul></ul></div></div>",
+          "unsafeHTML": "<div class=\"advanced-tabs\"><div></div></div>",
           "fields": [
              {
-              "name": "tablistone",
+              "name": "tablist",
               "selector": "div>div>ul>li:nth-child(1)"
             },
             {
@@ -52,8 +52,8 @@
         {
           "component": "richtext",
           "valueType": "string",
-          "name": "tablistone",
-          "label": "First Tab Name - nope"
+          "name": "tablist",
+          "label": "Tab List"
         },
          {
           "component": "text",
