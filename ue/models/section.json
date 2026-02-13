@@ -18,27 +18,10 @@
       "fields": [
 {
       "component": "tab",
-      "label": "Tab 1",
+      "label": "Main",
       "name": "tab1"
     },
     {
-      "component": "text-input",
-      "label": "Text 1",
-      "name": "text1",
-      "valueType": "string"
-    },
-    {
-      "component": "tab",
-      "label": "Tab 2",
-      "name": "tab2"
-    },
-    {
-      "component": "text-input",
-      "label": "Text 2",
-      "name": "text2",
-      "valueType": "string"
-    },
-        {
           "component": "multiselect",
           "name": "style",
           "label": "Style",
@@ -58,12 +41,75 @@
             
           ]
         },
+         {
+          "component": "multiselect",
+          "name": "background",
+          "condition": { "===": [{"var" : "reveal"}, false] },
+          "label": "Background Color",
+          "options": [
+            {
+              "name": "Red",
+              "value": "red"
+            },
+              {
+              "name": "Black",
+              "value": "black"
+            },
+              {
+              "name": "Blue",
+              "value": "blue"
+            }         
+            
+          ]
+        },
+        {
+        "component": "boolean",
+        "label": "Background Image",
+        "name": "reveal",
+        "valueType": "boolean"
+      },
+      {
+        "component": "reference",
+          "name": "image",
+          "label": "Image",
+          "multi": false,
+        "condition": { "===": [{"var" : "reveal"}, true] }
+      },
+    {
+      "component": "tab",
+      "label": "Grid",
+      "name": "tab2"
+    }, 
         {
           "component": "number",
           "valueType": "number",
           "name": "grid",
           "required": true,
-          "label": "Grid Columns",
+          "label": "Desktop Grid Columns",
+          "validation": {
+            "numberMin": 1,
+            "numberMax": 6,
+            "customErrorMsg": "1 thru 6 columns"
+          }
+        },
+         {
+          "component": "number",
+          "valueType": "number",
+          "name": "gridtab",
+          "required": true,
+          "label": "Tablet Grid Columns",
+          "validation": {
+            "numberMin": 1,
+            "numberMax": 6,
+            "customErrorMsg": "1 thru 6 columns"
+          }
+        },
+         {
+          "component": "number",
+          "valueType": "number",
+          "name": "gridmob",
+          "required": true,
+          "label": "Mobile Grid Columns",
           "validation": {
             "numberMin": 1,
             "numberMax": 6,
