@@ -123,17 +123,17 @@
           }
         },
         {
-          "title": "Tabs - 8:47",
+          "title": "Tabs - 8:49",
           "id": "advanced-tabs",
           "model": "advanced-tabs",
           "filter": "advanced-tabs",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"advanced-tabs\"><div></div></div>",
+              "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1</li></ul></div></div>",
               "fields": [
                 {
                   "name": "tablist",
-                  "selector": "div>div>ul>li:nth-child(1)"
+                  "selector": "div>div"
                 },
                 {
                   "name": "tablisttwo",
