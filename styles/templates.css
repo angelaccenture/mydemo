@@ -1,3 +1,11 @@
+/**
+ * Use template to add specific styles
+ * Block can have certain styles like "primary, secondary", etc. but template can make those unique
+ * Can use templates for branding specific (aka having multiple brands, etc.) or specific for groups of pages.. 
+ * Primary button might be blue square on some pages and maybe its blue round on other pages based on template
+ */
+
+
 .blankpage-template {
   color: red;
 }
