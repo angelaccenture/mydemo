@@ -42,6 +42,7 @@ function updateUEInstrumentation() {
 
   // updated section filters according to the template
   if (templates.includes(template)) {
+    console.log("set section");
     // update section filters
     sections.forEach((section) => {
       setUEFilter(section, `${template}-section`);
