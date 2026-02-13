@@ -83,7 +83,7 @@ async function applyChanges(event) {
       const newMain = parsedUpdate.querySelector(`[data-aue-resource="${resource}"]`);
       newMain.style.display = 'none';
       element.insertAdjacentElement('afterend', newMain);
-      decorateMain(newMain);
+      //decorateMain(newMain);
       decorateRichtext(newMain);
       await loadSections(newMain);
       element.remove();
