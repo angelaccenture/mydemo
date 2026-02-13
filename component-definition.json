@@ -123,7 +123,7 @@
           }
         },
         {
-          "title": "Tabs - 8:28",
+          "title": "Tabs - 8:35",
           "id": "advanced-tabs",
           "model": "advanced-tabs",
           "filter": "advanced-tabs",
@@ -133,7 +133,7 @@
               "fields": [
                 {
                   "name": "tablistone",
-                  "selector": "div>div>ul>li:nth-child(2)"
+                  "selector": "div>div>ul>li:nth-child(1)"
                 },
                 {
                   "name": "tablisttwo",
@@ -145,7 +145,7 @@
                 },
                 {
                   "name": "tablistfour",
-                  "selector": "div>div>ul>li:nth-child(2)"
+                  "selector": "div>div>ul>li:nth-child(4)"
                 }
               ]
             }
