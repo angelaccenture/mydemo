@@ -197,6 +197,14 @@
         "advanced-tabs",
         "teaser"
       ]
+    },
+    {
+      "id": "article-section",
+      "components": [
+        "text",
+        "button",
+        "image"
+      ]
     }
   ]
 }
