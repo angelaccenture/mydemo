@@ -10,6 +10,17 @@
       },
       "filter": "section",
       "model": "section"
+    },
+    {
+      "title": "Article Section",
+      "id": "article-section",
+      "plugins": {
+        "da": {
+          "unsafeHTML": "<div></div>"
+        }
+      },
+      "filter": "article-section",
+      "model": "section"
     }
   ],
   "models": [
