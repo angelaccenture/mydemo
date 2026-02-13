@@ -10,24 +10,53 @@
     "components": [
       "text",
       "image",
-      "accordion",
+      "advanced-accordion",
+      "button",
+      "advanced-carousel",
       "card",
-      "carousel",
-      "hero"
+      "form",
+      "fragment",
+      "hero",
+      "modal",
+      "table",
+      "advanced-tabs",
+      "teaser"
     ]
   },
   {
-    "id": "accordion",
+    "id": "advanced-accordion",
+    "components": []
+  },
+  {
+    "id": "advanced-carousel",
+    "components": []
+  },
+  {
+    "id": "advanced-tabs",
+    "components": []
+  },
+  {
+    "id": "table",
     "components": [
-      "accordion-item",
-      "image",
-      "text"
+      "table-row"
     ]
   },
   {
-    "id": "carousel",
+    "id": "table-2-columns",
     "components": [
-      "carousel-item"
+      "table-col-2"
+    ]
+  },
+  {
+    "id": "table-3-columns",
+    "components": [
+      "table-col-3"
+    ]
+  },
+  {
+    "id": "table-4-columns",
+    "components": [
+      "table-col-4"
     ]
   }
 ]

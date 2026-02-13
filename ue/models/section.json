@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Section Metadata",
+      "title": "Section",
       "id": "section",
       "plugins": {
         "da": {
@@ -16,7 +16,12 @@
     {
       "id": "section",
       "fields": [
-        {
+{
+      "component": "tab",
+      "label": "Main",
+      "name": "tab1"
+    },
+    {
           "component": "multiselect",
           "name": "style",
           "label": "Style",
@@ -36,14 +41,75 @@
             
           ]
         },
+         {
+          "component": "multiselect",
+          "name": "background",
+          "condition": { "===": [{"var" : "reveal"}, false] },
+          "label": "Background Color",
+          "options": [
+            {
+              "name": "Red",
+              "value": "red"
+            },
+              {
+              "name": "Black",
+              "value": "black"
+            },
+              {
+              "name": "Blue",
+              "value": "blue"
+            }         
+            
+          ]
+        },
+        {
+        "component": "boolean",
+        "label": "Background Image",
+        "name": "reveal",
+        "valueType": "boolean"
+      },
+      {
+        "component": "reference",
+          "name": "image",
+          "label": "Image",
+          "multi": false,
+        "condition": { "===": [{"var" : "reveal"}, true] }
+      },
+    {
+      "component": "tab",
+      "label": "Grid",
+      "name": "tab2"
+    }, 
         {
           "component": "number",
           "valueType": "number",
           "name": "grid",
           "required": true,
-          "label": "Grid Columns",
+          "label": "Desktop Grid Columns",
           "validation": {
-            "numberMin": 0,
+            "numberMin": 1,
+            "numberMax": 6,
+            "customErrorMsg": "1 thru 6 columns"
+          }
+        },
+         {
+          "component": "number",
+          "valueType": "number",
+          "name": "gridtab",
+          "label": "Tablet Grid Columns",
+          "validation": {
+            "numberMin": 1,
+            "numberMax": 6,
+            "customErrorMsg": "1 thru 6 columns"
+          }
+        },
+         {
+          "component": "number",
+          "valueType": "number",
+          "name": "gridmob",
+          "label": "Mobile Grid Columns",
+          "validation": {
+            "numberMin": 1,
             "numberMax": 6,
             "customErrorMsg": "1 thru 6 columns"
           }
@@ -119,10 +185,17 @@
       "components": [
         "text",
         "image",
-        "accordion",
+        "advanced-accordion",
+        "button",
+        "advanced-carousel",
         "card",
-        "carousel",
-        "hero"
+        "form",
+        "fragment",
+        "hero",
+        "modal",
+        "table",
+        "advanced-tabs",
+        "teaser"
       ]
     }
   ]
