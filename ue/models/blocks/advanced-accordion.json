@@ -2,25 +2,17 @@
   "definitions": [
     {
       "title": "Accordion",
-      "id": "accordion",
-      "model": "accordion",
-      "filter": "accordion",
+      "id": "advanced-accordion",
+      "model": "advanced-accordion",
+      "filter": "advanced-accordion",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"accordion\"></div>"
-        }
-      }
-    },
-    {
-      "title": "Accordion Item",
-      "id": "accordion-item",
-      "model": "accordion-item",
-      "plugins": {
-        "da": {
-           "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>",
+          "unsafeHTML": "<div class=\"advanced-accordion\"><div><ul><li>Accordion Item 1</li></ul></div></div>",
           "fields": [
-            { "name": "summary", "selector": "div>div:nth-child(1)"},
-            { "name": "text", "selector": "div>div:nth-child(2)"}
+             {
+              "name": "tablistall",
+              "selector": "div>div>ul>li"
+            }
           ]
         }
       }
@@ -28,33 +20,35 @@
   ],
   "models": [
     {
-      "id": "accordion-item",
+      "id": "advanced-accordion",
       "fields": [
         {
-          "component": "text",
-          "valueType": "string",
-          "name": "summary",
-          "value": "",
-          "label": "Summary",
-          "required": true
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+           {
+              "name": "Standard",
+              "value": "standard"
+            },
+            {
+              "name": "Blue Standard",
+              "value": "bluestandard"
+            }            
+          ]
         },
         {
           "component": "richtext",
-          "name": "text",
-          "value": "",
-          "label": "Text",
           "valueType": "string",
-          "required": true
+          "name": "tablistall",
+          "label": "Fix These Later"
         }
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "accordion",
+  "filters": [ {
+      "id": "advanced-accordion",
       "components": [
-        "accordion-item","image","text"
       ]
-    }
-  ]
+    }]
 }

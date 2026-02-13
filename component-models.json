@@ -136,7 +136,6 @@
         "component": "number",
         "valueType": "number",
         "name": "gridtab",
-        "required": true,
         "label": "Tablet Grid Columns",
         "validation": {
           "numberMin": 1,
@@ -148,7 +147,6 @@
         "component": "number",
         "valueType": "number",
         "name": "gridmob",
-        "required": true,
         "label": "Mobile Grid Columns",
         "validation": {
           "numberMin": 1,
@@ -221,47 +219,54 @@
     ]
   },
   {
-    "id": "accordion-item",
+    "id": "advanced-accordion",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "summary",
-        "value": "",
-        "label": "Summary",
-        "required": true
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Standard",
+            "value": "standard"
+          },
+          {
+            "name": "Blue Standard",
+            "value": "bluestandard"
+          }
+        ]
       },
       {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
         "valueType": "string",
-        "required": true
+        "name": "tablistall",
+        "label": "Fix These Later"
       }
     ]
   },
   {
-    "id": "carousel-item",
+    "id": "advanced-carousel",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "backgroundImage",
-        "label": "Background Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "backgroundImageAlt",
-        "label": "Background Image Alt"
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Standard",
+            "value": "standard"
+          },
+          {
+            "name": "Blue Standard",
+            "value": "bluestandard"
+          }
+        ]
       },
       {
         "component": "richtext",
-        "name": "text",
-        "label": "Text",
-        "valueType": "string"
+        "valueType": "string",
+        "name": "tablistall",
+        "label": "Fix These Later"
       }
     ]
   },
@@ -589,17 +594,17 @@
     ]
   },
   {
-    "id": "fragment",
+    "id": "modal",
     "fields": [
       {
         "component": "text",
         "name": "urlText",
-        "label": "Fragment URL Text"
+        "label": "modal URL Text"
       },
       {
         "component": "text",
         "name": "url",
-        "label": "Fragment URL",
+        "label": "modal URL",
         "required": true
       }
     ]

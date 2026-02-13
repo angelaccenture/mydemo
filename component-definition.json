@@ -55,107 +55,6 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion",
-          "id": "accordion",
-          "model": "accordion",
-          "filter": "accordion",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div class=\"accordion\"></div>"
-            }
-          }
-        },
-        {
-          "title": "Accordion Item",
-          "id": "accordion-item",
-          "model": "accordion-item",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div><div>Summary</div><div>Text Area</div></div>",
-              "fields": [
-                {
-                  "name": "summary",
-                  "selector": "div>div:nth-child(1)"
-                },
-                {
-                  "name": "text",
-                  "selector": "div>div:nth-child(2)"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "title": "Carousel",
-          "id": "carousel",
-          "model": "advanced-carousel",
-          "filter": "advanced-carousel",
-          "plugins": {
-            "da": {
-              "rows": 1,
-              "columns": 1
-            }
-          }
-        },
-        {
-          "title": "Carousel Slide",
-          "id": "carousel-item",
-          "model": "carousel-item",
-          "plugins": {
-            "da": {
-              "rows": 1,
-              "columns": 1,
-              "fields": [
-                {
-                  "name": "backgroundImage",
-                  "selector": "div>picture>img:nth-child(3)[src]"
-                },
-                {
-                  "name": "backgroundImageAlt",
-                  "selector": "div>picture>img:nth-child(3)[alt]"
-                },
-                {
-                  "name": "text",
-                  "selector": "div:nth-child(2)>p"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "title": "Tabs - 8:56",
-          "id": "advanced-tabs",
-          "model": "advanced-tabs",
-          "filter": "advanced-tabs",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1</li></ul></div></div>",
-              "fields": [
-                {
-                  "name": "tablistall",
-                  "selector": "div>div>ul>li"
-                },
-                {
-                  "name": "tablistone",
-                  "selector": "div>div>ul>li:nth-child(1)"
-                },
-                {
-                  "name": "tablisttwo",
-                  "selector": "div>div>ul>li:nth-child(2)"
-                },
-                {
-                  "name": "tablistthree",
-                  "selector": "div>div>ul>li:nth-child(3)"
-                },
-                {
-                  "name": "tablistfour",
-                  "selector": "div>div>ul>li:nth-child(4)"
-                }
-              ]
-            }
-          }
-        },
-        {
           "title": "Button",
           "id": "button",
           "plugins": {
@@ -262,12 +161,12 @@
           }
         },
         {
-          "title": "Fragment",
-          "id": "fragment",
-          "model": "fragment",
+          "title": "Modal",
+          "id": "modal",
+          "model": "modal",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div class=\"fragment\"><div><div><p><a href=\"\">Fragment URL</a></p></div></div></div>",
+              "unsafeHTML": "<div class=\"modal\"><div><div><p><a href=\"\">Fix later URL</a></p></div></div></div>",
               "fields": [
                 {
                   "name": "url",
@@ -380,6 +279,79 @@
                   "key-value": true
                 }
               }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Advanced Blocks",
+      "id": "advanced-blocks",
+      "components": [
+        {
+          "title": "Accordion",
+          "id": "advanced-accordion",
+          "model": "advanced-accordion",
+          "filter": "advanced-accordion",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"advanced-accordion\"><div><ul><li>Accordion Item 1</li></ul></div></div>",
+              "fields": [
+                {
+                  "name": "tablistall",
+                  "selector": "div>div>ul>li"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Carousel",
+          "id": "advanced-carousel",
+          "model": "advanced-carousel",
+          "filter": "advanced-carousel",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"advanced-carousel\"><div><ul><li>carousel Item 1</li></ul></div></div>",
+              "fields": [
+                {
+                  "name": "tablistall",
+                  "selector": "div>div>ul>li"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Tabs - 8:56",
+          "id": "advanced-tabs",
+          "model": "advanced-tabs",
+          "filter": "advanced-tabs",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1</li></ul></div></div>",
+              "fields": [
+                {
+                  "name": "tablistall",
+                  "selector": "div>div>ul>li"
+                },
+                {
+                  "name": "tablistone",
+                  "selector": "div>div>ul>li:nth-child(1)"
+                },
+                {
+                  "name": "tablisttwo",
+                  "selector": "div>div>ul>li:nth-child(2)"
+                },
+                {
+                  "name": "tablistthree",
+                  "selector": "div>div>ul>li:nth-child(3)"
+                },
+                {
+                  "name": "tablistfour",
+                  "selector": "div>div>ul>li:nth-child(4)"
+                }
+              ]
             }
           }
         }

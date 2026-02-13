@@ -21,12 +21,48 @@
         }
       ]
     },
-    {
+      {
       "title": "Blocks",
       "id": "blocks",
       "components": [
         {
-          "...": "./blocks/*.json#/definitions"
+          "...": "./blocks/button.json#/definitions"
+        },
+        {
+          "...": "./blocks/card.json#/definitions"
+        },
+        {
+          "...": "./blocks/form.json#/definitions"
+        },
+        {
+          "...": "./blocks/fragment.json#/definitions"
+        },
+        {
+          "...": "./blocks/hero.json#/definitions"
+        },
+        {
+          "...": "./blocks/modal.json#/definitions"
+        },
+        { 
+          "...": "./blocks/table.json#/definitions"
+        },
+        {
+          "...": "./blocks/teaser.json#/definitions"
+        }
+      ]
+    },
+    {
+      "title": "Advanced Blocks",
+      "id": "advanced-blocks",
+      "components": [
+        {
+          "...": "./blocks/advanced-accordion.json#/definitions"
+        },
+        {
+          "...": "./blocks/advanced-carousel.json#/definitions"
+        },
+        {
+          "...": "./blocks/advanced-tabs.json#/definitions"
         }
       ]
     }

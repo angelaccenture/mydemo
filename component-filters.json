@@ -24,18 +24,12 @@
     ]
   },
   {
-    "id": "accordion",
-    "components": [
-      "accordion-item",
-      "image",
-      "text"
-    ]
+    "id": "advanced-accordion",
+    "components": []
   },
   {
     "id": "advanced-carousel",
-    "components": [
-      "carousel-item"
-    ]
+    "components": []
   },
   {
     "id": "advanced-tabs",

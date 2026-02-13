@@ -1,12 +1,12 @@
 {
   "definitions": [
     {
-      "title": "Fragment",
-      "id": "fragment",
-      "model": "fragment",
+      "title": "Modal",
+      "id": "modal",
+      "model": "modal",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div class=\"fragment\"><div><div><p><a href=\"\">Fragment URL</a></p></div></div></div>",
+          "unsafeHTML": "<div class=\"modal\"><div><div><p><a href=\"\">Fix later URL</a></p></div></div></div>",
           "fields": [
             { "name": "url", "selector": "div>div>p>a[href]"},
             { "name": "urlText", "selector": "div>div>p>a"}
@@ -17,17 +17,17 @@
   ],
   "models": [
     {
-      "id": "fragment",
+      "id": "modal",
       "fields": [
         {
           "component": "text",
           "name": "urlText",
-          "label": "Fragment URL Text"
+          "label": "modal URL Text"
         },
         {
           "component": "text",
           "name": "url",
-          "label": "Fragment URL",
+          "label": "modal URL",
           "required": true
         }
       ]

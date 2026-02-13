@@ -96,7 +96,6 @@
           "component": "number",
           "valueType": "number",
           "name": "gridtab",
-          "required": true,
           "label": "Tablet Grid Columns",
           "validation": {
             "numberMin": 1,
@@ -108,7 +107,6 @@
           "component": "number",
           "valueType": "number",
           "name": "gridmob",
-          "required": true,
           "label": "Mobile Grid Columns",
           "validation": {
             "numberMin": 1,
