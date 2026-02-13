@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Tabs - 3:37pm",
+      "title": "Tabs - 8:28",
       "id": "advanced-tabs",
       "model": "advanced-tabs",
       "filter": "advanced-tabs",
@@ -19,7 +19,7 @@
             },
              {
               "name": "tablistthree",
-              "selector": "div>div>ul>li:nth-child(2)"
+              "selector": "div>div>ul>li:nth-child(3)"
             },
              {
               "name": "tablistfour",
@@ -53,8 +53,7 @@
           "component": "text",
           "valueType": "string",
           "name": "tablistone",
-          "label": "First Tab Name",
-          "required": true
+          "label": "First Tab Name"
         },
          {
           "component": "text",

@@ -206,8 +206,7 @@
         "component": "text",
         "valueType": "string",
         "name": "tablistone",
-        "label": "First Tab Name",
-        "required": true
+        "label": "First Tab Name"
       },
       {
         "component": "text",
