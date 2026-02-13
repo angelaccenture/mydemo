@@ -7,11 +7,5 @@
 
 
 .blankpage-template {
-  color: red;
-}
-.homepage-template {
-  color: green;
-}
-.article-template {
-  color: blue;
+  font-family:Arial, Helvetica, sans-serif;
 }
