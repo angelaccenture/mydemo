@@ -13,22 +13,17 @@ const elementsToRemove = document.querySelectorAll('footer');
 // Iterate over the NodeList and remove each element
 elementsToRemove.forEach(element => {
   element.remove();
+  console.log("removed footer");
 });
 
 const setupObservers = () => {
-const mutatingBlocks = document.querySelectorAll('footer, div.card, div.carousel, div.accordion');
+const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
 
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       console.log("Mutation:")
       console.log(mutation);
-
-      const footerNode = mutation.target.classList.contains('footer');
-      if (footerNode) {
-        console.log("yes foudn it");
-        console.log(footerNode.parentNode);
-      }
 
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         console.log("what does this if do?");
