@@ -1,5 +1,5 @@
 import { moveInstrumentation } from './ue-utils.js';
-import { getMetadata } from './././scripts/ak.js';
+import { getMetadata } from '../../scripts/ak.js';
 
 const setupObservers = () => {
  const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
