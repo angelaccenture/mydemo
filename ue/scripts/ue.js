@@ -24,6 +24,7 @@ const setupObservers = () => {
         switch (type) {
            case 'footer':
             console.log("footer");
+            const removedDivEl = [...mutation.removedNodes].filter((node) => node.tagName === 'DIV');
             break;
            case 'card':
             console.log("card yes");
