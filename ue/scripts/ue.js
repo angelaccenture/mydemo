@@ -15,7 +15,7 @@ const setupObservers = () => {
     mutations.forEach((mutation) => {
       console.log("Mutation:")
       console.log(mutation);
-      if (mutation.target === 'footer') {
+      if (mutation.target === 'footer.footer') {
         console.log("yes foudn it");
       }
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
