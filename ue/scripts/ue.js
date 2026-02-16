@@ -14,6 +14,7 @@ import { showSlide } from '../../blocks/carousel/carousel.js';
 import { moveInstrumentation } from './ue-utils.js';
 
 const setupObservers = () => {
+  console.log("setupObservers");
   const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
@@ -86,6 +87,7 @@ const setupObservers = () => {
 };
 
 const setupUEEventHandlers = () => {
+  console.log("setupUEEventHandles");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
@@ -101,6 +103,7 @@ const setupUEEventHandlers = () => {
   });
 
   document.addEventListener('aue:ui-select', (event) => {
+     console.log("addEventListerner");
     const { detail } = event;
     const resource = detail?.resource;
 
