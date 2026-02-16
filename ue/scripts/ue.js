@@ -19,10 +19,11 @@ const setupObservers = () => {
         console.log("yes foudn it");
       }
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
+        console.log("what does this if do?");
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
-        // detect the mutation type of the block or picture (for cards)
+      /*  // detect the mutation type of the block or picture (for cards)
         const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
         console.log("type:")
         console.log(type);
@@ -95,7 +96,7 @@ const setupObservers = () => {
             break;
           default:
             break;
-        }
+        }*/
       }
     });
   });
