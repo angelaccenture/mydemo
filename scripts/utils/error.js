@@ -5,9 +5,8 @@ const { codeBase } = getConfig();
 
 export default async function error(ex, el) {
   // eslint-disable-next-line no-console
-  console.log("Error: " + ex);
-
-     if (el && ENV !== 'prod') {
+  const currentHostname = window.location.hostname;
+     if (el && ENV !== 'prod' || !currentHostname.includes('ue.da.live')) {
         await loadStyle(`${codeBase}/styles/error.css`);
         const wrapper = document.createElement('div');
         wrapper.className = 'has-error';
