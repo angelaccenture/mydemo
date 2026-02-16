@@ -15,9 +15,10 @@ const setupObservers = () => {
     mutations.forEach((mutation) => {
       console.log("Mutation:")
       console.log(mutation);
-      if (mutation.target.classList.contains('footer')) {
+      const footerNode = mutation.target.classList.contains('footer');
+      if (footerNode) {
         console.log("yes foudn it");
-        mutation.target.classList.contains('footer').parentNode.removeChild(node);
+       footerNode.parentNode.removeChild(footerNode);
       }
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         console.log("what does this if do?");
