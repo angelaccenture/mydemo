@@ -7,8 +7,8 @@ export default async function error(ex, el) {
   // eslint-disable-next-line no-console
   const daHostName = window.location.hostname.includes('ue.da.live');
   console.log(daHostName);
-  if (daHostName) {
-    console.log("daHostName is true");
+  if (daHostName !== true) {
+    console.log("daHostName does not equal true");
   }
 
      if (el && ENV !== 'prod' || !daHostName) {
