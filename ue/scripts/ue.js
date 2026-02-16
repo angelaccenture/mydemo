@@ -8,7 +8,7 @@ function setUEFilter(element, filter) {
 
 const template = getMetadata('template');
 console.log(template);
-const elementsToRemove = document.querySelectorAll('.footer-content');
+const elementsToRemove = document.querySelectorAll('footer');
 
 // Iterate over the NodeList and remove each element
 elementsToRemove.forEach(element => {
