@@ -7,18 +7,22 @@ function setUEFilter(element, filter) {
 }
  const template = getMetadata('template');
  console.log(template);
- //const footer = document.querySelector('footer');
- //console.log(footer);
- //footer.remove();
 
 const setupObservers = () => {
- const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
+ const mutatingBlocks = document.querySelectorAll('footer, div.card, div.carousel, div.accordion');
 
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       console.log("Mutation:")
       console.log(mutation);
+
+      const footerNode = mutation.target.classList.contains('footer');
+      if (footerNode) {
+        console.log("yes foudn it");
+        console.log(footerNode);
+      }
+
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         console.log("what does this if do?");
         const addedElements = mutation.addedNodes;
