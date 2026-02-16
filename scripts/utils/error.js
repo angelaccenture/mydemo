@@ -17,7 +17,7 @@ export default async function error(ex, el) {
         if (daHostName !== true) {
             console.log("wtf")
         }
-      console.log("why is this showing up in UE?");
+      console.log("why is this showing up in UE???");
         await loadStyle(`${codeBase}/styles/error.css`);
         const wrapper = document.createElement('div');
         wrapper.className = 'has-error';
