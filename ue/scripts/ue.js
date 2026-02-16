@@ -1,6 +1,11 @@
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 
+function setUEFilter(element, filter) {
+  console.log("dont know what UEFilter is, but lets try it");
+  element.dataset.aueFilter = filter;
+}
+
 const setupObservers = () => {
  const mutatingBlocks = document.querySelectorAll('footer, div.card, div.carousel, div.accordion');
  const template = getMetadata('template');
