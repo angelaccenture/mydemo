@@ -20,7 +20,7 @@ const setupObservers = () => {
       const footerNode = mutation.target.classList.contains('footer');
       if (footerNode) {
         console.log("yes foudn it");
-        console.log(footerNode);
+        console.log(footerNode.parentNode);
       }
 
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
