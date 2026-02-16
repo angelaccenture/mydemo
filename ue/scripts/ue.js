@@ -7,9 +7,9 @@ function setUEFilter(element, filter) {
 }
  const template = getMetadata('template');
  console.log(template);
- const footer = document.querySelector('footer');
- console.log(footer);
- footer.remove();
+ //const footer = document.querySelector('footer');
+ //console.log(footer);
+ //footer.remove();
 
 const setupObservers = () => {
  const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
