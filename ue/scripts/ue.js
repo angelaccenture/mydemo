@@ -5,14 +5,15 @@ function setUEFilter(element, filter) {
   console.log("dont know what UEFilter is, but lets try it");
   element.dataset.aueFilter = filter;
 }
-
-const setupObservers = () => {
- const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
  const template = getMetadata('template');
  console.log(template);
  const footer = querySelectorAll('footer');
  console.log(footer);
  footer.remove();
+
+const setupObservers = () => {
+ const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
+
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
