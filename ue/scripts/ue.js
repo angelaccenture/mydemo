@@ -5,11 +5,18 @@ function setUEFilter(element, filter) {
   console.log("dont know what UEFilter is, but lets try it");
   element.dataset.aueFilter = filter;
 }
- const template = getMetadata('template');
- console.log(template);
+
+const template = getMetadata('template');
+console.log(template);
+const elementsToRemove = document.querySelectorAll('.footer-content');
+
+// Iterate over the NodeList and remove each element
+elementsToRemove.forEach(element => {
+  element.remove();
+});
 
 const setupObservers = () => {
- const mutatingBlocks = document.querySelectorAll('footer, div.card, div.carousel, div.accordion');
+const mutatingBlocks = document.querySelectorAll('footer, div.card, div.carousel, div.accordion');
 
 
   const observer = new MutationObserver((mutations) => {
@@ -33,23 +40,6 @@ const setupObservers = () => {
         console.log("type:")
         console.log(type);
         switch (type) {
-           case 'footer':
-            console.log("footer");
-            const removedDivEl = [...mutation.removedNodes].filter((node) => node.tagName === 'DIV');
-            break;
-           case 'card':
-            console.log("card yes");
-            // handle card div > li replacements
-            if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
-              const ulEl = addedElements[0];
-              const removedDivEl = [...mutation.removedNodes].filter((node) => node.tagName === 'DIV');
-              removedDivEl.forEach((div, index) => {
-                if (index < ulEl.children.length) {
-                  moveInstrumentation(div, ulEl.children[index]);
-                }
-              });
-            }
-            break;
           case 'cards':
             console.log("cards yes");
             // handle card div > li replacements
