@@ -24,6 +24,7 @@ const sections = document.querySelectorAll('[data-aue-model$="section"]');
 console.log(sections);
 sections.forEach((section) => {
       setUEFilter(section, `${template}-section`);
+      console.log(section);
 });
 
 // Iterate over the NodeList and remove each element
