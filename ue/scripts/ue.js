@@ -2,8 +2,8 @@ import { moveInstrumentation } from './ue-utils.js';
 
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
- const template = getMetadata('template');
- console.log(template);
+ //const template = getMetadata('template');
+ //console.log(template);
   const footer = document.querySelectorAll('footer');
   console.log(footer);
  if (footer) {
