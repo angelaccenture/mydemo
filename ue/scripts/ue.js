@@ -7,7 +7,7 @@ const setupObservers = () => {
   const footer = document.querySelectorAll('footer');
   console.log(footer);
  if (footer) {
-    footer.remove();
+    //footer.removedNodes;
 }
 
   const observer = new MutationObserver((mutations) => {
