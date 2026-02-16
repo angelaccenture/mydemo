@@ -14,6 +14,9 @@ export default async function error(ex, el) {
   }
 
      if (el && ENV !== 'prod' || daHostName !== true) {
+        if (daHostName !== true) {
+            console.log("wtf")
+        }
       console.log("why is this showing up in UE?");
         await loadStyle(`${codeBase}/styles/error.css`);
         const wrapper = document.createElement('div');
