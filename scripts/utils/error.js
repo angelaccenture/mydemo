@@ -6,6 +6,12 @@ const { codeBase } = getConfig();
 export default async function error(ex, el) {
   // eslint-disable-next-line no-console
   const daHostName = window.location.hostname.includes('ue.da.live');
+  if (daHostName !== true) {
+    console.log("this should not show in UE, but should show in normal page")
+  }
+  else {
+    console.log("this should show up in UE")
+  }
 
      if (el && ENV !== 'prod' || daHostName !== true) {
         await loadStyle(`${codeBase}/styles/error.css`);
