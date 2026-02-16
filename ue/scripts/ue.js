@@ -2,14 +2,9 @@ import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 
 const setupObservers = () => {
- const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
+ const mutatingBlocks = document.querySelectorAll('footer, div.card, div.carousel, div.accordion');
  const template = getMetadata('template');
  console.log(template);
-  const footer = document.querySelectorAll('footer');
-  console.log(footer);
- if (footer) {
-    //footer.removedNodes;
-}
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
@@ -20,10 +15,26 @@ const setupObservers = () => {
 
         // detect the mutation type of the block or picture (for cards)
         const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
-
+        console.log(type);
         switch (type) {
-          case 'card':
+           case 'footer':
+            console.log("footer");
+            break;
+           case 'card':
             console.log("card yes");
+            // handle card div > li replacements
+            if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
+              const ulEl = addedElements[0];
+              const removedDivEl = [...mutation.removedNodes].filter((node) => node.tagName === 'DIV');
+              removedDivEl.forEach((div, index) => {
+                if (index < ulEl.children.length) {
+                  moveInstrumentation(div, ulEl.children[index]);
+                }
+              });
+            }
+            break;
+          case 'cards':
+            console.log("cards yes");
             // handle card div > li replacements
             if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
               const ulEl = addedElements[0];
