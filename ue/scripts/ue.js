@@ -7,7 +7,7 @@ function setUEFilter(element, filter) {
 }
  const template = getMetadata('template');
  console.log(template);
- const footer = querySelectorAll('footer');
+ const footer = document.querySelectorAll('footer');
  console.log(footer);
  footer.remove();
 
