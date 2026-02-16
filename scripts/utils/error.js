@@ -7,8 +7,7 @@ export default async function error(ex, el) {
   // eslint-disable-next-line no-console
   console.log("Error: " + ex);
 
-     console.log("Not in UE, show errors");
-      if (el && ENV !== 'prod') {
+     if (el && ENV !== 'prod') {
         await loadStyle(`${codeBase}/styles/error.css`);
         const wrapper = document.createElement('div');
         wrapper.className = 'has-error';
