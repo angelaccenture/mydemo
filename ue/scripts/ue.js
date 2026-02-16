@@ -2,6 +2,8 @@ import { moveInstrumentation } from './ue-utils.js';
 
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
+ const template = getMetadata('template');
+ console.log(template);
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {

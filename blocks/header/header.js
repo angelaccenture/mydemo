@@ -184,7 +184,6 @@ async function decorateHeader(fragment) {
  * @param {Element} el The header element
  */
 export default async function init(el) {
-  console.log("loading header in UE");
   const headerMeta = getMetadata('header');
   const path = headerMeta || HEADER_PATH;
   try {
