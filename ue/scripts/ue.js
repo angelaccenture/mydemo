@@ -15,7 +15,7 @@ const setupObservers = () => {
     mutations.forEach((mutation) => {
       console.log("Mutation:")
       console.log(mutation);
-      if (mutation.target === 'footer.footer') {
+      if (mutation.target.contains('footer')) {
         console.log("yes foudn it");
       }
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
@@ -125,7 +125,7 @@ const setupUEEventHandlers = () => {
   });
 
   document.addEventListener('aue:ui-select', (event) => {
-     console.log("addEventListerner");
+     console.log("addEventListerner console");
     const { detail } = event;
     const resource = detail?.resource;
 
