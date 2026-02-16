@@ -13,14 +13,16 @@ const setupObservers = () => {
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      console.log("Mutations " + mutation);
+      console.log("Mutation:")
+      console.log(mutation);
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
         // detect the mutation type of the block or picture (for cards)
         const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
-        console.log("type " + type);
+        console.log("type:")
+        console.log(type);
         switch (type) {
            case 'footer':
             console.log("footer");
