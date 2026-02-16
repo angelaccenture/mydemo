@@ -10,20 +10,41 @@
  * governing permissions and limitations under the License.
  */
 
-import { showSlide } from '../../blocks/carousel/carousel.js';
 import { moveInstrumentation } from './ue-utils.js';
+import { getMetadata } from '../../scripts/ak.js';
+
+function setUEFilter(element, filter) {
+  //This might help with template sections
+  element.dataset.aueFilter = filter;
+}
+const template = getMetadata('template');
+console.log(template);
+const elementsToRemove = document.querySelectorAll('footer');
+const sections = document.querySelectorAll('[data-aue-model$="section"]');
+console.log(sections);
+sections.forEach((section) => {
+      setUEFilter(section, `${template}-section`);
+      console.log(section);
+});
+
+// Iterate over the NodeList and remove each element
+elementsToRemove.forEach(element => {
+  element.remove();
+});
 
 const setupObservers = () => {
-  const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
+const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
+
+
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
+
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
-        // detect the mutation type of the block or picture (for cards)
+      /*  // detect the mutation type of the block or picture (for cards)
         const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
-
         switch (type) {
           case 'cards':
             // handle card div > li replacements
@@ -75,7 +96,7 @@ const setupObservers = () => {
             break;
           default:
             break;
-        }
+        }*/
       }
     });
   });
@@ -84,6 +105,7 @@ const setupObservers = () => {
     observer.observe(cardsBlock, { childList: true, subtree: true });
   });
 };
+
 
 const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
