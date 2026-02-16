@@ -17,6 +17,7 @@ const setupObservers = () => {
       console.log(mutation);
       if (mutation.target.classList.contains('footer')) {
         console.log("yes foudn it");
+         const removedDivEl = [...mutation.removedNodes].filter((node) => node.tagName === 'DIV');
       }
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         console.log("what does this if do?");
