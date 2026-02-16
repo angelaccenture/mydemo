@@ -7,9 +7,12 @@ function setUEFilter(element, filter) {
 }
 
 const setupObservers = () => {
- const mutatingBlocks = document.querySelectorAll('footer, div.card, div.carousel, div.accordion');
+ const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
  const template = getMetadata('template');
  console.log(template);
+ const footer = querySelectorAll('footer');
+ console.log(footer);
+ footer.remove();
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
@@ -19,8 +22,6 @@ const setupObservers = () => {
       if (footerNode) {
         console.log("yes foudn it");
         console.log(footerNode);
-        console.log(footerNode.parentNode);
-       //footerNode.parentNode.removeChild(footerNode);
       }
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         console.log("what does this if do?");
