@@ -13,7 +13,6 @@ const elementsToRemove = document.querySelectorAll('footer');
 // Iterate over the NodeList and remove each element
 elementsToRemove.forEach(element => {
   element.remove();
-  console.log("removed footer");
 });
 
 const setupObservers = () => {
@@ -22,21 +21,15 @@ const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.ac
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      console.log("Mutation:")
-      console.log(mutation);
 
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
-        console.log("what does this if do?");
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
       /*  // detect the mutation type of the block or picture (for cards)
         const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
-        console.log("type:")
-        console.log(type);
         switch (type) {
           case 'cards':
-            console.log("cards yes");
             // handle card div > li replacements
             if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
               const ulEl = addedElements[0];
@@ -98,10 +91,8 @@ const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.ac
 
 
 const setupUEEventHandlers = () => {
-  console.log("setupUEEventHandles");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-    console.log("top event listerner");
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
@@ -115,7 +106,6 @@ const setupUEEventHandlers = () => {
   });
 
   document.addEventListener('aue:ui-select', (event) => {
-     console.log("addEventListerner console");
     const { detail } = event;
     const resource = detail?.resource;
 
