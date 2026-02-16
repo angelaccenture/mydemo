@@ -3,6 +3,25 @@
     "id": "page-metadata",
     "fields": [
       {
+        "component": "select",
+        "name": "template",
+        "label": "Template",
+        "options": [
+          {
+            "name": "Blank Page",
+            "value": "blankpage"
+          },
+          {
+            "name": "Homepage",
+            "value": "homepage"
+          },
+          {
+            "name": "Article",
+            "value": "article"
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "title",
         "label": "Title"
