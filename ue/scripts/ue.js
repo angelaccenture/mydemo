@@ -14,13 +14,17 @@ import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 
 function setUEFilter(element, filter) {
-  console.log("dont know what UEFilter is, but lets try it");
+  //This might help with template sections
   element.dataset.aueFilter = filter;
 }
-
 const template = getMetadata('template');
 console.log(template);
 const elementsToRemove = document.querySelectorAll('footer');
+const sections = main.querySelectorAll('[data-aue-model$="section"]');
+console.log(sections);
+sections.forEach((section) => {
+      setUEFilter(section, `${template}-section`);
+});
 
 // Iterate over the NodeList and remove each element
 elementsToRemove.forEach(element => {
