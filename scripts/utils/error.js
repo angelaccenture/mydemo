@@ -6,8 +6,7 @@ const { codeBase } = getConfig();
 export default async function error(ex, el) {
   // eslint-disable-next-line no-console
   const daHostName = window.location.hostname.includes('ue.da.live');
-     if ((el && ENV !== 'prod') || (daHostName !== true)) {
-      console.log("newest cache why is this showing up in UE???");
+     if ((el && ENV !== 'prod')) {
       if (daHostName !== true) {
         await loadStyle(`${codeBase}/styles/error.css`);
         const wrapper = document.createElement('div');
