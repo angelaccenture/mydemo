@@ -13,7 +13,7 @@ export default async function error(ex, el) {
     console.log("this should show up in UE")
   }
 
-     if (el && ENV !== 'prod' || daHostName !== true) {
+     if ((el && ENV !== 'prod') || (daHostName !== true)) {
         if (daHostName !== true) {
             console.log("wtf")
         }
