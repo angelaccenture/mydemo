@@ -1,7 +1,6 @@
 import { moveInstrumentation } from './ue-utils.js';
 
 const setupObservers = () => {
-  console.log("setupObservers - not needed yet");
   const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
@@ -14,17 +13,16 @@ const setupObservers = () => {
 
         switch (type) {
           case 'card':
-            // handle card div > li replacements
             console.log("card yes");
-
-            /*if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
+            // handle card div > li replacements
+            if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
               const ulEl = addedElements[0];
               const removedDivEl = [...mutation.removedNodes].filter((node) => node.tagName === 'DIV');
               removedDivEl.forEach((div, index) => {
                 if (index < ulEl.children.length) {
                   moveInstrumentation(div, ulEl.children[index]);
                 }
-              });*/
+              });
             }
             break;
           case 'cards-image':
@@ -75,7 +73,6 @@ const setupObservers = () => {
   });
 };
 
-};
 
 const setupUEEventHandlers = () => {
   console.log("setupUEEventHandles");
