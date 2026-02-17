@@ -103,10 +103,8 @@ const setupObservers = () => {
 
 
 const setupUEEventHandlers = () => {
-  console.log("Event - 4:29");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-    console.log("aue:content-patch listener");
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
@@ -120,20 +118,16 @@ const setupUEEventHandlers = () => {
   });
 
   document.addEventListener('aue:ui-select', (event) => {
-    console.log('aue:ui-select listener - Yes this works');
     const { detail } = event;
     const resource = detail?.resource;
 
     if (resource) {
-      console.log("if within aue");
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
       if (!element) {
-          console.log("if !element");
         return;
       }
       const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
       if (blockEl) {
-        console.log("if blockEl");
         const block = blockEl.getAttribute('data-aue-model');
         const index = element.getAttribute('data-slide-index');
 
