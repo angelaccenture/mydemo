@@ -1,6 +1,10 @@
 async function handleLayout(text, section, type) {
   if (text === '0') return;
   console.log("create button here and add elements");
+   //Create Button
+  const buttonTag = document.createElement('a');
+  const buttonText = "test";
+  buttonTag.textContent = buttonText;
 }
 
 const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
@@ -22,18 +26,7 @@ export default function init(el) {
   if (btndata.btntext?.text) handleLayout(btndata.btntext.text, btnRoot, 'btntext');
   console.log("btndata link");
   console.log(btndata.link);
-
-  //Create Button
-  const buttonTag = document.createElement('button');
-  const buttonText = "test";
-  buttonTag.textContent = buttonText;
-  buttonTag.type = 'button';
-  
   
   btnRoot.before(buttonTag);
-  
-
- 
-
   //el.remove();
 }
