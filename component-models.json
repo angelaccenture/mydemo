@@ -117,7 +117,7 @@
       {
         "component": "boolean",
         "label": "Background Image",
-        "name": "reveal",
+        "name": "bgimage",
         "valueType": "boolean"
       },
       {
@@ -128,16 +128,30 @@
         "condition": {
           "===": [
             {
-              "var": "reveal"
+              "var": "bgimage"
             },
             true
           ]
         }
       },
       {
+        "component": "boolean",
+        "label": "Grid",
+        "name": "grid",
+        "valueType": "boolean"
+      },
+      {
         "component": "tab",
         "label": "Grid",
-        "name": "tab2"
+        "name": "tab2",
+        "condition": {
+          "===": [
+            {
+              "var": "grid"
+            },
+            true
+          ]
+        }
       },
       {
         "component": "number",
