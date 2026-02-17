@@ -160,9 +160,9 @@ const setupUEEventHandlers = () => {
       }
     }
   });
-
+console.log("trying new istener");
     document.addEventListener('urn:ui-select', (event) => {
-      console.log('try new listener');
+      console.log('urn maybe?');
   });
 };
 
