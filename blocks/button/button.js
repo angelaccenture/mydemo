@@ -12,9 +12,13 @@ export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
     if (!btnRoot) return;
   const btndata = getBtndata(el);
+  console.log("btndata");
   console.log(btndata);
-  //if (btndata.text?.text) handleLayout(metadata.text.text, section, 'text');
+  //if (metadata.grid?.text) handleLayout(metadata.grid.text, section, 'grid');
+  console.log("btndata link");
   console.log(btndata.link);
+
+  //Create Button
   const buttonTag = document.createElement('button');
   const buttonText = "test";
   buttonTag.textContent = buttonText;
@@ -22,8 +26,6 @@ export default function init(el) {
   
   
   btnRoot.before(buttonTag);
-
-  const section = el.closest('.section');
   
 
  
