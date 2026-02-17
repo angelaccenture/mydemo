@@ -1,3 +1,8 @@
+async function handleLayout(text, section, type) {
+  if (text === '0') return;
+  console.log("create button here and add elements");
+}
+
 const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
   if (row.children) {
     const key = row.children[0].textContent.trim().toLowerCase();
