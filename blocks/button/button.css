@@ -1,0 +1,338 @@
+.button a.button.disabled {
+  pointer-events: none;
+}
+
+a.button,
+button {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  padding: 16px 32px;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.32px;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-radius: var(--border-radius-xl);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  outline-offset: 4px;
+  outline: 2px solid transparent;
+  border: 2px solid transparent;
+}
+
+/* Input Button */
+a.button.primary-variant,
+button.primary-variant,
+a.button.secondary-variant,
+button.secondary-variant {
+  border-radius: var(--border-radius-m);
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.32px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: var(--body-font-family);
+  display: inline-flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  outline-offset: 4px;
+  outline: 2px solid transparent;
+  border: 2px solid transparent;
+}
+
+.button.block a.button.disabled,
+.button.block button:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.button.block a.button svg,
+.button.block button svg {
+  height: var(--icon-size-sm);
+  width: var(--icon-size-sm);
+}
+
+.button.block a.button.primary svg path,
+.button.block button.primary svg path,
+.button.block a.button.primary-variant svg path,
+.button.block button.primary-variant svg path,
+.button.block a.button.secondary.iblack svg path,
+.button.block button.secondary.iblack svg path,
+.button.block a.button.secondary-variant.iblack svg path,
+.button.block button.secondary-variant.iblack svg path,
+.button.block a.button.text-btn.iblack svg path,
+.button.block button.text-btn.iblack svg path {
+  fill: var(--color-white);
+}
+
+.button.block a.button.secondary svg path,
+.button.block button.secondary svg path,
+.button.block a.button.primary.iblack svg path,
+.button.block button.primary.iblack svg path,
+.button.block a.button.primary-variant.iblack svg path,
+.button.block button.primary-variant.iblack svg path {
+  fill: var(--primary-cta);
+}
+
+.button.block a.button.secondary-variant svg path,
+.button.block button.secondary-variant svg path {
+  fill: var(--secondary-cta);
+}
+
+.button.block a.button.text-btn svg path,
+.button.block button.text-btn svg path {
+  fill: var(--link-color);
+}
+
+.button.block a.button.secondary-variant:hover svg path,
+.button.block button.secondary-variant:hover svg path,
+.button.block a.button.primary.iblack:hover svg path,
+.button.block button.primary.iblack:hover svg path,
+.button.block a.button.primary-variant.iblack:hover svg path,
+.button.block button.primary-variant.iblack:hover svg path {
+  fill: var(--primary-cta-hover);
+}
+
+.button.block a.button.secondary:hover svg path,
+.button.block button.secondary:hover svg path {
+  fill: var(--secondary-cta-hover);
+}
+
+/* Primary Button Styles */
+
+a.button.primary,
+button.primary,
+a.button.primary-variant,
+button.primary-variant {
+  background-color: var(--primary-cta);
+  color: var(--color-white);
+}
+
+a.button.primary:hover,
+button.primary:hover,
+a.button.primary-variant:hover,
+button.primary-variant:hover {
+  background-color: var(--primary-cta-hover);
+  text-decoration: none;
+}
+
+a.button.primary.disabled,
+button.primary:disabled,
+a.button.primary-variant.disabled,
+button.primary-variant:disabled {
+  background-color: var(--deativated);
+}
+
+a.button.primary:focus,
+button.primary:focus,
+a.button.primary-variant:focus,
+button.primary-variant:focus {
+  background-color: var(--primary-cta);
+  outline: 2px solid var(--primary-cta);
+  border: 2px solid var(--primary-cta);
+}
+
+a.button.primary.iblack,
+button.primary.iblack,
+a.button.primary-variant.iblack,
+button.primary-variant.iblack {
+  background-color: var(--color-white);
+  color: var(--primary-cta);
+}
+
+a.button.primary.iblack:hover,
+button.primary.iblack:hover,
+a.button.primary-variant.iblack:hover,
+button.primary-variant.iblack:hover {
+  background-color: var(--gray-bg);
+}
+
+a.button.primary.iblack.disabled,
+button.primary.iblack:disabled,
+a.button.primary-variant.iblack.disabled,
+button.primary-variant.iblack:disabled {
+  background-color: var(--gray-bg);
+}
+
+a.button.primary.iblack:focus,
+button.primary.iblack:focus,
+a.button.primary-variant.iblack:focus,
+button.primary-variant.iblack:focus {
+  background-color: var(--color-white);
+  outline: 2px solid var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+/* Secondary Button Styles */
+a.button.secondary,
+button.secondary,
+a.button.secondary-variant,
+button.secondary-variant {
+  background-color: var(--color-white);
+  border: 2px solid var(--secondary-cta);
+  color: var(--secondary-cta);
+}
+
+a.button.secondary:hover,
+button.secondary:hover,
+a.button.secondary-variant:hover,
+button.secondary-variant:hover {
+  background-color: color-mix(in srgb, white 95%, var(--secondary-cta) 5%);
+  border: 2px solid var(--secondary-cta-hover);
+  text-decoration: none;
+}
+
+a.button.secondary.disabled,
+button.secondary:disabled,
+a.button.secondary-variant.disabled,
+button.secondary-variant:disabled {
+  border: 2px solid var(--deactivated-secondary);
+}
+
+a.button.secondary:focus,
+button.secondary:focus,
+a.button.secondary-variant:focus,
+button.secondary-variant:focus {
+  outline: 2px solid var(--secondary-cta);
+  border: 2px solid var(--secondary-cta);
+}
+
+a.button.secondary.iblack,
+button.secondary.iblack,
+a.button.secondary-variant.iblack,
+button.secondary-variant.iblack {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+}
+
+a.button.secondary.iblack:hover,
+button.secondary.iblack:hover,
+a.button.secondary-variant.iblack:hover,
+button.secondary-variant.iblack:hover {
+  border: 2px solid var(--gray-bg);
+}
+
+a.button.secondary.iblack.disabled,
+button.secondary.iblack:disabled,
+a.button.secondary-variant.iblack.disabled,
+button.secondary-variant.iblack:disabled {
+  border: 2px solid var(--gray-bg);
+}
+
+a.button.secondary.iblack:focus,
+button.secondary.iblack:focus,
+a.button.secondary-variant.iblack:focus,
+button.secondary-variant.iblack:focus {
+  outline: 2px solid var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+/* Text Button */
+a.button.text-btn,
+button.text-btn {
+  background-color: unset;
+  color: var(--link-color);
+  font-weight: var(--font-weight-regular);
+  text-decoration: underline;
+  padding: 4px;
+}
+
+a.button.text-btn:hover,
+button.text-btn:hover {
+  color: var(--link-hover-color);
+}
+
+a.button.text-btn:hover svg path,
+button.text-btn:hover svg path {
+  fill: var(--link-color-hover);
+}
+
+a.button.text-btn.disabled,
+button.text-btn:disabled {
+  color: var(--link-hover-color);
+}
+
+a.button.text-btn:focus,
+button.text-btn:focus {
+  outline: 2px solid var(--link-color);
+  border-radius: var(--border-radius-m);
+}
+
+a.button.text-btn.iblack,
+button.text-btn.iblack {
+  background-color: unset;
+  color: var(--color-white);
+}
+
+a.button.text-btn.iblack:hover,
+button.text-btn.iblack:hover {
+  color: var(--color-white);
+}
+
+a.button.text-btn.iblack.disabled,
+button.text-btn.iblack:disabled {
+  color: var(--link-hover-color);
+}
+
+a.button.text-btn.iblack:focus,
+button.text-btn.iblack:focus {
+  outline: 2px solid var(--color-white);
+}
+
+.button.block.small a.button,
+.button.block.small button,
+.button.block.small a.button.primary-variant,
+.button.block.small button.primary-variant,
+.button.block.small a.button.secondary-variant,
+.button.block.small button.secondary-variant {
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.28px;
+}
+
+.button.block.small a.button svg,
+.button.block.small button svg {
+  height: var(--icon-size-xs);
+  width: var(--icon-size-xs);
+}
+
+@media (max-width: 991px) {
+  a.button:any-link,
+  button {
+    padding: 12px 24px;
+    font-size: 14px;
+    line-height: 19.6px;
+    letter-spacing: 0.28px;
+  }
+
+  a.button.primary-variant,
+  button.primary-variant,
+  a.button.secondary-variant,
+  button.secondary-variant {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.28px;
+    padding: 12px 24px;
+  }
+
+  .button.block a.button svg,
+  .button.block button svg {
+    height: var(--icon-size-xs);
+    width: var(--icon-size-xs);
+  }
+}
