@@ -137,7 +137,7 @@
       {
         "component": "boolean",
         "label": "Grid",
-        "name": "grid",
+        "name": "gridshown",
         "valueType": "boolean"
       },
       {
@@ -147,7 +147,7 @@
         "condition": {
           "===": [
             {
-              "var": "grid"
+              "var": "gridshown"
             },
             true
           ]

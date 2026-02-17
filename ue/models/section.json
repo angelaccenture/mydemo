@@ -89,14 +89,14 @@
       {
         "component": "boolean",
         "label": "Grid",
-        "name": "grid",
+        "name": "gridshown",
         "valueType": "boolean"
       },
     {
       "component": "tab",
       "label": "Grid",
       "name": "tab2",
-      "condition": { "===": [{"var" : "grid"}, true] }
+      "condition": { "===": [{"var" : "gridshown"}, true] }
     }, 
         {
           "component": "number",
