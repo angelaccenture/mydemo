@@ -4,6 +4,6 @@ export default function init(el) {
   const buttonTag = document.createElement('button');
   buttonTag.textContent = 'New Button'; // Get this from DOM
   buttonTag.type = 'button';
-  btnRoot.after(buttonTag);
+  btnRoot.before(buttonTag);
 
 }
