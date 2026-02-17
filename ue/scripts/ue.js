@@ -99,6 +99,7 @@ const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.ac
 
 
 const setupUEEventHandlers = () => {
+  console.log("trying new istener");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
     console.log("aue:content-patch listener");
@@ -160,7 +161,7 @@ const setupUEEventHandlers = () => {
       }
     }
   });
-console.log("trying new istener");
+
     document.addEventListener('urn:ui-select', (event) => {
       console.log('urn maybe?');
   });
