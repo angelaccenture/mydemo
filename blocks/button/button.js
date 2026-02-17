@@ -20,5 +20,8 @@ export default function init(el) {
       btn.setAttribute('aria-label',btndata.label.text);
       btnRoot.before(btn);
   } 
-  btnRoot.remove();
+  const btnAll = el.querySelectorAll(':scope > div');
+ btnAll.forEach(btnelement => {
+  btnelement.remove();
+});
 }
