@@ -1,6 +1,6 @@
 const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
   if (row.children) {
-    const key = row.children[0].textContent.trim();
+    const key = row.children[0].textContent.trim().toLowerCase();
     const content = row.children[1];
     const text = content.textContent.trim();
     if (key && content) rdx[key] = { content, text };
@@ -18,7 +18,7 @@ export default function init(el) {
   const btn = document.createElement('a');
   btn.textContent = btndata.btntext.text;
   console.log(btndata.btntext.parentElement);
-  btn.href = "http://www.test.com";
+  btn.href = btndata.link.text;
  
   btnRoot.before(btn);
 
