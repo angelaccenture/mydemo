@@ -1,10 +1,12 @@
-async function handleLayout(text, section, type) {
+async function handleLayout(text, btnRoot, type) {
   if (text === '0') return;
   console.log("create button here and add elements");
-   //Create Button
-  const buttonTag = document.createElement('a');
-  const buttonText = "test";
-  buttonTag.textContent = buttonText;
+  console.log(text);
+   
+  //Create Button
+  //const buttonTag = document.createElement('a');
+  //const buttonText = "test";
+  //buttonTag.textContent = buttonText;
 }
 
 const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
