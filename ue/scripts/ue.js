@@ -19,16 +19,13 @@ elementsToRemove.forEach(element => {
   element.remove();
 });
 
-/*Add in Template Support*/
+/*Add in Template Support to control blocks - IP*/
 function setUEFilter(element, filter) {
   //This might help with template sections
   element.dataset.aueFilter = filter;
 }
 const template = getMetadata('template');
-console.log(template);
-
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
-console.log(sections);
 
 
 /*Review all code below later*/
