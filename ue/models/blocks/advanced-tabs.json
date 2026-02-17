@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Tabs - 8:56",
+      "title": "Tabs - 8:46",
       "id": "advanced-tabs",
       "model": "advanced-tabs",
       "filter": "advanced-tabs",
@@ -24,6 +24,14 @@
              {
               "name": "tablistfour",
               "selector": "div>div>ul>li:nth-child(4)"
+            },
+            {
+              "name": "tablistfive",
+              "selector": "div>div>ul>li:nth-child(5)"
+            },
+            {
+              "name": "tablistsix",
+              "selector": "div>div>ul>li:nth-child(6)"
             }
           ]
         }
@@ -50,12 +58,6 @@
           ]
         },
         {
-          "component": "richtext",
-          "valueType": "string",
-          "name": "tablistall",
-          "label": "Tab List"
-        },
-        {
           "component": "text",
           "valueType": "string",
           "name": "tablistone",
@@ -78,6 +80,18 @@
           "valueType": "string",
           "name": "tablistfour",
           "label": "Fourth Tab Name"
+        },
+         {
+          "component": "text",
+          "valueType": "string",
+          "name": "tablistfive",
+          "label": "Fifth Tab Name"
+        },
+         {
+          "component": "text",
+          "valueType": "string",
+          "name": "tablistsix",
+          "label": "Sixth Tab Name"
         }
       ]
     }
@@ -85,6 +99,7 @@
   "filters": [ {
       "id": "advanced-tabs",
       "components": [
+        "section"
       ]
     }]
 }

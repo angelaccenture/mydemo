@@ -40,7 +40,9 @@
   },
   {
     "id": "advanced-tabs",
-    "components": []
+    "components": [
+      "section"
+    ]
   },
   {
     "id": "table",
