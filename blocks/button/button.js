@@ -1,6 +1,5 @@
 const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
   if (row.children) {
-    console.log(row.children);
     const key = row.children[0].textContent.trim().toLowerCase();
     const content = row.children[1];
     const text = content.textContent.trim();
@@ -13,14 +12,13 @@ export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
     if (!btnRoot) return;
   const btndata = getBtndata(el);
-  console.log(btndata.text.text);
+  console.log(btndata.text);
   if (btndata.text.text) {
       const btn = document.createElement('a');
       btn.textContent = btndata.text.text;
       console.log(btndata.text.parentElement);
       btn.href = btndata.link.text;
       btn.setAttribute('aria-label',btndata.label.text);
-    
       btnRoot.before(btn);
   } 
 
