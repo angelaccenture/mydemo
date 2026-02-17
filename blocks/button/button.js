@@ -14,7 +14,7 @@ export default function init(el) {
   const btndata = getBtndata(el);
   console.log("btndata");
   console.log(btndata);
-  //if (metadata.grid?.text) handleLayout(metadata.grid.text, section, 'grid');
+  if (btndata.btntext?.text) handleLayout(btndata.btntext.text, btnRoot, 'btntext');
   console.log("btndata link");
   console.log(btndata.link);
 
