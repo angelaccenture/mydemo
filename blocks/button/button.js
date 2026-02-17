@@ -20,7 +20,5 @@ export default function init(el) {
       btn.setAttribute('aria-label',btndata.label.text);
       btnRoot.before(btn);
   } 
-  console.log(btndata.text);
-  btndata.tet.remove();
-  //el.remove();
+  btnRoot.remove();
 }
