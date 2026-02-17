@@ -24,7 +24,8 @@
       {
         "component": "text",
         "name": "title",
-        "label": "Title"
+        "label": "Title",
+        "required": true
       },
       {
         "component": "text",
