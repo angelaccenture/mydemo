@@ -162,7 +162,7 @@ const setupUEEventHandlers = () => {
     }
   });
 
-    document.addEventListener('urn:ui-select', (event) => {
+    document.addEventListener('urn:ab:ui-select', (event) => {
       console.log('urn maybe?');
   });
 };
