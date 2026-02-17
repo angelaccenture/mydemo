@@ -99,7 +99,7 @@ const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.ac
 
 
 const setupUEEventHandlers = () => {
-  console.log("trying new istener");
+  console.log("trying new istener - 4:29");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
     console.log("aue:content-patch listener");
@@ -116,11 +116,12 @@ const setupUEEventHandlers = () => {
   });
 
   document.addEventListener('aue:ui-select', (event) => {
-    console.log('aue:ui-select listener');
+    console.log('aue:ui-select listener - Yes this works');
     const { detail } = event;
     const resource = detail?.resource;
 
     if (resource) {
+      console.log("if within aue");
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
       if (!element) {
         return;
@@ -160,10 +161,6 @@ const setupUEEventHandlers = () => {
         }
       }
     }
-  });
-
-    document.addEventListener('urn:ab:ui-select', (event) => {
-      console.log('urn maybe?');
   });
 };
 
