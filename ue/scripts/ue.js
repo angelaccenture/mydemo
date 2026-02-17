@@ -20,22 +20,13 @@ function setUEFilter(element, filter) {
 const template = getMetadata('template');
 console.log(template);
 const elementsToRemove = document.querySelectorAll('footer');
-const sections = document.querySelectorAll('.section');
-console.log(sections);
-sections.forEach((section) => {
-      setUEFilter(section, `${template}-section`);
-      console.log(section);
-});
 
-// Iterate over the NodeList and remove each element
-elementsToRemove.forEach(element => {
-  element.remove();
-});
+/*Add in Template Support*/
+const sections = document.querySelectorAll('[data-aue-model$="section"]');
+console.log(sections);
 
 const setupObservers = () => {
 const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
-
-
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
 
@@ -110,6 +101,7 @@ const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.ac
 const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
+    console.log("is this listener here");
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
