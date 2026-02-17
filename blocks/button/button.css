@@ -25,233 +25,144 @@
   border: 2px solid transparent;
 }
 
-/* Input Button */
-.button-container a.button.primary-variant,
-.button-container button.primary-variant,
-.button-container a.button.secondary-variant,
-.button-container button.secondary-variant {
-  border-radius: var(--border-radius-m);
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.32px;
-  font-weight: 700;
-  font-style: normal;
-  font-family: var(--body-font-family);
-  display: inline-flex;
-  padding: 16px 32px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  max-width: 100%;
-  outline-offset: 4px;
-  outline: 2px solid transparent;
-  border: 2px solid transparent;
-}
-
-.button.block .button-container a.button.disabled,
-.button.block .button-container button:disabled {
-  pointer-events: none;
-  cursor: not-allowed;
-  opacity: 0.3;
-}
-
-.button.block .button-container a.button svg,
-.button.block .button-container button svg {
-  height: var(--icon-size-sm);
-  width: var(--icon-size-sm);
-}
-
-.button.block .button-container a.button.primary svg path,
-.button.block .button-container button.primary svg path,
-.button.block .button-container a.button.primary-variant svg path,
-.button.block .button-container button.primary-variant svg path,
-.button.block .button-container a.button.secondary.iblack svg path,
-.button.block .button-container button.secondary.iblack svg path,
-.button.block .button-container a.button.secondary-variant.iblack svg path,
-.button.block .button-container button.secondary-variant.iblack svg path,
-.button.block .button-container a.button.text-btn.iblack svg path,
-.button.block .button-container button.text-btn.iblack svg path {
-  fill: var(--color-white);
-}
-
-.button.block .button-container a.button.primary.iblack svg path,
-.button.block .button-container button.primary.iblack svg path,
-.button.block .button-container a.button.primary-variant.iblack svg path,
-.button.block .button-container button.primary-variant.iblack svg path {
-  fill: var(--primary-cta);
-}
-
-.button.block .button-container a.button.secondary svg path,
-.button.block .button-container button.secondary svg path,
-.button.block .button-container a.button.secondary-variant svg path,
-.button.block .button-container button.secondary-variant svg path {
-  fill: var(--secondary-cta);
-}
-
-.button.block .button-container a.button.text-btn svg path,
-.button.block .button-container button.text-btn svg path {
-  fill: var(--link-color);
-}
-
-.button.block .button-container a.button.secondary-variant:hover svg path,
-.button.block .button-container button.secondary-variant:hover svg path,
-.button.block .button-container a.button.primary.iblack:hover svg path,
-.button.block .button-container button.primary.iblack:hover svg path,
-.button.block .button-container a.button.primary-variant.iblack:hover svg path,
-.button.block .button-container button.primary-variant.iblack:hover svg path {
-  fill: var(--primary-cta-hover);
-}
-
-.button.block .button-container a.button.secondary:hover svg path,
-.button.block .button-container button.secondary:hover svg path {
-  fill: var(--secondary-cta-hover);
-}
-
-.button.block .button-container a.button.secondary.iblack:hover svg path,
-.button.block .button-container button.secondary.iblack:hover svg path,
-.button.block .button-container a.button.secondary-variant.iblack:hover svg path,
-.button.block .button-container button.secondary-variant.iblack:hover svg path {
-  fill: var(--color-white);
-}
-
 /* Primary Button Styles */
 
-.button-container a.button.primary,
-.button-container button.primary,
-.button-container a.button.primary-variant,
-.button-container button.primary-variant {
-  background-color: var(--primary-cta);
-  color: var(--color-white);
+.button .primary a,
+.button button.primary,
+.button .primary a-variant,
+.button button.primary-variant {
+  background-color: blue;
+  color: white;
 }
 
-.button-container a.button.primary:hover,
-.button-container button.primary:hover,
-.button-container a.button.primary-variant:hover,
-.button-container button.primary-variant:hover {
+.button .primary a:hover,
+.button button.primary:hover,
+.button .primary a-variant:hover,
+.button button.primary-variant:hover {
   background-color: var(--primary-cta-hover);
   text-decoration: none;
 }
 
-.button-container a.button.primary.disabled,
-.button-container button.primary:disabled,
-.button-container a.button.primary-variant.disabled,
-.button-container button.primary-variant:disabled {
+.button .primary a.disabled,
+.button button.primary:disabled,
+.button .primary a-variant.disabled,
+.button button.primary-variant:disabled {
   background-color: var(--deativated);
 }
 
-.button-container a.button.primary:focus,
-.button-container button.primary:focus,
-.button-container a.button.primary-variant:focus,
-.button-container button.primary-variant:focus {
+.button .primary a:focus,
+.button button.primary:focus,
+.button .primary a-variant:focus,
+.button button.primary-variant:focus {
   background-color: var(--primary-cta);
   outline: 2px solid var(--primary-cta);
   border: 2px solid var(--primary-cta);
 }
 
-.button-container a.button:focus{
+.button a.button:focus{
   outline: 2px solid var(--neutral-black);
   border: 2px solid var(--text-white);
 }
 
-.button-container a.button.primary.iblack,
-.button-container button.primary.iblack,
-.button-container a.button.primary-variant.iblack,
-.button-container button.primary-variant.iblack {
+.button .primary a.iblack,
+.button button.primary.iblack,
+.button .primary a-variant.iblack,
+.button button.primary-variant.iblack {
   background-color: var(--color-white);
   color: var(--primary-cta);
 }
 
-.button-container a.button.primary.iblack:hover,
-.button-container button.primary.iblack:hover,
-.button-container a.button.primary-variant.iblack:hover,
-.button-container button.primary-variant.iblack:hover {
+.button .primary a.iblack:hover,
+.button button.primary.iblack:hover,
+.button .primary a-variant.iblack:hover,
+.button button.primary-variant.iblack:hover {
   background-color: var(--gray-bg);
 }
 
-.button-container a.button.primary.iblack.disabled,
-.button-container button.primary.iblack:disabled,
-.button-container a.button.primary-variant.iblack.disabled,
-.button-container button.primary-variant.iblack:disabled {
+.button .primary a.iblack.disabled,
+.button button.primary.iblack:disabled,
+.button .primary a-variant.iblack.disabled,
+.button button.primary-variant.iblack:disabled {
   background-color: var(--gray-bg);
 }
 
-.button-container a.button.primary.iblack:focus,
-.button-container button.primary.iblack:focus,
-.button-container a.button.primary-variant.iblack:focus,
-.button-container button.primary-variant.iblack:focus {
+.button .primary a.iblack:focus,
+.button button.primary.iblack:focus,
+.button .primary a-variant.iblack:focus,
+.button button.primary-variant.iblack:focus {
   background-color: var(--color-white);
   outline: 2px solid var(--color-white);
   border: 2px solid var(--color-white);
 }
 
 /* Secondary Button Styles */
-.button-container a.button.secondary,
-.button-container button.secondary,
-.button-container a.button.secondary-variant,
-.button-container button.secondary-variant {
+.button a.button.secondary,
+.button button.secondary,
+.button a.button.secondary-variant,
+.button button.secondary-variant {
   background-color: var(--color-white);
   border: 2px solid var(--secondary-cta);
   color: var(--secondary-cta);
 }
 
-.button-container a.button.secondary:hover,
-.button-container button.secondary:hover,
-.button-container a.button.secondary-variant:hover,
-.button-container button.secondary-variant:hover {
+.button a.button.secondary:hover,
+.button button.secondary:hover,
+.button a.button.secondary-variant:hover,
+.button button.secondary-variant:hover {
   background-color: color-mix(in srgb, white 95%, var(--secondary-cta) 5%);
   border: 2px solid var(--secondary-cta-hover);
   text-decoration: none;
 }
 
-.button-container a.button.secondary.disabled,
-.button-container button.secondary:disabled,
-.button-container a.button.secondary-variant.disabled,
-.button-container button.secondary-variant:disabled {
+.button a.button.secondary.disabled,
+.button button.secondary:disabled,
+.button a.button.secondary-variant.disabled,
+.button button.secondary-variant:disabled {
   border: 2px solid var(--deactivated-secondary);
 }
 
-.button-container a.button.secondary:focus,
-.button-container button.secondary:focus,
-.button-container a.button.secondary-variant:focus,
-.button-container button.secondary-variant:focus {
+.button a.button.secondary:focus,
+.button button.secondary:focus,
+.button a.button.secondary-variant:focus,
+.button button.secondary-variant:focus {
   outline: 2px solid var(--secondary-cta);
   border: 2px solid var(--secondary-cta);
 }
 
-.button-container a.button.secondary.iblack,
-.button-container button.secondary.iblack,
-.button-container a.button.secondary-variant.iblack,
-.button-container button.secondary-variant.iblack {
+.button a.button.secondary.iblack,
+.button button.secondary.iblack,
+.button a.button.secondary-variant.iblack,
+.button button.secondary-variant.iblack {
   border: 2px solid var(--color-white);
   color: var(--color-white);
   background: none;
 }
 
-.button-container a.button.secondary.iblack:hover,
-.button-container button.secondary.iblack:hover,
-.button-container a.button.secondary-variant.iblack:hover,
-.button-container button.secondary-variant.iblack:hover {
+.button a.button.secondary.iblack:hover,
+.button button.secondary.iblack:hover,
+.button a.button.secondary-variant.iblack:hover,
+.button button.secondary-variant.iblack:hover {
   border: 2px solid var(--gray-bg);
 }
 
-.button-container a.button.secondary.iblack.disabled,
-.button-container button.secondary.iblack:disabled,
-.button-container a.button.secondary-variant.iblack.disabled,
-.button-container button.secondary-variant.iblack:disabled {
+.button a.button.secondary.iblack.disabled,
+.button button.secondary.iblack:disabled,
+.button a.button.secondary-variant.iblack.disabled,
+.button button.secondary-variant.iblack:disabled {
   border: 2px solid var(--gray-bg);
 }
 
-.button-container a.button.secondary.iblack:focus,
-.button-container button.secondary.iblack:focus,
-.button-container a.button.secondary-variant.iblack:focus,
-.button-container button.secondary-variant.iblack:focus {
+.button a.button.secondary.iblack:focus,
+.button button.secondary.iblack:focus,
+.button a.button.secondary-variant.iblack:focus,
+.button button.secondary-variant.iblack:focus {
   outline: 2px solid var(--color-white);
   border: 2px solid var(--color-white);
 }
 
 /* Text Button */
-.button-container a.button.text-btn,
-.button-container button.text-btn {
+.button a.button.text-btn,
+.button button.text-btn {
   background-color: unset;
   color: var(--link-color);
   font-weight: var(--font-weight-regular);
@@ -261,97 +172,97 @@
   border: 0;
 }
 
-.button-container a.button.text-btn:hover,
-.button-container button.text-btn:hover {
+.button a.button.text-btn:hover,
+.button button.text-btn:hover {
   color: var(--link-hover-color);
 }
 
-.button-container a.button.text-btn:hover svg path,
-.button-container button.text-btn:hover svg path {
+.button a.button.text-btn:hover svg path,
+.button button.text-btn:hover svg path {
   fill: var(--link-color-hover);
 }
 
-.button-container a.button.text-btn.disabled,
-.button-container button.text-btn:disabled {
+.button a.button.text-btn.disabled,
+.button button.text-btn:disabled {
   color: var(--link-hover-color);
 }
 
-.button-container a.button.text-btn:focus,
-.button-container button.text-btn:focus {
+.button a.button.text-btn:focus,
+.button button.text-btn:focus {
   outline: 2px solid var(--link-color);
   border-radius: var(--border-radius-m);
 }
 
-.button-container a.button.text-btn.iblack,
-.button-container button.text-btn.iblack {
+.button a.button.text-btn.iblack,
+.button button.text-btn.iblack {
   background-color: unset;
   color: var(--color-white);
 }
 
-.button-container a.button.text-btn.iblack:hover,
-.button-container button.text-btn.iblack:hover {
+.button a.button.text-btn.iblack:hover,
+.button button.text-btn.iblack:hover {
   color: var(--color-white);
 }
 
-.button-container a.button.text-btn.iblack.disabled,
-.button-container button.text-btn.iblack:disabled {
+.button a.button.text-btn.iblack.disabled,
+.button button.text-btn.iblack:disabled {
   color: var(--link-hover-color);
 }
 
-.button-container a.button.text-btn.iblack:focus,
-.button-container button.text-btn.iblack:focus {
+.button a.button.text-btn.iblack:focus,
+.button button.text-btn.iblack:focus {
   outline: 2px solid var(--color-white);
 }
 
-.button.block.small .button-container a.button,
-.button.block.small .button-container button,
-.button.block.small .button-container a.button.primary-variant,
-.button.block.small .button-container button.primary-variant,
-.button.block.small .button-container a.button.secondary-variant,
-.button.block.small .button-container button.secondary-variant {
+.button.block.small .button a.button,
+.button.block.small .button button,
+.button.block.small .button .primary a-variant,
+.button.block.small .button button.primary-variant,
+.button.block.small .button a.button.secondary-variant,
+.button.block.small .button button.secondary-variant {
   padding: 12px 24px;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.28px;
 }
 
-.button.block.small .button-container a.button svg,
-.button.block.small .button-container button svg {
+.button.block.small .button a.button svg,
+.button.block.small .button button svg {
   height: var(--icon-size-xs);
   width: var(--icon-size-xs);
 }
 
 @media (max-width: 991px) {
-  .button-container a.button:any-link,
-  .button-container button {
+  .button a.button:any-link,
+  .button button {
     padding: 12px 24px;
     font-size: 14px;
     line-height: 19.6px;
     letter-spacing: 0.28px;
   }
 
-  .button-container a.button.primary-variant,
-  .button-container button.primary-variant,
-  .button-container a.button.secondary-variant,
-  .button-container button.secondary-variant {
+  .button .primary a-variant,
+  .button button.primary-variant,
+  .button a.button.secondary-variant,
+  .button button.secondary-variant {
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.28px;
     padding: 12px 24px;
   }
 
-  .button.block .button-container a.button svg,
-  .button.block .button-container button svg {
+  .button.block .button a.button svg,
+  .button.block .button button svg {
     height: var(--icon-size-xs);
     width: var(--icon-size-xs);
   }
 
-  .button-container a.button.text-btn,
-  .button-container button.text-btn {
+  .button a.button.text-btn,
+  .button button.text-btn {
     padding: 0;
   }
 }
 
-.button.block .button-container a.button.secondary-variant:hover svg path{
+.button.block .button a.button.secondary-variant:hover svg path{
   fill: var(--secondary-cta-hover);
 }
