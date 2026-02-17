@@ -20,7 +20,7 @@ function setUEFilter(element, filter) {
 const template = getMetadata('template');
 console.log(template);
 const elementsToRemove = document.querySelectorAll('footer');
-const sections = document.querySelectorAll('[data-aue-model$="section"]');
+const sections = document.querySelectorAll('section');
 console.log(sections);
 sections.forEach((section) => {
       setUEFilter(section, `${template}-section`);
