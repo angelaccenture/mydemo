@@ -15,19 +15,15 @@ export default function init(el) {
   console.log("btndata");
   console.log(btndata.btntext.text);
   if (btndata.btntext.text) {
-    console.log("must have button text & link for anything else");
-    console.log(btndata.btntext.text);
   const btn = document.createElement('a');
   btn.textContent = btndata.btntext.text;
-  console.log(btndata.btntext);
+  console.log(btndata.btntext.parentNode);
   //btn.href = "http://www.test.com";
  
   btnRoot.before(btn);
 
 
   } 
-  console.log("btndata link");
-  console.log(btndata.link);
 
   //el.remove();
 }
