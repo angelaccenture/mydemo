@@ -17,7 +17,7 @@ export default function init(el) {
   if (btndata.btntext.text) {
   const btn = document.createElement('a');
   btn.textContent = btndata.btntext.text;
-  console.log(btndata.btntext.parentNode);
+  console.log(btndata.btntext.parentElement);
   //btn.href = "http://www.test.com";
  
   btnRoot.before(btn);
