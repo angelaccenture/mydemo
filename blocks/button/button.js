@@ -1,14 +1,3 @@
-async function handleLayout(text, btnRoot, type) {
-  if (text === '0') return;
-  console.log("create button here and add elements");
-  console.log(text);
-   
-  //Create Button
-  //const buttonTag = document.createElement('a');
-  //const buttonText = "test";
-  //buttonTag.textContent = buttonText;
-}
-
 const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
   if (row.children) {
     const key = row.children[0].textContent.trim().toLowerCase();
@@ -24,11 +13,17 @@ export default function init(el) {
     if (!btnRoot) return;
   const btndata = getBtndata(el);
   console.log("btndata");
-  console.log(btndata);
-  if (btndata.btntext?.text) handleLayout(btndata.btntext.text, btnRoot, 'btntext');
+  console.log(btndata.btntext.text);
+  if (btndata.btntext.text) {
+    console.log("must have button text & link for anything else");
+
+  } 
   console.log("btndata link");
   console.log(btndata.link);
-  
-  btnRoot.before(buttonTag);
+  //Create Button
+  //const buttonTag = document.createElement('a');
+  //const buttonText = "test";
+  //buttonTag.textContent = buttonText;
+  //btnRoot.before(buttonTag);
   //el.remove();
 }
