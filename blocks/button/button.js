@@ -12,7 +12,6 @@ export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
     if (!btnRoot) return;
   const btndata = getBtndata(el);
-  console.log(btndata.text);
   if (btndata.text.text) {
       const btn = document.createElement('a');
       btn.textContent = btndata.text.text;
@@ -21,6 +20,7 @@ export default function init(el) {
       btn.setAttribute('aria-label',btndata.label.text);
       btnRoot.before(btn);
   } 
-
+  console.log(btndata.text);
+  btndata.tet.remove();
   //el.remove();
 }
