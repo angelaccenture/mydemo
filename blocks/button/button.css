@@ -27,15 +27,12 @@
 
 /* Primary Button Styles */
 
-.button .primary a,
-.button button.primary,
-.button .primary a-variant,
-.button button.primary-variant {
+.button.primary a{
   background-color: blue;
   color: white;
 }
 
-.button .primary a:hover,
+.button.primary a:hover,
 .button button.primary:hover,
 .button .primary a-variant:hover,
 .button button.primary-variant:hover {
@@ -43,14 +40,14 @@
   text-decoration: none;
 }
 
-.button .primary a.disabled,
+.button.primary a.disabled,
 .button button.primary:disabled,
 .button .primary a-variant.disabled,
 .button button.primary-variant:disabled {
   background-color: var(--deativated);
 }
 
-.button .primary a:focus,
+.button.primary a:focus,
 .button button.primary:focus,
 .button .primary a-variant:focus,
 .button button.primary-variant:focus {
