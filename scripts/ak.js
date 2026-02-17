@@ -90,6 +90,7 @@ function decoratePictures(el) {
   }
 }
 
+/*
 function decorateButton(link) {
   const isEm = link.closest('em');
   const isStrong = link.closest('strong');
@@ -127,7 +128,7 @@ function decorateButton(link) {
   }
   const toReplace = [isEm, isStrong, isStrike].find((el) => el?.parentNode === trueParent);
   if (toReplace) trueParent.replaceChild(link, toReplace);
-}
+}*/
 
 export function localizeUrl({ config, url }) {
   const { locales, locale } = config;
@@ -177,7 +178,7 @@ function decorateLink(config, a) {
       const localized = localizeUrl({ config, url });
       if (localized) a.href = localized.href;
     }
-    decorateButton(a);
+    //decorateButton(a);
     if (!dnb) {
       const { href } = a;
       const found = config.widgets.some((pattern) => {

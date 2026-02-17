@@ -16,14 +16,17 @@ export default function init(el) {
   console.log(btndata.btntext.text);
   if (btndata.btntext.text) {
     console.log("must have button text & link for anything else");
+    console.log(btndata.btntext.text);
+  const btn = document.createElement('a');
+  btn.textContent = btndata.btntext.text;
+  //btn.href = "http://www.test.com";
+ 
+  btnRoot.before(btn);
+
 
   } 
   console.log("btndata link");
   console.log(btndata.link);
-  //Create Button
-  //const buttonTag = document.createElement('a');
-  //const buttonText = "test";
-  //buttonTag.textContent = buttonText;
-  //btnRoot.before(buttonTag);
+
   //el.remove();
 }
