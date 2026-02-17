@@ -13,22 +13,25 @@
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 
+// Remove Footer from being shown in UE
+const elementsToRemove = document.querySelectorAll('footer');
+elementsToRemove.forEach(element => {
+  element.remove();
+});
+
+/*Add in Template Support*/
 function setUEFilter(element, filter) {
   //This might help with template sections
   element.dataset.aueFilter = filter;
 }
 const template = getMetadata('template');
 console.log(template);
-const elementsToRemove = document.querySelectorAll('footer');
-// Remove Footer
-elementsToRemove.forEach(element => {
-  element.remove();
-});
 
-/*Add in Template Support*/
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
 console.log(sections);
 
+
+/*Review all code below later*/
 const setupObservers = () => {
  const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {

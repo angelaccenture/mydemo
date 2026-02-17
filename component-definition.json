@@ -343,10 +343,6 @@
               "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1</li></ul></div></div>",
               "fields": [
                 {
-                  "name": "tablistall",
-                  "selector": "div>div>ul>li"
-                },
-                {
                   "name": "tablistone",
                   "selector": "div>div>ul>li:nth-child(1)"
                 },
