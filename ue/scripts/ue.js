@@ -26,16 +26,16 @@ const sections = document.querySelectorAll('[data-aue-model$="section"]');
 console.log(sections);
 
 const setupObservers = () => {
-const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
+ const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
-      /*  // detect the mutation type of the block or picture (for cards)
+        // detect the mutation type of the block or picture (for cards)
         const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
+
         switch (type) {
           case 'cards':
             // handle card div > li replacements
@@ -87,7 +87,7 @@ const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.ac
             break;
           default:
             break;
-        }*/
+        }
       }
     });
   });
@@ -99,7 +99,7 @@ const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.ac
 
 
 const setupUEEventHandlers = () => {
-  console.log("trying new istener - 4:29");
+  console.log("Event - 4:29");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
     console.log("aue:content-patch listener");
@@ -124,10 +124,12 @@ const setupUEEventHandlers = () => {
       console.log("if within aue");
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
       if (!element) {
+          console.log("if !element");
         return;
       }
       const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
       if (blockEl) {
+        console.log("if blockEl");
         const block = blockEl.getAttribute('data-aue-model');
         const index = element.getAttribute('data-slide-index');
 
