@@ -2,7 +2,7 @@
 import DA_SDK from 'https://da.live/nx/utils/sdk.js';
 // eslint-disable-next-line import/no-unresolved
 import { DA_ORIGIN } from 'https://da.live/nx/public/utils/constants.js';
-
+console.log("tags.js");
 /**
  * Fetches the tagging JSON data from the specified endpoint
  * @param {string} token - Authentication token
