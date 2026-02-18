@@ -55,7 +55,6 @@
          {
           "component": "multiselect",
           "name": "background",
-          "condition": { "===": [{"var" : "reveal"}, false] },
           "label": "Background Color",
           "options": [
             {
@@ -76,7 +75,7 @@
         {
         "component": "boolean",
         "label": "Background Image",
-        "name": "reveal",
+        "name": "bgimage",
         "valueType": "boolean"
       },
       {
@@ -84,7 +83,7 @@
           "name": "image",
           "label": "Image",
           "multi": false,
-        "condition": { "===": [{"var" : "reveal"}, true] }
+        "condition": { "===": [{"var" : "bgimage"}, true] }
       },
     {
       "component": "tab",
@@ -95,7 +94,6 @@
           "component": "number",
           "valueType": "number",
           "name": "grid",
-          "required": true,
           "label": "Desktop Grid Columns",
           "validation": {
             "numberMin": 1,

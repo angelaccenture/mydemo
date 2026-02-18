@@ -5,6 +5,7 @@ const { codeBase } = getConfig();
 
 export default async function error(ex, el) {
   // eslint-disable-next-line no-console
+    console.log(ex);
   const daHostName = window.location.hostname.includes('ue.da.live');
      if ((el && ENV !== 'prod')) {
       if (daHostName !== true) {

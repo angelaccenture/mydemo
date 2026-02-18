@@ -334,7 +334,7 @@
           }
         },
         {
-          "title": "Tabs - 8:56",
+          "title": "Tabs - 10:12",
           "id": "advanced-tabs",
           "model": "advanced-tabs",
           "filter": "advanced-tabs",
@@ -342,10 +342,6 @@
             "da": {
               "unsafeHTML": "<div class=\"advanced-tabs\"><div><ul><li>Tab 1</li></ul></div></div>",
               "fields": [
-                {
-                  "name": "tablistall",
-                  "selector": "div>div>ul>li"
-                },
                 {
                   "name": "tablistone",
                   "selector": "div>div>ul>li:nth-child(1)"
@@ -361,6 +357,14 @@
                 {
                   "name": "tablistfour",
                   "selector": "div>div>ul>li:nth-child(4)"
+                },
+                {
+                  "name": "tablistfive",
+                  "selector": "div>div>ul>li:nth-child(5)"
+                },
+                {
+                  "name": "tablistsix",
+                  "selector": "div>div>ul>li:nth-child(6)"
                 }
               ]
             }

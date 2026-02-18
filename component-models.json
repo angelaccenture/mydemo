@@ -24,7 +24,8 @@
       {
         "component": "text",
         "name": "title",
-        "label": "Title"
+        "label": "Title",
+        "required": true
       },
       {
         "component": "text",
@@ -90,14 +91,6 @@
       {
         "component": "multiselect",
         "name": "background",
-        "condition": {
-          "===": [
-            {
-              "var": "reveal"
-            },
-            false
-          ]
-        },
         "label": "Background Color",
         "options": [
           {
@@ -117,7 +110,7 @@
       {
         "component": "boolean",
         "label": "Background Image",
-        "name": "reveal",
+        "name": "bgimage",
         "valueType": "boolean"
       },
       {
@@ -128,7 +121,7 @@
         "condition": {
           "===": [
             {
-              "var": "reveal"
+              "var": "bgimage"
             },
             true
           ]
@@ -143,7 +136,6 @@
         "component": "number",
         "valueType": "number",
         "name": "grid",
-        "required": true,
         "label": "Desktop Grid Columns",
         "validation": {
           "numberMin": 1,
@@ -308,12 +300,6 @@
         ]
       },
       {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "tablistall",
-        "label": "Tab List"
-      },
-      {
         "component": "text",
         "valueType": "string",
         "name": "tablistone",
@@ -336,6 +322,18 @@
         "valueType": "string",
         "name": "tablistfour",
         "label": "Fourth Tab Name"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tablistfive",
+        "label": "Fifth Tab Name"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tablistsix",
+        "label": "Sixth Tab Name"
       }
     ]
   },

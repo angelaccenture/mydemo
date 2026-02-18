@@ -1,186 +1,82 @@
-/**
- * Gets placeholders object. Added from aem.js
- * @param {string} [prefix] Location of placeholders
- * @returns {object} Window placeholders object
- */
-// eslint-disable-next-line import/prefer-default-export
-async function fetchPlaceholders(prefix = 'default') {
-  window.placeholders = window.placeholders || {};
-  if (!window.placeholders[prefix]) {
-    window.placeholders[prefix] = new Promise((resolve) => {
-      fetch(`${prefix === 'default' ? '' : prefix}/placeholders.json`)
-        .then((resp) => {
-          if (resp.ok) {
-            return resp.json();
-          }
-          return {};
-        })
-        .then((json) => {
-          const placeholders = {};
-          json.data
-            .filter((placeholder) => placeholder.Key)
-            .forEach((placeholder) => {
-              placeholders[toCamelCase(placeholder.Key)] = placeholder.Text;
-            });
-          window.placeholders[prefix] = placeholders;
-          resolve(window.placeholders[prefix]);
-        })
-        .catch(() => {
-          // error loading placeholders
-          window.placeholders[prefix] = {};
-          resolve(window.placeholders[prefix]);
-        });
+import { getConfig } from '../../scripts/ak.js';
+
+const { log } = getConfig();
+
+function getTabList(tabs, tabPanels) {
+  const tabItems = tabs.querySelectorAll('li');
+  const tabList = document.createElement('div');
+  tabList.className = 'tab-list';
+  tabList.role = 'tablist';
+
+  for (const [idx, tab] of tabItems.entries()) {
+    const btn = document.createElement('button');
+    btn.role = 'tab';
+    btn.id = `tab-${idx + 1}`;
+    btn.textContent = tab.textContent;
+    if (idx === 0) {
+      btn.classList.add('is-active');
+      tabPanels[0].classList.add('is-visible');
+    }
+    tabList.append(btn);
+
+    btn.addEventListener('click', () => {
+      // Remove all active styles
+      tabList.querySelectorAll('button')
+        .forEach((button) => { button.classList.remove('is-active'); });
+
+      tabPanels.forEach((sec) => { sec.classList.remove('is-visible'); });
+      tabPanels[idx].classList.add('is-visible');
+      btn.classList.add('is-active');
     });
   }
-  return window.placeholders[`${prefix}`];
+  return tabList;
 }
+ 
+export default function init(el) {
+  // Find the top most parent where all tab sections live
+  const parent = el.closest('.fragment-content, main');
 
+  // Forefully hide parent because sections may not be loaded yet
+  parent.style = 'display: none;';
 
-function updateActiveSlide(slide) {
-  const block = slide.closest('.carousel');
-  const slideIndex = parseInt(slide.dataset.slideIndex, 10);
-  block.dataset.activeSlide = slideIndex;
+  // Find the tab items
+  const tabs = el.querySelector('.advanced-tabs ul');
+  if (!tabs) {
+    log('Please add an unordered list to the advanced tabs block.');
+    return;
+  }
+  // Find the section 
+  const currSection = el.closest('.section');
 
-  const slides = block.querySelectorAll('.carousel-slide');
+   // Find the section that contains the actual block and only add class to tab sections
+  const currSectionat = el.closest('.section .advanced-tabs');
+  const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
+  const tabSection = document.querySelectorAll('.tabSection ~ .section');
+  const tabItems = document.querySelector(".advanced-tabs ul");
+  const tabCount = tabItems.childElementCount;
 
-  slides.forEach((aSlide, idx) => {
-    aSlide.setAttribute('aria-hidden', idx !== slideIndex);
-    aSlide.querySelectorAll('a').forEach((link) => {
-      if (idx !== slideIndex) {
-        link.setAttribute('tabindex', '-1');
-      } else {
-        link.removeAttribute('tabindex');
+  tabSection.forEach((element, index) => {
+    if (index < tabCount) {
+     element.classList.add("tabSection");
+    }
+   
+  });
+
+  // Filter and format all sections that do not hold the tabs block
+  const tabPanels = [...parent.querySelectorAll(':scope > .tabSection')]
+    .reduce((acc, section, idx) => {
+      if (section !== currSection) {
+        section.id = `tabpanel-${idx + 1}`;
+        section.role = 'tabpanel';
+        section.setAttribute('aria-labelledby', `tab-${idx + 1}`);
+        acc.push(section);
       }
-    });
-  });
+      return acc;
+    }, []);
 
-  const indicators = block.querySelectorAll('.carousel-slide-indicator');
-  indicators.forEach((indicator, idx) => {
-    if (idx !== slideIndex) {
-      indicator.querySelector('button').removeAttribute('disabled');
-    } else {
-      indicator.querySelector('button').setAttribute('disabled', 'true');
-    }
-  });
-}
+  const tabList = getTabList(tabs, tabPanels);
 
-export function showSlide(block, slideIndex = 0) {
-  const slides = block.querySelectorAll('.carousel-slide');
-  let realSlideIndex = slideIndex < 0 ? slides.length - 1 : slideIndex;
-  if (slideIndex >= slides.length) realSlideIndex = 0;
-  const activeSlide = slides[realSlideIndex];
-
-  activeSlide.querySelectorAll('a').forEach((link) => link.removeAttribute('tabindex'));
-  block.querySelector('.carousel-slides').scrollTo({
-    top: 0,
-    left: activeSlide.offsetLeft,
-    behavior: 'smooth',
-  });
-}
-
-function bindEvents(block) {
-  const slideIndicators = block.querySelector('.carousel-slide-indicators');
-  if (!slideIndicators) return;
-
-  slideIndicators.querySelectorAll('button').forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const slideIndicator = e.currentTarget.parentElement;
-      showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
-    });
-  });
-
-  block.querySelector('.slide-prev').addEventListener('click', () => {
-    showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);
-  });
-  block.querySelector('.slide-next').addEventListener('click', () => {
-    showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
-  });
-
-  const slideObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) updateActiveSlide(entry.target);
-    });
-  }, { threshold: 0.5 });
-  block.querySelectorAll('.carousel-slide').forEach((slide) => {
-    slideObserver.observe(slide);
-  });
-}
-
-function createSlide(row, slideIndex, carouselId) {
-  const slide = document.createElement('li');
-  slide.dataset.slideIndex = slideIndex;
-  slide.setAttribute('id', `carousel-${carouselId}-slide-${slideIndex}`);
-  slide.classList.add('carousel-slide');
-
-  row.querySelectorAll(':scope > div').forEach((column, colIdx) => {
-    column.classList.add(`carousel-slide-${colIdx === 0 ? 'image' : 'content'}`);
-    slide.append(column);
-  });
-
-  const labeledBy = slide.querySelector('h1, h2, h3, h4, h5, h6');
-  if (labeledBy) {
-    slide.setAttribute('aria-labelledby', labeledBy.getAttribute('id'));
-  }
-
-  return slide;
-}
-
-let carouselId = 0;
-export default async function decorate(block) {
-  carouselId += 1;
-  block.setAttribute('id', `carousel-${carouselId}`);
-  const rows = block.querySelectorAll(':scope > div');
-  const isSingleSlide = rows.length < 2;
-
-  const placeholders = await fetchPlaceholders();
-
-  block.setAttribute('role', 'region');
-  block.setAttribute('aria-roledescription', placeholders.carousel || 'Carousel');
-
-  const container = document.createElement('div');
-  container.classList.add('carousel-slides-container');
-
-  const slidesWrapper = document.createElement('ul');
-  slidesWrapper.classList.add('carousel-slides');
-  block.prepend(slidesWrapper);
-
-  let slideIndicators;
-  if (!isSingleSlide) {
-    const slideIndicatorsNav = document.createElement('nav');
-    slideIndicatorsNav.setAttribute('aria-label', placeholders.carouselSlideControls || 'Carousel Slide Controls');
-    slideIndicators = document.createElement('ol');
-    slideIndicators.classList.add('carousel-slide-indicators');
-    slideIndicatorsNav.append(slideIndicators);
-    block.append(slideIndicatorsNav);
-
-    const slideNavButtons = document.createElement('div');
-    slideNavButtons.classList.add('carousel-navigation-buttons');
-    slideNavButtons.innerHTML = `
-      <button type="button" class= "slide-prev" aria-label="${placeholders.previousSlide || 'Previous Slide'}"></button>
-      <button type="button" class="slide-next" aria-label="${placeholders.nextSlide || 'Next Slide'}"></button>
-    `;
-
-    container.append(slideNavButtons);
-  }
-
-  rows.forEach((row, idx) => {
-    const slide = createSlide(row, idx, carouselId);
-    slidesWrapper.append(slide);
-
-    if (slideIndicators) {
-      const indicator = document.createElement('li');
-      indicator.classList.add('carousel-slide-indicator');
-      indicator.dataset.targetSlide = idx;
-      indicator.innerHTML = `<button type="button" aria-label="${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}"></button>`;
-      slideIndicators.append(indicator);
-    }
-    row.remove();
-  });
-
-  container.append(slidesWrapper);
-  block.prepend(container);
-
-  if (!isSingleSlide) {
-    bindEvents(block);
-  }
+  tabs.remove();
+  el.append(tabList, ...tabPanels);
+  parent.removeAttribute('style');
 }
