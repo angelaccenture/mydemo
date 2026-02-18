@@ -22,7 +22,7 @@ async function fetchTaggingData(token, actions, org, repo) {
       console.error(`Failed to fetch tagging data: ${response.status} ${response.statusText}`);
       return null;
     }
-
+    console.log("found the tagging.json file");
     const taggingData = await response.json();
     return taggingData;
   } catch (error) {
