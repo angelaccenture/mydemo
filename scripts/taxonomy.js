@@ -46,11 +46,12 @@ function filter(name) {
 /**
  * Returns the taxonomy object
  * @param {string} lang Language of the taxonomy
+ * @param {string} type Type of the taxonomy
  * @param {*} url URL to use to load the taxonomy
  * @returns {object} The taxonomy object
  */
-export default async (lang, url) => {
-  const root = `/${lang}/topics`;
+export default async (lang, url, type) => {
+  const root = `/${lang}/${type}`;
   const escapeTopic = (topic) => {
     if (!topic) return null;
     return topic.replace(/\n/gm, ' ').trim();
