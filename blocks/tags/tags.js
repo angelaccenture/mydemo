@@ -1,5 +1,17 @@
 import { getMetadata } from '../../scripts/ak.js';
 
+function filter(name) {
+  return name
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // remove diacritics
+    .replace(/\s/gm, '-') // replace whitespace with -
+    .replace(/&amp;/gm, '') // remove encoded ampersands
+    .replace(/&/gm, '') // remove unencoded ampersands
+    .replace(/\./gm, '') // remove dots
+    .replace(/--+/g, '-'); // remove multiple dashes
+}
+
+
 export default function init(el) {
   console.log(el);
   const tagMeta = getMetadata('article:tag');
@@ -10,8 +22,9 @@ export default function init(el) {
    // });
       const tag = document.createElement('a');
       tag.textContent = tagMeta;
+      const name = tagMeta;
       console.log(tag);
-      tag.href = 'http://www.getthis.com';
+      tag.href = 'https://blogs.microsoft.com/blog/tag/'+${filter(name);
       tag.setAttribute('aria-label',tagMeta);
       tagRoot.before(tag);
 }
