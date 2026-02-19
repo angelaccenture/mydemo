@@ -25,7 +25,7 @@ const NO_INTERLINKS = 'no-interlinks';
 const CATEGORIES = 'categories';
 const PRODUCTS = 'products';
 const INDUSTRIES = 'industries';
-const INTERNALS = 'angeltag';
+const INTERNALS = 'internals';
 
 /**
  * Filters a string to become a filename of a url
