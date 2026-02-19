@@ -1,6 +1,7 @@
 import { getMetadata } from '../../scripts/ak.js';
 
 export default function init(el) {
+  console.log(el);
   const tagMeta = getMetadata('article:tag');
   console.log(tagMeta);
   const tagRoot = el.querySelector(':scope > div');
