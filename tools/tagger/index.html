@@ -340,6 +340,13 @@
       url.searchParams.set('lang', lang.value);
       window.location.href = url.toString();
     }
+    
+    function setType() {
+      const type = document.getElementById('type-switcher');
+      const url = new URL(window.location.href);
+      url.searchParams.set('type', type.value);
+      window.location.href = url.toString();
+    }
   </script>
 </head>
 
@@ -358,8 +365,15 @@
         <option value="br">Brasil</option>
       </select>
     </div>
+    <div class="type">
+      <select id="type-switcher" onchange="setType()">
+        <option value="pagemeta">Page MetaData</option>
+        <option value="blogtag">Blog Tags</option>
+        <option value="author">Authors</option>
+      </select>
+    </div>
     <div class="intro">
-      <h1 id="pick-your-tags">Pick your tags</h1>
+      <h1 id="pick-your-tags">Pick your Page Meta Data tags</h1>
       <p>Use this page to pick the tags for your post. Tags will correctly categorize your post on the blog, and ensure we can pull metrics for it.</p>
       <p>Once you click on a tag, it will populate at the bottom of the page. When you have picked all the tags, click “copy” and then paste the information directly in your blog post draft.</p>
       <ul>
