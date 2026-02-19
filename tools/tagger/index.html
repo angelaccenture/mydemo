@@ -403,7 +403,7 @@
         lang = localStorage.getItem('blog-tagger-lang') || 'en';
       }
       let type = 'author';
-      document.body.classList.add(lang);
+      document.body.classList.add(lang, type);
 
       // select in combo
       const option = document.querySelector(`#lang-switcher option[value=${lang}]`);
