@@ -12,6 +12,7 @@ console.log("tags.js");
  * @returns {Promise<Object>} The tagging JSON data
  */
 async function fetchTaggingData(token, actions, org, repo) {
+  console.log("FeatchTaggingData");
   try {
     const taggingUrl = `${DA_ORIGIN}/source/${org}/${repo}/docs/library/tagging.json`;
     console.log(taggingUrl);
