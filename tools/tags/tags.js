@@ -266,7 +266,7 @@ async function init() {
   try {
     console.log("start here - try");
     const { context, token, actions } = await DA_SDK;
-
+    console.log("const post await")
     // Fetch tagging data
     const taggingData = await fetchTaggingData(token, actions, context.org, context.repo);
     console.log(taggingData);
