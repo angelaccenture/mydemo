@@ -405,7 +405,7 @@
       }
       let type = params.get('type');
       if (type) {
-        localStorage.setItem('blog-tagger-type', lang);
+        localStorage.setItem('blog-tagger-type', type);
       } else {
         type = localStorage.getItem('blog-tagger-type') || 'pagemeta';
       }
