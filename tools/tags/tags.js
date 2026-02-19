@@ -264,6 +264,7 @@ function displayTaggingData(taggingData, actions) {
 async function init() {
   console.log("start here");
   try {
+     console.log("start here - try");
     const { context, token, actions } = await DA_SDK;
 
     // Fetch tagging data
@@ -272,6 +273,7 @@ async function init() {
     // Display tagging data
     displayTaggingData(taggingData, actions);
   } catch (error) {
+     console.log("start here - catch");
     // eslint-disable-next-line no-console
     console.error('Error initializing tags tool:', error);
 
