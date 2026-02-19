@@ -403,7 +403,13 @@
       } else {
         lang = localStorage.getItem('blog-tagger-lang') || 'en';
       }
-      let type = 'author';
+      let type = params.get('type');
+      if (type) {
+        localStorage.setItem('blog-tagger-type', lang);
+      } else {
+        type = localStorage.getItem('blog-tagger-type') || 'pagemeta';
+      }
+      console.log(type);
       document.body.classList.add(lang, type);
 
       // select in combo

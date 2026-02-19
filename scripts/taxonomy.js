@@ -52,7 +52,6 @@ function filter(name) {
  */
 export default async (lang, url) => {
   const type = "author";
-  console.log(type);
   const root = `/${lang}/${type}`;
   const escapeTopic = (topic) => {
     if (!topic) return null;
