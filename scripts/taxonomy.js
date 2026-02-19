@@ -50,8 +50,8 @@ function filter(name) {
  * @param {*} url URL to use to load the taxonomy
  * @returns {object} The taxonomy object
  */
-export default async (lang, url) => {
-  const type = "author";
+export default async (lang, type, url) => {
+  //const type = "author";
   const root = `/${lang}/${type}`;
   const escapeTopic = (topic) => {
     if (!topic) return null;
