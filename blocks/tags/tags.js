@@ -24,7 +24,7 @@ export default function init(el) {
       tag.textContent = tagMeta;
       const name = tagMeta;
       console.log(tag);
-      tag.href = 'https://blogs.microsoft.com/blog/tag/'+${filter(name);
+      tag.href = 'https://blogs.microsoft.com/blog/tag/'+${filter(name)};
       tag.setAttribute('aria-label',tagMeta);
       tagRoot.before(tag);
 }
