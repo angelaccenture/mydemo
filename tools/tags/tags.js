@@ -264,12 +264,12 @@ function displayTaggingData(taggingData, actions) {
 async function init() {
   console.log("start here");
   try {
-     console.log("start here - try");
+    console.log("start here - try");
     const { context, token, actions } = await DA_SDK;
 
     // Fetch tagging data
     const taggingData = await fetchTaggingData(token, actions, context.org, context.repo);
-
+    console.log(taggingData);
     // Display tagging data
     displayTaggingData(taggingData, actions);
   } catch (error) {
