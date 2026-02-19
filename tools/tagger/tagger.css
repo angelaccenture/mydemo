@@ -1,5 +1,5 @@
   body {
-      font-family: 'Adobe Clean';
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body.jp #results, body.jp #selected {
@@ -16,7 +16,6 @@
 
     main select {
       font-size: 1rem;
-      font-family: 'Adobe Clean';
       border: none;
       border-bottom: solid 1px grey;
       padding-top: 5px;
@@ -25,7 +24,6 @@
     main input {
       width: 100%;
       font-size: 2rem;
-      font-family: 'Adobe Clean';
       border: none;
       border-bottom: solid 1px grey;
       padding-top: 5px;
