@@ -340,13 +340,13 @@
       url.searchParams.set('lang', lang.value);
       window.location.href = url.toString();
     }
-    
+    const typeValue = "pagemeta";
     function setType() {
       const type = document.getElementById('type-switcher');
       const url = new URL(window.location.href);
       url.searchParams.set('type', type.value);
       window.location.href = url.toString();
-      const typeValue = type.textContent;
+      typeValue = type.textContent;
       console.log(typeValue);
     }
   </script>
