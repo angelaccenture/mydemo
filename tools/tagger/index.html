@@ -344,6 +344,7 @@
       const url = new URL(window.location.href);
       url.searchParams.set('type', type.value);
       window.location.href = url.toString();
+      console.log(type.value);
     }
   </script>
 </head>
