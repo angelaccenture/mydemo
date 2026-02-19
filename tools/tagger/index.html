@@ -430,7 +430,7 @@
       const checkLinks = params.get('checkLinks') || false;
 
       const mod = await import('/scripts/taxonomy.js');
-      const taxonomy = await mod.default(lang);
+      const taxonomy = await mod.default(lang,type);
 
       initTaxonomy(taxonomy);
       initCategories();
