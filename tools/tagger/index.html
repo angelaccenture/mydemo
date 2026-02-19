@@ -421,9 +421,9 @@
       } else {
         console.error('Unsupported language');
       }
-          const option = document.querySelector(`#type-switcher option[value=${type}]`);
-      if (option) {
-        option.selected = true;
+      const optiontype = document.querySelector(`#type-switcher option[value=${type}]`);
+      if (optiontype) {
+        optiontype.selected = true;
       } else {
         console.error('Unsupported type');
       }
