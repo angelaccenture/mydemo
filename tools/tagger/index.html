@@ -421,6 +421,12 @@
       } else {
         console.error('Unsupported language');
       }
+          const option = document.querySelector(`#type-switcher option[value=${type}]`);
+      if (option) {
+        option.selected = true;
+      } else {
+        console.error('Unsupported type');
+      }
 
       const checkLinks = params.get('checkLinks') || false;
 
