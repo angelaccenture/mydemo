@@ -328,3 +328,40 @@ let _taxonomy;
       url.searchParams.set('lang', lang.value);
       window.location.href = url.toString();
     }
+
+        async function init() {
+      const params = new URLSearchParams(window.location.search);
+      let lang = params.get('lang');
+      if (lang) {
+        localStorage.setItem('blog-tagger-lang', lang);
+      } else {
+        lang = localStorage.getItem('blog-tagger-lang') || 'en';
+      }
+
+      document.body.classList.add(lang);
+
+      // select in combo
+      const option = document.querySelector(`#lang-switcher option[value=${lang}]`);
+      if (option) {
+        option.selected = true;
+      } else {
+        console.error('Unsupported language');
+      }
+
+      const checkLinks = params.get('checkLinks') || false;
+
+      const mod = await import('/scripts/taxonomy.js');
+      const taxonomy = await mod.default(lang);
+
+      initTaxonomy(taxonomy);
+      initCategories();
+      filter();
+
+      document.addEventListener('paste', handlePaste);
+
+      if (checkLinks) {
+        await runLinkchecker(lang);
+      }
+    }
+
+    init();
