@@ -39,6 +39,7 @@ async function fetchTaggingData(token, actions, org, repo) {
  * @param {Object} actions - DA actions object
  */
 function displayTaggingData(taggingData, actions) {
+  console.log("displayTaggingData");
   if (!taggingData) {
     const errorDiv = document.createElement('div');
     errorDiv.className = 'error-message';
@@ -261,6 +262,7 @@ function displayTaggingData(taggingData, actions) {
  * Initializes the tags tool
  */
 async function init() {
+  console.log("start here");
   try {
     const { context, token, actions } = await DA_SDK;
 
