@@ -10,7 +10,7 @@ export default function init(el) {
       const tag = document.createElement('a');
       tag.textContent = tagMeta;
       console.log(tag);
-      btn.href = 'http://www.getthis.com';
-      btn.setAttribute('aria-label',tagMeta);
+      tag.href = 'http://www.getthis.com';
+      tag.setAttribute('aria-label',tagMeta);
       tagRoot.before(tag);
 }
