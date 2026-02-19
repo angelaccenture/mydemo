@@ -9,7 +9,7 @@
   <script src="tagger.js" type="module"></script>
   <script>
     /* Logic */
-
+    var typeValue = "Initial Value";
     let _taxonomy;
     const CATEGORIES = [];
 
@@ -340,14 +340,11 @@
       url.searchParams.set('lang', lang.value);
       window.location.href = url.toString();
     }
-    const typeValue = "pagemeta";
     function setType() {
       const type = document.getElementById('type-switcher');
       const url = new URL(window.location.href);
       url.searchParams.set('type', type.value);
       window.location.href = url.toString();
-      typeValue = type.textContent;
-      console.log(typeValue);
     }
   </script>
 </head>
