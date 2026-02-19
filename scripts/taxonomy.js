@@ -51,6 +51,7 @@ function filter(name) {
  * @returns {object} The taxonomy object
  */
 export default async (lang, type, url) => {
+    console.log('type in taxonomy');
   console.log(type);
   //const type = "author";
   const root = `/${lang}/${type}`;
