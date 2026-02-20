@@ -185,26 +185,6 @@
           }
         },
         {
-          "title": "Modal",
-          "id": "modal",
-          "model": "modal",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div class=\"modal\"><div><div><p><a href=\"\">Fix later URL</a></p></div></div></div>",
-              "fields": [
-                {
-                  "name": "url",
-                  "selector": "div>div>p>a[href]"
-                },
-                {
-                  "name": "urlText",
-                  "selector": "div>div>p>a"
-                }
-              ]
-            }
-          }
-        },
-        {
           "title": "Table",
           "id": "table",
           "plugins": {
