@@ -370,32 +370,23 @@
       },
       {
         "component": "text",
+        "valueType": "string",
         "name": "text",
         "label": "Text",
         "value": "Button"
       },
       {
         "component": "text",
+        "valueType": "string",
         "name": "link",
         "label": "Link",
         "value": ""
       },
       {
         "component": "text",
+        "valueType": "string",
         "name": "label",
         "label": "Aria Label",
-        "value": ""
-      },
-      {
-        "component": "boolean",
-        "name": "openInNewTab",
-        "label": "Opens button in new tab",
-        "value": false
-      },
-      {
-        "component": "text",
-        "name": "buttonId",
-        "label": "ID",
         "value": ""
       }
     ]
