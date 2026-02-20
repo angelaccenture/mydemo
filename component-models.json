@@ -341,26 +341,8 @@
     "id": "button",
     "fields": [
       {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link",
-        "value": "/content"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Text",
-        "value": "Button"
-      },
-      {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title",
-        "value": "Button"
-      },
-      {
         "component": "select",
-        "name": "linkStyle",
+        "name": "classes",
         "value": "",
         "label": "Styles",
         "options": [
@@ -387,74 +369,22 @@
         ]
       },
       {
-        "component": "boolean",
-        "name": "icondropdown",
-        "value": false,
-        "label": "Add Icon"
+        "component": "text",
+        "name": "text",
+        "label": "Text",
+        "value": "Button"
       },
       {
-        "component": "container",
-        "label": "Icon styles",
-        "name": "iconStyles",
-        "condition": {
-          "===": [
-            {
-              "var": "icondropdown"
-            },
-            true
-          ]
-        },
-        "fields": [
-          {
-            "component": "select",
-            "name": "IconPlacement",
-            "value": "trailing",
-            "label": "Icon Placement",
-            "options": [
-              {
-                "name": "After",
-                "value": "trailing"
-              },
-              {
-                "name": "Before",
-                "value": "leading"
-              }
-            ]
-          },
-          {
-            "component": "text",
-            "name": "linkIconText",
-            "label": "Icon Text",
-            "value": ""
-          }
-        ]
+        "component": "text",
+        "name": "link",
+        "label": "Link",
+        "value": ""
       },
       {
-        "component": "boolean",
-        "name": "inverse",
-        "label": "inverse",
-        "valueType": "boolean",
-        "value": false
-      },
-      {
-        "component": "select",
-        "name": "sizeClasses",
-        "value": "large",
-        "label": "Size",
-        "options": [
-          {
-            "name": "Default",
-            "value": ""
-          },
-          {
-            "name": "Large",
-            "value": "large"
-          },
-          {
-            "name": "Small",
-            "value": "small"
-          }
-        ]
+        "component": "text",
+        "name": "label",
+        "label": "Aria Label",
+        "value": ""
       },
       {
         "component": "boolean",
