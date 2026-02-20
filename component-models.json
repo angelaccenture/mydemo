@@ -341,10 +341,9 @@
     "id": "button",
     "fields": [
       {
-        "component": "select",
+        "component": "multiselect",
         "name": "classes",
-        "value": "",
-        "label": "Styles",
+        "label": "Style",
         "options": [
           {
             "name": "Primary",
@@ -369,25 +368,32 @@
         ]
       },
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
         "component": "text",
         "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
         "name": "text",
+        "value": "",
         "label": "Text",
-        "value": "Button"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "link",
-        "label": "Link",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "label",
-        "label": "Aria Label",
-        "value": ""
+        "valueType": "string"
       }
     ]
   },
