@@ -42,6 +42,7 @@ const setupObservers = () => {
 
         switch (type) {
           case 'card':
+            console.log("card switch");
             // handle card div > li replacements
             if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
               const ulEl = addedElements[0];
@@ -106,6 +107,8 @@ const setupUEEventHandlers = () => {
   console.log("setupUE - 2pm");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
+
+    //if not reading
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       console.log("event for img");
       const newImgSrc = event.detail.patch.value;
@@ -125,10 +128,13 @@ const setupUEEventHandlers = () => {
   });
 
   document.addEventListener('aue:ui-select', (event) => {
+    console.log("add Event Listener");
     const { detail } = event;
     const resource = detail?.resource;
 
     if (resource) {
+      console.log("resource");
+      console.log(resource);
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
       if (!element) {
         return;
