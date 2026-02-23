@@ -702,122 +702,47 @@
     "id": "teaser",
     "fields": [
       {
-        "component": "richtext",
-        "valueType": "string",
-        "value": "Your text will show here.",
-        "name": "teaserBlurb",
-        "label": "Title"
-      },
-      {
-        "component": "select",
-        "name": "teaserStyle",
-        "value": "image",
+        "component": "multiselect",
+        "name": "classes",
         "label": "Style",
-        "valueType": "string",
         "options": [
           {
-            "name": "Video",
-            "value": "video"
+            "name": "Left",
+            "value": "left"
           },
           {
-            "name": "Image",
-            "value": "image"
+            "name": "Right",
+            "value": "right"
           }
         ]
       },
       {
-        "component": "container",
-        "label": "Video Properties",
-        "name": "videoProperties",
+        "component": "reference",
         "valueType": "string",
-        "condition": {
-          "===": [
-            {
-              "var": "teaserStyle"
-            },
-            "video"
-          ]
-        },
-        "fields": [
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "videoReference",
-            "label": "Video Reference",
-            "multi": false,
-            "description": "Provide a URL for the video background."
-          },
-          {
-            "component": "select",
-            "name": "videoBehavior",
-            "value": "autoplay",
-            "label": "Video Behavior (on load)",
-            "valueType": "string",
-            "options": [
-              {
-                "name": "Autoplay",
-                "value": "autoplay"
-              },
-              {
-                "name": "Pause",
-                "value": "pause"
-              }
-            ]
-          }
-        ]
+        "name": "image",
+        "label": "Image",
+        "multi": false
       },
       {
-        "component": "container",
-        "label": "Image Properties",
-        "name": "imageProperties",
+        "component": "text",
         "valueType": "string",
-        "condition": {
-          "===": [
-            {
-              "var": "teaserStyle"
-            },
-            "image"
-          ]
-        },
-        "fields": [
-          {
-            "component": "reference",
-            "valueType": "string",
-            "name": "imageRef",
-            "label": "Image",
-            "multi": false
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "alt",
-            "value": "Default alt",
-            "label": "Alt Text"
-          }
-        ]
+        "name": "imageAlt",
+        "label": "Image Alt",
+        "multi": false
       },
       {
-        "component": "container",
-        "label": "Button Properties",
-        "name": "buttonProperties",
-        "valueType": "string",
-        "fields": [
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "btn-text",
-            "value": "Button",
-            "label": "Button Text"
-          },
-          {
-            "component": "aem-content",
-            "name": "btn-link",
-            "label": "Button Link",
-            "valueType": "string",
-            "rootPath": "",
-            "description": "Path to linked AEM content"
-          }
-        ]
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
