@@ -74,19 +74,15 @@
               "unsafeHTML": "<div class=\"button\"><div><div><p><picture><source type=\"image/webp\" srcset=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\" media=\"(min-width: 600px)\"><source type=\"image/webp\" srcset=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\"><source type=\"image/jpeg\" srcset=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\" media=\"(min-width: 600px)\"><img loading=\"lazy\" alt=\"Alt Text\" src=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\" width=\"3840\" height=\"2160\"></picture></p><p><strong>Unmatched speed</strong></p><p>AEM is the fastest way to publish, create, and serve websites.</p></div></div></div>",
               "fields": [
                 {
-                  "name": "image",
-                  "selector": "div>div>picture>img[src]"
-                },
-                {
-                  "name": "imageAlt",
+                  "name": "text",
                   "selector": "div>div>picture>img[alt]"
                 },
                 {
-                  "name": "title",
+                  "name": "link",
                   "selector": "div>div>p:nth-child(2)>strong"
                 },
                 {
-                  "name": "text",
+                  "name": "label",
                   "selector": "div>div>p:nth-child(3)"
                 }
               ]
