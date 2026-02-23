@@ -121,25 +121,27 @@ const setupUEEventHandlers = () => {
   console.log("setupUE");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-  console.log("not reading this at all?");
-    //if not reading
-    console.log(event.detail.patch.name);
-    if (event.detail.patch.name.match(/img.*\[src\]/)) {
-      console.log("event for img");
-      const newImgSrc = event.detail.patch.value;
-      console.log("newImgSrc");
-      const picture = event.srcElement.querySelector('picture');
-      console.log("picture");
-      const picturenew = event.querySelector('picture');
-      console.log("picturenew");
+     console.log('Property updated:', patch.name);
+      console.log('New value:', patch.value);
+        console.log("not reading this at all?");
+          //if not reading
+          console.log(event.detail.patch.name);
+          if (event.detail.patch.name.match(/img.*\[src\]/)) {
+            console.log("event for img");
+            const newImgSrc = event.detail.patch.value;
+            console.log("newImgSrc");
+            const picture = event.srcElement.querySelector('picture');
+            console.log("picture");
+            const picturenew = event.querySelector('picture');
+            console.log("picturenew");
 
-      if (picture) {
-        console.log("picture code goes here");
-        picture.querySelectorAll('source').forEach((source) => {
-          source.setAttribute('srcset', newImgSrc);
-        });
-      }
-    }
+            if (picture) {
+              console.log("picture code goes here");
+              picture.querySelectorAll('source').forEach((source) => {
+                source.setAttribute('srcset', newImgSrc);
+              });
+            }
+          }
   });
 
   document.addEventListener('aue:ui-select', (event) => {
