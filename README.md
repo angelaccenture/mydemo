@@ -1,8 +1,9 @@
 ## Angel Status
 1. UE support (Mostly done, need to fix images and multi class names)
 2. IP - Full template support to control blocks shown in UE (like xcom)
-3. IP - Section grid system (full support like AEM standard)
-4. IP - Get more tools like tagger, etc.
+3. NTH - Be able to lock blocks down to template so that author can't delete them
+4. IP - Section grid system (full support like AEM standard)
+5. IP - Get more tools like tagger, etc.
 
 
 # Author Kit
