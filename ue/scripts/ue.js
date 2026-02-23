@@ -103,7 +103,7 @@ const setupObservers = () => {
 
 
 const setupUEEventHandlers = () => {
-  console.log("setupUE");
+  console.log("setupUE - 2pm");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
