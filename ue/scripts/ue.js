@@ -13,18 +13,6 @@
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 
-console.log("timestamp for cache - 2:19")
-/*
-set up Observers
-setupUE
-resource
-goes to top again
-set up Observers
-setupUUE
-set up observers - if
-*/
-
-
 // Remove Footer from being shown in UE
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
@@ -39,15 +27,11 @@ function setUEFilter(element, filter) {
 const template = getMetadata('template');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
 
-
-/*Review all code below later*/
 const setupObservers = () => {
- console.log("setupObservers - not needed for now");
- const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
+  const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
-        console.log("set up observers - if");
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
@@ -55,8 +39,7 @@ const setupObservers = () => {
         const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
 
         switch (type) {
-          case 'card':
-            console.log("card switch");
+          case 'cards':
             // handle card div > li replacements
             if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
               const ulEl = addedElements[0];
@@ -68,7 +51,7 @@ const setupObservers = () => {
               });
             }
             break;
-          case 'card-image':
+          case 'cards-image':
             // handle card-image picture replacements
             if (mutation.target.classList.contains('cards-card-image')) {
               const addedPictureEl = [...mutation.addedNodes].filter((node) => node.tagName === 'PICTURE');
@@ -116,30 +99,19 @@ const setupObservers = () => {
   });
 };
 
-
 const setupUEEventHandlers = () => {
-  console.log("setupUE");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-        console.log("not reading this at all?");
-          //if not reading
-          console.log(event.detail.patch.name);
-          if (event.detail.patch.name.match(/image.*\[src\]/)) {
-            console.log("event for img");
-            const newImgSrc = event.detail.patch.value;
-            console.log("newImgSrc");
-            const picture = event.srcElement.querySelector('picture');
-            console.log("picture");
-            const picturenew = event.querySelector('picture');
-            console.log("picturenew");
+    if (event.detail.patch.name.match(/img.*\[src\]/)) {
+      const newImgSrc = event.detail.patch.value;
+      const picture = event.srcElement.querySelector('picture');
 
-            if (picture) {
-              console.log("picture code goes here");
-              picture.querySelectorAll('source').forEach((source) => {
-                source.setAttribute('srcset', newImgSrc);
-              });
-            }
-          }
+      if (picture) {
+        picture.querySelectorAll('source').forEach((source) => {
+          source.setAttribute('srcset', newImgSrc);
+        });
+      }
+    }
   });
 
   document.addEventListener('aue:ui-select', (event) => {
@@ -147,16 +119,11 @@ const setupUEEventHandlers = () => {
     const resource = detail?.resource;
 
     if (resource) {
-      console.log("resource");
-      console.log(resource);
-      //urn:ab:section-VAR/block-VAR -- tells me where I am in the UE DOM
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
       if (!element) {
         return;
       }
       const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
-      console.log("blockEl");
-      console.log(blockEl);
       if (blockEl) {
         const block = blockEl.getAttribute('data-aue-model');
         const index = element.getAttribute('data-slide-index');
@@ -195,6 +162,6 @@ const setupUEEventHandlers = () => {
 };
 
 export default () => {
-  //setupObservers();
+  setupObservers();
   setupUEEventHandlers();
 };
