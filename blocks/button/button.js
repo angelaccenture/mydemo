@@ -1,7 +1,7 @@
 export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
   console.log(btnRoot);
-  const getdata = btnRoot.querySelector('http://' || 'https://');
+  const getdata = btnRoot.includes('http://' || 'https://');
   console.log(getdata);
   if (btndata.text) {
      // console.log(btndata.text);
