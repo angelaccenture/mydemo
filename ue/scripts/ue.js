@@ -121,8 +121,6 @@ const setupUEEventHandlers = () => {
   console.log("setupUE");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-     console.log('Property updated:', patch.name);
-      console.log('New value:', patch.value);
         console.log("not reading this at all?");
           //if not reading
           console.log(event.detail.patch.name);
