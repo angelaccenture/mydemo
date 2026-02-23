@@ -13,6 +13,7 @@
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 
+console.log("timestamp for cache - 2:08")
 // Remove Footer from being shown in UE
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
@@ -106,7 +107,7 @@ const setupObservers = () => {
 
 
 const setupUEEventHandlers = () => {
-  console.log("setupUE - 2:05");
+  console.log("setupUE");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
 
@@ -131,19 +132,22 @@ const setupUEEventHandlers = () => {
   });
 
   document.addEventListener('aue:ui-select', (event) => {
-    console.log("add Event Listener");
     const { detail } = event;
     const resource = detail?.resource;
 
     if (resource) {
       console.log("resource");
       console.log(resource);
+      //urn:ab:section-VAR/block-VAR -- tells me where I am in the UE DOM
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
       if (!element) {
+        console.log("not element");
         return;
       }
       const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
       if (blockEl) {
+        console.log("blockEl");
+        console.log(blockEl);
         const block = blockEl.getAttribute('data-aue-model');
         const index = element.getAttribute('data-slide-index');
 
