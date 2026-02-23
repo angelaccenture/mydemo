@@ -12,7 +12,7 @@ export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
     if (!btnRoot) return;
  // const btndata = getBtndata(el);
-  console.log(btndata);
+  console.log(btnRoot);
   if (btndata.text) {
       console.log(btndata.text);
       const btn = document.createElement('a');
