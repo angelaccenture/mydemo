@@ -14,6 +14,17 @@ import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 
 console.log("timestamp for cache - 2:08")
+/*
+set up Observers
+setupUE
+resource
+goes to top again
+set up Observers
+setupUUE
+set up observers - if
+*/
+
+
 // Remove Footer from being shown in UE
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
@@ -31,7 +42,7 @@ const sections = document.querySelectorAll('[data-aue-model$="section"]');
 
 /*Review all code below later*/
 const setupObservers = () => {
-  console.log("set upObservers");
+  console.log("setupObservers");
  const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
@@ -110,7 +121,7 @@ const setupUEEventHandlers = () => {
   console.log("setupUE");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-
+  console.log("not reading this at all?");
     //if not reading
     console.log(event.detail.patch.name);
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
@@ -141,13 +152,12 @@ const setupUEEventHandlers = () => {
       //urn:ab:section-VAR/block-VAR -- tells me where I am in the UE DOM
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
       if (!element) {
-        console.log("not element");
         return;
       }
       const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
+      console.log("blockEl");
+      console.log(blockEl);
       if (blockEl) {
-        console.log("blockEl");
-        console.log(blockEl);
         const block = blockEl.getAttribute('data-aue-model');
         const index = element.getAttribute('data-slide-index');
 
