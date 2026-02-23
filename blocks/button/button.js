@@ -13,7 +13,7 @@ const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
 export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
   console.log(btnRoot);
-  const getdata = btnRoot.closest('p');
+  const getdata = btnRoot.closest('http://' || 'https://');
   console.log(getdata);
   if (btndata.text) {
      // console.log(btndata.text);
@@ -23,8 +23,11 @@ export default function init(el) {
       btn.href = btndata.link.text;
       btn.setAttribute('aria-label',btndata.text);
       btnRoot.before(btn);
+  }
+  else {
+    console.log("Button must have a standard link");
   } 
-  const btnAll = el.querySelectorAll(':scope > div');
+ const btnAll = el.querySelectorAll(':scope > div');
  btnAll.forEach(btnelement => {
   btnelement.remove();
 });
