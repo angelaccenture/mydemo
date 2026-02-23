@@ -371,8 +371,7 @@
         "component": "text",
         "valueType": "string",
         "name": "text",
-        "label": "Text",
-        "multi": false
+        "label": "Text"
       },
       {
         "component": "text",
