@@ -380,22 +380,10 @@
         "valueType": "string"
       },
       {
-        "component": "hidden",
-        "valueType": "string",
-        "name": "link-hidden",
-        "value": "link"
-      },
-      {
         "component": "text",
         "name": "label",
         "label": "Aria Label",
         "valueType": "string"
-      },
-      {
-        "component": "hidden",
-        "valueType": "string",
-        "name": "label-hidden",
-        "value": "label"
       }
     ]
   },
