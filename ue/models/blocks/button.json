@@ -10,15 +10,15 @@
          "fields": [
             {
               "name": "text",
-              "selector": "div>div>picture>img[alt]"
+              "selector": "div>div"
             },
             {
               "name": "link",
-              "selector": "div>div>p:nth-child(2)>strong"
+              "selector": "div>div:nth-child(2)"
             },
             {
               "name": "label",
-              "selector": "div>div>p:nth-child(3)"
+              "selector": "div>div:nth-child(3)"
             }
           ]
       }
