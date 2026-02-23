@@ -1,8 +1,10 @@
 const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
   if (row.children) {
     const key = row.children[0].textContent.trim().toLowerCase();
+    console.log("key");
     console.log(key);
     const content = row.children[1];
+    console.log("content");
     console.log(content);
     const text = content.textContent.trim();
     if (key && content) rdx[key] = { content, text };
