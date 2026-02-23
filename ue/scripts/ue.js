@@ -19,7 +19,7 @@ elementsToRemove.forEach(element => {
   element.remove();
 });
 
-/*Add in Template Support to control blocks - IP*/
+// IP - Add in Template Support to control blocks
 function setUEFilter(element, filter) {
   //This might help with template sections
   element.dataset.aueFilter = filter;
@@ -30,10 +30,12 @@ const sections = document.querySelectorAll('[data-aue-model$="section"]');
 
 /*Review all code below later*/
 const setupObservers = () => {
+  console.log("set upObservers");
  const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
+        console.log("set up observers - if");
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
@@ -104,11 +106,12 @@ const setupObservers = () => {
 
 
 const setupUEEventHandlers = () => {
-  console.log("setupUE - 2pm");
+  console.log("setupUE - 2:05");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
 
     //if not reading
+    console.log(event.detail.patch.name);
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       console.log("event for img");
       const newImgSrc = event.detail.patch.value;
