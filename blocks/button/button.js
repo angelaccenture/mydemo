@@ -12,12 +12,14 @@ export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
     if (!btnRoot) return;
   const btndata = getBtndata(el);
-  if (btndata.text.text) {
+  console.log(btndata);
+  if (btndata.text) {
+      console.log(btndata.text);
       const btn = document.createElement('a');
       btn.textContent = btndata.text.text;
       console.log(btndata.text.parentElement);
       btn.href = btndata.link.text;
-      btn.setAttribute('aria-label',btndata.label.text);
+      btn.setAttribute('aria-label',btndata.text);
       btnRoot.before(btn);
   } 
   const btnAll = el.querySelectorAll(':scope > div');
