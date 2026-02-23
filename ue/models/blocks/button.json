@@ -6,7 +6,7 @@
       "model": "button",
       "plugins": {
         "da": {
-        "unsafeHTML": "<div class=\"button\"><div><div><p>Button Text</p></div></div><div><div><p>http://www.linkgoeshere.com</p></div></div><div><div><p>Aria Label</p></div></div></div>",
+        "unsafeHTML": "<div class=\"button\"><div><p>Button Text</p><p>http://www.linkgoeshere.com</p><p>Aria Label</p></div></div>",
         "fields": [
             {
               "name": "text",
@@ -14,11 +14,11 @@
             },
             {
               "name": "link",
-              "selector": "div:nth-child(2)>div>p"
+              "selector": "div>div>p:nth-child(2)"
             },
             {
               "name": "label",
-              "selector": "div:nth-child(3)>div>p"
+              "selector": "div>div>p:nth-child(3)"
             }
           ]   
       }
