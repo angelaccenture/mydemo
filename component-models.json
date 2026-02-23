@@ -378,14 +378,14 @@
         "component": "text",
         "name": "link",
         "value": "",
-        "label": "Link",
+        "label": "URL",
         "valueType": "string"
       },
       {
         "component": "text",
         "name": "label",
         "value": "",
-        "label": "Text",
+        "label": "Aria Label",
         "valueType": "string"
       }
     ]
