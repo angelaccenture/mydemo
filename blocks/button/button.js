@@ -1,19 +1,7 @@
-const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
-  if (row.children) {
-    const key = row.children[0].textContent.trim().toLowerCase();
-    console.log("key");
-    console.log(key);
-    //const text = key.textContent.trim();
-    //console.log(text);
-    //if (key && content) rdx[key] = { content, text };
-  }
-  return rdx;
-}, {});
-
 export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
   console.log(btnRoot);
-  const getdata = btnRoot.closest('http://' || 'https://');
+  const getdata = btnRoot.querySelector('http://' || 'https://');
   console.log(getdata);
   if (btndata.text) {
      // console.log(btndata.text);
