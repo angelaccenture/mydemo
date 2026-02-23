@@ -374,16 +374,34 @@
         "label": "Text"
       },
       {
+        "component": "hidden",
+        "valueType": "string",
+        "name": "text-hidden",
+        "value": "text"
+      },
+      {
         "component": "text",
         "name": "link",
         "label": "URL",
         "valueType": "string"
       },
       {
+        "component": "hidden",
+        "valueType": "string",
+        "name": "link-hidden",
+        "value": "link"
+      },
+      {
         "component": "text",
         "name": "label",
         "label": "Aria Label",
         "valueType": "string"
+      },
+      {
+        "component": "hidden",
+        "valueType": "string",
+        "name": "label-hidden",
+        "value": "label"
       }
     ]
   },
