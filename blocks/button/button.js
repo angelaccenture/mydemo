@@ -10,14 +10,13 @@ const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
 
 export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
-    if (!btnRoot) return;
- // const btndata = getBtndata(el);
   console.log(btnRoot);
+ // const btndata = getBtndata(el);
   if (btndata.text) {
-      console.log(btndata.text);
+     // console.log(btndata.text);
       const btn = document.createElement('a');
       btn.textContent = btndata.text.text;
-      console.log(btndata.text.parentElement);
+     // console.log(btndata.text.parentElement);
       btn.href = btndata.link.text;
       btn.setAttribute('aria-label',btndata.text);
       btnRoot.before(btn);
