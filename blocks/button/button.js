@@ -9,7 +9,7 @@ const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
 }, {});
 
 export default function init(el) {
-  const btnRoot = el.querySelector(':scope > div');
+  const btnRoot = el.querySelector(':scope > div > div');
     if (!btnRoot) return;
  // const btndata = getBtndata(el);
   console.log(btnRoot);
