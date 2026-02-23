@@ -29,6 +29,6 @@ export default function init(el) {
   } 
  const btnAll = el.querySelectorAll(':scope > div');
  btnAll.forEach(btnelement => {
-  btnelement.remove();
+  //btnelement.remove();
 });
 }
