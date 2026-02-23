@@ -374,12 +374,6 @@
         "label": "Text"
       },
       {
-        "component": "hidden",
-        "valueType": "string",
-        "name": "text-hidden",
-        "value": "text"
-      },
-      {
         "component": "text",
         "name": "link",
         "label": "URL",

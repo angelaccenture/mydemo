@@ -6,7 +6,7 @@
       "model": "button",
       "plugins": {
         "da": {
-        "unsafeHTML": "<div class=\"button\"><div><div><p>Button Text</p></div></div></div>",
+        "unsafeHTML": "<div class=\"button\"><div><div><p>text</p></div><div><p>Button Text</p></div></div></div>",
         "fields": [
             {
               "name": "text",
@@ -58,12 +58,6 @@
           "valueType": "string",
           "name": "text",
           "label": "Text"
-        },
-        {
-          "component": "hidden",
-          "valueType": "string",
-          "name": "text-hidden",
-          "value": "text"
         },
         {
           "component": "text",
