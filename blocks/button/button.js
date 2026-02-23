@@ -1,10 +1,9 @@
 export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
   console.log(btnRoot);
-  const getdata = btnRoot.includes('http://' || 'https://');
-  console.log(getdata);
-  if (btndata.text) {
-     // console.log(btndata.text);
+
+  if (btnRoot) {
+      console.log(btnRoot.text);
       const btn = document.createElement('a');
       btn.textContent = btndata.text.text;
      // console.log(btndata.text.parentElement);
