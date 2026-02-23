@@ -162,9 +162,9 @@ const setupUEEventHandlers = () => {
       }
     }
   });
-};
+};*/
 
 export default () => {
-  setupObservers();
-  setupUEEventHandlers();
-};*/
+  //setupObservers();
+  //setupUEEventHandlers();
+};
