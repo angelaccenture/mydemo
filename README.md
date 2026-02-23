@@ -1,3 +1,10 @@
+## Angel Status
+1. UE support (Mostly done, need to fix images and multi class names)
+2. IP - Full template support to control blocks shown in UE (like xcom)
+3. IP - Section grid system (full support like AEM standard)
+4. IP - Get more tools like tagger, etc.
+
+
 # Author Kit
 For projects that want a few more batteries. Built by the team who brought you da.live and adobe.com.
 
