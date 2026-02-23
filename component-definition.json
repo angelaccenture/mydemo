@@ -79,7 +79,7 @@
                 },
                 {
                   "name": "link",
-                  "selector": "div:nth-child(2)>div:nth-child(2)"
+                  "selector": "div:nth-child(2)>div:nth-child(2)>p"
                 },
                 {
                   "name": "label",

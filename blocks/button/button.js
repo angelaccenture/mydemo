@@ -16,7 +16,7 @@ export default function init(el) {
       const btn = document.createElement('a');
       btn.textContent = btndata.text.text;
       console.log(btndata.text.parentElement);
-      btn.href = btndata.link.text;
+      btn.href = btndata.url.text;
       btn.setAttribute('aria-label',btndata.label.text);
       btnRoot.before(btn);
   } 
