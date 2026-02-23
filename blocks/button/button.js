@@ -3,11 +3,9 @@ const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
     const key = row.children[0].textContent.trim().toLowerCase();
     console.log("key");
     console.log(key);
-    const content = row.children[1];
-    console.log("content");
-    console.log(content);
-    const text = content.textContent.trim();
-    if (key && content) rdx[key] = { content, text };
+    const text = key.textContent.trim();
+    console.log(text);
+    //if (key && content) rdx[key] = { content, text };
   }
   return rdx;
 }, {});
@@ -16,7 +14,7 @@ export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
   console.log(btnRoot);
   const btndata = getBtndata(el);
-  console.log(btndata);
+  console.log(btndata.text);
   if (btndata.text) {
      // console.log(btndata.text);
       const btn = document.createElement('a');
