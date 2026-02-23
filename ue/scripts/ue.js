@@ -42,7 +42,7 @@ const sections = document.querySelectorAll('[data-aue-model$="section"]');
 
 /*Review all code below later*/
 const setupObservers = () => {
-  console.log("setupObservers");
+ console.log("setupObservers - not needed for now");
  const mutatingBlocks = document.querySelectorAll('div.card, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
@@ -195,6 +195,6 @@ const setupUEEventHandlers = () => {
 };
 
 export default () => {
-  setupObservers();
+  //setupObservers();
   setupUEEventHandlers();
 };
