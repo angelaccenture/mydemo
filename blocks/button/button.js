@@ -11,7 +11,8 @@ const getBtndata = (el) => [...el.childNodes].reduce((rdx, row) => {
 export default function init(el) {
   const btnRoot = el.querySelector(':scope > div');
   console.log(btnRoot);
- // const btndata = getBtndata(el);
+  const btndata = getBtndata(el);
+  console.log(btndata);
   if (btndata.text) {
      // console.log(btndata.text);
       const btn = document.createElement('a');
