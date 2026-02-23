@@ -13,7 +13,6 @@ export default function init(el) {
     if (!btnRoot) return;
  // const btndata = getBtndata(el);
   console.log(btnRoot);
-  console.log(btnRoot.text);
   if (btndata.text) {
       console.log(btndata.text);
       const btn = document.createElement('a');
