@@ -126,7 +126,7 @@ const setupUEEventHandlers = () => {
         console.log("not reading this at all?");
           //if not reading
           console.log(event.detail.patch.name);
-          if (event.detail.patch.name.match(/img.*\[src\]/)) {
+          if (event.detail.patch.name.match(/image.*\[src\]/)) {
             console.log("event for img");
             const newImgSrc = event.detail.patch.value;
             console.log("newImgSrc");
