@@ -16,19 +16,18 @@ import { getMetadata } from '../../scripts/ak.js';
 const template = getMetadata('template');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
 
+//Remove Footer from UE
+const elementsToRemove = document.querySelectorAll('footer');
+elementsToRemove.forEach(element => {
+  element.remove();
+});
+
 console.log("ue - 10:11am")
 
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('footer, div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      console.log(mutation.target.classList);
-      console.log(mutation.target.classList.value);
-      if (mutation.target.classList.value == 'footer') {
-        console.log("remove footer here");
-        console.log(mutation);
-        mutation.remove();
-      }
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
