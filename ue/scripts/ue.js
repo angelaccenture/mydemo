@@ -19,7 +19,7 @@ import { getMetadata } from '../../scripts/ak.js';
 elementsToRemove.forEach(element => {
   element.remove();
 });*/
-
+console.log("ue - 10:11am")
 
 // IP - Add in Template Support to control blocks
 function setUEFilter(element, filter) {
