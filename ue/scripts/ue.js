@@ -9,7 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-console.log("ue - 8:40am");
+console.log("ue - 9:30am");
 
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
@@ -106,8 +106,8 @@ const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
      console.log("event payload");
-     console.log(event.detail.patch.prop);
-     console.log(event.detail.patch.type);
+     console.log(event.detail.patch.request);
+     console.log(event.detail.patch.response);
      console.log(event.detail.patch.value);
     //if (event.detail.path.prop.contains('image')) {
      // console.log("Yes Image");
@@ -128,7 +128,6 @@ const setupUEEventHandlers = () => {
   });
 
   document.addEventListener('aue:ui-select', (event) => {
-    console.log("addEvenListener");
     const { detail } = event;
     const resource = detail?.resource;
 
