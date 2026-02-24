@@ -15,6 +15,7 @@ import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 const template = getMetadata('template');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
+console.log(sections);
 
 //Remove Footer from UE - rewrite later with aue:content-remove
 const elementsToRemove = document.querySelectorAll('footer');
