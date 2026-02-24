@@ -20,6 +20,7 @@ elementsToRemove.forEach(element => {
   element.remove();
 });*/
 
+
 // IP - Add in Template Support to control blocks
 function setUEFilter(element, filter) {
   //This might help with template sections
@@ -103,6 +104,7 @@ const setupObservers = () => {
 const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
+    console.log(event.detail.patch.name);
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
