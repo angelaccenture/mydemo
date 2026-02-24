@@ -30,6 +30,7 @@ const template = getMetadata('template');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
 
 const setupObservers = () => {
+  console.log("setupObservers");
   const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
@@ -102,6 +103,7 @@ const setupObservers = () => {
 };
 
 const setupUEEventHandlers = () => {
+   console.log("setupUEEventHandlers");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
     console.log(event.detail.patch.name);
