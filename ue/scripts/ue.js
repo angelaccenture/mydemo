@@ -22,6 +22,7 @@ const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('footer, div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
+      console.log(mutation.type);
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
