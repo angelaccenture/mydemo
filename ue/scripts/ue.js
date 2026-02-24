@@ -27,7 +27,7 @@ const setupObservers = () => {
       if (mutation.target.classList.value == 'footer') {
         console.log("remove footer here");
         console.log(mutation);
-        mutation.removedNodes[0];
+        mutation.remove();
       }
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
@@ -99,6 +99,7 @@ const setupObservers = () => {
 
 const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
+
   document.addEventListener('aue:content-patch', (event) => {
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
