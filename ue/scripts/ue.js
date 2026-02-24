@@ -105,9 +105,10 @@ const setupUEEventHandlers = () => {
   console.log("setupUEEventHandlers");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-     console.log("image source");
+     console.log("event payload");
      console.log(event.detail.patch.prop);
-      console.log(event.detail.patch.type);
+     console.log(event.detail.patch.type);
+     console.log(event.detail.patch.value);
     //if (event.detail.path.prop.contains('image')) {
      // console.log("Yes Image");
     //}
