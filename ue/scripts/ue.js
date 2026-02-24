@@ -14,11 +14,11 @@
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 
-// Remove Footer from being shown in UE
-const elementsToRemove = document.querySelectorAll('footer');
+// rewrite this with aue:content-remove
+/*const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
   element.remove();
-});
+});*/
 
 // IP - Add in Template Support to control blocks
 function setUEFilter(element, filter) {
