@@ -1,10 +1,12 @@
 ## Angel Status
-1. UE support (Mostly done, need to fix images and multi class names)
-2. Updated Advanced Tabs so that it can be included as Frag or stand alone on a page with other blocks (author preference)
-3. IP - Full template support to control blocks shown in UE (like xcom)
-4. NTH - Be able to lock blocks down to template so that author can't delete them
-5. IP - Section grid system (full support like AEM standard)
-6. IP - Get more tools like tagger, etc.
+1. UE support
+   - Updated error.js to not show any errors in UE (not needed)
+   - IP: Updating ue.js to remove footer
+   - IP: Updating to filter blocks based on templates
+3. Updated Advanced Tabs so that it can be included as Frag or stand alone on a page with other blocks (author preference)
+5. NTH - Be able to lock blocks down to template so that author can't delete them
+6. IP - Section grid system (full support like AEM standard)
+7. IP - Get more tools like tagger, etc.
 
 
 # Author Kit
