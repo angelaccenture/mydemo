@@ -13,25 +13,13 @@
 /*Clean this file up later, keeping "as is" for now as reference and because some of this is working as expected and I need to figure out what is working and whats not*/
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
-
-// rewrite this with aue:content-remove
-/*const elementsToRemove = document.querySelectorAll('footer');
-elementsToRemove.forEach(element => {
-  element.remove();
-});*/
-console.log("ue - 10:11am")
-
-// IP - Add in Template Support to control blocks
-function setUEFilter(element, filter) {
-  //This might help with template sections
-  element.dataset.aueFilter = filter;
-}
 const template = getMetadata('template');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
 
+console.log("ue - 10:11am")
+
 const setupObservers = () => {
-  console.log("setupObservers");
-  const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
+  const mutatingBlocks = document.querySelectorAll('footer, div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
@@ -42,6 +30,10 @@ const setupObservers = () => {
         const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
 
         switch (type) {
+            case 'footer':
+            // handle card div > li replacements
+            console.log("footer");
+            break;
           case 'cards':
             // handle card div > li replacements
             if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
@@ -103,18 +95,8 @@ const setupObservers = () => {
 };
 
 const setupUEEventHandlers = () => {
-   console.log("setupUEEventHandlers");
-
-  document.addEventListener('aue:content-remove', (event) => {
-    console.log("content-remove for footer");
-    console.log(event.detail.patch.name);
-  
-    
-  });
-    
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-    console.log(event.detail.patch.name);
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
