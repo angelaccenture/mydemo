@@ -107,10 +107,12 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
      console.log("image srource");
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
+       console.log("if event detail");
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
 
       if (picture) {
+        console.log("if picture");
         picture.querySelectorAll('source').forEach((source) => {
           source.setAttribute('srcset', newImgSrc);
         });
