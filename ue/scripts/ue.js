@@ -9,8 +9,8 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-console.log("ue - 9:30am");
 
+/*Clean this file up later, keeping for now as reference and because some of this is working as expected*/
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 
@@ -27,6 +27,7 @@ function setUEFilter(element, filter) {
 }
 const template = getMetadata('template');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
+
 
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
@@ -102,29 +103,19 @@ const setupObservers = () => {
 };
 
 const setupUEEventHandlers = () => {
-  console.log("setupUEEventHandlers");
-  // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-   /*  console.log("event payload");
-     console.log(event.detail.patch.name);
-     console.log(event.detail.patch.value);
-    if (event.detail.patch.name == 'image') {
-     console.log("Yes Image");
-    }*/
-
-    /*if (event.detail.patch.prop.match(/image.*\[src\]/)) {
-       console.log("if event detail");
+    if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
 
       if (picture) {
-        console.log("if picture");
         picture.querySelectorAll('source').forEach((source) => {
           source.setAttribute('srcset', newImgSrc);
         });
       }
-    }*/
+    }
   });
+
 
   document.addEventListener('aue:ui-select', (event) => {
     const { detail } = event;
