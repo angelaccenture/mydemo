@@ -22,19 +22,14 @@ const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('footer, div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      console.log(mutation.type);
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
-
+        console.log(mutation.target.classList);
         // detect the mutation type of the block or picture (for cards)
         const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
 
         switch (type) {
-            case 'footer':
-            // handle card div > li replacements
-            console.log("footer");
-            break;
           case 'cards':
             // handle card div > li replacements
             if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
