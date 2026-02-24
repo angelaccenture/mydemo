@@ -104,6 +104,14 @@ const setupObservers = () => {
 
 const setupUEEventHandlers = () => {
    console.log("setupUEEventHandlers");
+
+  document.addEventListener('aue:content-remove', (event) => {
+    console.log("content-remove for footer");
+    console.log(event.detail.patch.name);
+  
+    
+  });
+    
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
     console.log(event.detail.patch.name);
