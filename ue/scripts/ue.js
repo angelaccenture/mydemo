@@ -24,6 +24,9 @@ const setupObservers = () => {
     mutations.forEach((mutation) => {
       console.log(mutation.target.classList);
       console.log(mutation.target.classList.value);
+      if (mutation.target.classList.value == 'footer') {
+        console.log("remove footer here");
+      }
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
