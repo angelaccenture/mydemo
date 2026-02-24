@@ -108,9 +108,9 @@ const setupUEEventHandlers = () => {
      console.log("event payload");
      console.log(event.detail.patch.name);
      console.log(event.detail.patch.value);
-    //if (event.detail.path.prop.contains('image')) {
-     // console.log("Yes Image");
-    //}
+    if (event.detail.path.name == 'image') {
+     console.log("Yes Image");
+    }
 
     /*if (event.detail.patch.prop.match(/image.*\[src\]/)) {
        console.log("if event detail");
