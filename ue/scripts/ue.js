@@ -16,7 +16,7 @@ import { getMetadata } from '../../scripts/ak.js';
 const template = getMetadata('template');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
 
-//Remove Footer from UE
+//Remove Footer from UE - rewrite later with aue:content-remove
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
   element.remove();
