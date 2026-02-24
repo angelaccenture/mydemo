@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-/*Clean this file up later, keeping for now as reference and because some of this is working as expected*/
+/*Clean this file up later, keeping "as is" for now as reference and because some of this is working as expected and I need to figure out what is working and whats not*/
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 
@@ -28,13 +28,11 @@ function setUEFilter(element, filter) {
 const template = getMetadata('template');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
 
-
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
-        console.log("not using this if?");
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
@@ -103,6 +101,7 @@ const setupObservers = () => {
 };
 
 const setupUEEventHandlers = () => {
+  // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
@@ -115,7 +114,6 @@ const setupUEEventHandlers = () => {
       }
     }
   });
-
 
   document.addEventListener('aue:ui-select', (event) => {
     const { detail } = event;
