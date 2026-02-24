@@ -9,6 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+console.log("ue - 8:40am");
 
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
@@ -32,6 +33,7 @@ const setupObservers = () => {
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
+        console.log("not using this if?");
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
@@ -100,8 +102,10 @@ const setupObservers = () => {
 };
 
 const setupUEEventHandlers = () => {
+  console.log("setupUEEventHandlers");
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
+     console.log("image srource");
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
@@ -115,6 +119,7 @@ const setupUEEventHandlers = () => {
   });
 
   document.addEventListener('aue:ui-select', (event) => {
+    console.log("addEvenListener");
     const { detail } = event;
     const resource = detail?.resource;
 
