@@ -23,6 +23,9 @@ const setupObservers = () => {
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       console.log(mutation.target.classList);
+      if mutation.target.classList.contains('footer') {
+          console.log("footer");
+      }
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
