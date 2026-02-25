@@ -19,7 +19,7 @@ function setUEFilter(element, filter) {
 }
 function getUniversalEditorSections() {
   // Query for all elements with the specific Universal Editor section data attribute
-  const sections = document.querySelectorAll('[data-aue-type="section"]');
+  const sections = document.querySelectorAll('[data-aue-model$="section"]');
   return Array.from(sections); // Convert NodeList to an Array
 }
 function updateUEInstrumentation() {
@@ -32,7 +32,7 @@ function updateUEInstrumentation() {
   // updated section filters according to the template
   if (template) {
     console.log("if template is there");
-    sections.forEach((section) => {
+    sectionList.forEach((section) => {
       console.log(section);
       setUEFilter(section, `${template}-section`);
     });
