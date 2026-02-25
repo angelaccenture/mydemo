@@ -436,22 +436,6 @@
     ]
   },
   {
-    "id": "form",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "Form"
-      },
-      {
-        "component": "text",
-        "name": "action",
-        "label": "Action URL",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "fragment",
     "fields": [
       {
