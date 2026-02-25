@@ -18,7 +18,7 @@ function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
 function getUniversalEditorSections() {
-  const sections = document.querySelectorAll('[data-aue]');
+  const sections = document.querySelectorAll('[data-aue-type="component"], [data-aue-label="Section"]');
   return Array.from(sections); // Convert NodeList to an Array
 }
 function updateUEInstrumentation() {
