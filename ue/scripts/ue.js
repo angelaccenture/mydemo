@@ -13,7 +13,7 @@ console.log("ue - 9:20")
 import { moveInstrumentation } from './ue-utils.js';
 
 //const ueEditor = window.adobe.universalEditor.editor;
-const ueItems = document.querySelectorAll('[data-aue-id]');
+const ueItems = document.querySelectorAll('[data-aue]');
 console.log(ueItems);
 //console.log(ueEditor.getModel());
 // or
