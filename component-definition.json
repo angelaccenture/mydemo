@@ -77,7 +77,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Button 3:47",
+          "title": "Button",
           "id": "button",
           "model": "button",
           "plugins": {
