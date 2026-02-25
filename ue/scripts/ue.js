@@ -138,10 +138,12 @@ const setupUEEventHandlers = () => {
 
     if (resource) {
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
+      console.log(element);
       if (!element) {
         return;
       }
       const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
+      console.log(blockEl);
       if (blockEl) {
         const block = blockEl.getAttribute('data-aue-model');
         const index = element.getAttribute('data-slide-index');
