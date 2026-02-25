@@ -1,4 +1,4 @@
-.card {
+.teaser {
   --spacing-default: var(--spacing-l);
 
   box-shadow: 0 1px 6px 0 rgba(0 0 0 / 12%);
@@ -9,8 +9,8 @@
 
   .card-inner {
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   &:not(.quiet) {
@@ -33,7 +33,7 @@
     }
   }
 
-  .card-content-container {
+  .teaser-content-container {
     padding: var(--spacing-default);
 
     :first-child {
@@ -45,12 +45,12 @@
       margin-bottom: 0;
     }
 
-    &:has(+ .card-cta-container) {
+    &:has(+ .teaser-cta-container) {
       padding: var(--spacing-default) var(--spacing-default) var(--spacing-m) var(--spacing-default);
     }
   }
 
-  .card-cta-container {
+  .teaser-cta-container {
     padding: 0 var(--spacing-default) var(--spacing-default) var(--spacing-default);
     margin: 0;
     display: flex;
@@ -77,7 +77,7 @@
     box-shadow: initial;
     background-color: initial;
 
-    .card-content-container * {
+    .teaser-content-container * {
       margin: 6px;
     }
   }
