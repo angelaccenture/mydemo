@@ -25,13 +25,13 @@ function updateUEInstrumentation() {
   const sections = main.querySelectorAll('[data-aue-model$="section"]');
   const templates = ['article'];
   console.log(template);
-  console.log(sections);
+  console.log(sections[0]);
 
   // updated section filters according to the template
   if (template) {
     console.log("if template is there");
-    // update section filters
     sections.forEach((section) => {
+      console.log("section for each");
       setUEFilter(section, `${template}-section`);
       console.log("setUEFilter");
     });
