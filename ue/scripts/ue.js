@@ -9,12 +9,10 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-console.log("ue - 9:20")
 import { moveInstrumentation } from './ue-utils.js';
 
 // set the filter for an UE editable
 function setUEFilter(element, filter) {
-  console.log("setUEFilter");
   element.dataset.aueFilter = filter;
 }
 function getUniversalEditorSections() {
@@ -22,7 +20,6 @@ function getUniversalEditorSections() {
   return Array.from(sections); // Convert NodeList to an Array
 }
 function updateUEInstrumentation() {
-  console.log("xcom code");
   const main = document.querySelector('main');
   const template = document.querySelector('meta[name="template"]')?.content;
   const sectionList = getUniversalEditorSections();
@@ -30,9 +27,7 @@ function updateUEInstrumentation() {
 
   // updated section filters according to the template
   if (template) {
-    console.log("if template is there");
     sectionList.forEach((section) => {
-      console.log(section);
       setUEFilter(section, `${template}-section`);
     });
   }
@@ -138,11 +133,13 @@ const setupUEEventHandlers = () => {
 
     if (resource) {
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
+      console.log("element");
       console.log(element);
       if (!element) {
         return;
       }
       const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
+        console.log("blockEl");
       console.log(blockEl);
       if (blockEl) {
         const block = blockEl.getAttribute('data-aue-model');
