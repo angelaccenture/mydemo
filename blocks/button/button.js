@@ -3,7 +3,9 @@ export default function init(el) {
   console.log(btnRoot);
 
   if (btnRoot) {
-      console.log(btnRoot.text);
+    const btnlink = btnRoot.contains('http://' || 'https://');
+    console.log(btnlink); 
+      console.log(btnRoot.innerHTML);
       const btn = document.createElement('a');
       btn.textContent = btndata.text.text;
      // console.log(btndata.text.parentElement);
