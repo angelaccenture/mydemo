@@ -1,20 +1,13 @@
 .teaser {
-  --spacing-default: var(--spacing-l);
 
-  box-shadow: 0 1px 6px 0 rgba(0 0 0 / 12%);
-  overflow: hidden;
-  background-color: light-dark(var(--color-gray-100), var(--color-gray-900));
-  color: light-dark(var(--color-dark), var(--color-light));
-  transition: all 0.25s ease-in-out;
-
-  .card-inner {
+  .teaser-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
   &:not(.quiet) {
-    .card-picture-container {
+    .teaser-picture-container {
       position: relative;
       padding-bottom: 60%;
 
