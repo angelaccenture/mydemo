@@ -3,17 +3,29 @@
     {
       "title": "Teaser",
       "id": "teaser",
+       "model": "teaser",
       "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "Teaser",
-              "model": "teaser",
-              "key-value": true
+        "da": {
+        "unsafeHTML": "<div class=\"teaser\"><div><div><p><picture><source type=\"image/webp\" srcset=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\" media=\"(min-width: 600px)\"><source type=\"image/webp\" srcset=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\"><source type=\"image/jpeg\" srcset=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\" media=\"(min-width: 600px)\"><img loading=\"lazy\" alt=\"Alt Text\" src=\"https://sidekick-library--aem-block-collection--adobe.aem.live/media_1300083772e9645ea9463e3ff16e3a87fec824b7c.jpg\" width=\"3840\" height=\"2160\"></picture></p><p><strong>Unmatched speed</strong></p><p>AEM is the fastest way to publish, create, and serve websites.</p></div></div></div>",
+         "fields": [
+            {
+              "name": "image",
+              "selector": "div>div>picture>img[src]"
+            },
+            {
+              "name": "imageAlt",
+              "selector": "div>div>picture>img[alt]"
+            },
+            {
+              "name": "title",
+              "selector": "div>div>p:nth-child(2)>strong"
+            },
+            {
+              "name": "text",
+              "selector": "div>div>p:nth-child(3)"
             }
-          }
-        }
+          ]
+      }
       }
     }
   ],
@@ -22,96 +34,46 @@
       "id": "teaser",
       "fields": [
         {
-          "component": "richtext",
-          "valueType": "string",
-          "value": "Your text will show here.",
-          "name": "teaserBlurb",
-          "label": "Title"
-        },
-        {
-          "component": "select",
-          "name": "teaserStyle",
-          "value": "image",
+          "component": "multiselect",
+          "name": "classes",
           "label": "Style",
-          "valueType": "string",
           "options": [
-            { "name": "Video", "value": "video" },
-            { "name": "Image", "value": "image" }
-          ]
-        },
-        {
-          "component": "container",
-          "label": "Video Properties",
-          "name": "videoProperties",
-          "valueType": "string",
-          "condition": { "===": [{ "var": "teaserStyle" }, "video"] },
-          "fields": [
-            {
-              "component": "text",
-              "valueType": "string",
-              "name": "videoReference",
-              "label": "Video Reference",
-              "multi": false,
-              "description": "Provide a URL for the video background."
+           {
+              "name": "Left",
+              "value": "left"
             },
             {
-              "component": "select",
-              "name": "videoBehavior",
-              "value": "autoplay",
-              "label": "Video Behavior (on load)",
-              "valueType": "string",
-              "options": [
-                { "name": "Autoplay", "value": "autoplay" },
-                { "name": "Pause", "value": "pause" }
-              ]
-            }
+              "name": "Right",
+              "value": "right"
+            }            
           ]
         },
-        {
-          "component": "container",
-          "label": "Image Properties",
-          "name": "imageProperties",
+         {
+          "component": "reference",
           "valueType": "string",
-          "condition": { "===": [{ "var": "teaserStyle" }, "image"] },
-          "fields": [
-            {
-              "component": "reference",
-              "valueType": "string",
-              "name": "imageRef",
-              "label": "Image",
-              "multi": false
-            },
-            {
-              "component": "text",
-              "valueType": "string",
-              "name": "alt",
-              "value": "Default alt",
-              "label": "Alt Text"
-            }
-          ]
+          "name": "image",
+          "label": "Image",
+          "multi": false
         },
         {
-          "component": "container",
-          "label": "Button Properties",
-          "name": "buttonProperties",
+          "component": "text",
           "valueType": "string",
-          "fields": [
-            {
-              "component": "text",
-              "valueType": "string",
-              "name": "btn-text",
-              "value": "Button",
-              "label": "Button Text"
-            },
-            {
-              "component": "aem-content",
-              "name": "btn-link",
-              "label": "Button Link",
-              "valueType": "string",
-              "rootPath": "",
-              "description": "Path to linked AEM content"
-            }
-          ]
+          "name": "imageAlt",
+          "label": "Image Alt",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "value": "",
+          "label": "Title",
+          "valueType": "string"
+        }, {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
         }
       ]
     }

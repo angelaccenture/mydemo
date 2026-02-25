@@ -9,34 +9,45 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
 import { moveInstrumentation } from './ue-utils.js';
-import { getMetadata } from '../../scripts/ak.js';
 
-// Remove Footer from being shown in UE
+// set the filter for an UE editable
+function setUEFilter(element, filter) {
+  element.dataset.aueFilter = filter;
+}
+function getUniversalEditorSections() {
+  const main = document.querySelector('main');
+  const sections = main.querySelectorAll('[data-aue-type="component"], [data-aue-label="Section"]');
+  return Array.from(sections); // Convert NodeList to an Array
+}
+function updateUEInstrumentation() {
+  const template = document.querySelector('meta[name="template"]')?.content;
+  const sectionList = getUniversalEditorSections();
+  console.log(`Found ${sectionList.length} Universal Editor sections:`, sectionList);
+
+  // updated section filters according to the template
+  if (template) {
+    sectionList.forEach((section) => {
+      console.log(section);
+      setUEFilter(section, `${template}-section`);
+    });
+  }
+}
+//Remove Footer from UE - rewrite later with aue:content-remove
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
   element.remove();
 });
 
-/*Add in Template Support to control blocks - IP*/
-function setUEFilter(element, filter) {
-  //This might help with template sections
-  element.dataset.aueFilter = filter;
-}
-const template = getMetadata('template');
-const sections = document.querySelectorAll('[data-aue-model$="section"]');
-
-
-/*Review all code below later*/
+/*Clean this file up later, keeping "as is" for now as reference and because some of this is working as expected and I need to figure out what is working and whats not*/
 const setupObservers = () => {
- const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
+  const mutatingBlocks = document.querySelectorAll('footer, div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
-
+     
         // detect the mutation type of the block or picture (for cards)
         const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
 
@@ -101,9 +112,9 @@ const setupObservers = () => {
   });
 };
 
-
 const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
+
   document.addEventListener('aue:content-patch', (event) => {
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
@@ -123,6 +134,8 @@ const setupUEEventHandlers = () => {
 
     if (resource) {
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
+      console.log("element");
+      console.log(element);
       if (!element) {
         return;
       }
@@ -167,4 +180,5 @@ const setupUEEventHandlers = () => {
 export default () => {
   setupObservers();
   setupUEEventHandlers();
+  updateUEInstrumentation();
 };

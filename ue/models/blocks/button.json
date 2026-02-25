@@ -1,18 +1,27 @@
 {
   "definitions": [
     {
-      "title": "Button",
+      "title": "Button - 10:37",
       "id": "button",
+      "model": "button",
       "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "Button",
-              "model": "button"
+        "da": {
+        "unsafeHTML": "<div class=\"button\"><div><p>Button Text</p><p>http://www.linkgoeshere.com</p><p>Aria Label</p></div></div>",
+        "fields": [
+            {
+              "name": "text",
+              "selector": "div>div>p"
+            },
+            {
+              "name": "link",
+              "selector": "div>div>p:nth-child(2)"
+            },
+            {
+              "name": "label",
+              "selector": "div>div>p:nth-child(3)"
             }
-          }
-        }
+          ]   
+      }
       }
     }
   ],
@@ -21,95 +30,34 @@
       "id": "button",
       "fields": [
         {
-          "component": "aem-content",
-          "name": "link",
-          "label": "Link",
-          "value": "/content"
-        },
-        {
-          "component": "text",
-          "name": "linkText",
-          "label": "Text",
-          "value": "Button"
-        },
-        {
-          "component": "text",
-          "name": "linkTitle",
-          "label": "Title",
-          "value": "Button"
-        },
-        {
-          "component": "select",
-          "name": "linkStyle",
-          "value": "",
-          "label": "Styles",
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
           "options": [
-            { "name": "Primary", "value": "primary" },
+           { "name": "Primary", "value": "primary" },
             { "name": "Secondary", "value": "secondary" },
             { "name": "Text Button", "value": "text-btn" },
             { "name": "Input",        "value": "primary-variant" },
-            { "name": "Input Secondary", "value": "secondary-variant" }
+            { "name": "Input Secondary", "value": "secondary-variant" }   
           ]
-        },
-        {
-          "component": "boolean",
-          "name": "icondropdown",
-          "value": false,
-          "label": "Add Icon"
-        },
-        {
-          "component": "container",
-          "label": "Icon styles",
-          "name": "iconStyles",
-          "condition": { "===": [{ "var": "icondropdown" }, true] },
-          "fields": [
-            {
-              "component": "select",
-              "name": "IconPlacement",
-              "value": "trailing",
-              "label": "Icon Placement",
-              "options": [
-                { "name": "After", "value": "trailing" },
-                { "name": "Before", "value": "leading" }
-              ]
-            },
-            {
-              "component": "text",
-              "name": "linkIconText",
-              "label": "Icon Text",
-              "value": ""
-            }
-          ]
-        },
-        {
-        "component": "boolean",
-        "name": "inverse",
-        "label": "inverse",
-        "valueType": "boolean",
-        "value": false
-        },
-        {
-          "component": "select",
-          "name": "sizeClasses",
-          "value": "large",
-          "label": "Size",
-          "options": [
-            { "name": "Default", "value": "" },
-            { "name": "Large", "value": "large" },
-            { "name": "Small", "value": "small" }
-          ]
-        },
-        {
-          "component": "boolean",
-          "name": "openInNewTab",
-          "label": "Opens button in new tab",
-          "value": false
         },
         {
           "component": "text",
-          "name": "buttonId",
-          "label": "ID",
-          "value": ""
+          "valueType": "string",
+          "name": "text",
+          "label": "Text"
+        },
+        {
+          "component": "text",
+          "name": "link",
+          "label": "URL",
+          "valueType": "string"
+        },
+         {
+          "component": "text",
+          "name": "label",
+          "label": "Aria Label",
+          "valueType": "string"
         }
       ]
     }

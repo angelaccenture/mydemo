@@ -40,9 +40,6 @@
         {
           "...": "./blocks/hero.json#/definitions"
         },
-        {
-          "...": "./blocks/modal.json#/definitions"
-        },
         { 
           "...": "./blocks/table.json#/definitions"
         },
