@@ -23,7 +23,6 @@ function getUniversalEditorSections() {
 function updateUEInstrumentation() {
   const template = document.querySelector('meta[name="template"]')?.content;
   const sectionList = getUniversalEditorSections();
-  console.log(`Found ${sectionList.length} Universal Editor sections:`, sectionList);
 
   // updated section filters according to the template
   if (template) {
@@ -135,8 +134,7 @@ const setupUEEventHandlers = () => {
 
     if (resource) {
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
-      console.log("element");
-      console.log(element);
+      //console.log(element);
       if (!element) {
         return;
       }
