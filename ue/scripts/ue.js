@@ -17,14 +17,17 @@ function setUEFilter(element, filter) {
   console.log("setUEFilter");
   element.dataset.aueFilter = filter;
 }
+function getUniversalEditorSections() {
+  // Query for all elements with the specific Universal Editor section data attribute
+  const sections = document.querySelectorAll('[data-aue-type="section"]');
+  return Array.from(sections); // Convert NodeList to an Array
+}
 function updateUEInstrumentation() {
   console.log("xcom code");
   const main = document.querySelector('main');
   const template = document.querySelector('meta[name="template"]')?.content;
-  //const sections = main.querySelectorAll('[data-aue-model$="section"]');
-  const sections = main.querySelectorAll('section');
-  console.log(template);
-  console.log(sections);
+  const sectionList = getUniversalEditorSections();
+  console.log(`Found ${sectionList.length} Universal Editor sections:`, sectionList);
 
   // updated section filters according to the template
   if (template) {
