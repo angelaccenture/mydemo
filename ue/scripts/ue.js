@@ -9,8 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
-/*Clean this file up later, keeping "as is" for now as reference and because some of this is working as expected and I need to figure out what is working and whats not*/
+console.log("ue - 8:40")
 import { moveInstrumentation } from './ue-utils.js';
 //Update for Templates - pulled from xcom
 // set the filter for an UE editable
@@ -25,6 +24,7 @@ function updateUEInstrumentation() {
   //const sections = main.querySelectorAll('[data-aue-model$="section"]');
   const sections = main.querySelectorAll('section');
   console.log(template);
+  console.log(sections);
 
   // updated section filters according to the template
   if (template) {
@@ -36,17 +36,13 @@ function updateUEInstrumentation() {
     });
   }
 }
-
-
-
 //Remove Footer from UE - rewrite later with aue:content-remove
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
   element.remove();
 });
 
-console.log("ue - 8:40")
-
+/*Clean this file up later, keeping "as is" for now as reference and because some of this is working as expected and I need to figure out what is working and whats not*/
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('footer, div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
