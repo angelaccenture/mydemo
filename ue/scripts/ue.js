@@ -16,11 +16,11 @@ function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
 function getUniversalEditorSections() {
-  const sections = document.querySelectorAll('[data-aue-type="component"], [data-aue-label="Section"]');
+  const main = document.querySelector('main');
+  const sections = main.querySelectorAll('[data-aue-type="component"], [data-aue-label="Section"]');
   return Array.from(sections); // Convert NodeList to an Array
 }
 function updateUEInstrumentation() {
-  const main = document.querySelector('main');
   const template = document.querySelector('meta[name="template"]')?.content;
   const sectionList = getUniversalEditorSections();
   console.log(`Found ${sectionList.length} Universal Editor sections:`, sectionList);
@@ -28,6 +28,7 @@ function updateUEInstrumentation() {
   // updated section filters according to the template
   if (template) {
     sectionList.forEach((section) => {
+      console.log(section);
       setUEFilter(section, `${template}-section`);
     });
   }
@@ -139,8 +140,6 @@ const setupUEEventHandlers = () => {
         return;
       }
       const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
-        console.log("blockEl");
-      console.log(blockEl);
       if (blockEl) {
         const block = blockEl.getAttribute('data-aue-model');
         const index = element.getAttribute('data-slide-index');
