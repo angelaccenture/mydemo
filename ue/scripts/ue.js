@@ -12,17 +12,6 @@
 
 /*Clean this file up later, keeping "as is" for now as reference and because some of this is working as expected and I need to figure out what is working and whats not*/
 import { moveInstrumentation } from './ue-utils.js';
-import { getMetadata } from '../../scripts/ak.js';
-
-//Angel Code
-const gettemplate = getMetadata('template');
-const cursections = document.querySelectorAll('section');
-const getsections = document.querySelectorAll('[data-aue-model$="section"]');
-console.log(gettemplate);
-console.log(cursections);
-console.log(getsections);
-console.log("Angel 3 vars above");
-
 //Update for Templates - pulled from xcom
 // set the filter for an UE editable
 function setUEFilter(element, filter) {
@@ -39,7 +28,8 @@ function updateUEInstrumentation() {
   console.log(sections);
 
   // updated section filters according to the template
-  if (templates.includes(template)) {
+  if (template) {
+    console.log("if template is there");
     // update section filters
     sections.forEach((section) => {
       setUEFilter(section, `${template}-section`);
