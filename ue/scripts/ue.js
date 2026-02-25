@@ -114,7 +114,9 @@ const setupObservers = () => {
 const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-    console.log("this should fix image issue");
+    console.log("this is where image issue needs to be fixed");
+    console.log(event.detail.patch.name);
+
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       console.log("if not finding");
       const newImgSrc = event.detail.patch.value;
