@@ -10,7 +10,7 @@
         "fields": [
             {
               "name": "text",
-              "selector": "div>div>p"
+              "selector": "div>div>p>a"
             },
             {
               "name": "link",
