@@ -30,6 +30,7 @@ function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
 function updateUEInstrumentation() {
+  console.log("xcom code");
   const main = document.querySelector('main');
   const template = document.querySelector('meta[name="template"]')?.content;
   const sections = main.querySelectorAll('[data-aue-model$="section"]');
