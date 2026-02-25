@@ -13,12 +13,20 @@
 /*Clean this file up later, keeping "as is" for now as reference and because some of this is working as expected and I need to figure out what is working and whats not*/
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
+
+//Angel Code
 const template = getMetadata('template');
 const cursections = document.querySelectorAll('section');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
 console.log(cursections);
 
-//Update for Templates
+//Update for Templates - pulled from xcom
+// set the filter for an UE editable
+function setUEFilter(element, filter) {
+  element.dataset.aueFilter = filter;
+}
+
+
 function updateUEInstrumentation() {
   const main = document.querySelector('main');
   const template = document.querySelector('meta[name="template"]')?.content;
