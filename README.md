@@ -20,6 +20,9 @@ For projects that want a few more batteries. Built by the team who brought you d
 
 ## Features
 
+### UE Support
+* Added /ue code from DA Block collection, added UE support into scripts.js, updated error.js to disable for UE
+
 ### Localization & globalization
 * Language only support - Ex: en, de, hi, ja
 * Region only support - Ex: en-us, en-ca, de-de, de-ch
