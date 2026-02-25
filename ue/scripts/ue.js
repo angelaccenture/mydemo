@@ -9,25 +9,29 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+
+
+
+
+import { showSlide } from '../../blocks/carousel/carousel.js';
 import { moveInstrumentation } from './ue-utils.js';
 
-// set the filter for an UE editable
+// updated section filters according to the template
 function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
 function getUniversalEditorSections() {
   const main = document.querySelector('main');
-  const sections = main.querySelectorAll('[data-aue-type="component"], [data-aue-label="Section"]');
-  return Array.from(sections); // Convert NodeList to an Array
+  const sections = main.querySelectorAll('[data-aue-label="Section"]');
+  return Array.from(sections); 
 }
 function updateUEInstrumentation() {
   const template = document.querySelector('meta[name="template"]')?.content;
   const sectionList = getUniversalEditorSections();
-  console.log(`Found ${sectionList.length} Universal Editor sections:`, sectionList);
-
-  // updated section filters according to the template
   if (template) {
     sectionList.forEach((section) => {
+      console.log("section getting template");
       console.log(section);
       setUEFilter(section, `${template}-section`);
     });
@@ -39,17 +43,18 @@ elementsToRemove.forEach(element => {
   element.remove();
 });
 
-/*Clean this file up later, keeping "as is" for now as reference and because some of this is working as expected and I need to figure out what is working and whats not*/
+
+/*Original File Need to review below*/
 const setupObservers = () => {
-  const mutatingBlocks = document.querySelectorAll('footer, div.cards, div.carousel, div.accordion');
+  const mutatingBlocks = document.querySelectorAll('div.cards, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
-     
+
         // detect the mutation type of the block or picture (for cards)
-        const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-model']?.value;
+        const type = mutation.target.classList.contains('cards-card-image') ? 'cards-image' : mutation.target.attributes['data-aue-component']?.value;
 
         switch (type) {
           case 'cards':
@@ -85,7 +90,7 @@ const setupObservers = () => {
             }
             break;
           case 'carousel':
-            if (removedElements.length === 1 && removedElements[0].attributes['data-aue-model']?.value === 'carousel-item') {
+            if (removedElements.length === 1 && removedElements[0].attributes['data-aue-component']?.value === 'carousel-item') {
               const resourceAttr = removedElements[0].getAttribute('data-aue-resource');
               if (resourceAttr) {
                 const itemMatch = resourceAttr.match(/item-(\d+)/);
@@ -114,7 +119,6 @@ const setupObservers = () => {
 
 const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
-
   document.addEventListener('aue:content-patch', (event) => {
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
       const newImgSrc = event.detail.patch.value;
@@ -134,14 +138,12 @@ const setupUEEventHandlers = () => {
 
     if (resource) {
       const element = document.querySelector(`[data-aue-resource="${resource}"]`);
-      console.log("element");
-      console.log(element);
       if (!element) {
         return;
       }
       const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
       if (blockEl) {
-        const block = blockEl.getAttribute('data-aue-model');
+        const block = blockEl.getAttribute('data-aue-component');
         const index = element.getAttribute('data-slide-index');
 
         switch (block) {

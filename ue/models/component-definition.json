@@ -32,16 +32,10 @@
           "...": "./blocks/card.json#/definitions"
         },
         {
-          "...": "./blocks/form.json#/definitions"
-        },
-        {
           "...": "./blocks/fragment.json#/definitions"
         },
         {
           "...": "./blocks/hero.json#/definitions"
-        },
-        { 
-          "...": "./blocks/table.json#/definitions"
         },
         {
           "...": "./blocks/teaser.json#/definitions"

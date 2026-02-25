@@ -1,30 +1,8 @@
-## Angel Updates
-UE support:
-   - IP: Clean up code in ue.js
-   - IP: fix image issues
-   - IP: Ability to add multiple classes behind block names
-   - Updated error.js to not show any errors in UE (not needed)
-   - Updated to remove footer in UE
-   - Updated to filter blocks based on templates
-   - Nice to Have/Doesn't exist in any repo: Lock blocks down to template, so author can't delete them
-
-DA Library Updates:
-   - IP: Add Library Plugin
-
-Tools:
-  - Tagger
-  - IP: get more
-
-Block Status:
-- Removed columns (since we can use section as columns), youtube
-- IP: Added Button, Form, Teaser, verify fragment in UE
-- IP: Section grid system (full support - columns based on viewport, hide/show based on viewport)
-- Updated Advanced Tabs so that it can be included as Frag or stand alone on a page with other blocks (author preference)
-   - IP: Update so that author can have different blocks within advanced blocks
-   - IP: Update so that different blocks show based on template
-   - Build out advanced carousel and advanced accordion
-
-
+### UE Support
+* Added /ue code from DA Block collection
+* Added UE support into scripts.js
+* Updated error.js to disable for UE
+* Added filter script to head.html
 
 # Author Kit
 For projects that want a few more batteries. Built by the team who brought you da.live and adobe.com.
@@ -59,6 +37,7 @@ For projects that want a few more batteries. Built by the team who brought you d
 ### Flexible section authoring
 * Optional containers to constrain content
 * Grids: 1-6
+* Columns: 1-12
 * Color scheme: light, dark
 * Gap: xs, s, m, l, xl, xxl
 * Spacing: xs, s, m, l, xl, xxl
@@ -83,9 +62,11 @@ For projects that want a few more batteries. Built by the team who brought you d
 ### Scheduled content
 * Schedule content using spreadsheets
 
-### Sidekick
+### Sidekick & pre-production
+* Quick Edit
 * Extensible plumbing for plugins
 * Schedule simulator
+* Convert production links to relative
 
 ### Performance
 * Extensible LCP detection
@@ -123,11 +104,10 @@ Default content is content that lives outside a block.
 XS, S, M, L, XL, XXL
 
 ### Emphasis
-default, quiet, strong, negative
+quiet, default, strong, negative
 
 ### Buttons
 accent, primary, secondary, negative
-
 (w/ outline variations)
 
 ### Columns
@@ -138,8 +118,7 @@ accent, primary, secondary, negative
 
 ### Color tokens
 blue, gray, green, magenta, organge, red, purple, yellow
-
 (w/ 100-900 variations)
 
-### Color Schemes
+### Color schemes
 light, dark
