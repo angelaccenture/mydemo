@@ -17,21 +17,22 @@ import { getMetadata } from '../../scripts/ak.js';
 //Angel Code
 const template = getMetadata('template');
 const cursections = document.querySelectorAll('section');
-const sections = document.querySelectorAll('[data-aue-model$="section"]');
-console.log(cursections);
+const getsections = document.querySelectorAll('[data-aue-model$="section"]');
+console.log("need to figure out how to pull sections");
 
 //Update for Templates - pulled from xcom
 // set the filter for an UE editable
 function setUEFilter(element, filter) {
+  console.log("setUEFilter");
   element.dataset.aueFilter = filter;
 }
-
-
 function updateUEInstrumentation() {
   const main = document.querySelector('main');
   const template = document.querySelector('meta[name="template"]')?.content;
   const sections = main.querySelectorAll('[data-aue-model$="section"]');
   const templates = ['article'];
+  console.log(template);
+  console.log(sections);
 
   // updated section filters according to the template
   if (templates.includes(template)) {
