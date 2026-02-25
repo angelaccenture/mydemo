@@ -14,8 +14,9 @@
 import { moveInstrumentation } from './ue-utils.js';
 import { getMetadata } from '../../scripts/ak.js';
 const template = getMetadata('template');
+const cursections = document.querySelectorAll('section');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
-console.log(sections);
+console.log(cursections);
 
 //Remove Footer from UE - rewrite later with aue:content-remove
 const elementsToRemove = document.querySelectorAll('footer');
@@ -23,7 +24,7 @@ elementsToRemove.forEach(element => {
   element.remove();
 });
 
-console.log("ue - 10:11am")
+console.log("ue - 8:30")
 
 const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('footer, div.cards, div.carousel, div.accordion');
