@@ -8,25 +8,38 @@
   > * {
     color: light-dark(var(--color-dark), var(--color-light));
   }
-
   &.grid-2 {
     --grid-size: 2;
   }
-
   &.grid-3 {
     --grid-size: 3;
   }
-
   &.grid-4 {
     --grid-size: 4;
   }
-
   &.grid-5 {
     --grid-size: 5;
   }
-
   &.grid-6 {
     --grid-size: 6;
+  }
+   &.grid-7 {
+    --grid-size: 7;
+  }
+   &.grid-8 {
+    --grid-size: 8;
+  }
+   &.grid-9 {
+    --grid-size: 9;
+  }
+   &.grid-10 {
+    --grid-size: 10;
+  }
+   &.grid-11 {
+    --grid-size: 11;
+  }
+   &.grid-12 {
+    --grid-size: 12;
   }
 
   &.gap-xs {

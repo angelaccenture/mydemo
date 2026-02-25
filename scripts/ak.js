@@ -283,7 +283,7 @@ function decorateDoc() {
 export async function loadArea({ area } = { area: document }) {
   const isDoc = area === document;
   if (isDoc) decorateDoc();
-  decoratePictures(area);
+  //decoratePictures(area);
   const { decorateArea } = getConfig();
   if (decorateArea) decorateArea({ area });
   const sections = decorateSections(area, isDoc);
