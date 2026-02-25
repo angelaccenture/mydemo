@@ -1,3 +1,9 @@
+### UE Support
+* Added /ue code from DA Block collection
+* Added UE support into scripts.js
+* Updated error.js to disable for UE
+* Added filter script to head.html
+
 # Author Kit
 For projects that want a few more batteries. Built by the team who brought you da.live and adobe.com.
 
@@ -19,9 +25,6 @@ For projects that want a few more batteries. Built by the team who brought you d
 1. **Recommended:** Install common npm packages like linting and testing: `npm i`.
 
 ## Features
-
-### UE Support
-* Added /ue code from DA Block collection, added UE support into scripts.js, updated error.js to disable for UE
 
 ### Localization & globalization
 * Language only support - Ex: en, de, hi, ja
