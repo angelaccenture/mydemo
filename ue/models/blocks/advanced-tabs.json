@@ -98,7 +98,6 @@
   ],
   "filters": [ {
       "id": "advanced-tabs",
-      "components": [
-      ]
+      "components": ["text","image"]
     }]
 }
