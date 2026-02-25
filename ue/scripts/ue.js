@@ -22,10 +22,9 @@ function updateUEInstrumentation() {
   console.log("xcom code");
   const main = document.querySelector('main');
   const template = document.querySelector('meta[name="template"]')?.content;
-  const sections = main.querySelectorAll('[data-aue-model$="section"]');
-  const templates = ['article'];
+  //const sections = main.querySelectorAll('[data-aue-model$="section"]');
+  const sections = main.querySelectorAll('section');
   console.log(template);
-  console.log(sections[0]);
 
   // updated section filters according to the template
   if (template) {
