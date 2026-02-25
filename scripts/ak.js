@@ -76,7 +76,7 @@ function loadTemplate() {
   });
 }
 
-function decoratePictures(el) {
+/*function decoratePictures(el) {
   const pics = el.querySelectorAll('picture');
   for (const pic of pics) {
     const source = pic.querySelector('source');
@@ -88,7 +88,7 @@ function decoratePictures(el) {
     clone.setAttribute('media', '(min-width: 1440px)');
     pic.prepend(clone);
   }
-}
+}*/
 
 /*
 function decorateButton(link) {
