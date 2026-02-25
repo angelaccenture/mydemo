@@ -9,7 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-console.log("ue - 8:40")
+console.log("ue - 8:50")
 import { moveInstrumentation } from './ue-utils.js';
 //Update for Templates - pulled from xcom
 // set the filter for an UE editable
@@ -30,9 +30,8 @@ function updateUEInstrumentation() {
   if (template) {
     console.log("if template is there");
     sections.forEach((section) => {
-      console.log("section for each");
+      console.log(section);
       setUEFilter(section, `${template}-section`);
-      console.log("setUEFilter");
     });
   }
 }
