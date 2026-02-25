@@ -76,7 +76,7 @@ function loadTemplate() {
   });
 }
 
-/*function decoratePictures(el) {
+function decoratePictures(el) {
   const pics = el.querySelectorAll('picture');
   for (const pic of pics) {
     const source = pic.querySelector('source');
@@ -88,7 +88,7 @@ function loadTemplate() {
     clone.setAttribute('media', '(min-width: 1440px)');
     pic.prepend(clone);
   }
-}*/
+}
 
 /*
 function decorateButton(link) {
@@ -283,7 +283,7 @@ function decorateDoc() {
 export async function loadArea({ area } = { area: document }) {
   const isDoc = area === document;
   if (isDoc) decorateDoc();
-  //decoratePictures(area);
+  decoratePictures(area);
   const { decorateArea } = getConfig();
   if (decorateArea) decorateArea({ area });
   const sections = decorateSections(area, isDoc);
