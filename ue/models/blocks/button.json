@@ -1,12 +1,12 @@
 {
   "definitions": [
     {
-      "title": "Button - 10:37",
+      "title": "Button - 12:21",
       "id": "button",
       "model": "button",
       "plugins": {
         "da": {
-        "unsafeHTML": "<div class=\"button primary\"><div><div><p>Button Text</p><p>http://www.linkgoeshere.com</p><p>Aria Label</p></div></div></div>",
+        "unsafeHTML": "<div class=\"button primary\"><div><div><a href=\"http://www.linkgoeshere.com\" title=\"Aria Label\">Button Text</a></div></div></div>",
         "fields": [
             {
               "name": "text",
