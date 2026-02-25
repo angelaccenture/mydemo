@@ -18,6 +18,25 @@ const cursections = document.querySelectorAll('section');
 const sections = document.querySelectorAll('[data-aue-model$="section"]');
 console.log(cursections);
 
+//Update for Templates
+function updateUEInstrumentation() {
+  const main = document.querySelector('main');
+  const template = document.querySelector('meta[name="template"]')?.content;
+  const sections = main.querySelectorAll('[data-aue-model$="section"]');
+  const templates = ['article'];
+
+  // updated section filters according to the template
+  if (templates.includes(template)) {
+    // update section filters
+    sections.forEach((section) => {
+      setUEFilter(section, `${template}-section`);
+      console.log("setUEFilter");
+    });
+  }
+}
+
+
+
 //Remove Footer from UE - rewrite later with aue:content-remove
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
@@ -164,4 +183,5 @@ const setupUEEventHandlers = () => {
 export default () => {
   setupObservers();
   setupUEEventHandlers();
+  updateUEInstrumentation();
 };
