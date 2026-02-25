@@ -12,8 +12,7 @@ const locales = {
   '/zh': { lang: 'zh' },
 };
 
-// Widget patterns to look for
-const widgets = [
+const linkBlocks = [
   { fragment: '/fragments/' },
   { schedule: '/schedules/' },
   { youtube: 'https://www.youtube' },
@@ -35,16 +34,15 @@ const decorateArea = ({ area = document }) => {
 };
 
 export async function loadPage() {
-  setConfig({ hostnames, locales, widgets, components, decorateArea });
+  setConfig({ hostnames, locales, linkBlocks, components, decorateArea });
   await loadArea();
-}
-// UE Editor support before page load - Need to review before uncommenting
-if (window.location.hostname.includes('ue.da.live')) {
-  await import(`../ue/scripts/ue.js`).then(({ default: ue }) => ue());
 }
 await loadPage();
 
 (function da() {
-  const ref = new URL(window.location.href).searchParams.get('dapreview');
-  if (ref) import('../tools/da/da.js').then((mod) => mod.default(loadPage));
+  const { searchParams } = new URL(window.location.href);
+  const hasPreview = searchParams.has('dapreview');
+  if (hasPreview) import('../tools/da/da.js').then((mod) => mod.default(loadPage));
+  const hasQE = searchParams.has('quick-edit');
+  if (hasQE) import('../tools/quick-edit/quick-edit.js').then((mod) => mod.default());
 }());
