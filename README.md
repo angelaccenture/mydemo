@@ -1,14 +1,27 @@
 ## Angel Updates
-1. UE support
+UE support:
+   - IP: Clean up code in ue.js
+   - IP: fix image issues
+   - IP: Ability to add multiple classes behind block names
    - Updated error.js to not show any errors in UE (not needed)
    - Updated to remove footer in UE
    - Updated to filter blocks based on templates
    - Nice to Have/Doesn't exist in any repo: Lock blocks down to template, so author can't delete them
-2. Updated Advanced Tabs so that it can be included as Frag or stand alone on a page with other blocks (author preference)
+DA Library Updates:
+   - IP: Add Library Plugin
+Tools:
+  - Tagger
+  - IP: get more
+
+Block Status:
+- Removed columns (since we can use section as columns), youtube
+- IP: Added Button, Form, Teaser, verify fragment in UE
+- IP: Section grid system (full support - columns based on viewport, hide/show based on viewport)
+- Updated Advanced Tabs so that it can be included as Frag or stand alone on a page with other blocks (author preference)
    - IP: Update so that author can have different blocks within advanced blocks
    - IP: Update so that different blocks show based on template
-3. IP - Section grid system (full support like AEM standard - columns based on viewport, hide/show based on viewport)
-4. IP - Get more tools like tagger, etc.
+   - Build out advanced carousel and advanced accordion
+
 
 
 # Author Kit
