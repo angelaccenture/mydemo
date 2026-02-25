@@ -17,7 +17,7 @@ function setUEFilter(element, filter) {
 }
 function getUniversalEditorSections() {
   const main = document.querySelector('main');
-  const sections = main.querySelectorAll('[data-aue-type="component"], [data-aue-label="Section"]');
+  const sections = main.querySelectorAll('[data-aue-label="Section"]');
   return Array.from(sections); // Convert NodeList to an Array
 }
 function updateUEInstrumentation() {
@@ -28,6 +28,7 @@ function updateUEInstrumentation() {
   // updated section filters according to the template
   if (template) {
     sectionList.forEach((section) => {
+      console.log("section getting template");
       console.log(section);
       setUEFilter(section, `${template}-section`);
     });
