@@ -114,7 +114,9 @@ const setupObservers = () => {
 const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
+    console.log("this should fix image issue");
     if (event.detail.patch.name.match(/img.*\[src\]/)) {
+      console.log("if not finding");
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
 
@@ -126,7 +128,7 @@ const setupUEEventHandlers = () => {
     }
   });
 
-  document.addEventListener('aue:ui-select', (event) => {
+ /* document.addEventListener('aue:ui-select', (event) => {
     const { detail } = event;
     const resource = detail?.resource;
 
@@ -170,11 +172,11 @@ const setupUEEventHandlers = () => {
         }
       }
     }
-  });
+  });*/
 };
 
 export default () => {
   //setupObservers();
-  //setupUEEventHandlers();
+  setupUEEventHandlers();
   updateUEInstrumentation();
 };
