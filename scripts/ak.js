@@ -191,7 +191,7 @@ export function decorateLink(config, a) {
       const localized = localizeUrl({ config, url });
       if (localized) a.href = localized.href;
     }
-    decorateButton(a);
+   // decorateButton(a);
     if (!dnb) {
       const { href } = a;
       const found = config.linkBlocks.some((pattern) => {

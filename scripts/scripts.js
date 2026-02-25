@@ -37,6 +37,10 @@ export async function loadPage() {
   setConfig({ hostnames, locales, linkBlocks, components, decorateArea });
   await loadArea();
 }
+// UE Editor support
+if (window.location.hostname.includes('ue.da.live')) {
+  await import(`../ue/scripts/ue.js`).then(({ default: ue }) => ue());
+}
 await loadPage();
 
 (function da() {
