@@ -45,14 +45,14 @@ const setupUEEventHandlers = () => {
 
     if (event.detail.patch.name == 'image') {
       console.log("if image yes");
-      //const newImgSrc = event.detail.patch.value;
-      //const picture = event.srcElement.querySelector('picture');
+      const newImgSrc = event.detail.patch.value;
+      const picture = event.srcElement.querySelector('picture');
 
-      /*if (picture) {
+      if (picture) {
         picture.querySelectorAll('source').forEach((source) => {
           source.setAttribute('srcset', newImgSrc);
         });
-      }*/
+      }
     }
   });
 
