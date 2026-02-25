@@ -9,7 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-console.log("ue - 8:50")
+console.log("ue - 9:20")
 import { moveInstrumentation } from './ue-utils.js';
 //Update for Templates - pulled from xcom
 // set the filter for an UE editable
@@ -18,8 +18,7 @@ function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
 function getUniversalEditorSections() {
-  // Query for all elements with the specific Universal Editor section data attribute
-  const sections = document.querySelectorAll('[data-aue-model$="section"]');
+  const sections = document.querySelectorAll('section');
   return Array.from(sections); // Convert NodeList to an Array
 }
 function updateUEInstrumentation() {
