@@ -58,6 +58,17 @@
           },
           "filter": "article-section",
           "model": "section"
+        },
+        {
+          "title": "HomePage Section",
+          "id": "homepage-section",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div></div>"
+            }
+          },
+          "filter": "homepage-section",
+          "model": "section"
         }
       ]
     },
