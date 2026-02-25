@@ -371,7 +371,7 @@
         "component": "text",
         "valueType": "string",
         "name": "text",
-        "label": "Text"
+        "label": "Display Text"
       },
       {
         "component": "text",
@@ -382,7 +382,7 @@
       {
         "component": "text",
         "name": "label",
-        "label": "Aria Label",
+        "label": "Title",
         "valueType": "string"
       }
     ]
@@ -486,7 +486,11 @@
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false
+        "required": true,
+        "multi": false,
+        "validation": {
+          "customErrorMsg": "Image is required"
+        }
       },
       {
         "component": "text",

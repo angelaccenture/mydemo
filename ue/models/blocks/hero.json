@@ -65,7 +65,11 @@
           "valueType": "string",
           "name": "image",
           "label": "Image",
-          "multi": false
+          "required": true,
+          "multi": false,
+           "validation": {
+              "customErrorMsg": "Image is required"
+          }
         },
         {
           "component": "text",
