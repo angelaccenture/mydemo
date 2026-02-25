@@ -12,19 +12,13 @@
 console.log("ue - 9:20")
 import { moveInstrumentation } from './ue-utils.js';
 
-//const ueEditor = window.adobe.universalEditor.editor;
-const ueItems = document.querySelectorAll('[data-aue]');
-console.log(ueItems);
-//console.log(ueEditor.getModel());
-// or
-//console.log(ueEditor.getAllItems());
 // set the filter for an UE editable
 function setUEFilter(element, filter) {
   console.log("setUEFilter");
   element.dataset.aueFilter = filter;
 }
 function getUniversalEditorSections() {
-  const sections = document.querySelectorAll('.section');
+  const sections = document.querySelectorAll('[data-aue]');
   return Array.from(sections); // Convert NodeList to an Array
 }
 function updateUEInstrumentation() {
