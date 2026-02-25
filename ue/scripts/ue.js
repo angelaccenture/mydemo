@@ -44,7 +44,7 @@ const setupUEEventHandlers = () => {
     console.log("this is where image issue needs to be fixed");
     console.log(event.detail.patch.name);
 
-    if (event.detail.patch.name.match(/image.*\[src\]/)) {
+    if (event.detail.patch.name == 'image') {
       console.log("if not finding");
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
