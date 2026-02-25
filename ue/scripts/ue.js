@@ -41,19 +41,18 @@ elementsToRemove.forEach(element => {
 const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-    console.log("this is where image issue needs to be fixed");
     console.log(event.detail.patch.name);
 
     if (event.detail.patch.name == 'image') {
-      console.log("if not finding");
-      const newImgSrc = event.detail.patch.value;
-      const picture = event.srcElement.querySelector('picture');
+      console.log("if image yes");
+      //const newImgSrc = event.detail.patch.value;
+      //const picture = event.srcElement.querySelector('picture');
 
-      if (picture) {
+      /*if (picture) {
         picture.querySelectorAll('source').forEach((source) => {
           source.setAttribute('srcset', newImgSrc);
         });
-      }
+      }*/
     }
   });
 
