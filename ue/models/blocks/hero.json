@@ -76,7 +76,12 @@
           "valueType": "string",
           "name": "imageAlt",
           "label": "Alt",
-          "value": ""
+          "value": "",
+          "required": true,
+          "multi": false,
+           "validation": {
+              "customErrorMsg": "Alt Text is required"
+          }
         },
         {
           "component": "text",

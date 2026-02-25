@@ -410,14 +410,22 @@
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false
+        "required": true,
+        "multi": false,
+        "validation": {
+          "customErrorMsg": "Image is required"
+        }
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "imageAlt",
         "label": "Image Alt",
-        "multi": false
+        "required": true,
+        "multi": false,
+        "validation": {
+          "customErrorMsg": "Alt Text is required"
+        }
       },
       {
         "component": "text",
@@ -497,7 +505,12 @@
         "valueType": "string",
         "name": "imageAlt",
         "label": "Alt",
-        "value": ""
+        "value": "",
+        "required": true,
+        "multi": false,
+        "validation": {
+          "customErrorMsg": "Alt Text is required"
+        }
       },
       {
         "component": "text",
@@ -699,14 +712,22 @@
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false
+        "required": true,
+        "multi": false,
+        "validation": {
+          "customErrorMsg": "Image is required"
+        }
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "imageAlt",
         "label": "Image Alt",
-        "multi": false
+        "required": true,
+        "multi": false,
+        "validation": {
+          "customErrorMsg": "Alt Text is required"
+        }
       },
       {
         "component": "text",
