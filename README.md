@@ -7,8 +7,10 @@ UE support:
    - Updated to remove footer in UE
    - Updated to filter blocks based on templates
    - Nice to Have/Doesn't exist in any repo: Lock blocks down to template, so author can't delete them
+
 DA Library Updates:
    - IP: Add Library Plugin
+
 Tools:
   - Tagger
   - IP: get more
