@@ -86,15 +86,15 @@
               "fields": [
                 {
                   "name": "text",
-                  "selector": "div>div>p"
+                  "selector": "div>div>a"
                 },
                 {
                   "name": "link",
-                  "selector": "div>div>p:nth-child(2)"
+                  "selector": "div>div>a[href]"
                 },
                 {
                   "name": "label",
-                  "selector": "div>div>p:nth-child(3)"
+                  "selector": "div>div>div>a[title]"
                 }
               ]
             }
