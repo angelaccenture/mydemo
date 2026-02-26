@@ -10,6 +10,8 @@
  * governing permissions and limitations under the License.
  */
 
+import { moveInstrumentation } from './ue-utils.js';
+
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
@@ -22,9 +24,14 @@ function setUEFilter(element, filter) {
 }
 function getUniversalEditorSections() {
   const main = document.querySelector('main');
-  const allSections = main.querySelectorAll('[data-aue-label="Section"]');
+  //const allSections = main.querySelectorAll('[data-aue-label="Section"]');
   const tabSections = main.querySelectorAll('.tabSection');
   return Array.from(tabSections); 
+}
+function moveAdvancedBlocks () {
+    const tabBlock = main.querySelectorAll('.tabSection');
+    console.log("Move Tabs");
+    console.log(tabBlock);
 }
 
 function updateUEInstrumentationTabs() {
@@ -33,7 +40,6 @@ function updateUEInstrumentationTabs() {
   sectionList.forEach((section) => {
       console.log("just tabs now");
       console.log(section);
-      
       setUEFilter(section, `tabs-section`);
     });
 }
