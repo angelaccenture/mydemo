@@ -31,7 +31,7 @@ function getUniversalEditorSections() {
 function moveAdvancedBlocks () {
     const tabSection = document.querySelectorAll('.tabSection');
     console.log("Move Tabs");
-    console.log(tabBlock);
+    console.log(tabSection);
 }
 
 function updateUEInstrumentationTabs() {
