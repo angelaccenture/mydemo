@@ -56,7 +56,7 @@ const advancedBlocks = () => {
    console.log(sectionList);
    sectionList.forEach((section) => {
       console.log("just tabs now");
-      console.log(section);
+      console.log(section[0]);
       setUEFilter(section, `tabs-section`);
     });
 };
