@@ -19,25 +19,7 @@ async function loadMoudle(origin, payload) {
   loadQuickEdit(payload, loadPage);
 }
 
-// creates sidekick payload when loading QE from query param
-function generateSidekickPayload() {
-  let { hostname } = window.location;
-  if (hostname === 'localhost') {
-    hostname = document.querySelector('meta[property="hlx:proxyUrl"]').content;
-  }
-  const parts = hostname.split('.')[0].split('--');
-  const [, repo, owner] = parts;
-
-  return {
-    detail: {
-      config: { mountpoint: `https://content.da.live/${owner}/${repo}/` },
-      location: { pathname: window.location.pathname },
-    },
-  };
-}
-
 export default function init(payload) {
-  console.log("QE activated");
   const { search } = window.location;
   const ref = new URLSearchParams(search).get('quick-edit');
   let origin;
@@ -45,5 +27,5 @@ export default function init(payload) {
   if (ref === 'local') origin = 'http://localhost:6456';
   if (!origin) origin = `https://${ref}--da-nx--adobe.aem.live`;
   addImportmap();
-  loadMoudle(origin, payload || generateSidekickPayload());
+  loadMoudle(origin, payload);
 }
