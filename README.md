@@ -4,9 +4,9 @@
 * Updated error.js to disable for UE
 * Added filter script to head.html
 * Added scripts to package.json
-* ue.js - updated to include template support to hide/show blocks
 * ue.js - removed support for carousel/accordion, etc. since we are using advanced blocks
-* ue.js - updated to include section support for advanced tabs
+* ue.js - updated to to hide/show blocks first based on block type (advanced blocks), then by template
+
 
 # Author Kit
 For projects that want a few more batteries. Built by the team who brought you da.live and adobe.com.

@@ -246,8 +246,7 @@
     {
       "id": "tabs-section",
       "components": [
-        "text",
-        "image"
+        "section"
       ]
     }
   ]
