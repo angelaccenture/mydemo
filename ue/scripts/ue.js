@@ -51,11 +51,17 @@ function updateUEInstrumentationTemplate() {
 
 const setupObservers = () => {
   console.log("setupObservers");
-  const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.carousel, div.accordion');
+  const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.advanced-carousel, div.advanced-accordion');
   console.log(mutatingBlocks);
-  const observer = new MutationObserver((mutatingBlocks) => {
+   mutatingBlocks.forEach((mutation) => {
+    console.log(mutation);
+
+   });
+
+
+  const observer = new MutationObserver((mutations) => {
     console.log(observer);
-    mutatingBlocks.forEach((mutation) => {
+    mutations.forEach((mutation) => {
       console.log("mutations");
       console.log(mutation);
      // if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
