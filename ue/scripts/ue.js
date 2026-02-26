@@ -29,7 +29,7 @@ function getUniversalEditorSections() {
   return Array.from(tabSections); 
 }
 function moveAdvancedBlocks () {
-    const tabBlock = main.querySelectorAll('.tabSection');
+    const tabBlock = document.querySelector('.tabSection');
     console.log("Move Tabs");
     console.log(tabBlock);
 }
