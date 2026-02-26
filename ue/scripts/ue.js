@@ -16,27 +16,25 @@ elementsToRemove.forEach(element => {
   element.remove();
 });
 
-//Update section filters according to the template
+//Update section filters according to the template/block type
 function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
 function getUniversalEditorSections() {
   const main = document.querySelector('main');
-  const sections = main.querySelectorAll('[data-aue-label="Section"]');
-  return Array.from(sections); 
+  const allSections = main.querySelectorAll('[data-aue-label="Section"]');
+  const tabSections = main.querySelectorAll('.tabSection');
+  return Array.from(tabSections); 
 }
 
 function updateUEInstrumentationTabs() {
   const sectionList = getUniversalEditorSections();
   console.log(sectionList);
   sectionList.forEach((section) => {
-      console.log("look for tabs");
+      console.log("just tabs now");
       console.log(section);
-      const tabSection = main.querySelctorAll('.tabSection');
-      console.log("tabSections only");
-      console.log(tabSection)
       
-      //setUEFilter(section, `${template}-section`);
+      setUEFilter(section, `tab-section`);
     });
 }
 function updateUEInstrumentationTemplate() {
