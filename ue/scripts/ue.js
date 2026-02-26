@@ -53,10 +53,11 @@ const advancedBlocks = () => {
    });
    //Update section types for advanced blocks
    const sectionList = getUniversalEditorSections('.tabSection');
-   console.log(sectionList);
+   console.log("get the first one");
+   console.log(sectionList[0]);
    sectionList.forEach((section) => {
       console.log("just tabs now");
-      console.log(section[0]);
+      console.log(section);
       setUEFilter(section, `tabs-section`);
     });
 };
