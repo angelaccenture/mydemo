@@ -3,7 +3,7 @@
   "plugins": [
     {
       "id": "quick-edit",
-      "title": "QE",
+      "title": "Quick Edit",
       "event": "quick-edit",
       "environments": [ "dev", "preview" ]
     
