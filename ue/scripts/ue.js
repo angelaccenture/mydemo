@@ -28,7 +28,8 @@ function setUELabel(element, label) {
 
 function getUniversalEditorSections(sectionType) {
   const main = document.querySelector('main');
-  const allSections = main.querySelectorAll('[data-aue-label="Section"]');
+  const allSections = main.querySelectorAll('[data-aue-label="Section"]:not(.tabSection)');
+
   console.log(allSections);
   const sectionTypeAll = main.querySelectorAll(sectionType);
   return Array.from(sectionTypeAll); 
@@ -60,7 +61,7 @@ const advancedBlocks = () => {
    const sectionList = getUniversalEditorSections('.tabSection');
    sectionList.slice(1).forEach((section) => {
       setUEFilter(section, `tabs-section`);
-      setUELabel(section, `Tab Content`);
+      setUELabel(section, `Tab Section`);
     });
 };
 
