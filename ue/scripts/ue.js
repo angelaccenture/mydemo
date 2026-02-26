@@ -57,7 +57,7 @@ const setupObservers = () => {
     mutations.forEach((mutation) => {
       console.log("mutations");
       console.log(mutation);
-      if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
+     // if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
         console.log("If is here");
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
@@ -103,7 +103,7 @@ const setupObservers = () => {
           default:
             break;
         }
-      }
+      //}
     });
   });
 
