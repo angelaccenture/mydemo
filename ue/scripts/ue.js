@@ -9,9 +9,6 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-//import { moveInstrumentation } from './ue-utils.js';
-
-
 
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
@@ -28,7 +25,12 @@ function getUniversalEditorSections() {
   const sections = main.querySelectorAll('[data-aue-label="Section"]');
   return Array.from(sections); 
 }
-function updateUEInstrumentation() {
+
+function updateUEInstrumentationTabs() {
+  const sectionList = getUniversalEditorSections();
+  console.log(sectionList);
+}
+function updateUEInstrumentationTemplate() {
   const template = document.querySelector('meta[name="template"]')?.content;
   const sectionList = getUniversalEditorSections();
   if (template) {
@@ -60,56 +62,10 @@ const setupUEEventHandlers = () => {
     }
   });
 
- /* Keep for when I build carousel/accordion
- document.addEventListener('aue:ui-select', (event) => {
-    const { detail } = event;
-    const resource = detail?.resource;
-
-    if (resource) {
-      const element = document.querySelector(`[data-aue-resource="${resource}"]`);
-      if (!element) {
-        return;
-      }
-      const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
-      if (blockEl) {
-        const block = blockEl.getAttribute('data-aue-component');
-        const index = element.getAttribute('data-slide-index');
-
-        switch (block) {
-          case 'accordion':
-            blockEl.querySelectorAll('details').forEach((details) => {
-              details.open = false;
-            });
-            element.open = true;
-            break;
-          case 'carousel':
-            if (index) {
-              showSlide(blockEl, index);
-            }
-            break;
-          case 'tabs':
-            if (element === block) {
-              return;
-            }
-            blockEl.querySelectorAll('[role=tabpanel]').forEach((panel) => {
-              panel.setAttribute('aria-hidden', true);
-            });
-            element.setAttribute('aria-hidden', false);
-            blockEl.querySelector('.tabs-list').querySelectorAll('button').forEach((btn) => {
-              btn.setAttribute('aria-selected', false);
-            });
-            blockEl.querySelector(`[aria-controls=${element?.id}]`).setAttribute('aria-selected', true);
-            break;
-          default:
-            break;
-        }
-      }
-    }
-  });
-  */
 };
 
 export default () => {
   setupUEEventHandlers();
-  updateUEInstrumentation();
+  updateUEInstrumentationTabs();
+  updateUEInstrumentationTemplate();
 };
