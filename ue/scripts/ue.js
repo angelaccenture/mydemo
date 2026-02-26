@@ -28,7 +28,8 @@ function setUELabel(element, label) {
 
 function getUniversalEditorSections(sectionType) {
   const main = document.querySelector('main');
-  //const allSections = main.querySelectorAll('[data-aue-label="Section"]');
+  const allSections = main.querySelectorAll('[data-aue-label="Section"]');
+  console.log(allSections);
   const sectionTypeAll = main.querySelectorAll(sectionType);
   return Array.from(sectionTypeAll); 
 }
