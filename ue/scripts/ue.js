@@ -18,15 +18,15 @@ elementsToRemove.forEach(element => {
   element.remove();
 });
 
-//Update section filters according to the template/block type
+//Functions to update section filters according to the template/block type
 function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
 function getUniversalEditorSections(sectionType) {
   const main = document.querySelector('main');
   //const allSections = main.querySelectorAll('[data-aue-label="Section"]');
-  const sectionType = main.querySelectorAll(sectionType);
-  return Array.from(sectionType); 
+  const sectionTypeAll = main.querySelectorAll(sectionType);
+  return Array.from(sectionTypeAll); 
 }
 function updateUEInstrumentationTemplate() {
   const template = document.querySelector('meta[name="template"]')?.content;
