@@ -28,16 +28,6 @@ function getUniversalEditorSections() {
   const tabSections = main.querySelectorAll('.tabSection');
   return Array.from(tabSections); 
 }
-function moveAdvancedBlocks () {
-  //long way for now - but find block then move to parent (that way it will work for multiple blocks)
-    const tabSection = document.querySelectorAll('.tabSection');
-    const tabBlock = document.querySelectorAll('div.advanced-tabs');
-    console.log("Move Tabs - grab items");
-    console.log(tabSection[0]);
-    console.log(tabBlock);
-    moveInstrumentation(tabBlock, tabSection[0]);
-}
-
 function updateUEInstrumentationTabs() {
   const sectionList = getUniversalEditorSections();
   console.log(sectionList);
@@ -59,6 +49,60 @@ function updateUEInstrumentationTemplate() {
   }
 }
 
+const setupObservers = () => {
+  const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.carousel, div.accordion');
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
+        const addedElements = mutation.addedNodes;
+        const removedElements = mutation.removedNodes;
+
+        switch (type) {
+          case 'advanced-tabs':
+            console.log("advance tab move goes here");
+            if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
+              const ulEl = addedElements[0];
+              const removedDivEl = [...mutation.removedNodes].filter((node) => node.tagName === 'DIV');
+              removedDivEl.forEach((div, index) => {
+                if (index < ulEl.children.length) {
+                  moveInstrumentation(div, ulEl.children[index]);
+                }
+              });
+            }
+            break;
+          case 'accordion':
+            if (addedElements.length === 1 && addedElements[0].tagName === 'DETAILS') {
+              moveInstrumentation(removedElements[0], addedElements[0]);
+              moveInstrumentation(removedElements[0].querySelector('div'), addedElements[0].querySelector('summary'));
+            }
+            break;
+          case 'carousel':
+            if (removedElements.length === 1 && removedElements[0].attributes['data-aue-component']?.value === 'carousel-item') {
+              const resourceAttr = removedElements[0].getAttribute('data-aue-resource');
+              if (resourceAttr) {
+                const itemMatch = resourceAttr.match(/item-(\d+)/);
+                if (itemMatch && itemMatch[1]) {
+                  const slideIndex = parseInt(itemMatch[1], 10);
+                  const slides = mutation.target.querySelectorAll('li.carousel-slide');
+                  const targetSlide = Array.from(slides).find((slide) => parseInt(slide.getAttribute('data-slide-index'), 10) === slideIndex);
+                  if (targetSlide) {
+                    moveInstrumentation(removedElements[0], targetSlide);
+                  }
+                }
+              }
+            }
+            break;
+          default:
+            break;
+        }
+      }
+    });
+  });
+
+  mutatingBlocks.forEach((cardsBlock) => {
+    observer.observe(cardsBlock, { childList: true, subtree: true });
+  });
+};
 
 
 const setupUEEventHandlers = () => {
@@ -83,7 +127,7 @@ const setupUEEventHandlers = () => {
 
 export default () => {
   setupUEEventHandlers();
-  moveAdvancedBlocks();
+  setupObservers();
   //updateUEInstrumentationTabs();
   //updateUEInstrumentationTemplate();
 };
