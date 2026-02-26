@@ -54,6 +54,7 @@ const setupObservers = () => {
   const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.carousel, div.accordion');
   console.log(mutatingBlocks);
   const observer = new MutationObserver((mutations) => {
+    console.log(observer);
     mutations.forEach((mutation) => {
       console.log("mutations");
       console.log(mutation);
