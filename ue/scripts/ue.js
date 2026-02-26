@@ -29,11 +29,13 @@ function getUniversalEditorSections() {
   return Array.from(tabSections); 
 }
 function moveAdvancedBlocks () {
+  //long way for now - but find block then move to parent (that way it will work for multiple blocks)
     const tabSection = document.querySelectorAll('.tabSection');
     const tabBlock = document.querySelectorAll('div.advanced-tabs');
     console.log("Move Tabs - grab items");
     console.log(tabSection[0]);
     console.log(tabBlock);
+    moveInstrumentation(tabBlock, tabSection[0]);
 }
 
 function updateUEInstrumentationTabs() {
