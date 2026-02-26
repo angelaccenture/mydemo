@@ -22,20 +22,11 @@ elementsToRemove.forEach(element => {
 function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
-function getUniversalEditorSections() {
+function getUniversalEditorSections(sectionType) {
   const main = document.querySelector('main');
   //const allSections = main.querySelectorAll('[data-aue-label="Section"]');
-  const tabSections = main.querySelectorAll('.tabSection');
-  return Array.from(tabSections); 
-}
-function updateUEInstrumentationTabs() {
-  const sectionList = getUniversalEditorSections();
-  console.log(sectionList);
-  sectionList.forEach((section) => {
-      console.log("just tabs now");
-      console.log(section);
-      setUEFilter(section, `tabs-section`);
-    });
+  const sectionType = main.querySelectorAll(sectionType);
+  return Array.from(sectionType); 
 }
 function updateUEInstrumentationTemplate() {
   const template = document.querySelector('meta[name="template"]')?.content;
@@ -53,69 +44,21 @@ const advancedBlocks = () => {
   console.log("setupObservers");
   const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.advanced-carousel, div.advanced-accordion');
   console.log(mutatingBlocks);
+  //Move advanced blocks up to parent nodes
    mutatingBlocks.forEach((mutation) => {
     console.log(mutation);
     const getparentSection = mutation.closest('.tabSection');
     console.log(getparentSection);
     moveInstrumentation(mutation, getparentSection);
-
    });
-
-
- /*const observer = new MutationObserver((mutations) => {
-    console.log(observer);
-    mutations.forEach((mutation) => {
-      console.log("mutations");
-      console.log(mutation);
-     // if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
-        console.log("If is here");
-        const addedElements = mutation.addedNodes;
-        const removedElements = mutation.removedNodes;
-
-        switch (type) {
-          case 'advanced-tabs':
-            console.log("advance tab move goes here");
-             const ulEl = addedElements[0];
-             console.log(ulEl);
-            
-            if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
-              const ulEl = addedElements[0];
-              const removedDivEl = [...mutation.removedNodes].filter((node) => node.tagName === 'DIV');
-              removedDivEl.forEach((div, index) => {
-                if (index < ulEl.children.length) {
-                  moveInstrumentation(div, ulEl.children[index]);
-                }
-              });
-            }
-            break;
-          case 'accordion':
-            if (addedElements.length === 1 && addedElements[0].tagName === 'DETAILS') {
-              moveInstrumentation(removedElements[0], addedElements[0]);
-              moveInstrumentation(removedElements[0].querySelector('div'), addedElements[0].querySelector('summary'));
-            }
-            break;
-          case 'carousel':
-            if (removedElements.length === 1 && removedElements[0].attributes['data-aue-component']?.value === 'carousel-item') {
-              const resourceAttr = removedElements[0].getAttribute('data-aue-resource');
-              if (resourceAttr) {
-                const itemMatch = resourceAttr.match(/item-(\d+)/);
-                if (itemMatch && itemMatch[1]) {
-                  const slideIndex = parseInt(itemMatch[1], 10);
-                  const slides = mutation.target.querySelectorAll('li.carousel-slide');
-                  const targetSlide = Array.from(slides).find((slide) => parseInt(slide.getAttribute('data-slide-index'), 10) === slideIndex);
-                  if (targetSlide) {
-                    moveInstrumentation(removedElements[0], targetSlide);
-                  }
-                }
-              }
-            }
-            break;
-          default:
-            break;
-        }
-      //}
+   //Update section types for advanced blocks
+   const sectionList = getUniversalEditorSections('.tabSection');
+   console.log(sectionList);
+   sectionList.forEach((section) => {
+      console.log("just tabs now");
+      console.log(section);
+      setUEFilter(section, `tabs-section`);
     });
-  });*/
 };
 
 
