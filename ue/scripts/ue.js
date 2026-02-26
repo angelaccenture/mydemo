@@ -44,12 +44,11 @@ function updateSectionTemplate() {
 }
 
 const advancedBlocks = () => {
-  console.log("setupObservers");
   const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.advanced-carousel, div.advanced-accordion');
+  //Rewrite for all Advanced Blocks after I build them
   console.log(mutatingBlocks);
   //Move advanced blocks up to parent nodes
    mutatingBlocks.forEach((mutation) => {
-    console.log(mutation);
     const getparentSection = mutation.closest('.tabSection');
     console.log(getparentSection);
     moveInstrumentation(mutation, getparentSection);
@@ -86,6 +85,5 @@ const setupUEEventHandlers = () => {
 export default () => {
   setupUEEventHandlers();
   advancedBlocks();
-  //updateUEInstrumentationTabs();
-  //updateSectionTemplate();
+  updateSectionTemplate();
 };
