@@ -50,10 +50,14 @@ function updateUEInstrumentationTemplate() {
 }
 
 const setupObservers = () => {
+  console.log("setupObservers");
   const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.carousel, div.accordion');
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
+      console.log("mutations");
+      console.log(mutation);
       if (mutation.type === 'childList' && mutation.target.tagName === 'DIV') {
+        console.log("If is here");
         const addedElements = mutation.addedNodes;
         const removedElements = mutation.removedNodes;
 
