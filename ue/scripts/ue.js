@@ -20,7 +20,7 @@ sectionList.forEach((section) => {
     });
 const main = document.querySelector('main');
 const createSection = document.createElement('div');
-createSection.classList.add('section');
+//createSection.classList.add('section');
 main.appendChild(createSection)
 
 //Remove Footer from UE 
