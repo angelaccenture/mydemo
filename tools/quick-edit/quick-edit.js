@@ -37,6 +37,7 @@ function generateSidekickPayload() {
 }
 
 export default function init(payload) {
+  console.log("QE activated");
   const { search } = window.location;
   const ref = new URLSearchParams(search).get('quick-edit');
   let origin;
