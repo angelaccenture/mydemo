@@ -2,10 +2,10 @@
   "project": "Angel Fun Stuff",
   "plugins": [
     {
-      "id": "preview a",
+      "id": "quick-edit",
       "title": "Quick Edit",
       "environments": [ "dev", "preview" ],
-      "event": "preview a"
+      "event": "quick-edit"
     }
   ]
 }
