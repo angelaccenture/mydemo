@@ -69,6 +69,17 @@
           },
           "filter": "homepage-section",
           "model": "section"
+        },
+        {
+          "title": "Advanced Tabs Section",
+          "id": "tabs-section",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div></div>"
+            }
+          },
+          "filter": "tabs-section",
+          "model": "section"
         }
       ]
     },

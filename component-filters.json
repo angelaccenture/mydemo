@@ -38,6 +38,13 @@
     ]
   },
   {
+    "id": "tabs-section",
+    "components": [
+      "text",
+      "image"
+    ]
+  },
+  {
     "id": "advanced-accordion",
     "components": []
   },

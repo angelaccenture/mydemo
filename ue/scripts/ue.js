@@ -32,6 +32,10 @@ function updateUEInstrumentationTabs() {
   sectionList.forEach((section) => {
       console.log("look for tabs");
       console.log(section);
+      const tabSection = main.querySelctorAll('.tabSection');
+      console.log("tabSections only");
+      console.log(tabSection)
+      
       //setUEFilter(section, `${template}-section`);
     });
 }

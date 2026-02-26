@@ -11,7 +11,7 @@
       "filter": "section",
       "model": "section"
     },
-        {
+    {
       "title": "Article Section",
       "id": "article-section",
       "plugins": {
@@ -22,7 +22,7 @@
       "filter": "article-section",
       "model": "section"
     },
-       {
+    {
       "title": "HomePage Section",
       "id": "homepage-section",
       "plugins": {
@@ -31,6 +31,17 @@
         }
       },
       "filter": "homepage-section",
+      "model": "section"
+    },
+     {
+      "title": "Advanced Tabs Section",
+      "id": "tabs-section",
+      "plugins": {
+        "da": {
+          "unsafeHTML": "<div></div>"
+        }
+      },
+      "filter": "tabs-section",
       "model": "section"
     }
   ],
@@ -230,6 +241,13 @@
       "components": [
         "advanced-tabs",
         "advanced-carousel"
+      ]
+    },
+    {
+      "id": "tabs-section",
+      "components": [
+        "text",
+        "image"
       ]
     }
   ]
