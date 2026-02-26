@@ -12,6 +12,10 @@
 
 import { moveInstrumentation } from './ue-utils.js';
 
+const main = document.querySelector('main');
+const createSection = document.createElement('div');
+main.after(createSection,"test section")
+
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
