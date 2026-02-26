@@ -14,6 +14,10 @@ import { moveInstrumentation } from './ue-utils.js';
 
 const sectionList = getUniversalEditorSections('[data-aue-label="Section"]');
 console.log(sectionList);
+sectionList.forEach((section) => {
+      console.log("section each");
+      console.log(section);
+    });
 const main = document.querySelector('main');
 const createSection = document.createElement('div');
 main.after(createSection,"<p>test section</p>")
