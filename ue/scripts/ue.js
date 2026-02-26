@@ -52,6 +52,7 @@ function updateUEInstrumentationTemplate() {
 const setupObservers = () => {
   console.log("setupObservers");
   const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.carousel, div.accordion');
+  console.log(mutatingBlocks);
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       console.log("mutations");
