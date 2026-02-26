@@ -79,6 +79,7 @@ const setupUEEventHandlers = () => {
 
 export default () => {
   setupUEEventHandlers();
+  moveAdvancedBlocks();
   updateUEInstrumentationTabs();
   updateUEInstrumentationTemplate();
 };
