@@ -12,9 +12,11 @@
 
 import { moveInstrumentation } from './ue-utils.js';
 
+const sectionList = getUniversalEditorSections('[data-aue-label="Section"]');
+console.log(sectionList);
 const main = document.querySelector('main');
 const createSection = document.createElement('div');
-main.after(createSection,"test section")
+main.after(createSection,"<p>test section</p>")
 
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
