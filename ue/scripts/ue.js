@@ -28,15 +28,12 @@ function setUELabel(element, label) {
 
 function getUniversalEditorSections(sectionType) {
   const main = document.querySelector('main');
-  const allSections = main.querySelectorAll('[data-aue-label="Section"]:not(.advancedBlock)');
-
-  console.log(allSections);
   const sectionTypeAll = main.querySelectorAll(sectionType);
   return Array.from(sectionTypeAll); 
 }
 function updateSectionTemplate() {
   const template = document.querySelector('meta[name="template"]')?.content;
-  const sectionList = getUniversalEditorSections();
+  const sectionList = getUniversalEditorSections('[data-aue-label="Section"]:not(.tabSection)');
   if (template) {
     sectionList.forEach((section) => {
       console.log("section getting template");

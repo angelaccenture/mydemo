@@ -50,7 +50,7 @@ export default function init(el) {
 
    // Find the section that contains the actual block and only add class to tab sections
   const currSectionat = el.closest('.section .advanced-tabs');
-  const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection","advancedBlock");
+  const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
   const tabSection = document.querySelectorAll('.tabSection ~ .section');
   const tabItems = document.querySelector(".advanced-tabs ul");
   const tabCount = tabItems.childElementCount;
