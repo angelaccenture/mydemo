@@ -5,7 +5,7 @@
       "id": "quick-edit",
       "title": "QE",
       "event": "quick-edit",
-      "environments": [ "dev", "preview" ]
+      "environments": [ "dev", "previewHost" ]
     
     }
   ]
