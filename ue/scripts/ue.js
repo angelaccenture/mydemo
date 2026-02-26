@@ -21,7 +21,7 @@ sectionList.forEach((section) => {
 const main = document.querySelector('main');
 const createSection = document.createElement('div');
 createSection.classList.add('section');
-main.after(createSection,"<div class=\"default-content\"><p>Test New Section</p></div>")
+main.after(createSection)
 
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
