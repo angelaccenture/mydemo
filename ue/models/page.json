@@ -8,6 +8,10 @@
           "name": "template",
           "label": "Template",
           "options": [
+           {
+              "name": "No Template",
+              "value": ""
+            },
             {
               "name": "Blank Page",
               "value": "blankpage"
