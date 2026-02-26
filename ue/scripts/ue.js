@@ -60,6 +60,9 @@ const setupObservers = () => {
         switch (type) {
           case 'advanced-tabs':
             console.log("advance tab move goes here");
+             const ulEl = addedElements[0];
+             console.log(ulEl);
+            
             if (addedElements.length === 1 && addedElements[0].tagName === 'UL') {
               const ulEl = addedElements[0];
               const removedDivEl = [...mutation.removedNodes].filter((node) => node.tagName === 'DIV');
