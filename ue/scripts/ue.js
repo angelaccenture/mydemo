@@ -22,13 +22,17 @@ elementsToRemove.forEach(element => {
 function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
+function setUELabel(element, label) {
+  element.dataset.aueLabel = label;
+}
+
 function getUniversalEditorSections(sectionType) {
   const main = document.querySelector('main');
   //const allSections = main.querySelectorAll('[data-aue-label="Section"]');
   const sectionTypeAll = main.querySelectorAll(sectionType);
   return Array.from(sectionTypeAll); 
 }
-function updateUEInstrumentationTemplate() {
+function updateSectionTemplate() {
   const template = document.querySelector('meta[name="template"]')?.content;
   const sectionList = getUniversalEditorSections();
   if (template) {
@@ -53,12 +57,9 @@ const advancedBlocks = () => {
    });
    //Update section types for advanced blocks
    const sectionList = getUniversalEditorSections('.tabSection');
-   console.log("get the first one");
-   console.log(sectionList[0]);
    sectionList.slice(1).forEach((section) => {
-      console.log("just tabs now");
-      console.log(section);
       setUEFilter(section, `tabs-section`);
+      setUELabel(section, `Tab Content`);
     });
 };
 
@@ -87,5 +88,5 @@ export default () => {
   setupUEEventHandlers();
   advancedBlocks();
   //updateUEInstrumentationTabs();
-  //updateUEInstrumentationTemplate();
+  //updateSectionTemplate();
 };
