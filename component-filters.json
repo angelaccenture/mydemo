@@ -53,9 +53,7 @@
   },
   {
     "id": "advanced-tabs",
-    "components": [
-      "section"
-    ]
+    "components": []
   },
   {
     "id": "table",

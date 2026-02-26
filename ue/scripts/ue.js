@@ -34,7 +34,7 @@ function updateUEInstrumentationTabs() {
       console.log("just tabs now");
       console.log(section);
       
-      setUEFilter(section, `tab-section`);
+      setUEFilter(section, `tabs-section`);
     });
 }
 function updateUEInstrumentationTemplate() {
