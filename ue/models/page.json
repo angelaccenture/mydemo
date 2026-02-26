@@ -27,7 +27,10 @@
           "component": "text",
           "name": "title",
           "label": "Title",
-          "required": true
+          "required": true,
+          "validation": {
+              "customErrorMsg": "Page Title is required"
+          }
         },
         {
           "component": "text",

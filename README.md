@@ -6,6 +6,7 @@
 * Added scripts to package.json
 * ue.js - updated to include template support to hide/show blocks
 * ue.js - removed support for carousel/accordion, etc. since we are using advanced blocks
+* ue.js - updated to include section support for advanced tabs
 
 # Author Kit
 For projects that want a few more batteries. Built by the team who brought you da.live and adobe.com.

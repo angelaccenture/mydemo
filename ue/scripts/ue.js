@@ -29,6 +29,11 @@ function getUniversalEditorSections() {
 function updateUEInstrumentationTabs() {
   const sectionList = getUniversalEditorSections();
   console.log(sectionList);
+  sectionList.forEach((section) => {
+      console.log("look for tabs");
+      console.log(section);
+      //setUEFilter(section, `${template}-section`);
+    });
 }
 function updateUEInstrumentationTemplate() {
   const template = document.querySelector('meta[name="template"]')?.content;
