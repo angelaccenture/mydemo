@@ -49,12 +49,15 @@ function updateUEInstrumentationTemplate() {
   }
 }
 
-const setupObservers = () => {
+const advancedBlocks = () => {
   console.log("setupObservers");
   const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.advanced-carousel, div.advanced-accordion');
   console.log(mutatingBlocks);
    mutatingBlocks.forEach((mutation) => {
     console.log(mutation);
+    const getparentSection = mutation.getParent();
+    console.log(getparentSection);
+    //moveInstrumentation(mutation, ulEl.children[index]);
 
    });
 
@@ -138,7 +141,7 @@ const setupUEEventHandlers = () => {
 
 export default () => {
   setupUEEventHandlers();
-  setupObservers();
+  advancedBlocks();
   //updateUEInstrumentationTabs();
   //updateUEInstrumentationTemplate();
 };
