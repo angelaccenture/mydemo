@@ -11,7 +11,8 @@
           "fields": [
             {
               "name": "tablistone",
-              "selector": "div>div>ul>li:nth-child(1)"
+              "selector": "div>div>ul>li:nth-child(1)",
+              "unsafeHTML": "<div class=\"text\"><div>TEST DIV INJECTS</div></div>"
             },
             {
               "name": "tablisttwo",
