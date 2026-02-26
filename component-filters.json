@@ -40,7 +40,7 @@
   {
     "id": "tabs-section",
     "components": [
-      "section"
+      "text"
     ]
   },
   {
