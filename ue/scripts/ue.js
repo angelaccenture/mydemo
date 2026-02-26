@@ -9,20 +9,31 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
 import { moveInstrumentation } from './ue-utils.js';
 
-// updated section filters according to the template
+//Remove Footer from UE 
+const elementsToRemove = document.querySelectorAll('footer');
+elementsToRemove.forEach(element => {
+  element.remove();
+});
+
+//Functions to update section filters according to the template/block type
 function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
-function getUniversalEditorSections() {
-  const main = document.querySelector('main');
-  const sections = main.querySelectorAll('[data-aue-label="Section"]');
-  return Array.from(sections); 
+function setUELabel(element, label) {
+  element.dataset.aueLabel = label;
 }
-function updateUEInstrumentation() {
+
+function getUniversalEditorSections(sectionType) {
+  const main = document.querySelector('main');
+  const sectionTypeAll = main.querySelectorAll(sectionType);
+  return Array.from(sectionTypeAll); 
+}
+function updateSectionTemplate() {
   const template = document.querySelector('meta[name="template"]')?.content;
-  const sectionList = getUniversalEditorSections();
+  const sectionList = getUniversalEditorSections('[data-aue-label="Section"]:not(.tabSection)');
   if (template) {
     sectionList.forEach((section) => {
       console.log("section getting template");
@@ -31,11 +42,24 @@ function updateUEInstrumentation() {
     });
   }
 }
-//Remove Footer from UE - rewrite later with aue:content-remove
-const elementsToRemove = document.querySelectorAll('footer');
-elementsToRemove.forEach(element => {
-  element.remove();
-});
+
+const advancedBlocks = () => {
+  const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.advanced-carousel, div.advanced-accordion');
+  //Rewrite for all Advanced Blocks after I build them
+  console.log(mutatingBlocks);
+  //Move advanced blocks up to parent nodes
+   mutatingBlocks.forEach((mutation) => {
+    const getparentSection = mutation.closest('.tabSection');
+    console.log(getparentSection);
+    moveInstrumentation(mutation, getparentSection);
+   });
+   //Update section types for advanced blocks
+   const sectionList = getUniversalEditorSections('.tabSection');
+   sectionList.slice(1).forEach((section) => {
+      setUEFilter(section, `tabs-section`);
+      setUELabel(section, `Tab Section`);
+    });
+};
 
 
 const setupUEEventHandlers = () => {
@@ -56,56 +80,10 @@ const setupUEEventHandlers = () => {
     }
   });
 
- /* 
- document.addEventListener('aue:ui-select', (event) => {
-    const { detail } = event;
-    const resource = detail?.resource;
-
-    if (resource) {
-      const element = document.querySelector(`[data-aue-resource="${resource}"]`);
-      if (!element) {
-        return;
-      }
-      const blockEl = element.parentElement?.closest('.block[data-aue-resource]') || element?.closest('.block[data-aue-resource]');
-      if (blockEl) {
-        const block = blockEl.getAttribute('data-aue-component');
-        const index = element.getAttribute('data-slide-index');
-
-        switch (block) {
-          case 'accordion':
-            blockEl.querySelectorAll('details').forEach((details) => {
-              details.open = false;
-            });
-            element.open = true;
-            break;
-          case 'carousel':
-            if (index) {
-              showSlide(blockEl, index);
-            }
-            break;
-          case 'tabs':
-            if (element === block) {
-              return;
-            }
-            blockEl.querySelectorAll('[role=tabpanel]').forEach((panel) => {
-              panel.setAttribute('aria-hidden', true);
-            });
-            element.setAttribute('aria-hidden', false);
-            blockEl.querySelector('.tabs-list').querySelectorAll('button').forEach((btn) => {
-              btn.setAttribute('aria-selected', false);
-            });
-            blockEl.querySelector(`[aria-controls=${element?.id}]`).setAttribute('aria-selected', true);
-            break;
-          default:
-            break;
-        }
-      }
-    }
-  });
-  */
 };
 
 export default () => {
   setupUEEventHandlers();
-  updateUEInstrumentation();
+  advancedBlocks();
+  updateSectionTemplate();
 };

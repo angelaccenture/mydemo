@@ -38,6 +38,14 @@
     ]
   },
   {
+    "id": "tabs-section",
+    "components": [
+      "text",
+      "card",
+      "button"
+    ]
+  },
+  {
     "id": "advanced-accordion",
     "components": []
   },
@@ -47,10 +55,7 @@
   },
   {
     "id": "advanced-tabs",
-    "components": [
-      "text",
-      "image"
-    ]
+    "components": []
   },
   {
     "id": "table",

@@ -69,6 +69,17 @@
           },
           "filter": "homepage-section",
           "model": "section"
+        },
+        {
+          "title": "Advanced Tabs Section",
+          "id": "tabs-section",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div></div>"
+            }
+          },
+          "filter": "tabs-section",
+          "model": "section"
         }
       ]
     },
@@ -245,7 +256,7 @@
           }
         },
         {
-          "title": "Tabs - 10:12",
+          "title": "Tabs",
           "id": "advanced-tabs",
           "model": "advanced-tabs",
           "filter": "advanced-tabs",

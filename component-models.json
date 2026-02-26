@@ -8,6 +8,10 @@
         "label": "Template",
         "options": [
           {
+            "name": "No Template",
+            "value": ""
+          },
+          {
             "name": "Blank Page",
             "value": "blankpage"
           },
@@ -25,7 +29,10 @@
         "component": "text",
         "name": "title",
         "label": "Title",
-        "required": true
+        "required": true,
+        "validation": {
+          "customErrorMsg": "Page Title is required"
+        }
       },
       {
         "component": "text",
