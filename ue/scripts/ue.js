@@ -11,7 +11,15 @@
  */
 //import { moveInstrumentation } from './ue-utils.js';
 
-// updated section filters according to the template
+
+
+//Remove Footer from UE 
+const elementsToRemove = document.querySelectorAll('footer');
+elementsToRemove.forEach(element => {
+  element.remove();
+});
+
+//Update section filters according to the template
 function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
 }
@@ -31,11 +39,7 @@ function updateUEInstrumentation() {
     });
   }
 }
-//Remove Footer from UE - rewrite later with aue:content-remove
-const elementsToRemove = document.querySelectorAll('footer');
-elementsToRemove.forEach(element => {
-  element.remove();
-});
+
 
 
 const setupUEEventHandlers = () => {
