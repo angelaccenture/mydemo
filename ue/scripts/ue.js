@@ -55,14 +55,14 @@ const advancedBlocks = () => {
   console.log(mutatingBlocks);
    mutatingBlocks.forEach((mutation) => {
     console.log(mutation);
-    const getparentSection = mutation.getParent();
+    const getparentSection = mutation.parentElement;
     console.log(getparentSection);
     //moveInstrumentation(mutation, ulEl.children[index]);
 
    });
 
 
-  const observer = new MutationObserver((mutations) => {
+ /*const observer = new MutationObserver((mutations) => {
     console.log(observer);
     mutations.forEach((mutation) => {
       console.log("mutations");
@@ -115,7 +115,7 @@ const advancedBlocks = () => {
         }
       //}
     });
-  });
+  });*/
 };
 
 
