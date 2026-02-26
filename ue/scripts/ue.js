@@ -57,7 +57,7 @@ const advancedBlocks = () => {
     console.log(mutation);
     const getparentSection = mutation.closest('.tabSection');
     console.log(getparentSection);
-    //moveInstrumentation(mutation, ulEl.children[index]);
+    moveInstrumentation(mutation, getparentSection);
 
    });
 
