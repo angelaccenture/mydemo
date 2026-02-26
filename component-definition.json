@@ -34,56 +34,6 @@
       ]
     },
     {
-      "title": "Sections",
-      "id": "sections",
-      "components": [
-        {
-          "title": "Section",
-          "id": "section",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div></div>"
-            }
-          },
-          "filter": "section",
-          "model": "section"
-        },
-        {
-          "title": "Article Section",
-          "id": "article-section",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div></div>"
-            }
-          },
-          "filter": "article-section",
-          "model": "section"
-        },
-        {
-          "title": "HomePage Section",
-          "id": "homepage-section",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div></div>"
-            }
-          },
-          "filter": "homepage-section",
-          "model": "section"
-        },
-        {
-          "title": "Advanced Tabs Section",
-          "id": "tabs-section",
-          "plugins": {
-            "da": {
-              "unsafeHTML": "<div></div>"
-            }
-          },
-          "filter": "tabs-section",
-          "model": "section"
-        }
-      ]
-    },
-    {
       "title": "Blocks",
       "id": "blocks",
       "components": [
