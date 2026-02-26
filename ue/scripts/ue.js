@@ -55,7 +55,7 @@ const advancedBlocks = () => {
    const sectionList = getUniversalEditorSections('.tabSection');
    console.log("get the first one");
    console.log(sectionList[0]);
-   sectionList.forEach((section) => {
+   sectionList.slice(1).forEach((section) => {
       console.log("just tabs now");
       console.log(section);
       setUEFilter(section, `tabs-section`);
