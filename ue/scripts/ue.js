@@ -9,7 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-import { moveInstrumentation } from './ue-utils.js';
+//import { moveInstrumentation } from './ue-utils.js';
 
 // updated section filters according to the template
 function setUEFilter(element, filter) {
@@ -56,7 +56,7 @@ const setupUEEventHandlers = () => {
     }
   });
 
- /* 
+ /* Keep for when I build carousel/accordion
  document.addEventListener('aue:ui-select', (event) => {
     const { detail } = event;
     const resource = detail?.resource;
