@@ -246,7 +246,7 @@
     {
       "id": "tabs-section",
       "components": [
-        "text"
+        "text","card","button"
       ]
     }
   ]
