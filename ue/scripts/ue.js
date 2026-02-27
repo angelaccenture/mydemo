@@ -42,6 +42,9 @@ function updateSectionTemplate() {
     });
   }
 }
+function layoutMode () {
+  console.log("enter layout mode code");
+}
 
 const advancedBlocks = () => {
   const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.advanced-carousel, div.advanced-accordion');
@@ -83,7 +86,7 @@ const setupUEEventHandlers = () => {
         console.log(event);
         const lm = event.detail.patch.value;
         if (lm == true) {
-          console.log("turning lm on")
+          layoutMode();
         }
 
         //Turn it off if the user leaves
