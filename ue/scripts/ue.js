@@ -81,7 +81,7 @@ const setupUEEventHandlers = () => {
     if (event.detail.patch.name == 'layoutmode') {
         console.log("layout mode is active");
         console.log(event);
-        const section = event.querySelector('.section');
+        const section = document.closest('.section');
         console.log(section);
 
         //Turn it off if the user leaves
