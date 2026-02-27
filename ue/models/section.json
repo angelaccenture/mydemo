@@ -103,12 +103,6 @@
       },
       {
         "component": "boolean",
-        "label": "Use Layout Mode",
-        "name": "layoutmode",
-        "valueType": "boolean"
-      },
-      {
-        "component": "boolean",
         "label": "Hide in Mobile",
         "name": "hidemobile",
         "valueType": "boolean"
@@ -116,9 +110,14 @@
     {
       "component": "tab",
       "label": "Layout",
-      "name": "tab2",
-        "condition": { "===": [{"var" : "bgimage"}, true] }
+      "name": "tab2"
     }, 
+      {
+        "component": "boolean",
+        "label": "Show Layout Mode",
+        "name": "layoutmode",
+        "valueType": "boolean"
+      },
       {
           "component": "number",
           "valueType": "number",
