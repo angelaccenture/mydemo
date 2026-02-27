@@ -136,7 +136,7 @@
       },
       {
         "component": "tab",
-        "label": "Grid",
+        "label": "Layout",
         "name": "tab2"
       },
       {
@@ -162,10 +162,24 @@
         }
       },
       {
+        "component": "boolean",
+        "label": "Hide in Mobile",
+        "name": "hidemobile",
+        "valueType": "boolean"
+      },
+      {
         "component": "number",
         "valueType": "number",
         "name": "gridmob",
         "label": "Mobile Grid Columns",
+        "condition": {
+          "===": [
+            {
+              "var": "hidemobile"
+            },
+            false
+          ]
+        },
         "validation": {
           "numberMin": 1,
           "numberMax": 12,
