@@ -61,7 +61,10 @@ const advancedBlocks = () => {
     });
 };
 
-
+//Layout Mode
+function layoutMode () {
+  //Add code for layoutMode to show lines
+}
 const setupUEEventHandlers = () => {
   // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {

@@ -115,16 +115,27 @@
         ]
       },
       {
-        "component": "boolean",
-        "label": "Background Image",
-        "name": "bgimage",
-        "valueType": "boolean"
-      },
-      {
         "component": "reference",
         "name": "image",
         "label": "Image",
-        "multi": false,
+        "multi": false
+      },
+      {
+        "component": "boolean",
+        "label": "Use Layout Mode",
+        "name": "layoutmode",
+        "valueType": "boolean"
+      },
+      {
+        "component": "boolean",
+        "label": "Hide in Mobile",
+        "name": "hidemobile",
+        "valueType": "boolean"
+      },
+      {
+        "component": "tab",
+        "label": "Layout",
+        "name": "tab2",
         "condition": {
           "===": [
             {
@@ -133,11 +144,6 @@
             true
           ]
         }
-      },
-      {
-        "component": "tab",
-        "label": "Layout",
-        "name": "tab2"
       },
       {
         "component": "number",
@@ -160,12 +166,6 @@
           "numberMax": 12,
           "customErrorMsg": "1 thru 12 columns"
         }
-      },
-      {
-        "component": "boolean",
-        "label": "Hide in Mobile",
-        "name": "hidemobile",
-        "valueType": "boolean"
       },
       {
         "component": "number",
