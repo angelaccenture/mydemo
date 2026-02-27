@@ -46,6 +46,7 @@ function updateSectionTemplate() {
 const advancedBlocks = () => {
   const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.advanced-carousel, div.advanced-accordion');
   //Rewrite for all Advanced Blocks after I build them
+  console.log("mutatingBlocks");
   console.log(mutatingBlocks);
   //Move advanced blocks up to parent nodes
    mutatingBlocks.forEach((mutation) => {
@@ -61,15 +62,10 @@ const advancedBlocks = () => {
     });
 };
 
-//Layout Mode
-function layoutMode () {
-  //Add code for layoutMode to show lines
-}
 const setupUEEventHandlers = () => {
-  // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
     console.log(event.detail.patch.name);
-
+  // For each img source change, update the srcsets of the parent picture sources
     if (event.detail.patch.name == 'image') {
       console.log("if image yes");
       const newImgSrc = event.detail.patch.value;
@@ -80,6 +76,11 @@ const setupUEEventHandlers = () => {
           source.setAttribute('srcset', newImgSrc);
         });
       }
+    }
+    //Turn layout mode on
+    if (event.detail.patch.name == 'layoutmode') {
+        console.log("layout mode is active");
+        console.log(event);
     }
   });
 
