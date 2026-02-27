@@ -1,6 +1,6 @@
 ### UE Support - updates
-* Added UE support into scripts.js, Updated error.js to disable for UE,  Added scripts to package.json
-* Added filter script to head.html
+* Initial Setup: Added UE support into scripts.js, Updated error.js to disable for UE, Added scripts to package.json
+* Added filter script to head.html for templates
 * ue.js - updated to to hide/show blocks based on block-type (advanced), then template
 
 

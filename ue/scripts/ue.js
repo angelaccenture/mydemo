@@ -12,17 +12,6 @@
 
 import { moveInstrumentation } from './ue-utils.js';
 
-const sectionList = getUniversalEditorSections('[data-aue-label="Section"]');
-console.log(sectionList);
-sectionList.forEach((section) => {
-      console.log("section each");
-      console.log(section);
-    });
-const main = document.querySelector('main');
-const createSection = document.createElement('div');
-//createSection.classList.add('section');
-main.appendChild(createSection)
-
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
