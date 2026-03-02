@@ -60,17 +60,6 @@ const advancedBlocks = () => {
     });
 };
 
-
-
-function loadCSS(filename) {
-    var head = document.getElementsByTagName('head')[0];
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = filename;
-    head.appendChild(link);
-}
-
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
   // For each img source change, update the srcsets of the parent picture sources
@@ -89,9 +78,8 @@ const setupUEEventHandlers = () => {
     console.log(event);
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
-        console.log("layout mode is active");
+        console.log("layout mode is active - add class to body tag for styles");
         console.log(event);
-       loadCSS('../ue/scripts/ue-styles.css');
       }
     }
      //Turn it off if the user leaves section area - then I don't need anything below
