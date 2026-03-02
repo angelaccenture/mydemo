@@ -81,11 +81,11 @@ const setupUEEventHandlers = () => {
         console.log("layout mode is active");
         console.log(event);
         
-        //const sectionArea = 
+        const sectionArea = document.querySelectorAll('.section');
         console.log(sectionArea);
       }
     }
-     //Turn it off if the user leaves section area
+     //Turn it off if the user leaves section area - then I don't need anything below
   });
   document.addEventListener('aue:ui-viewport-change', (viewevent) => {
      console.log("ui-viewport-change");
