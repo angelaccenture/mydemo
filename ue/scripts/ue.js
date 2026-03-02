@@ -79,7 +79,7 @@ const setupUEEventHandlers = () => {
         console.log("layout mode is active");
         console.log(event);
         
-        const sectionArea = event.querySelector('section');
+        const sectionArea = event.srcElement.querySelector('.section');
         console.log(sectionArea);
       }
     }
