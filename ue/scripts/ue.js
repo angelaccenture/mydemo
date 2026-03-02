@@ -78,8 +78,8 @@ const setupUEEventHandlers = () => {
       if (event.detail.patch.value == true) {
         const getsection = event.srcElement.querySelector('div').parentNode;
         console.log(getsection);
-        const parentSection = getsection.style.color = 'red';
-        console.log(parentSection);
+        getsection.style.color = 'red';
+        console.log(getsection.content);
         console.log("need to modify this event");
        console.log(event);
       }
