@@ -76,8 +76,8 @@ const setupUEEventHandlers = () => {
     //Turn layout mode on
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
-        console.log("layout mode is active - add class to body tag for styles");
-        document.body.setAttribute('style', 'angel-test');
+        console.log("need to modify this event");
+       console.log(event);
       }
     }
      //Turn it off if the user leaves section area - then I don't need anything below
