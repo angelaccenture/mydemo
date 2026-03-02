@@ -76,15 +76,14 @@ const setupUEEventHandlers = () => {
     //Turn layout mode on
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
-         console.log("layout mode is active");
+        console.log("layout mode is active");
         console.log(event);
+        
+        const sectionArea = event.querySelector('section');
+        console.log(sectionArea);
       }
     }
-     //Turn it off if the user leaves section
-    else {
-      console.log("event name");
-      console.log(event.detail.patch.name);
-    }
+     //Turn it off if the user leaves section area
   });
 };
 
