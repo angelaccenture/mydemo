@@ -74,7 +74,8 @@ const setupUEEventHandlers = () => {
       }
     }
     //Turn layout mode on
-    console.log("look for tab");
+    console.log("add class to body");
+    document.body.classList.add('layoutmode');
     console.log(event);
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
