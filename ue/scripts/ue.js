@@ -79,7 +79,7 @@ const setupUEEventHandlers = () => {
         console.log("layout mode is active");
         console.log(event);
         
-        const sectionArea = event.detail.patch.target;
+        const sectionArea = event.srcElement.querySelector('div');
         console.log(sectionArea);
       }
     }
