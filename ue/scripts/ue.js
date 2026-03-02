@@ -91,7 +91,7 @@ const setupUEEventHandlers = () => {
       if (event.detail.patch.value == true) {
         console.log("layout mode is active");
         console.log(event);
-       loadCSS('styles.css');
+       loadCSS('../ue/scripts/ue-styles.css');
       }
     }
      //Turn it off if the user leaves section area - then I don't need anything below
