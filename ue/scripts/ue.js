@@ -76,8 +76,10 @@ const setupUEEventHandlers = () => {
     //Turn layout mode on
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
-        const picture = event.srcElement.querySelector('div').setAttribute('style', 'color: red');;
-        console.log(picture);
+        const getsection = event.srcElement.querySelector('div').parentNode;
+        console.log(getsection);
+        const parentSection = getsection.setAttribute('style', 'color: red');;
+        console.log(parentSection);
         console.log("need to modify this event");
        console.log(event);
       }
