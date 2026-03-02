@@ -67,10 +67,8 @@ const advancedBlocks = () => {
 
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
-    console.log(event.detail.patch.name);
   // For each img source change, update the srcsets of the parent picture sources
     if (event.detail.patch.name == 'image') {
-      console.log("if image yes");
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
 
@@ -82,17 +80,15 @@ const setupUEEventHandlers = () => {
     }
     //Turn layout mode on
     if (event.detail.patch.name == 'layoutmode') {
-        console.log("layout mode is active");
+      if (event.detail.patch.value == true) {
+         console.log("layout mode is active");
         console.log(event);
-        const lm = event.detail.patch.value;
-        if (lm == true) {
-          layoutMode();
-        }
-
-        //Turn it off if the user leaves
+      }
     }
+    //Turn it off if the user leaves section
+    console.log(event.detail.patch.name);
+  
   });
-
 };
 
 export default () => {
