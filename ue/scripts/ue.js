@@ -78,7 +78,7 @@ const setupUEEventHandlers = () => {
       if (event.detail.patch.value == true) {
         const getsection = event.srcElement.querySelector('div').parentNode;
         console.log(getsection);
-        getsection.addClassList('testclass');
+        getsection.classList.add('testclass');
          console.log("need to modify section element");
         console.log(getsection);
        console.log(event);
