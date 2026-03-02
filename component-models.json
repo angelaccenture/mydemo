@@ -298,7 +298,7 @@
     "id": "advanced-tabs",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "label": "Style",
         "options": [
@@ -404,7 +404,7 @@
     "id": "card",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "label": "Style",
         "options": [
@@ -476,7 +476,7 @@
     "id": "hero",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "label": "Style",
         "options": [
@@ -706,7 +706,7 @@
     "id": "teaser",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "label": "Style",
         "value": "left",
