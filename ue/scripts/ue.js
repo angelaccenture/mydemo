@@ -79,8 +79,8 @@ const setupUEEventHandlers = () => {
         const getsection = event.srcElement.querySelector('div').parentNode;
         console.log(getsection);
         getsection.style.color = 'red';
+         console.log("need to modify section element");
         console.log(getsection.content);
-        console.log("need to modify this event");
        console.log(event);
       }
     }
