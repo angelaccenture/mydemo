@@ -74,7 +74,7 @@ const setupUEEventHandlers = () => {
       }
     }
     //Turn layout mode on
-    /*console.log("look for tab");
+    console.log("look for tab");
     console.log(event);
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
@@ -84,7 +84,7 @@ const setupUEEventHandlers = () => {
         //const sectionArea = 
         console.log(sectionArea);
       }
-    }*/
+    }
      //Turn it off if the user leaves section area
   });
   document.addEventListener('aue:ui-viewport-change', (viewevent) => {
@@ -96,7 +96,7 @@ const setupUEEventHandlers = () => {
      console.log(editevent);
   });
     document.addEventListener('aue:ui-select', (selectevent) => {
-     console.log("ui-select");
+     console.log("ui-select - when selecting item from content tree");
      console.log(selectevent);
   });
 };
