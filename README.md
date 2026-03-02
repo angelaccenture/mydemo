@@ -1,3 +1,5 @@
+Any code modifications to this original source are not intended for production use yet - this is pure DEMO (beta) to prove out requirments can be done in EDS.
+
 ### UE Support - updates
 * Initial Setup: Added UE support into scripts.js, Updated error.js to disable for UE, Added scripts to package.json
 * Added filter script to head.html for templates
