@@ -74,13 +74,10 @@ const setupUEEventHandlers = () => {
       }
     }
     //Turn layout mode on
-    console.log("add class to body");
-    document.body.classList.add('layoutmode');
-    console.log(event);
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
         console.log("layout mode is active - add class to body tag for styles");
-          document.body.classList.add('layoutmode');
+        document.body.setAttribute('style', 'angel-test');
       }
     }
      //Turn it off if the user leaves section area - then I don't need anything below
