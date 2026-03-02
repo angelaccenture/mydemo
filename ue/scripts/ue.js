@@ -25,7 +25,6 @@ function setUEFilter(element, filter) {
 function setUELabel(element, label) {
   element.dataset.aueLabel = label;
 }
-
 function getUniversalEditorSections(sectionType) {
   const main = document.querySelector('main');
   const sectionTypeAll = main.querySelectorAll(sectionType);
@@ -42,15 +41,11 @@ function updateSectionTemplate() {
     });
   }
 }
-function layoutMode () {
-  console.log("enter layout mode code");
-}
-
 const advancedBlocks = () => {
   const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.advanced-carousel, div.advanced-accordion');
   //Rewrite for all Advanced Blocks after I build them
-  console.log("mutatingBlocks");
-  console.log(mutatingBlocks);
+  //console.log("mutatingBlocks");
+  //console.log(mutatingBlocks);
   //Move advanced blocks up to parent nodes
    mutatingBlocks.forEach((mutation) => {
     const getparentSection = mutation.closest('.tabSection');
@@ -85,9 +80,11 @@ const setupUEEventHandlers = () => {
         console.log(event);
       }
     }
-    //Turn it off if the user leaves section
-    console.log(event.detail.patch.name);
-  
+     //Turn it off if the user leaves section
+    else {
+      console.log("event name");
+      console.log(event.detail.patch.name);
+    }
   });
 };
 
