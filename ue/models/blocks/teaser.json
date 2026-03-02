@@ -37,6 +37,7 @@
           "component": "multiselect",
           "name": "classes",
           "label": "Style",
+          "value": "left",
           "options": [
            {
               "name": "Left",
