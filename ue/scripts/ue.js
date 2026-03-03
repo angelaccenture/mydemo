@@ -71,15 +71,6 @@ const advancedBlocks = () => {
     });
 };
 
-function addLayout() {
-  const layoutsection = document.querySelectorAll('.section');
-  console.log(layoutsection);
-    layoutsection.forEach((section) => {
-      console.log("layoutsections");
-      console.log(section);
-      section.classList.add('testclass');
-    });
-}
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
   // For each img source change, update the srcsets of the parent picture sources
@@ -107,6 +98,7 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:ui-viewport-change', (viewevent) => {
      console.log("ui-viewport-change");
      console.log(viewevent);
+     addLayout();
   });
   document.addEventListener('aue:ui-edit', (editevent) => {
      console.log("ui-edit");
@@ -116,8 +108,19 @@ const setupUEEventHandlers = () => {
     document.addEventListener('aue:ui-select', (selectevent) => {
      console.log("ui-select - when selecting item from content tree");
      console.log(selectevent);
+     addLayout();
+
   });
 };
+function addLayout() {
+  const layoutsection = document.querySelectorAll('.section');
+  console.log(layoutsection);
+    layoutsection.forEach((section) => {
+      console.log("layoutsections");
+      console.log(section);
+      section.classList.add('testclass');
+    });
+}
 
 export default () => {
   setupUEEventHandlers();
