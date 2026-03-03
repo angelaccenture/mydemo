@@ -84,7 +84,7 @@ const setupUEEventHandlers = () => {
         });
       }
     }
-    //Turn layout mode on
+   /* //Turn layout mode on
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
         const getsection = event.srcElement.querySelector('div').parentNode;
@@ -92,7 +92,7 @@ const setupUEEventHandlers = () => {
         console.log("Within content-patch");
         console.log(getsection);
       }
-    }
+    }*/
      //Turn it off if the user leaves section area - then I don't need anything below
   });
   document.addEventListener('aue:ui-viewport-change', (viewevent) => {
