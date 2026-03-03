@@ -137,6 +137,10 @@
         "label": "Desktop Grid Columns",
         "options": [
           {
+            "name": "No Grid",
+            "value": ""
+          },
+          {
             "name": "1",
             "value": "1"
           },

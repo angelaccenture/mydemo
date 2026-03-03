@@ -84,13 +84,13 @@ const setupUEEventHandlers = () => {
         });
       }
     }
-    console.log("parent name");
-    console.log(event.detail.patch.name);
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
         console.log("first within layoutmode");
         const getsection = event.srcElement.querySelector('div').parentNode;
+        console.log(getsection);
         const findGrid = getsection.classList.contains('grid');
+        console.log("grid");
         console.log(findGrid);
         //Find section, then get grid class name -- split the count up -- then create divs for each number of the count
 
