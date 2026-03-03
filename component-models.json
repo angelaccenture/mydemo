@@ -168,27 +168,27 @@
         "label": "Tablet Grid Columns",
         "options": [
           {
-            "name": "One",
+            "name": "1",
             "value": "1"
           },
           {
-            "name": "Two",
+            "name": "2",
             "value": "2"
           },
           {
-            "name": "Three",
+            "name": "3",
             "value": "3"
           },
           {
-            "name": "Four",
+            "name": "4",
             "value": "4"
           },
           {
-            "name": "Five",
+            "name": "5",
             "value": "5"
           },
           {
-            "name": "Six",
+            "name": "6",
             "value": "6"
           }
         ]
