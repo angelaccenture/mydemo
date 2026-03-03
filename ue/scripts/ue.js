@@ -80,6 +80,7 @@ function addLayout() {
     layoutsection.forEach((section) => {
       console.log("layoutsections");
       console.log(section);
+      section.classList.add('testclass');
     });
 
 }
