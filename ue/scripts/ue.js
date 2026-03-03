@@ -71,10 +71,10 @@ const advancedBlocks = () => {
     });
 };
 
-function addLayout(getsection) {
-  getsection.classList.add('testclass');
-  console.log("Within Function");
-  console.log(getsection);
+function addLayout() {
+  //getsection.classList.add('testclass');
+  //console.log("Within Function");
+  //console.log(getsection);
   const layoutsection = document.querySelectorAll('.section');
   console.log(layoutsection);
     layoutsection.forEach((section) => {
@@ -114,6 +114,7 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:ui-edit', (editevent) => {
      console.log("ui-edit");
      console.log(editevent);
+     addLayout();
   });
     document.addEventListener('aue:ui-select', (selectevent) => {
      console.log("ui-select - when selecting item from content tree");
