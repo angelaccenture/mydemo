@@ -71,6 +71,13 @@ const advancedBlocks = () => {
     });
 };
 
+function addLayout(getsection) {
+
+  getsection.classList.add('testclass');
+  console.log("Within Function");
+  console.log(getsection);
+
+}
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
   // For each img source change, update the srcsets of the parent picture sources
@@ -88,11 +95,9 @@ const setupUEEventHandlers = () => {
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
         const getsection = event.srcElement.querySelector('div').parentNode;
+        addLayout(getsection);
         console.log(getsection);
-        getsection.classList.add('testclass');
-         console.log("need to modify section element");
-        console.log(getsection);
-       console.log(event);
+        
       }
     }
      //Turn it off if the user leaves section area - then I don't need anything below
