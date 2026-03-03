@@ -72,10 +72,15 @@ const advancedBlocks = () => {
 };
 
 function addLayout(getsection) {
-
   getsection.classList.add('testclass');
   console.log("Within Function");
   console.log(getsection);
+  const layoutsection = document.querySelectorAll('.section');
+  console.log(layoutsection);
+    layoutsection.forEach((section) => {
+      console.log("layoutsections");
+      console.log(section);
+    });
 
 }
 const setupUEEventHandlers = () => {
