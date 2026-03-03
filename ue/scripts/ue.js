@@ -21,7 +21,7 @@ function loadCSS(filename) {
 
   head.appendChild(link); // Append the link to the head
 }
-loadCSS( './ue-styles.css');
+loadCSS( './ue/scripts/ue-styles.css');
 
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
