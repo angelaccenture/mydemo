@@ -226,3 +226,8 @@
     grid-template-columns: repeat(var(--grid-size), 1fr);
   }
 }
+
+/*Test Styles for Layout Mode*/
+.testclass {
+  background-color: red;
+}
