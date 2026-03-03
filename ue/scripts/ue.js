@@ -90,6 +90,9 @@ const setupUEEventHandlers = () => {
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
         //check grid count and add divs as needed
+        const grid = event.detail.patch.name == 'grid';
+        const gridCount = grid.value;
+        console.log(gridCount);
       }
     }
      //Turn it off if the user leaves section area - then I don't need anything below
