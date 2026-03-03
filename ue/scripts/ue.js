@@ -84,6 +84,8 @@ const setupUEEventHandlers = () => {
         });
       }
     }
+    console.log("look for columns to be changes");
+    console.log(event.detail.patch.name);
   });
   document.addEventListener('aue:ui-viewport-change', (viewevent) => {
      console.log("ui-viewport-change");
