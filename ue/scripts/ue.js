@@ -11,6 +11,8 @@
  */
 
 import { moveInstrumentation } from './ue-utils.js';
+import sheet from './ue-styles.css' assert { type: 'css' };
+document.adoptedStyleSheets = [sheet];
 
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
