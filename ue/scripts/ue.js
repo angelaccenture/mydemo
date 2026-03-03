@@ -89,8 +89,11 @@ const setupUEEventHandlers = () => {
         const getsection = event.srcElement.querySelector('div').parentNode;
         const findGrid = getsection.classList;
           findGrid.forEach((grid) => {
-            if (grid.includes('grid-')) {
+            if (grid.className.includes('grid-')) {
               console.log("yes has grid class I am looking for");
+            }
+            else {
+              console.log("Need to turn layoutmode off and give alert that desktop grid must have columns");
             }
             console.log("Grid Classes");
             console.log(grid);
@@ -109,10 +112,10 @@ const setupUEEventHandlers = () => {
      console.log("ui-edit");
      console.log(editevent);
   });
-    document.addEventListener('aue:ui-select', (selectevent) => {
+  document.addEventListener('aue:ui-select', (selectevent) => {
      const layoutModeOn = document.getElementsByClassName('layoutmode');
      if (layoutModeOn.length > 0) {
-      console.log("turn layoutmodeoff");
+      console.log("turn layoutmodeoff - need to remove from DA DOM");
      }
   });
 };
