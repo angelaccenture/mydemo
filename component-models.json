@@ -121,12 +121,6 @@
         "multi": false
       },
       {
-        "component": "boolean",
-        "label": "Hide in Mobile",
-        "name": "hidemobile",
-        "valueType": "boolean"
-      },
-      {
         "component": "tab",
         "label": "Layout",
         "name": "tab2"
@@ -138,30 +132,75 @@
         "valueType": "boolean"
       },
       {
-        "component": "number",
-        "valueType": "number",
+        "component": "select",
         "name": "grid",
         "label": "Desktop Grid Columns",
-        "validation": {
-          "numberMin": 1,
-          "numberMax": 12,
-          "customErrorMsg": "1 thru 12 columns"
-        }
+        "options": [
+          {
+            "name": "One",
+            "value": "1"
+          },
+          {
+            "name": "Two",
+            "value": "2"
+          },
+          {
+            "name": "Three",
+            "value": "3"
+          },
+          {
+            "name": "Four",
+            "value": "4"
+          },
+          {
+            "name": "Five",
+            "value": "5"
+          },
+          {
+            "name": "Six",
+            "value": "6"
+          }
+        ]
       },
       {
-        "component": "number",
-        "valueType": "number",
+        "component": "select",
         "name": "gridtab",
         "label": "Tablet Grid Columns",
-        "validation": {
-          "numberMin": 1,
-          "numberMax": 12,
-          "customErrorMsg": "1 thru 12 columns"
-        }
+        "options": [
+          {
+            "name": "One",
+            "value": "1"
+          },
+          {
+            "name": "Two",
+            "value": "2"
+          },
+          {
+            "name": "Three",
+            "value": "3"
+          },
+          {
+            "name": "Four",
+            "value": "4"
+          },
+          {
+            "name": "Five",
+            "value": "5"
+          },
+          {
+            "name": "Six",
+            "value": "6"
+          }
+        ]
       },
       {
-        "component": "number",
-        "valueType": "number",
+        "component": "boolean",
+        "label": "Hide in Mobile",
+        "name": "hidemobile",
+        "valueType": "boolean"
+      },
+      {
+        "component": "select",
         "name": "gridmob",
         "label": "Mobile Grid Columns",
         "condition": {
@@ -172,11 +211,32 @@
             false
           ]
         },
-        "validation": {
-          "numberMin": 1,
-          "numberMax": 12,
-          "customErrorMsg": "1 thru 12 columns"
-        }
+        "options": [
+          {
+            "name": "One",
+            "value": "1"
+          },
+          {
+            "name": "Two",
+            "value": "2"
+          },
+          {
+            "name": "Three",
+            "value": "3"
+          },
+          {
+            "name": "Four",
+            "value": "4"
+          },
+          {
+            "name": "Five",
+            "value": "5"
+          },
+          {
+            "name": "Six",
+            "value": "6"
+          }
+        ]
       },
       {
         "component": "select",

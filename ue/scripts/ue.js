@@ -86,6 +86,13 @@ const setupUEEventHandlers = () => {
     }
     console.log("look for columns to be changes");
     console.log(event.detail.patch.name);
+     //Turn layout mode on
+    if (event.detail.patch.name == 'layoutmode') {
+      if (event.detail.patch.value == true) {
+        //check grid count and add divs as needed
+      }
+    }
+     //Turn it off if the user leaves section area - then I don't need anything below
   });
   document.addEventListener('aue:ui-viewport-change', (viewevent) => {
      console.log("ui-viewport-change");
