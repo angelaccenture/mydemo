@@ -11,8 +11,17 @@
  */
 
 import { moveInstrumentation } from './ue-utils.js';
-import sheet from './ue-styles.css' assert { type: 'css' };
-document.adoptedStyleSheets = [sheet];
+
+function loadCSS(filename) {
+  var head = document.head; // Access document head
+  var link = document.createElement('link'); // Create a new link element
+  link.rel = 'stylesheet'; // Set the rel attribute
+  link.type = 'text/css'; // Set the type attribute
+  link.href = filename; // Set the href (path to the CSS file)
+
+  head.appendChild(link); // Append the link to the head
+}
+loadCSS( './ue-styles.css');
 
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
