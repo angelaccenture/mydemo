@@ -84,14 +84,16 @@ const setupUEEventHandlers = () => {
         });
       }
     }
-    console.log("look for columns to be changes");
+    console.log("parent name");
     console.log(event.detail.patch.name);
      //Turn layout mode on
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
         //check grid count and add divs as needed
         const grid = event.detail.patch.name == 'grid';
+        console.log(grid);
         const gridCount = grid.value;
+        console.log("grid count");
         console.log(gridCount);
       }
     }
