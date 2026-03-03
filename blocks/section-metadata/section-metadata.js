@@ -107,6 +107,7 @@ export default async function init(el) {
   if (!section) return;
   const metadata = getMetadata(el);
   console.log(metadata.layoutmode?.text);
+  if (metadata.layoutmode?.text) await handleStyle(metadata.layoutmode.text, section);
   if (metadata.style?.text) await handleStyle(metadata.style.text, section);
   if (metadata.grid?.text) handleLayout(metadata.grid.text, section, 'grid');
   if (metadata.gap?.text) handleLayout(metadata.gap.text, section, 'gap');
