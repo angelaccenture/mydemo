@@ -3,5 +3,5 @@ body {
 }
 
 .testclass {
-  background-color: red;
+  background-color: red !important;
 }
