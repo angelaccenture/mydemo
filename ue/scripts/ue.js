@@ -103,13 +103,11 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:ui-edit', (editevent) => {
      console.log("ui-edit");
      console.log(editevent);
-     //addLayout();
+     addLayout();
   });
     document.addEventListener('aue:ui-select', (selectevent) => {
      console.log("ui-select - when selecting item from content tree");
      console.log(selectevent);
-     //addLayout();
-
   });
 };
 function addLayout() {
