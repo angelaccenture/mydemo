@@ -108,9 +108,7 @@ const setupUEEventHandlers = () => {
   });
     document.addEventListener('aue:ui-select', (selectevent) => {
      const layoutModeOn = document.getElementsByClassName('layoutmode');
-     console.log("layoutModeOn");
-     console.log(layoutModeOn);
-     if (layoutModeOn) {
+     if (layoutModeOn.length > 0) {
       console.log("turn layoutmodeoff");
      }
   });
