@@ -89,8 +89,8 @@ const setupUEEventHandlers = () => {
         console.log("first within layoutmode");
         const getsection = event.srcElement.querySelector('div').parentNode;
         console.log(getsection);
-        const findGrid = getsection.classList.contains('grid');
-        console.log("grid");
+        const findGrid = getsection.classList;
+        console.log("all classes");
         console.log(findGrid);
         //Find section, then get grid class name -- split the count up -- then create divs for each number of the count
 
@@ -108,6 +108,7 @@ const setupUEEventHandlers = () => {
   });
     document.addEventListener('aue:ui-select', (selectevent) => {
      const layoutModeOn = document.getElementsByClassName('layoutmode');
+     console.log(layoutModeOn);
      if (layoutModeOn) {
       console.log("turn layoutmodeoff");
      }
