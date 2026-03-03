@@ -84,44 +84,20 @@ const setupUEEventHandlers = () => {
         });
       }
     }
-   /* //Turn layout mode on
-    if (event.detail.patch.name == 'layoutmode') {
-      if (event.detail.patch.value == true) {
-        const getsection = event.srcElement.querySelector('div').parentNode;
-        getsection.classList.add('layoutclass');
-        console.log("Within content-patch");
-        console.log(getsection);
-      }
-    }*/
-     //Turn it off if the user leaves section area - then I don't need anything below
   });
   document.addEventListener('aue:ui-viewport-change', (viewevent) => {
      console.log("ui-viewport-change");
      console.log(viewevent);
-     addLayout();
   });
   document.addEventListener('aue:ui-edit', (editevent) => {
      console.log("ui-edit");
      console.log(editevent);
-     addLayout();
   });
     document.addEventListener('aue:ui-select', (selectevent) => {
      console.log("ui-select - when selecting item from content tree");
      console.log(selectevent);
   });
 };
-function addLayout() {
-  const layoutsection = document.querySelectorAll('.section');
-  console.log(layoutsection);
-    layoutsection.forEach((section) => {
-      console.log("layoutsections");
-      console.log(section);
-      if (section.classList.contains('layoutmode')) {
-        console.log("addtestclass");
-        section.classList.add('testclass');
-      }
-    });
-}
 
 export default () => {
   setupUEEventHandlers();
