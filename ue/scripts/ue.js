@@ -71,10 +71,10 @@ const advancedBlocks = () => {
     });
 };
 
-function addLayout() {
-  //getsection.classList.add('testclass');
-  //console.log("Within Function");
-  //console.log(getsection);
+function addLayout(getsection) {
+  getsection.classList.add('angel');
+  console.log("Within Function");
+  console.log(getsection);
   const layoutsection = document.querySelectorAll('.section');
   console.log(layoutsection);
     layoutsection.forEach((section) => {
@@ -82,7 +82,6 @@ function addLayout() {
       console.log(section);
       section.classList.add('testclass');
     });
-
 }
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
