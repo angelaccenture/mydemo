@@ -71,10 +71,7 @@ const advancedBlocks = () => {
     });
 };
 
-function addLayout(getsection) {
-  getsection.classList.add('angel');
-  console.log("Within Function");
-  console.log(getsection);
+function addLayout() {
   const layoutsection = document.querySelectorAll('.section');
   console.log(layoutsection);
     layoutsection.forEach((section) => {
@@ -100,9 +97,9 @@ const setupUEEventHandlers = () => {
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
         const getsection = event.srcElement.querySelector('div').parentNode;
-        addLayout(getsection);
+        getsection.classList.add('layoutclass');
+        console.log("Within content-patch");
         console.log(getsection);
-        
       }
     }
      //Turn it off if the user leaves section area - then I don't need anything below
