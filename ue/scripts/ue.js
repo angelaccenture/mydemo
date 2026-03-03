@@ -89,6 +89,9 @@ const setupUEEventHandlers = () => {
         const getsection = event.srcElement.querySelector('div').parentNode;
         const findGrid = getsection.classList;
           findGrid.forEach((grid) => {
+            if (grid.includes('grid-')) {
+              console.log("yes has grid class I am looking for");
+            }
             console.log("Grid Classes");
             console.log(grid);
           });
