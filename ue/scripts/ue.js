@@ -90,11 +90,11 @@ const setupUEEventHandlers = () => {
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
         //check grid count and add divs as needed
-        const grid = event.detail.patch.name == 'grid';
-        console.log(grid);
-        const gridCount = grid.value;
-        console.log("grid count");
-        console.log(gridCount);
+        console.log("first within layoutmode");
+        //const getsection = event.srcElement.querySelector('div').parentNode;
+        //getsection.classList.add('layoutclass');
+        //Find section, then get grid class name -- split the count up -- then create divs for each number of the count
+
       }
     }
      //Turn it off if the user leaves section area - then I don't need anything below
@@ -108,6 +108,11 @@ const setupUEEventHandlers = () => {
      console.log(editevent);
   });
     document.addEventListener('aue:ui-select', (selectevent) => {
+      if (selectevent.detail.patch.name == 'layoutmode') {
+          if (selectevent.detail.patch.value == true) {
+          console.log("check if this is true first");
+      }
+    }
      console.log("ui-select - when selecting item from content tree");
      console.log(selectevent);
   });
