@@ -116,7 +116,10 @@ function addLayout() {
     layoutsection.forEach((section) => {
       console.log("layoutsections");
       console.log(section);
-      section.classList.add('testclass');
+      if (section.classList.contains('layoutmode')) {
+        console.log("addtestclass");
+        section.classList.add('testclass');
+      }
     });
 }
 
