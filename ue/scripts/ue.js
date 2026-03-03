@@ -88,15 +88,15 @@ const setupUEEventHandlers = () => {
       if (event.detail.patch.value == true) {
         const getsection = event.srcElement.querySelector('div').parentNode;
         const findGrid = getsection.classList;
-          findGrid.forEach((grid) => {
+          findGrid.forEach(grid => {
+            console.log("Grid Classes");
+            console.log(grid);
             if (grid.className.includes('grid-')) {
               console.log("yes has grid class I am looking for");
             }
             else {
               console.log("Need to turn layoutmode off and give alert that desktop grid must have columns");
             }
-            console.log("Grid Classes");
-            console.log(grid);
           });
         //Find section, then get grid class name -- split the count up -- then create divs for each number of the count
 
