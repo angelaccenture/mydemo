@@ -21,6 +21,17 @@
       }
     },
     {
+      "title": "Rich Text",
+      "id": "richtext",
+      "plugins": {
+        "da": {
+          "name": "richtext",
+           "unsafeHTML": "<p>Rich Text goes here</p>"
+         
+        }
+      }
+    },
+    {
     "title": "Rich Text",
     "id": "richtext",
     "rte": {
