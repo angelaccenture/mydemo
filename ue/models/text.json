@@ -6,7 +6,18 @@
       "plugins": {
         "da": {
           "name": "text",
-           "unsafeHTML": "<p>Rich Text goes here</p>"
+           "unsafeHTML": "<p>Normal Text goes here</p>"
+         
+        }
+      }
+    },
+    {
+      "title": "Test Text",
+      "id": "text",
+      "plugins": {
+        "da": {
+          "name": "text",
+           "unsafeHTML": "<p>Normal Text goes here</p>"
          
         }
       }
@@ -15,7 +26,7 @@
     "title": "Rich Text",
     "id": "richtext",
     "rte": {
-      "toolbar": {
+    "toolbar": {
      "format": ["bold", "italic", "underline", "strike"],
     "alignment": ["left", "center", "right", "justify"],
     "direction": ["rtl", "ltr"],
