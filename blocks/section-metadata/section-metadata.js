@@ -106,12 +106,12 @@ export default async function init(el) {
   const section = el.closest('.section');
   if (!section) return;
   const metadata = getMetadata(el);
-  if (metadata.layoutmode?.text) await handleStyle('layoutmode', section);
   if (metadata.style?.text) await handleStyle(metadata.style.text, section);
   if (metadata.grid?.text) handleLayout(metadata.grid.text, section, 'grid');
   if (metadata.gap?.text) handleLayout(metadata.gap.text, section, 'gap');
   if (metadata.spacing?.text) handleLayout(metadata.spacing.text, section, 'spacing');
   if (metadata.container?.text) handleLayout(metadata.container.text, section, 'container');
+  if (metadata.layout?.text) handleLayout(metadata.layout.text, section, 'layout');
   if (metadata['background-color']?.content) handleBackground(metadata['background-color'].content, section);
   if (metadata['background-image']?.content) handleBackground(metadata['background-image'].content, section);
   if (metadata.background?.content) handleBackground(metadata.background, section);
