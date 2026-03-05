@@ -9,7 +9,7 @@
           "id": "richtext",
           "plugins": {
             "da": {
-              "name": "richtext",
+              "name": "text",
               "unsafeHTML": "<p>Rich Text goes here</p>"
             }
           }
