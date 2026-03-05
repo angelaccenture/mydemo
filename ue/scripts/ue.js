@@ -28,14 +28,6 @@ const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
   element.remove();
 });
-//Fix section grids to not include the default text block
-const gridSection = document.querySelectorAll('.section.grid');
-if (gridSection) {
-    gridSection.forEach((gridsec) => {
-      console.log(gridsec);
-    });
-}
-
 //Functions to update section filters according to the template/block type
 function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
