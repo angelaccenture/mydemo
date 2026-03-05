@@ -28,7 +28,9 @@ const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
   element.remove();
 });
-
+//Fix section grids to not include the default text block
+const gridSections = document.querySelectorAll('.section.grid');
+console.log(gridSections)
 
 //Functions to update section filters according to the template/block type
 function setUEFilter(element, filter) {
@@ -47,8 +49,6 @@ function updateSectionTemplate() {
   const sectionList = getUniversalEditorSections('[data-aue-label="Section"]:not(.tabSection)');
   if (template) {
     sectionList.forEach((section) => {
-      console.log("section getting template");
-      console.log(section);
       setUEFilter(section, `${template}-section`);
     });
   }
