@@ -50,8 +50,8 @@ export default function init(el) {
   console.log(tabs);
   const currSection = el.closest('.section');
   console.log(currSection);
-  const addSection = document.createElement('div');
-  currSection.after(addSection, "Tab content goes here. ANGEL")
+  const addSection = '<div><h2>New Title</h2><p>Some more content here.</p></div>'
+  currSection.insertAdjacentHTML('afterend', addSection);
    // Find the section that contains the actual block and only add class to tab sections
   const currSectionat = el.closest('.section .advanced-tabs');
   const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
