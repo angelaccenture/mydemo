@@ -6,7 +6,7 @@
       "components": [
         {
           "title": "Text",
-          "id": "richtext",
+          "id": "text",
           "plugins": {
             "da": {
               "name": "text",
