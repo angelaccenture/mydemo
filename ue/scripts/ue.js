@@ -94,7 +94,7 @@ const setupUEEventHandlers = () => {
               console.log(grid);
             }
           });
-          const elementCount = getsection.childElementCount;
+          const elementCount = getsection.childNode.childElementCount;
           console.log('Child element count:', elementCount); 
         //Find section, then get grid class name -- split the count up -- then create divs for each number of the count
 
