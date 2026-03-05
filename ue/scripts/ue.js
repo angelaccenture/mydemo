@@ -31,7 +31,7 @@ elementsToRemove.forEach(element => {
 //Fix section grids to not include the default text block
 const gridSection = document.querySelectorAll('.section.grid');
 if (gridSection) {
-   sectionGrid.slice(1).forEach((gridsec) => {
+    gridSection.forEach((gridsec) => {
       console.log(gridsec);
     });
 }
