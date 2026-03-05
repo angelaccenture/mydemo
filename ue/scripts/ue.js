@@ -61,7 +61,6 @@ const advancedBlocks = () => {
   //Move advanced blocks up to parent nodes
    mutatingBlocks.forEach((mutation) => {
     const getparentSection = mutation.closest('.tabSection');
-    console.log(getparentSection);
     moveInstrumentation(mutation, getparentSection);
    });
    //Update section types for advanced blocks
@@ -85,6 +84,7 @@ const setupUEEventHandlers = () => {
         });
       }
     }
+     //Layout Mode - NTH: show dummy block sections where none and turn it off if the user leaves section area
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
         const getsection = event.srcElement.querySelector('div').parentNode;
@@ -95,21 +95,17 @@ const setupUEEventHandlers = () => {
               console.log(grid);
             }
           });
-          const elementCount = getsection.childNode.childElementCount;
-          console.log('Child element count:', elementCount); 
-        //Find section, then get grid class name -- split the count up -- then create divs for each number of the count
-
       }
     }
-     //Turn it off if the user leaves section area - then I don't need anything below
+    
   });
   document.addEventListener('aue:ui-viewport-change', (viewevent) => {
-     console.log("ui-viewport-change");
-     console.log(viewevent);
+    // console.log("ui-viewport-change");
+    // console.log(viewevent);
   });
   document.addEventListener('aue:ui-edit', (editevent) => {
-     console.log("ui-edit");
-     console.log(editevent);
+     //console.log("ui-edit");
+     //console.log(editevent);
   });
   document.addEventListener('aue:ui-select', (selectevent) => {
      const layoutModeOn = document.getElementsByClassName('layoutmode');
