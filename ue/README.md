@@ -33,7 +33,9 @@ To enable Universal Editor for custom blocks, you need to create three essential
 ### UE Support - mydemo updates
 * Initial Setup: Added UE support into scripts.js, Updated error.js to disable for UE, Added scripts to package.json
 * Added filter script to head.html for templates
-* ue.js - updated to to hide/show blocks based on block-type (advanced), then template
+* Support for Advanced blocks (tabs, carousel, accordion) to allow blocks within 
+* Support for filtering blocks based on block-type (advanced), then template
+* Added layout mode for section grid
 
 
 ### Implementation Steps
