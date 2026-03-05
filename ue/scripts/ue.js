@@ -29,6 +29,7 @@ elementsToRemove.forEach(element => {
   element.remove();
 });
 
+
 //Functions to update section filters according to the template/block type
 function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;

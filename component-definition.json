@@ -6,11 +6,11 @@
       "components": [
         {
           "title": "Text",
-          "id": "text",
+          "id": "richtext",
           "plugins": {
             "da": {
-              "name": "text",
-              "unsafeHTML": "<p>Text goes here</p>"
+              "name": "richtext",
+              "unsafeHTML": "<p>Rich Text goes here</p>"
             }
           }
         },
