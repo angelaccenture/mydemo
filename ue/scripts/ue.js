@@ -29,8 +29,12 @@ elementsToRemove.forEach(element => {
   element.remove();
 });
 //Fix section grids to not include the default text block
-const gridSections = document.querySelectorAll('.section.grid');
-console.log(gridSections)
+const gridSection = document.querySelectorAll('.section.grid');
+if (gridSection) {
+   sectionGrid.slice(1).forEach((gridsec) => {
+      console.log(gridsec);
+    });
+}
 
 //Functions to update section filters according to the template/block type
 function setUEFilter(element, filter) {
