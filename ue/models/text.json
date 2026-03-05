@@ -8,18 +8,16 @@
           "name": "text",
            "unsafeHTML": "<p>Normal Text goes here</p>"
          
-        }
-      }
-    },
-    {
-      "title": "Test Text",
-      "id": "text",
-      "plugins": {
-        "da": {
-          "name": "text",
-           "unsafeHTML": "<p>Normal Text goes here</p>"
-         
-        }
+        },
+         "rtelink": {
+            "plugins": {
+              "format": ["bold", "italic"],
+              "list": ["unordered", "ordered"],
+              "justify": ["justifyleft", "justifycenter", "justifyright"],
+              "links": ["unlink", "link"]
+            },
+            "toolbar": ["bold", "italic", "separator", "unordered", "ordered", "separator", "link"]
+          }
       }
     },
     {
