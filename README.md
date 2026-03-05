@@ -1,11 +1,5 @@
 Any code modifications to this original source are not intended for production use yet - this is pure DEMO (beta) to prove out requirments can be done in EDS.
 
-### UE Support - updates
-* Initial Setup: Added UE support into scripts.js, Updated error.js to disable for UE, Added scripts to package.json
-* Added filter script to head.html for templates
-* ue.js - updated to to hide/show blocks based on block-type (advanced), then template
-
-
 # Author Kit
 For projects that want a few more batteries. Built by the team who brought you da.live and adobe.com.
 

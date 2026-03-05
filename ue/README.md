@@ -29,8 +29,14 @@ To enable Universal Editor for custom blocks, you need to create three essential
    - Defines how nested content is handled
    - Empty array for non-container blocks
 
-### Implementation Steps
 
+### UE Support - mydemo updates
+* Initial Setup: Added UE support into scripts.js, Updated error.js to disable for UE, Added scripts to package.json
+* Added filter script to head.html for templates
+* ue.js - updated to to hide/show blocks based on block-type (advanced), then template
+
+
+### Implementation Steps
 1. Add your block to a test page using the document editor
 2. Open the page in Universal Editor
 3. Use the developer console to inspect the `/details` network call
