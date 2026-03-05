@@ -45,9 +45,11 @@ export default function init(el) {
     log('Please add an unordered list to the advanced tabs block.');
     return;
   }
-  // Find the section 
+  // Find the section
+  console.log("tabs and current section"); 
+  console.log(tabs);
   const currSection = el.closest('.section');
-
+  console.log(currSection);
    // Find the section that contains the actual block and only add class to tab sections
   const currSectionat = el.closest('.section .advanced-tabs');
   const tabSectionItem = currSectionat.closest('.section').classList.add("tabSection");
