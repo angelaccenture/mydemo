@@ -12,7 +12,7 @@
               "name": "text",
               "unsafeHTML": "<p>Normal Text goes here</p>"
             },
-            "rtelink": {
+            "rte": {
               "plugins": {
                 "format": [
                   "bold",
