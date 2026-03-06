@@ -4,10 +4,17 @@ export default function init(el) {
     getDefault.forEach(function(element) {    
         const defaultChildren = element.childNodes;
          defaultChildren.forEach(function(eachEl) {  
-            if (eachEl.textContent.includes('[' && ']')) {
+            const regex = /\[(.*?)\]/;
+            const findClass = eachEl.match(regex);
+            if (findClass && findClass.length > 1) {
+                console.log(findClass[0]);
+            }
+
+           /* if (eachEl.textContent.includes('[' && ']')) {
+
             console.log(eachEl);
             eachEl.style.color = 'red';
-            }   
+            }   */
          });
       
         
