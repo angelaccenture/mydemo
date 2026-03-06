@@ -1,9 +1,21 @@
 export default function init(el) {
     const getDefault = document.querySelectorAll('.default-content');
-    
+
+const elementsWithBrackets = Array.from(getDefault).filter(element => {
+  // Check if the textContent includes both '[' and ']'
+  const text = element.textContent;
+  return text.includes('[') && text.includes(']');
+});
+
+// Log the matching elements
+console.log("what is this?");
+console.log(elementsWithBrackets);
+
+
+
     getDefault.forEach(function(element) {    
-        const str = element.childNodes.textContent;
-        console.log("original string");
+        const str = element.childNodes;
+        console.log("original string");  
         console.log(str);
         const strings = ["[value1]", "item[value2]", "[value3][]"];
         console.log("strings");
