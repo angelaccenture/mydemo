@@ -90,9 +90,6 @@ async function handleLayout(text, section, type) {
   if (text === '0') return;
   if (type === 'grid') section.classList.add('grid');
   section.classList.add(`${type}-${text}`);
-  //Move default-content into block content
-  console.log("show sections with grid only");
-  console.log(section);
 }
 
 const getMetadata = (el) => [...el.childNodes].reduce((rdx, row) => {
