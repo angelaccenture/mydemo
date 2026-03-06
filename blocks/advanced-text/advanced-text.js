@@ -1,7 +1,7 @@
 export default function init(el) {
     console.log("Use advanced Text block");
-    const getText = document.querySelectorAll('.default-content');
-    getText.forEach(function(element) {
+    const getDefault = document.querySelectorAll('.default-content').childNodes;
+    getDefault.forEach(function(element) {
         const elementText = element.textContent; 
         if (elementText.includes('[')) {
             console.log(element);
