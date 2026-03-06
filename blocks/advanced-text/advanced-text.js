@@ -1,7 +1,8 @@
 export default function init(el) {
     const getDefault = document.querySelectorAll('.default-content');
 
-    getDefault.forEach(function(element) {  
+    getDefault.forEach(function(element) {
+        console.log("children")  
         console.log(element.children);  
        
     });
