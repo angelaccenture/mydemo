@@ -235,7 +235,7 @@ function groupChildren(section) {
     if (!currentGroup || currentType !== isDiv) {
       currentGroup = document.createElement('div');
       currentGroup.className = isDiv
-        ? 'block-content' : 'advanced-text';
+        ? 'block-content' : 'default-content';
       groups.push(currentGroup);
     }
 
