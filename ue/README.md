@@ -1,3 +1,10 @@
+### UE Support - mydemo updates
+* Initial Setup for AK: Added UE support into scripts.js, Updated error.js to disable for UE, Added scripts to package.json
+* Advanced blocks (tabs, carousel, accordion) to allow blocks within on same page (to show better in UE) 
+* Filtering blocks based on block-type for advanced blocks
+* Filtering by template (excluding advanced blocks)
+* Added layout mode for section grid
+
 # Universal Editor (UE)
 
 Universal Editor is Adobe's next-generation content editing experience that enables true in-context editing across any implementation. Universal Editor is particularly useful when you need a modern, flexible editing experience that can work across different content repositories and implementations.
@@ -29,8 +36,8 @@ To enable Universal Editor for custom blocks, you need to create three essential
    - Defines how nested content is handled
    - Empty array for non-container blocks
 
-### Implementation Steps
 
+### Implementation Steps
 1. Add your block to a test page using the document editor
 2. Open the page in Universal Editor
 3. Use the developer console to inspect the `/details` network call

@@ -12,12 +12,22 @@
 
 import { moveInstrumentation } from './ue-utils.js';
 
+function loadCSS(filename) {
+  var head = document.head; // Access document head
+  var link = document.createElement('link'); // Create a new link element
+  link.rel = 'stylesheet'; // Set the rel attribute
+  link.type = 'text/css'; // Set the type attribute
+  link.href = filename; // Set the href (path to the CSS file)
+
+  head.appendChild(link); // Append the link to the head
+}
+loadCSS( './ue/scripts/ue-styles.css');
+
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
   element.remove();
 });
-
 //Functions to update section filters according to the template/block type
 function setUEFilter(element, filter) {
   element.dataset.aueFilter = filter;
@@ -25,7 +35,6 @@ function setUEFilter(element, filter) {
 function setUELabel(element, label) {
   element.dataset.aueLabel = label;
 }
-
 function getUniversalEditorSections(sectionType) {
   const main = document.querySelector('main');
   const sectionTypeAll = main.querySelectorAll(sectionType);
@@ -36,21 +45,18 @@ function updateSectionTemplate() {
   const sectionList = getUniversalEditorSections('[data-aue-label="Section"]:not(.tabSection)');
   if (template) {
     sectionList.forEach((section) => {
-      console.log("section getting template");
-      console.log(section);
       setUEFilter(section, `${template}-section`);
     });
   }
 }
-
 const advancedBlocks = () => {
   const mutatingBlocks = document.querySelectorAll('div.advanced-tabs, div.advanced-carousel, div.advanced-accordion');
   //Rewrite for all Advanced Blocks after I build them
-  console.log(mutatingBlocks);
+  //console.log("mutatingBlocks");
+  //console.log(mutatingBlocks);
   //Move advanced blocks up to parent nodes
    mutatingBlocks.forEach((mutation) => {
     const getparentSection = mutation.closest('.tabSection');
-    console.log(getparentSection);
     moveInstrumentation(mutation, getparentSection);
    });
    //Update section types for advanced blocks
@@ -61,14 +67,10 @@ const advancedBlocks = () => {
     });
 };
 
-
 const setupUEEventHandlers = () => {
-  // For each img source change, update the srcsets of the parent picture sources
   document.addEventListener('aue:content-patch', (event) => {
-    console.log(event.detail.patch.name);
-
+  // For each img source change, update the srcsets of the parent picture sources
     if (event.detail.patch.name == 'image') {
-      console.log("if image yes");
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
 
@@ -78,8 +80,35 @@ const setupUEEventHandlers = () => {
         });
       }
     }
+     //Layout Mode - NTH: show dummy block sections where none and turn it off if the user leaves section area
+    if (event.detail.patch.name == 'layoutmode') {
+      if (event.detail.patch.value == true) {
+        const getsection = event.srcElement.querySelector('div').parentNode;
+        const findGrid = getsection.classList;       
+          findGrid.forEach(grid => {
+            if (grid.includes('grid-')) {
+              console.log("yes has grid class I am looking for");
+              console.log(grid);
+            }
+          });
+      }
+    }
+    
   });
-
+  document.addEventListener('aue:ui-viewport-change', (viewevent) => {
+    // console.log("ui-viewport-change");
+    // console.log(viewevent);
+  });
+  document.addEventListener('aue:ui-edit', (editevent) => {
+     //console.log("ui-edit");
+     //console.log(editevent);
+  });
+  document.addEventListener('aue:ui-select', (selectevent) => {
+     const layoutModeOn = document.getElementsByClassName('layoutmode');
+     if (layoutModeOn.length > 0) {
+      console.log("turn layoutmodeoff - need to remove from DA DOM");
+     }
+  });
 };
 
 export default () => {

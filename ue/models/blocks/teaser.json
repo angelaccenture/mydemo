@@ -34,9 +34,10 @@
       "id": "teaser",
       "fields": [
         {
-          "component": "multiselect",
+          "component": "select",
           "name": "classes",
           "label": "Style",
+          "value": "left",
           "options": [
            {
               "name": "Left",

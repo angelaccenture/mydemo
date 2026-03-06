@@ -1,12 +1,4 @@
-### UE Support - updates
-* Added /ue code from DA Block collection
-* Added UE support into scripts.js
-* Updated error.js to disable for UE
-* Added filter script to head.html
-* Added scripts to package.json
-* ue.js - removed support for carousel/accordion, etc. since we are using advanced blocks
-* ue.js - updated to to hide/show blocks first based on block type (advanced blocks), then by template
-
+Any code modifications to this original source are not intended for production use yet - this is pure DEMO (beta) to prove out requirments can be done in EDS.
 
 # Author Kit
 For projects that want a few more batteries. Built by the team who brought you da.live and adobe.com.

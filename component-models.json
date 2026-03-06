@@ -115,62 +115,132 @@
         ]
       },
       {
-        "component": "boolean",
-        "label": "Background Image",
-        "name": "bgimage",
-        "valueType": "boolean"
-      },
-      {
         "component": "reference",
         "name": "image",
         "label": "Image",
-        "multi": false,
-        "condition": {
-          "===": [
-            {
-              "var": "bgimage"
-            },
-            true
-          ]
-        }
+        "multi": false
       },
       {
         "component": "tab",
-        "label": "Grid",
+        "label": "Layout",
         "name": "tab2"
       },
       {
-        "component": "number",
-        "valueType": "number",
+        "component": "boolean",
+        "label": "Show Layout Mode",
+        "name": "layoutmode",
+        "valueType": "boolean"
+      },
+      {
+        "component": "select",
         "name": "grid",
         "label": "Desktop Grid Columns",
-        "validation": {
-          "numberMin": 1,
-          "numberMax": 12,
-          "customErrorMsg": "1 thru 12 columns"
-        }
+        "options": [
+          {
+            "name": "No Grid",
+            "value": ""
+          },
+          {
+            "name": "1",
+            "value": "1"
+          },
+          {
+            "name": "2",
+            "value": "2"
+          },
+          {
+            "name": "3",
+            "value": "3"
+          },
+          {
+            "name": "4",
+            "value": "4"
+          },
+          {
+            "name": "5",
+            "value": "5"
+          },
+          {
+            "name": "6",
+            "value": "6"
+          }
+        ]
       },
       {
-        "component": "number",
-        "valueType": "number",
+        "component": "select",
         "name": "gridtab",
         "label": "Tablet Grid Columns",
-        "validation": {
-          "numberMin": 1,
-          "numberMax": 12,
-          "customErrorMsg": "1 thru 12 columns"
-        }
+        "options": [
+          {
+            "name": "1",
+            "value": "1"
+          },
+          {
+            "name": "2",
+            "value": "2"
+          },
+          {
+            "name": "3",
+            "value": "3"
+          },
+          {
+            "name": "4",
+            "value": "4"
+          },
+          {
+            "name": "5",
+            "value": "5"
+          },
+          {
+            "name": "6",
+            "value": "6"
+          }
+        ]
       },
       {
-        "component": "number",
-        "valueType": "number",
+        "component": "boolean",
+        "label": "Hide in Mobile",
+        "name": "hidemobile",
+        "valueType": "boolean"
+      },
+      {
+        "component": "select",
         "name": "gridmob",
         "label": "Mobile Grid Columns",
-        "validation": {
-          "numberMin": 1,
-          "numberMax": 12,
-          "customErrorMsg": "1 thru 12 columns"
-        }
+        "condition": {
+          "===": [
+            {
+              "var": "hidemobile"
+            },
+            false
+          ]
+        },
+        "options": [
+          {
+            "name": "1",
+            "value": "1"
+          },
+          {
+            "name": "2",
+            "value": "2"
+          },
+          {
+            "name": "3",
+            "value": "3"
+          },
+          {
+            "name": "4",
+            "value": "4"
+          },
+          {
+            "name": "5",
+            "value": "5"
+          },
+          {
+            "name": "6",
+            "value": "6"
+          }
+        ]
       },
       {
         "component": "select",
@@ -292,7 +362,7 @@
     "id": "advanced-tabs",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "label": "Style",
         "options": [
@@ -398,7 +468,7 @@
     "id": "card",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "label": "Style",
         "options": [
@@ -470,7 +540,7 @@
     "id": "hero",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "label": "Style",
         "options": [
@@ -700,9 +770,10 @@
     "id": "teaser",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "label": "Style",
+        "value": "left",
         "options": [
           {
             "name": "Left",
