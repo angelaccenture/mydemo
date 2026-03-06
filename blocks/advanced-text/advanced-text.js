@@ -3,16 +3,27 @@ export default function init(el) {
     
     getDefault.forEach(function(element) {    
         const str = element.childNodes;
-              const regex = /\\[(.*?)\\]/g; // Matches content including the brackets
+        console.log("original string");
+        console.log(str);
+        const strings = ["[value1]", "item[value2]", "[value3][]"];
+        console.log("strings");
+        console.log(strings);
+        const extractedValues = [];
 
-const matches = str.match(regex); // ["value1]", "[value2]", "[value3]"]
+            strings.map(str => {
+            const matches = str.match(/\\[(.*?)\\]/g); // Find all matches including brackets
+            if (matches) {
+                matches.forEach(match => {
+                // Remove the brackets to get the value
+                const value = match.replace('[', '').replace(']', '');
+                extractedValues.push(value);
+                });
+            }
+            });
 
-// To get the values without brackets, map over the matches
-const valuesWithoutBrackets = matches.map(match => match.replace(/\\[|\\]/g, ''));
-
-console.log(valuesWithoutBrackets);
-
-         defaultChildren.forEach(function(eachEl) {  
+        console.log(extractedValues);
+        
+        defaultChildren.forEach(function(eachEl) {  
            // const regex = /\[(.*?)\]/;
            // const findClass = eachEl.match(regex);
            // if (findClass && findClass.length > 1) {
