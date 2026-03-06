@@ -2,24 +2,18 @@ export default function init(el) {
     const getDefault = document.querySelectorAll('.default-content');
     
     getDefault.forEach(function(element) {    
-        const defaultChildren = element.childNodes;
-                const extractedValues = [];
+        const str = element.childNodes;
+              const regex = /\\[(.*?)\\]/g; // Matches content including the brackets
 
-                defaultChildren.map(str => {
-                const matches = str.match(/\\[(.*?)\\]/g); // Find all matches including brackets
-                if (matches) {
-                    matches.forEach(match => {
-                    // Remove the brackets to get the value
-                    const value = match.replace('[', '').replace(']', '');
-                    extractedValues.push(value);
-                    });
-                }
-                });
+const matches = str.match(regex); // ["value1]", "[value2]", "[value3]"]
 
-                console.log(extractedValues);
+// To get the values without brackets, map over the matches
+const valuesWithoutBrackets = matches.map(match => match.replace(/\\[|\\]/g, ''));
+
+console.log(valuesWithoutBrackets);
 
          defaultChildren.forEach(function(eachEl) {  
-            const regex = /\[(.*?)\]/;
+           // const regex = /\[(.*?)\]/;
            // const findClass = eachEl.match(regex);
            // if (findClass && findClass.length > 1) {
             //    console.log(findClass[0]);
