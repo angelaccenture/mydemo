@@ -3,17 +3,24 @@ export default function init(el) {
 
     getDefault.forEach(function(element) {
         console.log("children")  
-        console.log(element.children);  
+        const getDefaultC = element.children;
+        console.log(getDefaultC);  
+
+
+            const elementsWithBrackets = Array.from(getDefaultC).filter(element => {
+            const text = element.textContent;
+            return text.includes('[') && text.includes(']');
+            });
        
     });
 
-    const elementsWithBrackets = Array.from(getDefault).filter(element => {
-    const text = element.textContent;
-    return text.includes('[') && text.includes(']');
-    });
+    //const elementsWithBrackets = Array.from(getDefault).filter(element => {
+    //const text = element.textContent;
+    //return text.includes('[') && text.includes(']');
+    //});
 
 // Log the matching elements
-    console.log("what is this?");
+    console.log("Within Array");
     console.log(elementsWithBrackets);
 
     getDefault.forEach(function(element) {    
