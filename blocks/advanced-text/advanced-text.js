@@ -2,7 +2,7 @@ export default function init(el) {
     const getDefault = document.querySelectorAll('.default-content');
     
     getDefault.forEach(function(element) {    
-        const str = element.childNodes;
+        const str = element.childNodes.textContent;
         console.log("original string");
         console.log(str);
         const strings = ["[value1]", "item[value2]", "[value3][]"];
@@ -20,10 +20,10 @@ export default function init(el) {
                 });
             }
             });
-
+            console.log("extractedValues");
         console.log(extractedValues);
         
-        defaultChildren.forEach(function(eachEl) {  
+       // defaultChildren.forEach(function(eachEl) {  
            // const regex = /\[(.*?)\]/;
            // const findClass = eachEl.match(regex);
            // if (findClass && findClass.length > 1) {
@@ -35,7 +35,7 @@ export default function init(el) {
             console.log(eachEl);
             eachEl.style.color = 'red';
             }   */
-         });
+        // });
       
         
         //element.classList.add('active'); // Example of adding another class name
