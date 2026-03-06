@@ -5,7 +5,7 @@ export default function init(el) {
     getDefault.forEach(function(element) {    
         const defaultChildren = element.childNodes;
         console.log(defaultChildren);
-       if (element.textContent.includes('[' && ']')) {
+       if (defaultChildren.textContent.includes('[' && ']')) {
             console.log(element);
             element.style.color = 'red';
         }
