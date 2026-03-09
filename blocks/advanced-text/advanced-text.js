@@ -10,10 +10,7 @@ export default function init(el) {
         if (matches) {
             console.log("matches");
             console.log(matches);
-            const value = matches.substring(1, matches.length - 1);
-            allExtractedValues.push(value);
-            console.log("Found value:", value);
-
+            console.log(matches[1]);
             // If matches are found, process them to remove the brackets
             /*matches.forEach(match => {
                 console.log(match);
