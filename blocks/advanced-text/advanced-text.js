@@ -10,10 +10,11 @@ export default function init(el) {
         if (matches) {
             const classname = matches[1];
             element.classList.add(classname);
-            let matchList = matches.join();
-            let result = matchList.replace(/,/g, '');
-            console.log(result);
-            //const removeclass = matches.replace(matches[0],'');
+
+            
+            const newArray = matches.map(item => {
+                return item.replace(regex, '');
+            });
         }
     });
 
