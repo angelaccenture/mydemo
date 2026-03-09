@@ -69,9 +69,10 @@ const advancedBlocks = () => {
 const richText = () => {
   const fixTextBlock = document.querySelectorAll('div.richtext');
    fixTextBlock.forEach((textBlock) => {
-    console.log(textBlock);
     const getparentBlock = textBlock.parentElement.parentElement;
-    console.log(getparentBlock);
+    const getBlock = textBlock.closest('.block-content');
+    console.log("Parents: " + getparentBlock);
+    console.log("Block Content: " + getBlock);
    });
 };
 
