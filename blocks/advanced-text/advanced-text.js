@@ -8,12 +8,9 @@ export default function init(el) {
         const matches = content.match(regex);
 
         if (matches) {
-            console.log("match value");
             const classname = matches[1];
-            console.log(matches[1]);
-            console.log("content to move class name to");
-            console.log(element);
             element.classList.add(classname);
+            const removeclass = matches.replace(matches[0],'');
         }
     });
 
