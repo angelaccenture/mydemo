@@ -12,6 +12,7 @@ export default function init(el) {
             console.log(matches[1]);
             console.log("content to move class name to");
             console.log(element);
+            element.classList.add("newclass");
         }
     });
 
