@@ -2,7 +2,7 @@ export default function init(el) {
     const allHP = document.querySelectorAll('h1, p');
     const regex = /\[(.*?)\]/;
 
-    allHP.forEach(function(element) { 
+    allHP.forEach((element, index) => {
         const content = element.textContent;
         const matches = content.match(regex);
         if (matches) {
