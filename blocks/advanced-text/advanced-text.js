@@ -8,10 +8,10 @@ export default function init(el) {
         if (matches) {
             const classname = matches[1];
             element.classList.add(classname);
-            console.log(matches[0]);
+            //console.log(matches[0]);
             const newArray = matches.map(function(item) {
                 console.log(item);
-                    return item.slice(1); // or item.slice(1)
+                    return item.slice(); // or item.slice(1)
             });
         }
     });
