@@ -23,11 +23,6 @@ function loadCSS(filename) {
 }
 loadCSS( './ue/scripts/ue-styles.css');
 
-const findText = document.querySelectorAll('div.richtext');
-findText.forEach(textitem => {
-  console.log("Rich Text: " + textitem.content);
-});
-
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
@@ -70,6 +65,13 @@ const advancedBlocks = () => {
       setUEFilter(section, `tabs-section`);
       setUELabel(section, `Tab Section`);
     });
+};
+const richText = () => {
+  const fixTextBlock = document.querySelectorAll('div.richtext');
+   fixTextBlock.forEach((textBlock) => {
+    console.log(textBlock);
+    //const getparentSection = textBlock.closest('.tabSection');
+   });
 };
 
 const setupUEEventHandlers = () => {
