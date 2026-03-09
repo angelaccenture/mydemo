@@ -67,7 +67,7 @@ const advancedBlocks = () => {
     });
 };
 const defaultContent = () => {
-  const fixImage = document.querySelectorAll('.default-content');
+  const fixDefault = document.querySelectorAll('.default-content');
     fixDefault.forEach((defaultC) => {
     const defaultParent = defaultC.parentElement;
     console.log("Parents: ");
