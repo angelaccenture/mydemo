@@ -8,8 +8,11 @@ export default function init(el) {
         });
 
         console.log("elements")  
-        console.log(text); 
+        console.log(elementsWithBrackets); 
 
+         console.log("text")  
+        console.log(text); 
+        
       
     });
 }
