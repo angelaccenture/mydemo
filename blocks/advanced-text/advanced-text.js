@@ -10,6 +10,7 @@ export default function init(el) {
             element.classList.add(classname);
             console.log("content" + content);
             console.log("matches" + matches[0]);
+            content.splice(index, 1);
         }
     });
 
