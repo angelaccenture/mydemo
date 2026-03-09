@@ -1,16 +1,15 @@
 export default function init(el) {
     const allHP = document.querySelectorAll('h1, p');
-    const allExtractedValues = [];
+    const regex = /\[(.*?)\]/;
 
     allHP.forEach(function(element) { 
         const content = element.textContent;
-        const regex = /\[(.*?)\]/;
         const matches = content.match(regex);
         if (matches) {
             const classname = matches[1];
             element.classList.add(classname);
+            console.log(matches[0]);
         }
-        return element.replace(regex, '');
     });
 
 }
