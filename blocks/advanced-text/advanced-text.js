@@ -9,6 +9,9 @@ export default function init(el) {
             const classname = matches[1];
             element.classList.add(classname);
             console.log(matches[0]);
+            const newArray = matches.map(function(item) {
+                    return item.substring(1); // or item.slice(1)
+            });
         }
     });
 
