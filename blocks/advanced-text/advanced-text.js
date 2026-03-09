@@ -8,8 +8,9 @@ export default function init(el) {
         if (matches) {
             const classname = matches[1];
             element.classList.add(classname);
-            console.log(content);
-            console.log(regex);
+            console.log("content" + content);
+            console.log("index" + index);
+            console.log("matches" + matches);
         }
     });
 
