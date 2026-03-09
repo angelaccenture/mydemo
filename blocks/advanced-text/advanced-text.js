@@ -3,11 +3,17 @@ export default function init(el) {
 
     allHP.forEach(function(element) { 
         
-        const strings = ["[value1]", "item[value2]", "[value3][]"];
-        console.log("strings");
-        console.log(strings);
+               /*const elementsWithBrackets = Array.from(allHP).filter(element => {
+            const text = element.textContent;
+            return text.includes('[') && text.includes(']');
+
+        });
+        if (elementsWithBrackets) {
+            element.classList.add('center');
+        }*/
+    }); 
+     const strings = ["[value1]", "item[value2]", "[value3][]"];
         const extractedValues = [];
-     
      
         strings.map(str => {
             const matches = str.match(/\\[(.*?)\\]/g); // Find all matches including brackets
@@ -21,15 +27,6 @@ export default function init(el) {
             });
             console.log("extractedValues");
             console.log(extractedValues);
-        /*const elementsWithBrackets = Array.from(allHP).filter(element => {
-            const text = element.textContent;
-            return text.includes('[') && text.includes(']');
-
-        });
-        if (elementsWithBrackets) {
-            element.classList.add('center');
-        }*/
-    }); 
    
    
   
