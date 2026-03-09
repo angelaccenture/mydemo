@@ -71,6 +71,7 @@ const richText = () => {
    fixTextBlock.forEach((textBlock) => {
     console.log(textBlock);
     const getparentBlock = textBlock.parentElement;
+    console.log(getparentBlock);
    });
 };
 
