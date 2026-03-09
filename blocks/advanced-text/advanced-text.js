@@ -14,8 +14,8 @@ export default function init(el) {
             const partToRemove = "center";
             const updatedElement = content.replace(partToRemove, '');
             console.log(updatedElement);
-            //array[index] = updatedElement;
-            content = updatedElement;
+
+            element.textContent = updatedElement;
         }
     });
 
