@@ -10,7 +10,10 @@ export default function init(el) {
         if (matches) {
             const classname = matches[1];
             element.classList.add(classname);
-            const removeclass = matches.replace(matches[0],'');
+            let matchList = matches.join();
+            let result = matchList.replace(/,/g, ' AND ');
+            console.log(result);
+            //const removeclass = matches.replace(matches[0],'');
         }
     });
 
