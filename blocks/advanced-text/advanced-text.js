@@ -15,7 +15,7 @@ export default function init(el) {
             const updatedElement = content.replace(partToRemove, '');
             console.log(updatedElement);
             //array[index] = updatedElement;
-            return updatedElement;
+            content = updatedElement;
         }
     });
 
