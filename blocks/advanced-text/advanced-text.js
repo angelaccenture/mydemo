@@ -9,8 +9,7 @@ export default function init(el) {
             const classname = matches[1];
             element.classList.add(classname);
             console.log("content" + content);
-            console.log("index" + index);
-            console.log("matches" + matches);
+            console.log("matches" + matches[0]);
         }
     });
 
