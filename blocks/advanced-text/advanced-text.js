@@ -3,14 +3,13 @@ export default function init(el) {
     const allExtractedValues = [];
 
     allHP.forEach(function(element) { 
-       // Get the plain text content of the element
     const content = element.textContent;
-
-    // 3. Use regex to find all matches in the content
-    // The regex /\[(.*?)]/g finds the brackets and their content
+    console.log(content);
     const matches = content.match(/\\[(.*?)\\]/g);
 
     if (matches) {
+        console.log("matches");
+        console.log(matches);
         // If matches are found, process them to remove the brackets
         matches.forEach(match => {
             // Remove the leading '[' and trailing ']'
