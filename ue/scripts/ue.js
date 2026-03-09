@@ -121,5 +121,6 @@ const setupUEEventHandlers = () => {
 export default () => {
   setupUEEventHandlers();
   advancedBlocks();
+  richText();
   updateSectionTemplate();
 };
