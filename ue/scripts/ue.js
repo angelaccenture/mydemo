@@ -68,7 +68,8 @@ const advancedBlocks = () => {
 };
 const defaultContent = () => {
   const fixDefault = document.querySelectorAll('.default-content');
-    fixDefault.forEach((defaultC) => {
+   fixDefault.forEach((defaultC) => {
+    defaultC.classList.add(`block-content`);
     const defaultParent = defaultC.parentElement;
     console.log("Parents: ");
     console.log(defaultParent)
