@@ -2,7 +2,7 @@ export default function init(el) {
     const allHP = document.querySelectorAll('h1, p');
     const regex = /\[(.*?)\]/;
 
-    allHP.forEach((element, index) => {
+    allHP.forEach((element, index, array) => {
         const content = element.textContent;
         const matches = content.match(regex);
         
@@ -11,10 +11,10 @@ export default function init(el) {
             element.classList.add(classname);
             console.log("content: " + content);
             console.log("matches: " + matches);
+            const partToRemove = "center";
+            const updatedElement = content.replace(partToRemove, '');
+            array[index] = updatedElement;
         }
-            // const updatedArray = content.map(item => {
-             //   return item.replace(matches[0], "");
-            // });
     });
 
 }
