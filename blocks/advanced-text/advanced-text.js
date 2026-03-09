@@ -6,16 +6,11 @@ export default function init(el) {
         const content = element.textContent;
         const regex = /\[(.*?)\]/;
         const matches = content.match(regex);
-
         if (matches) {
             const classname = matches[1];
             element.classList.add(classname);
-
-            
-            const newArray = matches.map(item => {
-                return item.replace(regex, '');
-            });
         }
+        return element.replace(regex, '');
     });
 
 }
