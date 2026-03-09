@@ -11,7 +11,7 @@ export default function init(el) {
             const classname = matches[1];
             element.classList.add(classname);
             let matchList = matches.join();
-            let result = matchList.replace(/,/g, ' AND ');
+            let result = matchList.replace(/,/g, '');
             console.log(result);
             //const removeclass = matches.replace(matches[0],'');
         }
