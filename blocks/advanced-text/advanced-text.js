@@ -10,7 +10,7 @@ export default function init(el) {
         if (matches) {
             console.log("matches");
             console.log(matches);
-            const value = match.substring(1, match.length - 1);
+            const value = element.substring(1, match.length - 1);
             allExtractedValues.push(value);
             console.log("Found value:", value);
 
