@@ -8,6 +8,7 @@ export default function init(el) {
         if (matches) {
             const classname = matches[1];
             element.classList.add(classname);
+            console.log(matches);
             return matches[0].slice(1);
         }
     });
