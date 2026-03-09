@@ -23,7 +23,7 @@ function loadCSS(filename) {
 }
 loadCSS( './ue/scripts/ue-styles.css');
 
-const findText = document.querySelectorAll('richtext');
+const findText = document.querySelectorAll('div.richtext');
 findText.forEach(textitem => {
   console.log("Rich Text: " + textitem);
 });
