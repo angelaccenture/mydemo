@@ -23,6 +23,9 @@ function loadCSS(filename) {
 }
 loadCSS( './ue/scripts/ue-styles.css');
 
+const findText = document.querySelectorAll('default-content');
+console.log(findText);
+
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
 elementsToRemove.forEach(element => {
@@ -106,7 +109,7 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:ui-select', (selectevent) => {
      const layoutModeOn = document.getElementsByClassName('layoutmode');
      if (layoutModeOn.length > 0) {
-      console.log("turn layoutmodeoff - need to remove from DA DOM");
+      console.log("turn layoutmode off once user leaves section - need to remove from DA DOM");
      }
   });
 };
