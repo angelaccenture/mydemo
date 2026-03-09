@@ -3,7 +3,7 @@ export default function init(el) {
 
     allHP.forEach(function(element) { 
         const regex = /\[(.*?)\]/;
-        const findClass = allHP.match(regex);
+        const findClass = element.match(regex);
         if (findClass && findClass.length > 1) {
              console.log(findClass);
            }
