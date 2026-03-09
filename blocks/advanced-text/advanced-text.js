@@ -2,6 +2,8 @@ export default function init(el) {
     const allHP = document.querySelectorAll('h1, p');
 
     allHP.forEach(function(element) { 
+        const matches = allHP.match(/\\[(.*?)\\]/g);
+        console.log(matches);
         
                /*const elementsWithBrackets = Array.from(allHP).filter(element => {
             const text = element.textContent;
