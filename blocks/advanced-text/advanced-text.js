@@ -1,13 +1,16 @@
 export default function init(el) {
     const allHP = document.querySelectorAll('h1, p');
 
-    const elements = document.querySelectorAll('h1, p');
-    const valuesInsideBrackets = [...elements]
-    .map(element => element.textContent.matchAll(/\\[(.*?)\\]/g)) 
-    .flatMap(matches => [...matches].map(match => match[1])); 
+    allHP.forEach(function(element) { 
+        const elementsWithBrackets = Array.from(allHP).filter(element => {
+            const text = element.textContent;
+            return text.includes('[') && text.includes(']');
+        });
 
-console.log(valuesInsideBrackets); 
-   
+        console.log("elements")  
+        console.log(elementsWithBrackets); 
+      
+    }); 
    
    
   
