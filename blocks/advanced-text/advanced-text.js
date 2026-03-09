@@ -11,8 +11,8 @@ export default function init(el) {
             element.classList.add(classname);
             console.log("content: " + content);
             console.log("matches: " + matches);
-            const partToRemove = "center";
-            const updatedElement = content.replace(partToRemove, '');
+            //const partToRemove = "center";
+            const updatedElement = content.replace(matches[0], '');
             console.log(updatedElement);
 
             element.textContent = updatedElement;
