@@ -6,9 +6,9 @@ export default function init(el) {
             const text = element.textContent;
             return text.includes('[') && text.includes(']');
         });
-        console.log("elements")  
-        console.log(elementsWithBrackets); 
-        elementsWithBrackets.classList.add('center');
+        if (elementsWithBrackets) {
+            element.classList.add('center');
+        }
     }); 
    
    
