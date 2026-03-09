@@ -9,12 +9,7 @@ export default function init(el) {
         if (matches) {
             const classname = matches[1];
             element.classList.add(classname);
-            console.log("content: " + content);
-            console.log("matches: " + matches);
-            //const partToRemove = "center";
             const updatedElement = content.replace(matches[0], '');
-            console.log(updatedElement);
-
             element.textContent = updatedElement;
         }
     });
