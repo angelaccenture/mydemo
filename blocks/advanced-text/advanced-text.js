@@ -12,6 +12,7 @@ export default function init(el) {
         console.log(matches);
         // If matches are found, process them to remove the brackets
         matches.forEach(match => {
+            console.log(match);
             // Remove the leading '[' and trailing ']'
             const value = match.substring(1, match.length - 1);
             allExtractedValues.push(value);
