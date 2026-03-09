@@ -4,8 +4,8 @@ export default function init(el) {
 
     allHP.forEach(function(element) { 
     const content = element.textContent;
-    console.log(content);
-    const matches = content.match(/\\[(.*?)\\]/g);
+    const regex = /\[(.*?)\]/;
+    const matches = content.match(regex);
 
     if (matches) {
         console.log("matches");
