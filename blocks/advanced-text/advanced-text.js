@@ -10,6 +10,7 @@ export default function init(el) {
             element.classList.add(classname);
             console.log(matches[0]);
             const newArray = matches.map(function(item) {
+                console.log(item);
                     return item.slice(1); // or item.slice(1)
             });
         }
