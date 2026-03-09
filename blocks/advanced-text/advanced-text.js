@@ -8,10 +8,10 @@ export default function init(el) {
         if (matches) {
             const classname = matches[1];
             element.classList.add(classname);
-            console.log("content" + content);
-            console.log("matches" + matches[0]);
-            content.splice(index, 1);
         }
+             const updatedArray = content.map(item => {
+                return item.replace(matches[0], "");
+             });
     });
 
 }
