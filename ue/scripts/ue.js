@@ -24,7 +24,9 @@ function loadCSS(filename) {
 loadCSS( './ue/scripts/ue-styles.css');
 
 const findText = document.querySelectorAll('richtext');
-console.log("Rich Text: " + findText);
+findText.forEach(textitem => {
+  console.log("Rich Text: " + textitem);
+});
 
 //Remove Footer from UE 
 const elementsToRemove = document.querySelectorAll('footer');
