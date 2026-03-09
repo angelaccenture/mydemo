@@ -13,7 +13,8 @@ export default function init(el) {
             console.log("matches: " + matches);
             const partToRemove = "center";
             const updatedElement = content.replace(partToRemove, '');
-            array[index] = updatedElement;
+            console.log(updatedElement);
+            //array[index] = updatedElement;
         }
     });
 
