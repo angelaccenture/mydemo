@@ -3,6 +3,20 @@ export default function init(el) {
 
     allHP.forEach(function(element) { 
         console.log(element);
+        const extractedValues = [];
+          element.map(str => {
+            const matches = str.match(/\\[(.*?)\\]/g); // Find all matches including brackets
+            if (matches) {
+                matches.forEach(match => {
+                // Remove the brackets to get the value
+                const value = match.replace('[', '').replace(']', '');
+                extractedValues.push(value);
+                });
+            }
+            });
+            console.log("extractedValues");
+            console.log(extractedValues);
+
         //const matches = element.match(/\\[(.*?)\\]/g);
         //console.log(matches);
         
