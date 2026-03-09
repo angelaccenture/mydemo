@@ -70,7 +70,7 @@ const richText = () => {
   const fixTextBlock = document.querySelectorAll('div.richtext');
    fixTextBlock.forEach((textBlock) => {
     console.log(textBlock);
-    //const getparentSection = textBlock.closest('.tabSection');
+    const getparentBlock = textBlock.parentElement;
    });
 };
 
