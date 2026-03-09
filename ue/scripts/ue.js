@@ -70,7 +70,7 @@ const richText = () => {
   const fixTextBlock = document.querySelectorAll('div.richtext');
    fixTextBlock.forEach((textBlock) => {
     console.log(textBlock);
-    const getparentBlock = textBlock.parentElement;
+    const getparentBlock = textBlock.parentElement.parentElement;
     console.log(getparentBlock);
    });
 };
