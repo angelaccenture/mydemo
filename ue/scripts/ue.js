@@ -73,7 +73,7 @@ const defaultContent = () => {
       //Find closest block-content or else create one
     const blockExists = defaultC.closest('.block-content');
     console.log("find block");
-    console.log(currentBlock)
+    console.log(blockExists)
 
 
     defaultC.classList.add(`block-content`);
