@@ -68,9 +68,9 @@ const advancedBlocks = () => {
 };
 //MOVE any default Content into a block
 const defaultContent = () => {
-  const fixDefault = document.querySelectorAll('.default-content');
+ const fixDefault = document.querySelectorAll('.default-content');
    fixDefault.forEach((defaultC) => {
-   const blockExists = defaultC.parentElement.querySelector('.block-content');
+ /*  const blockExists = defaultC.parentElement.querySelector('.block-content');
     console.log("find block");
     console.log(blockExists)
     if (blockExists) {
@@ -103,7 +103,7 @@ const defaultContent = () => {
     else {
       //Create block conent div if does not exist
          //defaultC.classList.add(`block-content`);
-    }
+    }*/
 
     const defaultParent = defaultC.parentElement;
             console.log("Parents: ");
@@ -169,6 +169,6 @@ const setupUEEventHandlers = () => {
 export default () => {
   setupUEEventHandlers();
   advancedBlocks();
- // defaultContent();
+  defaultContent();
   updateSectionTemplate();
 };
