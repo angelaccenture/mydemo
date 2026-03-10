@@ -71,7 +71,7 @@ const defaultContent = () => {
   const fixDefault = document.querySelectorAll('.default-content');
    fixDefault.forEach((defaultC) => {
       //Find closest block-content or else create one
-    const blockExists = defaultC.closest('.block-content');
+    const blockExists = defaultC.parentElement.querySelector('.block-content');
     console.log("find block");
     console.log(blockExists)
 
