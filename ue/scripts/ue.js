@@ -94,8 +94,9 @@ const defaultContent = () => {
             }
         newEle.setAttribute('data-aue-behavior','component');
 
+        newEle.appendChild(defaultC.children[0]) 
         blockExists.appendChild(newEle);
-        //newEle.appendChild(blockExists)   
+          
     }
 
     const defaultParent = defaultC.parentElement;
