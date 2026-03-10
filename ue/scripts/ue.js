@@ -70,13 +70,14 @@ const advancedBlocks = () => {
 const defaultContent = () => {
   const fixDefault = document.querySelectorAll('.default-content');
    fixDefault.forEach((defaultC) => {
-      //Find closest block-content or else create one
-    const blockExists = defaultC.parentElement.querySelector('.block-content');
+   const blockExists = defaultC.parentElement.querySelector('.block-content');
     console.log("find block");
     console.log(blockExists)
     if (blockExists) {
         const newEle = document.createElement('div');
+        //Update these for text as well
         newEle.setAttribute('class','image');
+        newEle.setAttribute('data-block-name','image');
         const getUEattrres = defaultC.children[0].getAttribute('data-aue-resource');
            if (getUEattrres !== null) {
               newEle.setAttribute('data-aue-resource', getUEattrres)
@@ -98,11 +99,15 @@ const defaultContent = () => {
         blockExists.appendChild(newEle);
           
     }
+    else {
+      //Create block conent div if does not exist
+         //defaultC.classList.add(`block-content`);
+    }
 
     const defaultParent = defaultC.parentElement;
             console.log("Parents: ");
             console.log(defaultParent)
-    //defaultC.classList.add(`block-content`);
+ 
     
    });
   const fixTextBlock = document.querySelectorAll('div.richtext');
