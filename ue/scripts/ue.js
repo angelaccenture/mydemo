@@ -72,6 +72,12 @@ const defaultContent = () => {
     defaultC.classList.add(`block-content`);
     const newEle = document.createElement('div');
     newEle.setAttribute('class','image');
+    const getUEattr = defaultC.children.getAttribute('data-aue-resource');
+    console.log(getUEattr);
+     if (getUEattr !== null) {
+      newEle.setAttribute('data-aue-resource',)
+    }
+
 
     defaultC.appendChild(newEle);
 
