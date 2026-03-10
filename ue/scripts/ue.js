@@ -73,7 +73,7 @@ const defaultContent = () => {
     const newEle = document.createElement('div');
     newEle.setAttribute('class','image');
 
-    defaultC.before(newEle);
+    defaultC.appendChild(newEle);
 
     const defaultParent = defaultC.parentElement;
     console.log("Parents: ");
