@@ -70,9 +70,16 @@ const defaultContent = () => {
   const fixDefault = document.querySelectorAll('.default-content');
    fixDefault.forEach((defaultC) => {
     defaultC.classList.add(`block-content`);
+    const newEle = document.createElement('div');
+    newEle.setAttribute('class','image');
+    
+    defaultC.after(newEle);
+
     const defaultParent = defaultC.parentElement;
     console.log("Parents: ");
     console.log(defaultParent)
+    
+    //create outer layer, then move picture into outer layer
    });
   const fixTextBlock = document.querySelectorAll('div.richtext');
    fixTextBlock.forEach((textBlock) => {
