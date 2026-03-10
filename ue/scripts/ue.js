@@ -72,8 +72,8 @@ const defaultContent = () => {
     defaultC.classList.add(`block-content`);
     const newEle = document.createElement('div');
     newEle.setAttribute('class','image');
-    
-    defaultC.after(newEle);
+
+    defaultC.before(newEle);
 
     const defaultParent = defaultC.parentElement;
     console.log("Parents: ");
