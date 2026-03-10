@@ -72,10 +72,21 @@ const defaultContent = () => {
     defaultC.classList.add(`block-content`);
     const newEle = document.createElement('div');
     newEle.setAttribute('class','image');
-    const getUEattr = defaultC.children[0].getAttribute('data-aue-resource');
-    console.log(getUEattr);
-     if (getUEattr !== null) {
-      newEle.setAttribute('data-aue-resource', getUEattr)
+    newEle.setAttribute('data-aue-behavior','component');
+    const getUEattrres = defaultC.children[0].getAttribute('data-aue-resource');
+    console.log(getUEattrres);
+     if (getUEattrres !== null) {
+      newEle.setAttribute('data-aue-resource', getUEattrres)
+    }
+    const getUEattrlab = defaultC.children[0].getAttribute('data-aue-label');
+    console.log(getUEattrlab);
+     if (getUEattrlab !== null) {
+      newEle.setAttribute('data-aue-label', getUEattrlab)
+    }
+    const getUEattrcomp = defaultC.children[0].getAttribute('data-aue-component');
+    console.log(getUEattrcomp);
+     if (getUEattrcomp !== null) {
+      newEle.setAttribute('data-aue-component', getUEattrcomp)
     }
 
 
