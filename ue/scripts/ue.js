@@ -75,7 +75,7 @@ const defaultContent = () => {
     const getUEattr = defaultC.children[0].getAttribute('data-aue-resource');
     console.log(getUEattr);
      if (getUEattr !== null) {
-      newEle.setAttribute('data-aue-resource',)
+      newEle.setAttribute('data-aue-resource', getUEattr)
     }
 
 
