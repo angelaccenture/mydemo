@@ -72,25 +72,28 @@ const defaultContent = () => {
     defaultC.classList.add(`block-content`);
     const newEle = document.createElement('div');
     newEle.setAttribute('class','image');
-    newEle.setAttribute('data-aue-behavior','component');
     const getUEattrres = defaultC.children[0].getAttribute('data-aue-resource');
     console.log(getUEattrres);
      if (getUEattrres !== null) {
       newEle.setAttribute('data-aue-resource', getUEattrres)
+      defaultC.children[0].removeAttribute('data-aue-resource');
     }
     const getUEattrlab = defaultC.children[0].getAttribute('data-aue-label');
     console.log(getUEattrlab);
      if (getUEattrlab !== null) {
-      newEle.setAttribute('data-aue-label', getUEattrlab)
+      newEle.setAttribute('data-aue-label', getUEattrlab);
+      defaultC.children[0].removeAttribute('data-aue-label');
     }
     const getUEattrcomp = defaultC.children[0].getAttribute('data-aue-component');
     console.log(getUEattrcomp);
      if (getUEattrcomp !== null) {
-      newEle.setAttribute('data-aue-component', getUEattrcomp)
+      newEle.setAttribute('data-aue-component', getUEattrcomp);
+      defaultC.children[0].removeAttribute('data-aue-component');
     }
-
+    newEle.setAttribute('data-aue-behavior','component');
 
     defaultC.appendChild(newEle);
+    newEle.appendChild(defaultC.children[0])
 
     const defaultParent = defaultC.parentElement;
     console.log("Parents: ");
