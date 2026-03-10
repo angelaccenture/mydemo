@@ -66,9 +66,16 @@ const advancedBlocks = () => {
       setUELabel(section, `Tab Section`);
     });
 };
+//MOVE any default Content into a block
 const defaultContent = () => {
   const fixDefault = document.querySelectorAll('.default-content');
    fixDefault.forEach((defaultC) => {
+      //Find closest block-content or else create one
+    const blockExists = defaultC.closest('.block-content');
+    console.log("find block");
+    console.log(currentBlock)
+
+
     defaultC.classList.add(`block-content`);
     const newEle = document.createElement('div');
     newEle.setAttribute('class','image');
@@ -84,7 +91,7 @@ const defaultContent = () => {
       newEle.setAttribute('data-aue-label', getUEattrlab);
       defaultC.children[0].removeAttribute('data-aue-label');
     }
-    const getUEattrcomp = defaultC.children[0].getAttribute('data-aue-component');
+    const getUEattrcomp = defaultC.children[0].getAttribute('data-aue-component');;
     console.log(getUEattrcomp);
      if (getUEattrcomp !== null) {
       newEle.setAttribute('data-aue-component', getUEattrcomp);
@@ -98,8 +105,6 @@ const defaultContent = () => {
     const defaultParent = defaultC.parentElement;
     console.log("Parents: ");
     console.log(defaultParent)
-    
-    //create outer layer, then move picture into outer layer
    });
   const fixTextBlock = document.querySelectorAll('div.richtext');
    fixTextBlock.forEach((textBlock) => {
