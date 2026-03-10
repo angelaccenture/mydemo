@@ -78,6 +78,7 @@ const defaultContent = () => {
         //Update these for text as well
         newEle.setAttribute('class','image');
         newEle.setAttribute('data-block-name','image');
+         newEle.setAttribute('data-aue-type','image');
         const getUEattrres = defaultC.children[0].getAttribute('data-aue-resource');
            if (getUEattrres !== null) {
               newEle.setAttribute('data-aue-resource', getUEattrres)
