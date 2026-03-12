@@ -122,7 +122,7 @@ export default async function init(el) {
   const getDefaultContent = section.querySelectorAll('div.default-content');
   if (sectionGrid && getDefaultContent) {
 
-        console.log(getDefaultContent.parentNode);
+        console.log(getDefaultContent);
         //const sectionChildren = sectionGrid.children;
         //const createNewBlock = document.createElement('div');
         //createNewBlock.setAttribute('class','angel-content');
