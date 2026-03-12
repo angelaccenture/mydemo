@@ -119,7 +119,8 @@ export default async function init(el) {
   el.remove();
   if (section.classList.contains('grid')) {
     const getDefaultContent = section.querySelectorAll('div.default-content');
-    console.log(getDefaultContent);
+    const getBlock = getDefaultContent.closest(".block-content");
+    console.log(getBlock);
     getDefaultContent.forEach((defaultEl) => {
       console.log(defaultEl)
     });
