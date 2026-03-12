@@ -119,10 +119,10 @@ export default async function init(el) {
   el.remove();
 
 
-
   const sectionGrid = section.querySelectorAll('div.grid');
   if (sectionGrid) {
     console.log("WTF")
+    sectionGrid.map(node => console.log(node));
     sectionGrid.forEach(function(currentNode, index) {
         // Perform an action on the currentNode
           console.log(`Node at index ${index}:`, currentNode);
