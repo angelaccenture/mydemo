@@ -119,5 +119,6 @@ export default async function init(el) {
   el.remove();
   if (section.classList.contains('grid')) {
     console.log("find all sections with grid");
+    console.log(section);
   }
 }
