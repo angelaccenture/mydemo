@@ -123,7 +123,7 @@ export default async function init(el) {
   if (sectionGrid.length > 0) {
       sectionGrid.forEach(sec => {
         console.log(sec);
-        const sectionParent = sec.parentNode;
+        const sectionParent = sec.parentNode.querySelector('div.block-content');
         console.log(sectionParent);
         //const getBlock = sectionParent.querySelector('.block-content');
         //getBlock.apprendChild(sec);
