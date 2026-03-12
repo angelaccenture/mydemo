@@ -72,10 +72,16 @@ const defaultContent = () => {
     //This is unique to UE only
      richtext.forEach((rtele) => {
       const getRTParent = rtele.parentElement.parentElement;
+      const getRTBlock = rtele.parentElement;
       console.log("Rich Text - Parents: ");
       console.log(getRTParent)
       if (getRTParent.classList.contains('grid')) {
-        console.log("is within grid");
+        console.log("is within grid - create new element, move out of block-content and into new container");
+        const newDiv = document.createElement('div');
+        newDiv.setAttribute('class','default-content');
+        newDiv.appendChild(getRTParent);
+        console.log(getRTParent); 
+
       }
     });
  const fixDefault = document.querySelectorAll('div.default-content');
