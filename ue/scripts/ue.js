@@ -66,63 +66,6 @@ const advancedBlocks = () => {
       setUELabel(section, `Tab Section`);
     });
 };
-//MOVE any default Content into a block
-const defaultContent = () => {
-    //Rich Text creating block is unique to UE only
-    const richtext = document.querySelectorAll('div.richtext')
-     richtext.forEach((RTele) => {
-      const getRTParent = RTele.parentElement.parentElement;
-      const getRTBlock = RTele.parentElement;
-      if (getRTParent.classList.contains('grid')) {
-        const newDiv = document.createElement('div');
-        newDiv.setAttribute('class','default-content');
-        newDiv.appendChild(RTele)
-        getRTParent.prepend(newDiv);
-      }
-    });
- const fixDefault = document.querySelectorAll('div.default-content');
-   fixDefault.forEach((defaultC) => {
- /*  const blockExists = defaultC.parentElement.querySelector('.block-content');
-    console.log("find block");
-    console.log(blockExists)
-    if (blockExists) {
-        const newEle = document.createElement('div');
-        //Update these for text as well
-        newEle.setAttribute('class','image');
-        newEle.setAttribute('data-block-name','image');
-         newEle.setAttribute('data-aue-type','image');
-        const getUEattrres = defaultC.children[0].getAttribute('data-aue-resource');
-           if (getUEattrres !== null) {
-              newEle.setAttribute('data-aue-resource', getUEattrres)
-              defaultC.children[0].removeAttribute('data-aue-resource');
-            }
-        const getUEattrlab = defaultC.children[0].getAttribute('data-aue-label');
-            if (getUEattrlab !== null) {
-              newEle.setAttribute('data-aue-label', getUEattrlab);
-              defaultC.children[0].removeAttribute('data-aue-label');
-            }
-        const getUEattrcomp = defaultC.children[0].getAttribute('data-aue-component');;
-            if (getUEattrcomp !== null) {
-              newEle.setAttribute('data-aue-component', getUEattrcomp);
-              defaultC.children[0].removeAttribute('data-aue-component');
-            }
-        newEle.setAttribute('data-aue-behavior','component');
-
-        newEle.appendChild(defaultC.children[0]) 
-        blockExists.appendChild(newEle);
-          
-    }
-    else {
-      //Create block conent div if does not exist
-         //defaultC.classList.add(`block-content`);
-    }*/
-
-    const defaultParent = defaultC.parentElement;
-    console.log("Image Parents: ");
-    console.log(defaultParent)
-    
-   });
-};
 
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
@@ -171,6 +114,5 @@ const setupUEEventHandlers = () => {
 export default () => {
   setupUEEventHandlers();
   advancedBlocks();
-  defaultContent();
   updateSectionTemplate();
 };
