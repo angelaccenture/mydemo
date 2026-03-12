@@ -120,18 +120,10 @@ export default async function init(el) {
 
 
   const sectionGrid = section.querySelectorAll('div.grid .default-content');
- // console.log(sectionGrid);
-  if (sectionGrid) {
-    const allsectionGrid = [sectionGrid]
-   // console.log("WTF 2");
-    for (const nodeList of allsectionGrid) {
-     // console.log("first for")
-     // console.log(nodeList);
-        for (const element of nodeList) {
-       //     console.log(element); // This should log each element to the console
-        }
-    }
-   }
+  console.log(sectionGrid);
+  if (sectionGrid.length > 0) {
+    console.log("Right Ones");
+  }
   
        //console.log(getDefaultContent);
         //const sectionChildren = sectionGrid.children;
