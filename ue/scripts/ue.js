@@ -74,7 +74,7 @@ const defaultContent = () => {
       const getRTParent = rtele.parentElement.parentElement;
       console.log("Rich Text - Parents: ");
       console.log(getRTParent)
-      if (getRTParent.classList.contains('.grid')) {
+      if (getRTParent.classList.contains('grid')) {
         console.log("is within grid");
       }
     });
