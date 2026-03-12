@@ -117,4 +117,7 @@ export default async function init(el) {
   if (metadata['background-image']?.content) handleBackground(metadata['background-image'].content, section);
   if (metadata.background?.content) handleBackground(metadata.background, section);
   el.remove();
+  if (section.classList.contains('grid')) {
+    console.log("find all sections with grid");
+  }
 }
