@@ -77,7 +77,7 @@
     --top-bottom-spacing: calc(var(--spacing-xxl) * 2);
   }
 
-  &.grid .block-content {
+  &.grid {
     display: grid;
     gap: var(--gap-spacing);
   }
