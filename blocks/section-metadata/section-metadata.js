@@ -119,11 +119,13 @@ export default async function init(el) {
   el.remove();
   if (section.classList.contains('grid')) {
     const getDefaultContent = section.querySelectorAll('div.default-content');
-    getDefaultContent.forEach((defaultEl) => {
-      console.log(defaultEl)
-      const getDefaultParent = defaultEl.parentElement;
-      const getBlock = getDefaultParent.querySelector('div.block-content');
-      console.log(getBlock.parentElement);
-    });
+    if (getDefaultContent) {
+        getDefaultContent.forEach((defaultEl) => {
+          const getDefaultParent = defaultEl.parentElement;
+          const getBlock = getDefaultParent.querySelector('div.block-content');
+          defaultEl.appendChild(getBlock);
+          console.log(getBlock.parentElement);
+        });
+    }
   }
 }
