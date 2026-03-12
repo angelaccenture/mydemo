@@ -121,10 +121,12 @@ export default async function init(el) {
 
   const sectionGrid = section.querySelectorAll('div.grid');
   if (sectionGrid) {
+    const allsectionGrid = [sectionGrid]
     console.log("WTF 2");
-    sectionGrid.forEach(node => {
+    allsectionGrid.forEach(node => {
   // Your code to process the node goes here
-        console.log(node.value);
+      console.log("within foreach")
+        console.log(node);
       });
    }
   
