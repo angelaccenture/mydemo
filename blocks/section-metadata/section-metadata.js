@@ -123,12 +123,12 @@ export default async function init(el) {
   console.log(sectionGrid);
   if (sectionGrid) {
     const allsectionGrid = [sectionGrid]
-    console.log("WTF 2");
+   // console.log("WTF 2");
     for (const nodeList of allsectionGrid) {
       console.log("first for")
-      console.log(nodeList);
+     // console.log(nodeList);
         for (const element of nodeList) {
-            console.log(element); // This should log each element to the console
+       //     console.log(element); // This should log each element to the console
         }
     }
    }
