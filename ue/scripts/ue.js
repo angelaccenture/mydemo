@@ -70,7 +70,7 @@ const advancedBlocks = () => {
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
   // For each img source change, update the srcsets of the parent picture sources
- /*   if (event.detail.patch.name == 'image') {
+    if (event.detail.patch.name == 'image') {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
 
@@ -79,7 +79,7 @@ const setupUEEventHandlers = () => {
           source.setAttribute('srcset', newImgSrc);
         });
       }
-    }*/
+    }
      //Layout Mode - NTH: show dummy block sections where none and turn it off if the user leaves section area
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
