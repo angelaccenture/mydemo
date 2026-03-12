@@ -118,9 +118,11 @@ export default async function init(el) {
   if (metadata.background?.content) handleBackground(metadata.background, section);
   el.remove();
 
+
+
   const sectionGrid = section.querySelectorAll('div.grid');
   if (sectionGrid) {
-      const getDefaultContent = section.querySelectorAll('div.default-content');
+      console.log(sectionGrid);
       if (getDefaultContent) {
         console.log("default content within a section grid - should be 3")
       }
