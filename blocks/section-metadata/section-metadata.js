@@ -121,13 +121,12 @@ export default async function init(el) {
 
   const sectionGrid = section.querySelectorAll('div.grid .default-content');
   if (sectionGrid.length > 0) {
-    console.log("Right Ones");
-      console.log(sectionGrid);
-      const createNewBlock = document.createElement('div');
-      createNewBlock.setAttribute('class','angel-content');
       sectionGrid.forEach(sec => {
+        const sectionRoot = sec.parentNode;
         console.log(sec.parentNode);
-        sec.appendChild(createNewBlock);
+        const createNewBlock = document.createElement('div');
+        createNewBlock.setAttribute('class','angel-content');
+        sectionRoot.appendChild(createNewBlock);
       });
   }
   
