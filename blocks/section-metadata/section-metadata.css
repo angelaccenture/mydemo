@@ -231,7 +231,7 @@
 }
 
 @media (width >= 1200px) {
-  .section.grid .block-content {
+  .section.grid {
     display: grid;
     grid-template-columns: repeat(var(--grid-size), 1fr);
   }
