@@ -119,10 +119,11 @@ export default async function init(el) {
   el.remove();
   if (section.classList.contains('grid')) {
     const getDefaultContent = section.querySelectorAll('div.default-content');
-    const getBlock = getDefaultContent.closest(".block-content");
-    console.log(getBlock);
     getDefaultContent.forEach((defaultEl) => {
       console.log(defaultEl)
+      const getDefaultParent = defaultEl.parentElement;
+      const getBlock = getDefaultParent.querySelector('div.block-content');
+      console.log(getBlock);
     });
   }
 }
