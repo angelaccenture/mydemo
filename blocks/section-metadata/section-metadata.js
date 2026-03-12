@@ -126,6 +126,7 @@ export default async function init(el) {
       const createNewBlock = document.createElement('div');
       createNewBlock.setAttribute('class','angel-content');
       sectionGrid.forEach(sec => {
+        console.log(sec.parentNode);
         sec.appendChild(createNewBlock);
       });
   }
