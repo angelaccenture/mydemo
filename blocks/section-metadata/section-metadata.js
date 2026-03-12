@@ -123,6 +123,10 @@ export default async function init(el) {
   const sectionGrid = section.querySelectorAll('div.grid');
   if (sectionGrid) {
       console.log(sectionGrid);
+
+      sectionGrid.forEach(section => {
+          console.log("Grid Section", section);
+      });
       if (getDefaultContent) {
         console.log("default content within a section grid - should be 3")
       }
