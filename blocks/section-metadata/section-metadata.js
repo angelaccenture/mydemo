@@ -119,17 +119,21 @@ export default async function init(el) {
   el.remove();
 
   const sectionGrid = section.querySelectorAll('div.grid');
-  const getDefaultContent = section.querySelectorAll('div.default-content');
+  if (sectionGrid) {
+      const getDefaultContent = section.querySelectorAll('div.default-content');
+      if (getDefaultContent) {
+        console.log("default content within a section grid - should be 3")
+      }
+  }
+  
   if (sectionGrid && getDefaultContent) {
 
-        console.log(getDefaultContent);
+        //console.log(getDefaultContent);
         //const sectionChildren = sectionGrid.children;
         //const createNewBlock = document.createElement('div');
         //createNewBlock.setAttribute('class','angel-content');
-        Array.from(sectionGrid).forEach(childEle => {
           // Perform actions on the child element
-          console.log(childEle);
+          //console.log(childEle);
           //childEle.appendChild(createNewBlock);
-        });
   }
 }
