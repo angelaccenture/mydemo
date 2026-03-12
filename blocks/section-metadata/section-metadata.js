@@ -120,5 +120,7 @@ export default async function init(el) {
   if (section.classList.contains('grid')) {
     console.log("find all sections with grid");
     console.log(section);
+    const getDefaultContent = section.querySelectorAll('div.default-content');
+    console.log(getDefaultContent);
   }
 }
