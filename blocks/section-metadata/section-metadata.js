@@ -126,14 +126,11 @@ export default async function init(el) {
       }
   }
   
-  if (sectionGrid && getDefaultContent) {
-
-        //console.log(getDefaultContent);
+       //console.log(getDefaultContent);
         //const sectionChildren = sectionGrid.children;
         //const createNewBlock = document.createElement('div');
         //createNewBlock.setAttribute('class','angel-content');
           // Perform actions on the child element
           //console.log(childEle);
           //childEle.appendChild(createNewBlock);
-  }
 }
