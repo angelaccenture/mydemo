@@ -125,7 +125,7 @@ export default async function init(el) {
         const sectionChildren = sectionGrid.children;
         const createNewBlock = document.createElement('div');
         createNewBlock.setAttribute('class','angel-content');
-        Array.from(sectionChildren).forEach(childEle => {
+        Array.from(sectionGrid).forEach(childEle => {
           // Perform actions on the child element
           console.log(childEle);
           //childEle.appendChild(createNewBlock);
