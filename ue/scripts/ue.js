@@ -70,15 +70,16 @@ const advancedBlocks = () => {
 const defaultContent = () => {
   const richtext = document.querySelectorAll('div.richtext')
     //This is unique to UE only
-     richtext.forEach((rtele) => {
-      const getRTParent = rtele.parentElement.parentElement;
-      const getRTBlock = rtele.parentElement;
+     richtext.forEach((RTele) => {
+      const getRTParent = RTele.parentElement.parentElement;
+      const getRTBlock = RTele.parentElement;
      // console.log("Rich Text - Parents: ");
      // console.log(getRTParent)
       if (getRTParent.classList.contains('grid')) {
         console.log("is within grid - create new element, move out of block-content and into new container");
         const newDiv = document.createElement('div');
         newDiv.setAttribute('class','default-content');
+        newDiv.appendChild(RTele)
         getRTParent.prepend(newDiv);
         console.log(getRTParent); 
       }
