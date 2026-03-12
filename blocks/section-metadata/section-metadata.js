@@ -120,9 +120,9 @@ export default async function init(el) {
 
 
   const sectionGrid = section.querySelectorAll('div.grid .default-content');
-  console.log(sectionGrid);
   if (sectionGrid.length > 0) {
     console.log("Right Ones");
+      console.log(sectionGrid);
   }
   
        //console.log(getDefaultContent);
