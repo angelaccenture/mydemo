@@ -125,6 +125,7 @@ export default async function init(el) {
         console.log(sec);
         const sectionParent = sec.parentNode;
         const getBlock = sectionParent.querySelector('.block-content');
+        getBlock.apprendChild(sec);
       });
   }
   
