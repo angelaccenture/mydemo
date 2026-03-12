@@ -123,11 +123,11 @@ export default async function init(el) {
   if (sectionGrid) {
     const allsectionGrid = [sectionGrid]
     console.log("WTF 2");
-    allsectionGrid.forEach(node => {
-  // Your code to process the node goes here
-      console.log("within foreach")
-        console.log(node);
-      });
+    for (const nodeList of allsectionGrid) {
+        for (const element of nodeList) {
+            console.log(element); // This should log each element to the console
+        }
+    }
    }
   
        //console.log(getDefaultContent);
