@@ -68,7 +68,14 @@ const advancedBlocks = () => {
 };
 //MOVE any default Content into a block
 const defaultContent = () => {
- const fixDefault = document.querySelectorAll('.default-content');
+  const richtext = document.querySelectorAll('div.richtext')
+    //This is unique to UE only
+     richtext.forEach((rtele) => {
+      const getRTParent = rtele.parentElement;
+      console.log("Rich Text - Parents: ");
+      console.log(getRTParent)
+    });
+ const fixDefault = document.querySelectorAll('div.default-content');
    fixDefault.forEach((defaultC) => {
  /*  const blockExists = defaultC.parentElement.querySelector('.block-content');
     console.log("find block");
@@ -106,19 +113,9 @@ const defaultContent = () => {
     }*/
 
     const defaultParent = defaultC.parentElement;
-            console.log("Parents: ");
-            console.log(defaultParent)
- 
+    console.log("Image Parents: ");
+    console.log(defaultParent)
     
-   });
-  const fixTextBlock = document.querySelectorAll('div.richtext');
-   fixTextBlock.forEach((textBlock) => {
-    const getparentBlock = textBlock.parentElement.parentElement;
-    const getBlock = textBlock.closest('.block-content');
-    /*console.log("Parents: ");
-    console.log(getparentBlock)
-    console.log("Block Content: ");
-    console.log(getBlock);*/
    });
 };
 
