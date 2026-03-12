@@ -124,7 +124,7 @@ export default async function init(el) {
     console.log("WTF 2");
     sectionGrid.forEach(node => {
   // Your code to process the node goes here
-        console.log(node);
+        console.log(node.value);
       });
    }
   
