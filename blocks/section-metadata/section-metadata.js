@@ -125,6 +125,7 @@ export default async function init(el) {
         const createNewBlock = document.createElement('div');
         createNewBlock.setAttribute('class','block-content');
         const gridChildren = sectionGrid.children;
+        console.log(gridChildren);
         gridChildren.forEach((childEle) => {
             console.log("child within section grid and has default content");
             console.log(childEle);
