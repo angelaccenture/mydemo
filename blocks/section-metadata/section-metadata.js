@@ -123,14 +123,8 @@ export default async function init(el) {
   if (sectionGrid && getDefaultContent) {
         const createNewBlock = document.createElement('div');
         createNewBlock.setAttribute('class','angel-content');
-        sectionGrid.appendChild(createNewBlock);
-        //const gridChildren = sectionGrid.children;
-        //console.log(gridChildren);
-        //gridChildren.forEach((childEle) => {
-          //  console.log("child within section grid and has default content");
-          //  console.log(childEle);
-          
-          //getBlock.appendChild(defaultEl);
-       // });
+        sectionGrid.forEach((sectionDefault) => {
+            sectionDefault.appendChild(createNewBlock);
+        });
   }
 }
