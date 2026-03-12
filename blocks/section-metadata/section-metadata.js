@@ -119,7 +119,7 @@ export default async function init(el) {
   el.remove();
 
 
-  const sectionGrid = section.querySelectorAll('div.grid' > 'div.default-content');
+  const sectionGrid = section.querySelectorAll('div.grid .default-content');
   console.log(sectionGrid);
   if (sectionGrid) {
     const allsectionGrid = [sectionGrid]
