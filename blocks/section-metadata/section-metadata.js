@@ -121,7 +121,7 @@ export default async function init(el) {
 
   const sectionGrid = section.querySelectorAll('div.grid');
   if (sectionGrid) {
-    console.log("WTF");
+    console.log("WTF 2");
     sectionGrid.forEach(node => {
   // Your code to process the node goes here
         console.log(node);
