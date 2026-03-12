@@ -123,7 +123,7 @@ export default async function init(el) {
   const sectionGrid = section.querySelectorAll('div.grid');
   if (sectionGrid) {
       sectionGrid.forEach(section => {
-          console.log("Grid Section", section);
+          console.log("Grid Section:", section);
       });
    }
   
