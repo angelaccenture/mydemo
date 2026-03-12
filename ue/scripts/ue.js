@@ -74,6 +74,9 @@ const defaultContent = () => {
       const getRTParent = rtele.parentElement.parentElement;
       console.log("Rich Text - Parents: ");
       console.log(getRTParent)
+      if (getRTParent.classList.contains()) {
+        console.log("is within grid");
+      }
     });
  const fixDefault = document.querySelectorAll('div.default-content');
    fixDefault.forEach((defaultC) => {
