@@ -122,6 +122,11 @@ export default async function init(el) {
 
   const sectionGrid = section.querySelectorAll('div.grid');
   if (sectionGrid) {
+    sectionGrid.forEach(function(currentNode, index) {
+        // Perform an action on the currentNode
+          console.log(`Node at index ${index}:`, currentNode);
+      });
+
       sectionGrid.forEach(section => {
           console.log("Grid Section:", section);
       });
