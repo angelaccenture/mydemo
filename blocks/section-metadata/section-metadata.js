@@ -123,10 +123,13 @@ export default async function init(el) {
   if (sectionGrid.length > 0) {
       sectionGrid.forEach(sec => {
         const sectionRoot = sec.parentNode;
-        console.log(sec.parentNode);
+        const sectionRootbc = sectionRoot.querySelector('div.block-content');
+        console.log(sectionRootbc);  
+
         const createNewBlock = document.createElement('div');
         createNewBlock.setAttribute('class','angel-content');
         sectionRoot.appendChild(createNewBlock);
+      
       });
   }
   
