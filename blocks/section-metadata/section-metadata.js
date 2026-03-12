@@ -125,7 +125,7 @@ export default async function init(el) {
     const allsectionGrid = [sectionGrid]
    // console.log("WTF 2");
     for (const nodeList of allsectionGrid) {
-      console.log("first for")
+     // console.log("first for")
      // console.log(nodeList);
         for (const element of nodeList) {
        //     console.log(element); // This should log each element to the console
