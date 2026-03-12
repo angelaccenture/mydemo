@@ -123,7 +123,7 @@ export default async function init(el) {
   if (sectionGrid && getDefaultContent) {
 
         console.log(getDefaultContent);
-        for (const nodeList of sectionGrid) {
+        for (const nodeList of getDefaultContent) {
             for (const element of nodeList) {
             console.log(element);
               }
