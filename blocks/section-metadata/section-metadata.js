@@ -117,12 +117,18 @@ export default async function init(el) {
   if (metadata['background-image']?.content) handleBackground(metadata['background-image'].content, section);
   if (metadata.background?.content) handleBackground(metadata.background, section);
   el.remove();
-  if (section.classList.contains('grid')) {
+
+  const sectionGrid = section.classList.contains('grid')
+  if (sectionGrid) {
     const getDefaultContent = section.querySelectorAll('div.default-content');
     if (getDefaultContent) {
-        getDefaultContent.forEach((defaultEl) => {
-          const getDefaultParent = defaultEl.parentElement;
-          const getBlock = getDefaultParent.querySelector('div.block-content');
+        const createNewBlock = document.createElement('div');
+        createNewBlock.setAttribute('class','block-content');
+        const gridChildren = sectionGrid.childNodes;
+        gridChildren.forEach((childEle) => {
+            console.log("child within section grid and has default content");
+            console.log(childEle);
+          
           //getBlock.appendChild(defaultEl);
         });
     }
