@@ -121,6 +121,7 @@ export default async function init(el) {
   const sectionGrid = section.querySelectorAll('div.grid');
   const getDefaultContent = section.querySelectorAll('div.default-content');
   if (sectionGrid && getDefaultContent) {
+    console.log(sectionGrid);
         const createNewBlock = document.createElement('div');
         createNewBlock.setAttribute('class','angel-content');
         sectionGrid.forEach((sectionDefault) => {
