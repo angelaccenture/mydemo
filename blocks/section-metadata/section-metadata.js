@@ -118,12 +118,13 @@ export default async function init(el) {
   if (metadata.background?.content) handleBackground(metadata.background, section);
   el.remove();
 
-  const sectionGrid = section.classList.contains('grid')
-  if (sectionGrid) {
-    const getDefaultContent = section.querySelectorAll('div.default-content');
-    if (getDefaultContent) {
+  const sectionGrid = section.classList.contains('grid');
+  const getDefaultContent = section.querySelectorAll('div.default-content');
+  if (sectionGrid && getDefaultContent) {
+    console.log("section grid and has default content");
         const createNewBlock = document.createElement('div');
         createNewBlock.setAttribute('class','block-content');
+        console.log(sectionGrid);
         const gridChildren = sectionGrid.children;
         console.log(gridChildren);
         gridChildren.forEach((childEle) => {
@@ -132,6 +133,5 @@ export default async function init(el) {
           
           //getBlock.appendChild(defaultEl);
         });
-    }
   }
 }
