@@ -79,7 +79,7 @@ const defaultContent = () => {
         console.log("is within grid - create new element, move out of block-content and into new container");
         const newDiv = document.createElement('div');
         newDiv.setAttribute('class','default-content');
-        getRTParent.appendChild(newDiv);
+        getRTParent.prepend(newDiv);
         console.log(getRTParent); 
       }
     });
