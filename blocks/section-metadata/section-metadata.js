@@ -121,7 +121,8 @@ export default async function init(el) {
   const sectionGrid = section.querySelectorAll('div.grid');
   const getDefaultContent = section.querySelectorAll('div.default-content');
   if (sectionGrid && getDefaultContent) {
-        console.log(sectionGrid);
+
+        console.log(getDefaultContent);
         for (const nodeList of sectionGrid) {
             for (const element of nodeList) {
             console.log(element);
