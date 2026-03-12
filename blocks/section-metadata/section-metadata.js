@@ -123,7 +123,7 @@ export default async function init(el) {
       console.log(defaultEl)
       const getDefaultParent = defaultEl.parentElement;
       const getBlock = getDefaultParent.querySelector('div.block-content');
-      console.log(getBlock);
+      console.log(getBlock.parentElement);
     });
   }
 }
