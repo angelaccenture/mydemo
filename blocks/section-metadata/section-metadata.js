@@ -121,12 +121,14 @@ export default async function init(el) {
   const sectionGrid = section.querySelectorAll('div.grid');
   const getDefaultContent = section.querySelectorAll('div.default-content');
   if (sectionGrid && getDefaultContent) {
-    console.log(sectionGrid);
+        console.log(sectionGrid);
+        const sectionChildren = sectionGrid.children;
         const createNewBlock = document.createElement('div');
         createNewBlock.setAttribute('class','angel-content');
-        sectionGrid.forEach((sectionDefault) => {
-          console.log(sectionDefault);
-            sectionDefault.appendChild(createNewBlock);
+        Array.from(sectionChildren).forEach(childEle => {
+          // Perform actions on the child element
+          console.log(childEle);
+          //childEle.appendChild(createNewBlock);
         });
   }
 }
