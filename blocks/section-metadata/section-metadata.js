@@ -123,6 +123,11 @@ export default async function init(el) {
   if (sectionGrid.length > 0) {
     console.log("Right Ones");
       console.log(sectionGrid);
+      const createNewBlock = document.createElement('div');
+      createNewBlock.setAttribute('class','angel-content');
+      sectionGrid.forEach(sec => {
+        sec.appendChild(createNewBlock);
+      });
   }
   
        //console.log(getDefaultContent);
