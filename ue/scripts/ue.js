@@ -71,7 +71,7 @@ const defaultContent = () => {
   const richtext = document.querySelectorAll('div.richtext')
     //This is unique to UE only
      richtext.forEach((rtele) => {
-      const getRTParent = rtele.parentElement;
+      const getRTParent = rtele.parentElement.parentElement;
       console.log("Rich Text - Parents: ");
       console.log(getRTParent)
     });
