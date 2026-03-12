@@ -123,6 +123,7 @@ export default async function init(el) {
   if (sectionGrid.length > 0) {
       sectionGrid.forEach(sec => {
         console.log("looking for first instance");
+        console.log(sec);
         const findBlockCont = sec.parentNode.querySelector('.block-content');
         console.log(findBlockCont);
       });
