@@ -127,6 +127,12 @@ export default async function init(el) {
         console.log(sec);
         console.log("Parent: " + sectionParent);
         console.log(sectionParent);
+        const childrenSec = Array.from(sectionParent.children);
+        const getBlock = sectionParent.querySelector('.block-content');
+        childrenSec.forEach(child => {
+              getBlock.appendChild(child);
+        });
+
         //sectionParent.appendChild(sec);
         //const getBlock = sectionParent.querySelector('.block-content');
         //getBlock.apprendChild(sec);
