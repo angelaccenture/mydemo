@@ -125,9 +125,10 @@ export default async function init(el) {
         const sectionParent = sec.parentNode;
         const childrenSec = Array.from(sectionParent.children);
         console.log(childrenSec);
-        const getBlock = sectionParent.querySelector('.block-content');
+        const createNewBlock = document.createElement('div');
+        createNewBlock.setAttribute('class','angel-content');
         childrenSec.forEach(child => {
-            // getBlock.appendChild(child);
+             createNewBlock.appendChild(child);
         });
 
         //sectionParent.appendChild(sec);
