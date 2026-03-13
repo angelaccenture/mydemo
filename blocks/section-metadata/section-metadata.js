@@ -124,7 +124,9 @@ export default async function init(el) {
       sectionGrid.forEach(sec => {
         const sectionParent = sec.parentNode;
         console.log("section:" + sec);
+        console.log(sec);
         console.log("Parent: " + sectionParent);
+        console.log(sectionParent);
         //sectionParent.appendChild(sec);
         //const getBlock = sectionParent.querySelector('.block-content');
         //getBlock.apprendChild(sec);
