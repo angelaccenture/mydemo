@@ -127,8 +127,9 @@ export default async function init(el) {
         console.log(childrenSec);
         const createNewBlock = document.createElement('div');
         createNewBlock.setAttribute('class','angel-content');
+        sectionParent.appendChild(createNewBlock);
         childrenSec.forEach(child => {
-             createNewBlock.appendChild(child);
+             //createNewBlock.appendChild(child);
         });
 
         //sectionParent.appendChild(sec);
