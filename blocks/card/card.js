@@ -19,7 +19,7 @@ export default function init(el) {
   const innercontent = el.querySelector('div:nth-child(2)');
   console.log("cards.js- content");
   console.log(innercontent);
-  //innercontent.classList.add('card-content-container')
+  innercontent.classList.add('card-content-container')
   // Decorate content
   /*const con = inner.querySelector(':scope > div:not([class])');
   console.log(con);
