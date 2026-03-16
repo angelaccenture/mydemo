@@ -99,7 +99,7 @@ const setupUEEventHandlers = () => {
     console.log("content add");
     console.log(addevent);
         //Button reload once drops
-     if (addevent.detail.patch.name == 'button') {
+     if (addevent.detail.resource == 'button') {
       console.log("dropped button");
     }
   });
