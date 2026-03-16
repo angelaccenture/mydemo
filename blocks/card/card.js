@@ -14,7 +14,7 @@ export default function init(el) {
     }
   }
   // Decorate content
-  const con = contentInner.querySelector(':scope > div:not([class])');
+  const con = inner.querySelector(':scope > div:not([class])');
   console.log(con);
   if (!con) return;
   con.classList.add('card-content-container');
