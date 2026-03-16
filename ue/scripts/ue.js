@@ -81,8 +81,9 @@ const setupUEEventHandlers = () => {
         });
       }
     }
+    console.log(event.detail.patch.name);
     if (event.detail.patch.name == 'richtext') {
-      console.log("text has been updated")
+      console.log("text has been updated");
     }
      //Layout Mode - NTH: show dummy block sections where none and turn it off if the user leaves section area
     if (event.detail.patch.name == 'layoutmode') {
@@ -104,7 +105,7 @@ const setupUEEventHandlers = () => {
     console.log(addevent);
     console.log(addevent.detail.value);
         //Button reload once drops
-     if (addevent.detail.resource == 'button') {
+    if (addevent.detail.resource == 'button') {
       console.log("dropped button");
     }
   });
