@@ -242,11 +242,11 @@
                 },
                 {
                   "name": "title",
-                  "selector": "div>div:nth-child(2)>p"
+                  "selector": "div:nth-child(2)>div>p"
                 },
                 {
                   "name": "text",
-                  "selector": "div>div:nth-child(2)>p:nth-child(2)"
+                  "selector": "div:nth-child(2)>div>p:nth-child(2)"
                 }
               ]
             }
