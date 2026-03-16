@@ -139,11 +139,11 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:ui-edit', (editevent) => {
      console.log("ui-edit");
      console.log(editevent);
-  });
+  });*/
   document.addEventListener('aue:ui-select', (selectevent) => {
     console.log("ui-select");
     console.log(selectevent);
-  });*/
+  });
 
 };
 
