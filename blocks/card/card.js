@@ -1,5 +1,6 @@
 export default function init(el) {
   const inner = el.querySelector(':scope > div');
+  const contentInner = el.querySelctor (':score > div:nth-child(2)')
   inner.classList.add('card-inner');
   const pic = el.querySelector('picture');
   if (pic) {
@@ -13,9 +14,7 @@ export default function init(el) {
     }
   }
   // Decorate content
-  console.log("Cards");
-  console.log(inner);
-  const con = inner.querySelector(':scope > div:not([class])');
+  const con = contentInner.querySelector(':scope > div:not([class])');
   console.log(con);
   if (!con) return;
   con.classList.add('card-content-container');
