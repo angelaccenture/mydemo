@@ -102,6 +102,7 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-remove', (removeevent) => {
     console.log("content remove");
     console.log(removeevent);
+    window.editor.api.refresh('body')
   });
     document.addEventListener('aue:content-update', (updateevent) => {
     console.log("content update");
