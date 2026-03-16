@@ -1,11 +1,8 @@
 export default function init(el) {
-  console.log(el);
-  const inner = el.querySelectorAll(':scope > div');
-  console.log("inner");
-  console.log(inner);
-  inner[0].classList.add('card-inner');
+  const inner = el.querySelector(':scope > div');
+  inner.classList.add('card-inner');
   
-  /*const pic = el.querySelector('picture');
+  const pic = el.querySelector('picture');
   if (pic) {
     const picPara = pic.closest('p');
     if (picPara) {
@@ -32,5 +29,5 @@ export default function init(el) {
     cta.href = `${cta.getAttribute('href')}${window.location.hash}`;
   }
   ctaPara.classList.add('card-cta-container');
-  inner.append(ctaPara);*/
+  inner.append(ctaPara);
 }
