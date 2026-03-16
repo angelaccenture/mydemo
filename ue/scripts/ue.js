@@ -95,6 +95,18 @@ const setupUEEventHandlers = () => {
     }
     
   });
+  document.addEventListener('aue:content-add', (addevent) => {
+    console.log("content add");
+    console.log(addevent);
+  });
+  document.addEventListener('aue:content-remove', (removeevent) => {
+    console.log("content remove");
+    console.log(removeevent);
+  });
+    document.addEventListener('aue:content-update', (updateevent) => {
+    console.log("content update");
+    console.log(updateevent);
+  });
   document.addEventListener('aue:ui-viewport-change', (viewevent) => {
      console.log("ui-viewport-change");
      console.log(viewevent);
@@ -106,11 +118,8 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:ui-select', (selectevent) => {
     console.log("ui-select");
     console.log(selectevent);
-     const layoutModeOn = document.getElementsByClassName('layoutmode');
-     if (layoutModeOn.length > 0) {
-      console.log("turn layoutmodeoff - need to remove from DA DOM");
-     }
   });
+
 };
 
 export default () => {

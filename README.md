@@ -13,7 +13,7 @@ Any code modifications to this original source are not intended for production u
 * Using DA, author can pre-populate the template with blocks
 
 ### Advanced Tabs, Accordion and Carousel
-* Allows author to add sections/blocks within advanced blocks
+* Allows author to add sections and then blocks within
 
 ### Advanced Text
 * Allows author to add classname in front of each text items using []
