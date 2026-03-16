@@ -80,6 +80,10 @@ const setupUEEventHandlers = () => {
         });
       }
     }
+    //Button reload once drops
+     if (event.detail.patch.name == 'button') {
+      console.log("dropped button");
+    }
      //Layout Mode - NTH: show dummy block sections where none and turn it off if the user leaves section area
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
