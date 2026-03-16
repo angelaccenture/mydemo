@@ -103,7 +103,8 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-add', (addevent) => {
     console.log("content add");
     console.log(addevent);
-    console.log(addevent.detail.value);
+    console.log("uggg find out how to get what is added?")
+    console.log(addevent.resource);
         //Button reload once drops
     if (addevent.detail.resource == 'button') {
       console.log("dropped button");
