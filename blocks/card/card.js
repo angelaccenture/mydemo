@@ -14,7 +14,7 @@ export default function init(el) {
       const picDiv = document.createElement('div');
       picDiv.className = 'card-picture-container';
       picDiv.append(pic);
-      inner.insertAdjacentElement('afterbegin', picDiv);
+      innerpic.insertAdjacentElement('afterbegin', picDiv);
       picPara.remove();
     }
   }
