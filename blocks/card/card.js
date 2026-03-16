@@ -1,8 +1,9 @@
 export default function init(el) {
   const inner = el.querySelector(':scope > div');
-  const contentInner = el.querySelctor (':score > div:nth-child(2)')
+  console.log(inner);
   inner.classList.add('card-inner');
-  const pic = el.querySelector('picture');
+  
+  /*const pic = el.querySelector('picture');
   if (pic) {
     const picPara = pic.closest('p');
     if (picPara) {
@@ -29,5 +30,5 @@ export default function init(el) {
     cta.href = `${cta.getAttribute('href')}${window.location.hash}`;
   }
   ctaPara.classList.add('card-cta-container');
-  inner.append(ctaPara);
+  inner.append(ctaPara);*/
 }
