@@ -123,8 +123,8 @@ const setupUEEventHandlers = () => {
     }
   });
     document.addEventListener('aue:content-details', (details) => {
-  console.log("try this event");
-  console.log(details);
+      console.log("aue:content-details - try this event");
+      console.log(details);
   });
   document.addEventListener('aue:content-remove', (removeevent) => {
     window.location.reload();
