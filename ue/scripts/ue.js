@@ -103,10 +103,19 @@ const setupUEEventHandlers = () => {
     
   });
   document.addEventListener('aue:content-add', (addevent) => {
-    console.log("content add");
-    console.log(addevent);
-    console.log("uggg find out how to get what is added?")
-    console.log(addevent.resource);
+   // Access the details object from the custom event
+  const details = addevent.detail;
+
+  // The 'resource' field in the response contains the newly created content resource path/identifier
+  const addedComponentResource = details.response.resource;
+
+  // The 'updates' field provides an array of resources that need updating
+  const updates = details.response.updates;
+
+  console.log('A new component was added:', addedComponentResource);
+  console.log('Resources to update:', updates);
+
+  // Further application logic to handle the new component can be added here
         //Button reload once drops
     if (addevent.detail.resource == 'button') {
       console.log("dropped button");
