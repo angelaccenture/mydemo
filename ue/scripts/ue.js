@@ -80,10 +80,6 @@ const setupUEEventHandlers = () => {
         });
       }
     }
-    //Button reload once drops
-     if (event.detail.patch.name == 'button') {
-      console.log("dropped button");
-    }
      //Layout Mode - NTH: show dummy block sections where none and turn it off if the user leaves section area
     if (event.detail.patch.name == 'layoutmode') {
       if (event.detail.patch.value == true) {
@@ -102,6 +98,10 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-add', (addevent) => {
     console.log("content add");
     console.log(addevent);
+        //Button reload once drops
+     if (addevent.detail.patch.name == 'button') {
+      console.log("dropped button");
+    }
   });
   document.addEventListener('aue:content-remove', (removeevent) => {
     console.log("content remove");
