@@ -1,8 +1,6 @@
 export default function init(el) {
-  const innerpic = el.querySelector(':scope > div');
-  console.log("cards.js - pic");
-  console.log(innerpic);
-  innerpic.classList.add('card-inner');
+  const inner = el.querySelector(':scope > div');
+  inner.classList.add('card-inner');
   
   const pic = el.querySelector('picture');
   if (pic) {
@@ -11,7 +9,7 @@ export default function init(el) {
       const picDiv = document.createElement('div');
       picDiv.className = 'card-picture-container';
       picDiv.append(pic);
-      innerpic.insertAdjacentElement('afterbegin', picDiv);
+      inner.insertAdjacentElement('afterbegin', picDiv);
       picPara.remove();
     }
   }
@@ -23,7 +21,7 @@ export default function init(el) {
   con.classList.add('card-content-container');
 
   // Decorate CTA
-  const ctaPara = innerpic.querySelector(':scope > div:last-of-type > p:last-of-type');
+  const ctaPara = inner.querySelector(':scope > div:last-of-type > p:last-of-type');
   if (!ctaPara) return;
   const cta = ctaPara.querySelector('a');
   if (!cta) return;
@@ -32,5 +30,5 @@ export default function init(el) {
     cta.href = `${cta.getAttribute('href')}${window.location.hash}`;
   }
   ctaPara.classList.add('card-cta-container');
-  innerpic.append(ctaPara);
+  inner.append(ctaPara);
 }
