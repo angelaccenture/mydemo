@@ -10,7 +10,7 @@ export default function init(el) {
         const con = el.querySelector(':scope > div:not([class]) > div');
         if (!con) return;
         con.classList.add('card-content-container');
-        con.after(picPara);
+        picPara.after(con);
     }
   }
 
