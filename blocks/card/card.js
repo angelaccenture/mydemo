@@ -23,7 +23,7 @@ export default function init(el) {
   con.classList.add('card-content-container');
 
   // Decorate CTA
-  const ctaPara = inner.querySelector(':scope > div:last-of-type > p:last-of-type');
+  const ctaPara = innerpic.querySelector(':scope > div:last-of-type > p:last-of-type');
   if (!ctaPara) return;
   const cta = ctaPara.querySelector('a');
   if (!cta) return;
@@ -32,5 +32,5 @@ export default function init(el) {
     cta.href = `${cta.getAttribute('href')}${window.location.hash}`;
   }
   ctaPara.classList.add('card-cta-container');
-  inner.append(ctaPara);
+  innerpic.append(ctaPara);
 }
