@@ -1,6 +1,8 @@
 export default function init(el) {
-  const inner = el.querySelector(':scope > div');
-  inner.classList.add('card-inner');
+  const innerpic = el.querySelector(':scope > div');
+  const innercontent = el.querySelector(':scope > div:ninth-child(2)');
+  console.log(innercontent);
+  //inner.classList.add('card-inner');
   
   const pic = el.querySelector('picture');
   if (pic) {
