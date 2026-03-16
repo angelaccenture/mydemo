@@ -8,12 +8,15 @@ export default function init(el) {
     if (picPara) {
       picPara.classList.add('card-picture-container');
     }
-      // Decorate content
-      const con = el.querySelector(':scope > div:not([class]) > div');
-      if (!con) return;
-      con.classList.add('card-content-container');
-      //con.after(picPara);
   }
+
+   // Decorate content
+   const piccont = el.querySelctor('card-icture-container');
+   const con = el.querySelector(':scope > div:not([class]) > div');
+   if (!con) return;
+   con.classList.add('card-content-container');
+   con.after(piccont);
+
   // Decorate CTA
   const ctaPara = inner.querySelector(':scope > div:last-of-type > p:last-of-type');
   if (!ctaPara) return;
