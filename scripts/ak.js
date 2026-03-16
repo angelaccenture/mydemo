@@ -94,8 +94,9 @@ function decoratePictures(el) {
   const pics = el.querySelectorAll('picture');
    console.log(pics);
   for (const pic of pics) {
-    console.log(pic);
+    console.log("Pic" + pic);
     const source = pic.querySelector('source');
+    console.log("source: ");
     console.log(source);
     const clone = source.cloneNode();
     const [pathname, params] = clone.getAttribute('srcset').split('?');
