@@ -14,7 +14,7 @@ export default function init(el) {
     }
   }
   // Decorate content
-  const con = el.querySelector(':scope > div:not([class])');
+ /* const con = el.querySelector(':scope > div:not([class])');
   if (!con) return;
   con.classList.add('card-content-container');
 
@@ -28,5 +28,5 @@ export default function init(el) {
     cta.href = `${cta.getAttribute('href')}${window.location.hash}`;
   }
   ctaPara.classList.add('card-cta-container');
-  inner.append(ctaPara);
+  inner.append(ctaPara);*/
 }
