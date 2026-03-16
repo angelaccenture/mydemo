@@ -117,32 +117,4 @@ export default async function init(el) {
   if (metadata['background-image']?.content) handleBackground(metadata['background-image'].content, section);
   if (metadata.background?.content) handleBackground(metadata.background, section);
   el.remove();
-
-
-  const sectionGrid = section.querySelectorAll('div.grid .default-content');
-  if (sectionGrid.length > 0) {
-      sectionGrid.forEach(sec => {
-        const sectionParent = sec.parentNode;
-        const childrenSec = Array.from(sectionParent.children);
-        console.log(childrenSec);
-        const createNewBlock = document.createElement('div');
-        createNewBlock.setAttribute('class','angel-content');
-        sectionParent.appendChild(createNewBlock);
-        childrenSec.forEach(child => {
-             //createNewBlock.appendChild(child);
-        });
-
-        //sectionParent.appendChild(sec);
-        //const getBlock = sectionParent.querySelector('.block-content');
-        //getBlock.apprendChild(sec);
-      });
-  }
-  
-       //console.log(getDefaultContent);
-        //const sectionChildren = sectionGrid.children;
-        //const createNewBlock = document.createElement('div');
-        //createNewBlock.setAttribute('class','angel-content');
-          // Perform actions on the child element
-          //console.log(childEle);
-          //childEle.appendChild(createNewBlock);
 }

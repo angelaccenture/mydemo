@@ -1,13 +1,11 @@
+.teaser-inner {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+}
+
 .teaser {
 color: red;
-  /* Variations */
-  &.left {
-    .teaser-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-  }
   &.right {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
