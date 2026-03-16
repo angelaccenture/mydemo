@@ -2,9 +2,6 @@ export default function init(el) {
   const innerpic = el.querySelector(':scope > div');
   console.log("cards.js - pic");
   console.log(innerpic);
-  const innercontent = el.querySelector('div:nth-child(2)');
-  console.log("cards.js- content");
-  console.log(innercontent);
   innerpic.classList.add('card-inner');
   
   const pic = el.querySelector('picture');
@@ -18,6 +15,10 @@ export default function init(el) {
       picPara.remove();
     }
   }
+
+  const innercontent = innerpic.querySelector('div:nth-child(2)');
+  console.log("cards.js- content");
+  console.log(innercontent);
   // Decorate content
   /*const con = inner.querySelector(':scope > div:not([class])');
   console.log(con);
