@@ -15,7 +15,7 @@
             },
             {
               "name": "imageAlt",
-              "selector": "img[alt]"
+              "selector": "picture>img[alt]"
             }
           ]
         }
