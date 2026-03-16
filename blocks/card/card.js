@@ -3,7 +3,7 @@ export default function init(el) {
   const inner = el.querySelectorAll(':scope > div');
   console.log("inner");
   console.log(inner);
-  inner.classList.add('card-inner');
+  inner[0].classList.add('card-inner');
   
   /*const pic = el.querySelector('picture');
   if (pic) {
