@@ -108,7 +108,7 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-add', (addevent) => {
     const details = addevent.detail;
    const addedComponentResource = details.response.resource;
-    const updates = details.response.updates;
+    const updates = details.response.updates.resource;
 
   console.log('A new component was added:', addedComponentResource);
   console.log('Resources to update:', updates);
