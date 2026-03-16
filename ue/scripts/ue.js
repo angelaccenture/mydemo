@@ -118,12 +118,14 @@ const setupUEEventHandlers = () => {
       console.log("dropped button");
     }*/
   });
+  //When deleting items, reload the screen or else we can't delete multiple items at a time
+  document.addEventListener('aue:content-remove', (removeevent) => {
+    window.location.reload();
+  });
+  /*Keep these events for later if needed
     document.addEventListener('aue:content-details', (details) => {
       console.log("aue:content-details - try this event");
       console.log(details);
-  });
-  document.addEventListener('aue:content-remove', (removeevent) => {
-    window.location.reload();
   });
     document.addEventListener('aue:content-update', (updateevent) => {
     console.log("content update");
@@ -140,7 +142,7 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:ui-select', (selectevent) => {
     console.log("ui-select");
     console.log(selectevent);
-  });
+  });*/
 
 };
 
