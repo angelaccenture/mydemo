@@ -69,11 +69,11 @@ const advancedBlocks = () => {
 
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
-  // For each img source change, update the srcsets of the parent picture sources
     console.log("content patch");
-    console.log("event patch")
     console.log(event.detail.patch.name);
     console.log(event.detail.patch.value);
+
+  // For each img source change, update the srcsets of the parent picture sources
     if (event.detail.patch.name == 'image') {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
@@ -84,9 +84,11 @@ const setupUEEventHandlers = () => {
         });
       }
     }
+    //Reload text block if author adds class to it
     const regex = /\[(.*?)\]/;
     if (event.detail.patch.value.match(regex)) {
       console.log("text has been updated and has a class name");
+      window.location.reload();
     }
      //Layout Mode - NTH: show dummy block sections where none and turn it off if the user leaves section area
     if (event.detail.patch.name == 'layoutmode') {
