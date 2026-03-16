@@ -1,6 +1,7 @@
 export default function init(el) {
   console.log(el);
-  const inner = el.querySelector(':scope > div');
+  const inner = el.querySelectorAll(':scope > div');
+  console.log("inner");
   console.log(inner);
   inner.classList.add('card-inner');
   
