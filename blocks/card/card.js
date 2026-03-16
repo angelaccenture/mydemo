@@ -11,7 +11,7 @@ export default function init(el) {
   }
 
    // Decorate content
-   const piccont = document.querySelctor('card-picture-container');
+   const piccont = el.querySelector('card-picture-container');
    const con = el.querySelector(':scope > div:not([class]) > div');
    if (!con) return;
    con.classList.add('card-content-container');
