@@ -1,7 +1,7 @@
 export default function init(el) {
   const inner = el.querySelector(':scope > div');
   inner.classList.add('card-inner');
-  
+
   const pic = el.querySelector('picture');
   if (pic) {
     const picPara = pic.closest('p');
@@ -13,10 +13,8 @@ export default function init(el) {
       picPara.remove();
     }
   }
-
   // Decorate content
   const con = el.querySelector(':scope > div:not([class])');
-  console.log(con);
   if (!con) return;
   con.classList.add('card-content-container');
 
