@@ -2,7 +2,7 @@ export default function init(el) {
   const innerpic = el.querySelector(':scope > div');
   console.log("cards.js - pic");
   console.log(innerpic);
-  const innercontent = el.querySelector(':scope > div:ninth-child(2)');
+  const innercontent = el.querySelector('div:nth-child(2)');
   console.log("cards.js- content");
   console.log(innercontent);
   //inner.classList.add('card-inner');
