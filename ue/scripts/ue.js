@@ -73,7 +73,7 @@ const setupUEEventHandlers = () => {
     console.log(event.detail.patch.name);
     console.log(event.detail.patch.value);
 
-  // For each img source change, update the srcsets of the parent picture sources
+   // For each img source change, update the srcsets of the parent picture sources
     if (event.detail.patch.name == 'image') {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
