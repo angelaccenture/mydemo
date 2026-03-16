@@ -16,7 +16,7 @@ export default function init(el) {
     }
   }
 
-  const innercontent = innerpic.querySelector('div:nth-child(2)');
+  const innercontent = el.querySelector('div:nth-child(2)');
   console.log("cards.js- content");
   console.log(innercontent);
   //innercontent.classList.add('card-content-container')
