@@ -11,7 +11,7 @@
           "fields": [
             {
               "name": "image",
-              "selector": "img"
+              "selector": "picture>img"
             },
             {
               "name": "imageAlt",
