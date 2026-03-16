@@ -81,7 +81,9 @@ const setupUEEventHandlers = () => {
         });
       }
     }
+    console.log("event patch")
     console.log(event.detail.patch.name);
+     console.log(event.detail.patch.value);
     if (event.detail.patch.name == 'richtext') {
       console.log("text has been updated");
     }
