@@ -5,12 +5,15 @@ export default function init(el) {
   const pic = el.querySelector('picture');
   if (pic) {
     const picPara = pic.closest('div');
+    console.log(picPara);
     if (picPara) {
-      const picDiv = document.createElement('div');
+     /* const picDiv = document.createElement('div');
       picDiv.className = 'card-picture-container';
       picDiv.append(pic);
       inner.insertAdjacentElement('afterbegin', picDiv);
-      picPara.remove();
+      picPara.remove();*/
+      picPara.classList.add('card-picture-container');
+
     }
   }
   // Decorate content
