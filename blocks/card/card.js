@@ -4,7 +4,7 @@ export default function init(el) {
 
   const pic = el.querySelector('picture');
   if (pic) {
-    const picPara = pic.closest('p');
+    const picPara = pic.closest('div');
     if (picPara) {
       const picDiv = document.createElement('div');
       picDiv.className = 'card-picture-container';
