@@ -418,7 +418,7 @@
     "id": "button",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "classes",
         "label": "Style",
         "options": [

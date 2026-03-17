@@ -69,7 +69,7 @@ const advancedBlocks = () => {
 
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
-  // For each img source change, update the srcsets of the parent picture sources
+   // For each img source change, update the srcsets of the parent picture sources
     if (event.detail.patch.name == 'image') {
       const newImgSrc = event.detail.patch.value;
       const picture = event.srcElement.querySelector('picture');
@@ -79,6 +79,12 @@ const setupUEEventHandlers = () => {
           source.setAttribute('srcset', newImgSrc);
         });
       }
+    }
+    //Reload text block if author adds class to it
+    const regex = /\[(.*?)\]/;
+    if (event.detail.patch.value.match(regex)) {
+      console.log("text has been updated and has a class name");
+      window.location.reload();
     }
      //Layout Mode - NTH: show dummy block sections where none and turn it off if the user leaves section area
     if (event.detail.patch.name == 'layoutmode') {
@@ -93,22 +99,36 @@ const setupUEEventHandlers = () => {
           });
       }
     }
-    
+  });
+ 
+  //When deleting items, reload the screen or else we can't delete multiple items at a time
+  document.addEventListener('aue:content-remove', (removeevent) => {
+    window.location.reload();
+  });
+  /*Keep these events for later if needed
+   document.addEventListener('aue:content-add', (addevent) => {
+  });
+    document.addEventListener('aue:content-details', (details) => {
+      console.log("aue:content-details - try this event");
+      console.log(details);
+  });
+    document.addEventListener('aue:content-update', (updateevent) => {
+    console.log("content update");
+    console.log(updateevent);
   });
   document.addEventListener('aue:ui-viewport-change', (viewevent) => {
-    // console.log("ui-viewport-change");
-    // console.log(viewevent);
+     console.log("ui-viewport-change");
+     console.log(viewevent);
   });
   document.addEventListener('aue:ui-edit', (editevent) => {
-     //console.log("ui-edit");
-     //console.log(editevent);
+     console.log("ui-edit");
+     console.log(editevent);
   });
   document.addEventListener('aue:ui-select', (selectevent) => {
-     const layoutModeOn = document.getElementsByClassName('layoutmode');
-     if (layoutModeOn.length > 0) {
-      console.log("turn layoutmodeoff - need to remove from DA DOM");
-     }
-  });
+    console.log("ui-select");
+    console.log(selectevent);
+  });*/
+
 };
 
 export default () => {
