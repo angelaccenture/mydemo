@@ -90,14 +90,9 @@ function loadTemplate() {
 }
 
 function decoratePictures(el) {
-  console.log("ak.js el" + el);
   const pics = el.querySelectorAll('picture');
-   console.log(pics);
   for (const pic of pics) {
-    console.log("Pic" + pic);
     const source = pic.querySelector('source');
-    console.log("source: ");
-    console.log(source);
     const clone = source.cloneNode();
     const [pathname, params] = clone.getAttribute('srcset').split('?');
     const search = new URLSearchParams(params);
