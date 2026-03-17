@@ -70,6 +70,7 @@ const advancedBlocks = () => {
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
    // For each img source change, update the srcsets of the parent picture sources
+   console.log("content patch");
     if (event.detail.patch.name == 'image') {
       const newImgSrc = event.detail.patch.value;
       console.log("does this also get normal images");
