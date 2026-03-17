@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Image - 11:40",
+      "title": "Image",
       "id": "image",
       "model": "image",
       "plugins": {

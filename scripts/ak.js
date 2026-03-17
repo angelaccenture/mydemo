@@ -93,6 +93,8 @@ function decoratePictures(el) {
   const pics = el.querySelectorAll('picture');
   for (const pic of pics) {
     const source = pic.querySelector('source');
+    console.log("ak.js");
+    console.log(source);
     const clone = source.cloneNode();
     const [pathname, params] = clone.getAttribute('srcset').split('?');
     const search = new URLSearchParams(params);
