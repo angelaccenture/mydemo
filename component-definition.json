@@ -124,7 +124,7 @@
           ]
         },
         {
-          "title": "Image",
+          "title": "Image - 11:40",
           "id": "image",
           "model": "image",
           "plugins": {
@@ -134,7 +134,7 @@
               "fields": [
                 {
                   "name": "image",
-                  "selector": "picture>img"
+                  "selector": "img[src]"
                 },
                 {
                   "name": "imageAlt",
