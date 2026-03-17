@@ -69,10 +69,6 @@ const advancedBlocks = () => {
 
 const setupUEEventHandlers = () => {
   document.addEventListener('aue:content-patch', (event) => {
-    console.log("content patch");
-    console.log(event.detail.patch.name);
-    console.log(event.detail.patch.value);
-
    // For each img source change, update the srcsets of the parent picture sources
     if (event.detail.patch.name == 'image') {
       const newImgSrc = event.detail.patch.value;
@@ -103,27 +99,15 @@ const setupUEEventHandlers = () => {
           });
       }
     }
-    
   });
-  document.addEventListener('aue:content-add', (addevent) => {
-    const details = addevent.detail;
-   const addedComponentResource = details.response.resource;
-    const updates = details.response.updates.resource;
-
-  console.log('A new component was added:', addedComponentResource);
-  console.log('Resources to update:', updates);
-
-  // Further application logic to handle the new component can be added here
-        //Button reload once drops
-   /* if (addevent.detail.resource == 'button') {
-      console.log("dropped button");
-    }*/
-  });
+ 
   //When deleting items, reload the screen or else we can't delete multiple items at a time
   document.addEventListener('aue:content-remove', (removeevent) => {
     window.location.reload();
   });
   /*Keep these events for later if needed
+   document.addEventListener('aue:content-add', (addevent) => {
+  });
     document.addEventListener('aue:content-details', (details) => {
       console.log("aue:content-details - try this event");
       console.log(details);
@@ -139,11 +123,11 @@ const setupUEEventHandlers = () => {
   document.addEventListener('aue:ui-edit', (editevent) => {
      console.log("ui-edit");
      console.log(editevent);
-  });*/
+  });
   document.addEventListener('aue:ui-select', (selectevent) => {
     console.log("ui-select");
     console.log(selectevent);
-  });
+  });*/
 
 };
 
